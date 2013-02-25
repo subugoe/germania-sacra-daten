@@ -1,0 +1,11 @@
+Golden Software Cartographic Reference Information : Version 1.10
+Projection Name : Unprojected Lat/Long
+Datum Name : World Geodetic System 1984
+Datum Method : Molodensky
+Datum Ellipsoid Type : WGS 84
+Datum Prime Meridian Shift (degrees) : 0
+Datum X-Shift in meters from WGS84 : 0
+Datum Y-Shift in meters from WGS84 : 0
+Datum Z-Shift in meters from WGS84 : 0
+Datum Ellipsoid Radius (meters) : 6378137
+Datum Ellipsoid Flattening : 0.00335281066474748

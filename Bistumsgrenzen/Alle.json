@@ -1,0 +1,107 @@
+{
+	"bounds": {
+		"mode": "bbox",
+		"data": [5, 46, 17, 56]
+ 	},
+	"layers": {
+		"Augsburg": {
+			"src": "Augsburg.shp"
+		},
+		"Bamberg": {
+			"src": "Bamberg.shp"
+		},
+		"Brandenburg": {
+			"src": "Brandenburg.shp"
+		},
+		"Bremen": {
+			"src": "Bremen.shp"
+		},
+		"Eichstaett": {
+			"src": "Eichstaett.shp"
+		},
+		"Freising": {
+			"src": "Freising.shp"
+		},
+		"Freising_Exklave": {
+			"src": "Freising_Exklave.shp"
+		},
+		"Halberstadt": {
+			"src": "Halberstadt.shp"
+		},
+		"Havelberg": {
+			"src": "Havelberg.shp"
+		},
+		"Hildesheim": {
+			"src": "Hildesheim.shp"
+		},
+		"Konstanz": {
+			"src": "Konstanz.shp"
+		},
+		"Koeln": {
+			"src": "Koeln.shp"
+		},
+		"Lebus": {
+			"src": "Lebus.shp"
+		},
+		"Luebeck": {
+			"src": "Luebeck.shp"
+		},
+		"Magdeburg": {
+			"src": "Magdeburg.shp"
+		},
+		"Mainz": {
+			"src": "Mainz.shp"
+		},
+		"Meissen": {
+			"src": "Meissen.shp"
+		},
+		"Merseburg": {
+			"src": "Merseburg.shp"
+		},
+		"Minden": {
+			"src": "Minden.shp"
+		},
+		"Muenster": {
+			"src": "Muenster.shp"
+		},
+		"Naumburg": {
+			"src": "Naumburg.shp"
+		},
+		"Osnabrueck": {
+			"src": "Osnabrueck.shp"
+		},
+		"Paderborn": {
+			"src": "Paderborn.shp"
+		},
+		"Passau": {
+			"src": "Passau.shp"
+		},
+		"Ratzeburg": {
+			"src": "Ratzeburg.shp"
+		},
+		"Regensburg": {
+			"src": "Regensburg.shp"
+		},
+		"Schleswig": {
+			"src": "Schleswig.shp"
+		},
+		"Schwerin": {
+			"src": "Schwerin.shp"
+		},
+		"Speyer": {
+			"src": "Speyer.shp"
+		},
+		"Trier": {
+			"src": "Trier.shp"
+		},
+		"Verden": {
+			"src": "Verden.shp"
+		},
+		"Worms": {
+			"src": "Worms.shp"
+		},
+		"Wuerzburg": {
+			"src": "Wuerzburg.shp"
+		}
+	}
+}

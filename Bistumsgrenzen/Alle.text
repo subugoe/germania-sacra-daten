@@ -1,0 +1,33 @@
+# Skript zur Konversion in SVG
+# 
+# Benötigt:
+# * kartograph http://kartograph.org/docs/kartograph.py
+# * Konversion der Umlaute in Dateinamen in ae/oe/ue
+# 	* siehe: https://github.com/kartograph/kartograph.py/issues/72
+# * Kartograph Patch:
+# 	* siehe: https://github.com/kartograph/kartograph.py/issues/71
+
+diff --git a/kartograph/layersource/shapefile.py b/kartograph/layersource/shapefile.py
+index fbe61cc..1981274 100644
+--- a/kartograph/layersource/shapefile.py
++++ b/kartograph/layersource/shapefile.py
+@@ -378,7 +378,14 @@ class Reader:
+                     except:
+                         value = 0
+                 else:
+-                    value = int(value)
++                       try:
++                           value = int(value)
++                       except:
++                               try:
++                                       value = int(float(value))
++                               except:
++                                       value = 0
++
+             elif typ == b('D'):
+                 try:
+                     y, m, d = int(value[:4]), int(value[4:6]), int(value[6:8])
+
+
+
+kartograph Alle.json -o Alle.svg
