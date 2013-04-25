@@ -177,6 +177,7 @@ for values in cursor:
 		'band_uid': row['GermaniaSacraBandNr'],
 		'status': row['Status'],
 		'bemerkung': row['Bemerkungen'],
+        'text_gs_band': row['TextGSBand'],
 		'crdate': crdate,
 		'cruser_id': cruser_id
 	}

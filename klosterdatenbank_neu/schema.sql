@@ -89,6 +89,7 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`kloster` (
   `band_uid` INT NULL ,
   `status` VARCHAR(255) NULL ,
   `bemerkung` TEXT NULL ,
+  `text_gs_band` TEXT NULL ,
   PRIMARY KEY (`uid`) ,
   UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
   INDEX `fk_kloster_band1_idx` (`band_uid` ASC) ,
