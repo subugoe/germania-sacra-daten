@@ -186,13 +186,24 @@ for values in cursor:
 
 	urls = row['GND']
 	if urls:
-		urls = urls.replace(chr(9), ' ').replace('http:// ', '').replace(';', '#').split('#')
+		urls = urls.replace(chr(9), ' ').replace('http:// ', '').replace(' http', ';http').replace(';', '#').split('#')
 		for myURL in urls:
 			myURL = myURL.strip().strip('# ')
 			URLRelation = makeURLData(myURL, '', 'GND', uid)
 			if URLRelation:
 				key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
 				kloster_has_urlDict[key] = URLRelation
+
+	urls = row['Wikipedia']
+	if urls:
+		urls = urls.replace('http:// ', '').replace(';', '#').split('#')
+		for myURL in urls:
+			URLRelation = makeURLData(myURL, '', 'Wikipedia', uid)
+			if URLRelation:
+				key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
+				kloster_has_urlDict[key] = URLRelation
+    
+
 
 
 
@@ -266,44 +277,6 @@ for values in cursor:
 
 
 
-# Gemeinde
-#tabelle = readPrefix + 'Gemeinden'
-#query = "SELECT * from " + tabelle
-#cursor.execute(query)
-#
-#gemeindeDict = {}
-#for values in cursor:
-#	row = dict(zip(cursor.column_names, values))
-#	r = {
-#		'uid': row['ID_Gemeinde'],
-#		'gemeinde': row['Gemeinde']
-#	}
-#	if gemeindeDict.has_key(r['gemeinde']):
-#		print 'WARNUNG: Doppelter Gemeindename ' + r['gemeinde']
-#	gemeindeDict[r['gemeinde']] = r
-
-
-
-# Kreis
-#tabelle = readPrefix + 'Kreise'
-#query = "SELECT * from " + tabelle
-#cursor.execute(query)
-#
-#kreisDict = {'-': None, '- -': None}
-#for values in cursor:
-#	row = dict(zip(cursor.column_names, values))
-#	print row
-#	r = {
-#		'uid': row['ID_Kreis'],
-#		'kreis': row['Kreis']
-#	}
-#	
-#	if kreisDict.has_key(r['kreis']):
-#		print 'WARNUNG: Doppelter Kreisname ' + r['kreis']
-#	kreisDict[r['kreis']] = r
-	
-
-
 # Land
 tabelle = readPrefix + 'Bundesländer'
 query = "SELECT * from " + tabelle
@@ -336,28 +309,22 @@ for values in cursor:
 	r = {
 		'uid': uid,
 		'ort': row['Ort'],
-		'standort': row['Standort'],
-		'strasse': row[u'Straße'],
-		'plz': str(row['PLZ']),
 		'gemeinde': row['Gemeinde'],
 		'kreis': row['Kreis'],
 		'land_uid': row['Land'],
 		'wuestung': row[u'Wüstung'],
 		'breite': row['Breite'],
 		'laenge': row[u'Laenge'],
-		'institutionengenau': row['Institutionengenaue Koordinaten'],
-		'bemerkung': row['Bemerkungen']
 	}
 	ort += [r]
 	
-	urls = row['Wikipedia']
-	if urls:
-		urls = urls.replace('http:// ', '').replace(';', '#').split('#')
-		for myURL in urls:
-			URLRelation = makeURLData(myURL, '', 'Wikipedia', uid)
-			if URLRelation:
-				key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
-				ort_has_urlDict[key] = URLRelation
+	url = row['GeoNameId']
+	if url:
+		myURL = 'http://geonames.org/' + str(url)
+		URLRelation = makeURLData(myURL, '', 'Geonames', uid)
+		if URLRelation:
+			key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
+			ort_has_urlDict[key] = URLRelation
 
 
 
@@ -383,6 +350,9 @@ for values in cursor:
 			'ort_uid': ort_uid,
 			'gruender': row['Gruender'],
 			'bemerkung': row['interne_Anmerkungen'],
+            'breite': row['Breite'],
+            'laenge': row['Laenge'],
+            'bemerkung_standort': row['BemerkungenStandort'],
 			'crdate': klosterDict[kloster_uid]['crdate'],
 			'cruser_id': klosterDict[kloster_uid]['cruser_id']
 		}
