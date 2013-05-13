@@ -1,2 +1,3 @@
 *.mwb.bak
 .DS_Store
+solr/data*

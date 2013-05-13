@@ -1,0 +1,21 @@
+<response>
+<lst name="responseHeader">
+<int name="status">0</int>
+<int name="QTime">0</int>
+<lst name="params">
+<str name="indent">true</str>
+<str name="tr">xmlpassthrough.xsl</str>
+<str name="q">id:217</str>
+<str name="wt">xml</str>
+</lst>
+</lst>
+<result name="response" numFound="1" start="0">
+<doc>
+<arr name="xml">
+<str>&lt;gaga>&lt;a>A&lt;/a>&lt;b type='c'>B&lt;/b>&lt;/gaga></str>
+</arr>
+<str name="id">217</str>
+<long name="_version_">1426236565327183872</long>
+</doc>
+</result>
+</response>

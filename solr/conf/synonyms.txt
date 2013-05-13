@@ -1,0 +1,5 @@
+# Synonyms
+# e.g.
+# mapping: aaafoo => aaabar
+# group: Television, Televisions, TV, TVs
+
