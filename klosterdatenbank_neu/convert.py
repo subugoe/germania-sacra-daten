@@ -1,5 +1,14 @@
 #! /usr/bin/env python
 #coding=utf-8
+"""
+Skript zum Import des Access SQL Dumps in MySQL
+mit Anpassung an das neue Datenbankschema:
+    * stärkere Normalisiserung
+    * Anpassung an TYPO3 Felder
+
+2013 Sven-S. Porst, SUB Göttingen <porst@sub.uni-goettingen.de>
+"""
+
 
 import re
 import copy
