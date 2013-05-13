@@ -25,7 +25,6 @@ cursor2 = db2.cursor()
 cursor3 = db3.cursor()
 
 
-
 def addValueForKeyToDict (value, key, myDict):
     if not myDict.has_key(key):
         myDict[key] = []
@@ -214,10 +213,10 @@ for values in cursor:
         
         mergeDocIntoDoc(docStandort, docKloster)
         doc2 = copy.deepcopy(docStandort)
-        doc2["id"] = "standort-" + str(doc2["standort_uid"])
+        doc2["id"] = "kloster-standort-" + str(doc2["standort_uid"])
         doc2["sql_uid"] = doc2["standort_uid"]
         del doc2["standort_uid"]
-        doc2["typ"] = "standort"
+        doc2["typ"] = "kloster-standort"
         docs += [doc2]
         
         
@@ -233,16 +232,27 @@ for values in cursor:
     	tx_gs_domain_model_ordenstyp AS ordenstyp,
     	tx_gs_domain_model_zeitraum AS zeitraum
     WHERE
-    	kloster_orden.uid = 10 AND
+    	kloster_orden.kloster_uid = %s AND
     	kloster_orden.orden_uid = orden.uid AND
     	orden.ordenstyp_uid = ordenstyp.uid AND
         kloster_orden.zeitraum_uid = zeitraum.uid
     """
+    cursor2.execute(queryOrden, [str(docKloster["sql_uid"])])
+    for values2 in cursor2:
+        docOrden = dict(zip(cursor2.column_names, values2))
+        improveZeitraumForDocument(docOrden, "orden")
+        mergeDocIntoDoc(docOrden, docKloster)
+        doc2 = copy.deepcopy(docOrden)
+        doc2["id"] = "kloster-orden-" + str(doc2["kloster_orden_uid"])
+        doc2["sql_uid"] = doc2["kloster_orden_uid"]
+        del doc2["kloster_orden_uid"]
+        doc2["typ"] = "kloster-orden"
+        docs += [doc2]
         
-    pprint.pprint(docKloster)
-
     docs += [docKloster]
 
+
+pprint.pprint(docs)
 
 index.add_many(docs)
 
