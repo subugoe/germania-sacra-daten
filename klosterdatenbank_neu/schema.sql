@@ -245,12 +245,19 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`ort` (
   `wuestung` TINYINT NULL ,
   `breite` FLOAT NULL ,
   `laenge` FLOAT NULL ,
+  `bistum_uid` INT NULL ,
   PRIMARY KEY (`uid`) ,
   UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
   INDEX `fk_ort_bundesland1_idx` (`land_uid` ASC) ,
+  INDEX `fk_ort_bistum1_idx` (`bistum_uid` ASC) ,
   CONSTRAINT `fk_ort_bundesland1`
     FOREIGN KEY (`land_uid` )
     REFERENCES `mydb`.`land` (`uid` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_ort_bistum1`
+    FOREIGN KEY (`bistum_uid` )
+    REFERENCES `mydb`.`bistum` (`uid` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

@@ -314,7 +314,8 @@ for values in cursor:
 		'land_uid': row['Land'],
 		'wuestung': row[u'Wüstung'],
 		'breite': row['Breite'],
-		'laenge': row[u'Laenge'],
+		'laenge': row['Laenge'],
+        'bistum_uid': row['ID_Bistum']
 	}
 	ort += [r]
 	
