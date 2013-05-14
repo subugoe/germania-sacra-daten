@@ -174,7 +174,9 @@ kloster_has_urlDict = {}
 for values in cursor:
 	row = dict(zip(cursor.column_names, values))
 	uid = row['Klosternummer']
-	crdate = row['Datensatz angelegt']
+
+	if row['Datensatz angelegt'] != None:
+		crdate = int(time.mktime(time.strptime(str(row['Datensatz angelegt']), '%Y-%m-%d %H:%M:%S')))
 	if not crdate:
 		crdate = defaultDate
 	cruser_id = bearbeiterDict[row['Bearbeiter']]
@@ -466,8 +468,6 @@ for result in cursor.execute(schema, multi=True):
 db.commit()
 
 
-
-
 # Daten in Datenbank einspielen
 
 url = urlDict.values()
@@ -506,4 +506,3 @@ addRecordsToTable(kloster_standort_has_literatur, 'kloster_standort_literatur_mm
 
 cursor.close()
 db.close()
-			
