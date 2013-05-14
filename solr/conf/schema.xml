@@ -55,10 +55,12 @@
 		<field name="band_nummer" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_titel" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_id" type="int" indexed="true" stored="true" multiValued="true"/>
+		<field name="band_url" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="status" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="gruender" type="string" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="literatur" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="literatur-id" type="string" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="url" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="url_bemerkung" type="text_de" indexed="true" stored="true" multiValued="true"/>
@@ -75,6 +77,7 @@
 		<field name="ist_in_deutschland" type="boolean" indexed="true" stored="true" multiValued="true"/>
 		<field name="wuestung" type="boolean" indexed="true" stored="true" multiValued="true"/>
 		<field name="bemerkung_standort" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="bemerkung_kloster_standort" type="text_de" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="bistum" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="kirchenprovinz" type="string" indexed="true" stored="true" multiValued="true"/>
@@ -140,6 +143,7 @@
 	<copyField source="bemerkung_kloster" dest="bemerkung"/>
 	<copyField source="bemerkung_orden" dest="bemerkung"/>
 	<copyField source="bemerkung_standort" dest="bemerkung"/>
+	<copyField source="bemerkung_kloster_standort" dest="bemerkung"/>
 
 	<copyField source="*_von_von" dest="zeitraum_von_von"/>
 	<copyField source="*_von_bis" dest="zeitraum_von_bis"/>
