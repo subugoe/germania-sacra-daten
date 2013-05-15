@@ -11,9 +11,11 @@ und spielt sie in einen Solr Index.
 
 import copy
 import pprint
+# benötigt das Modul Geohash (z.B. über easy_install)
+import Geohash
 
 import solr
-index = solr.Solr('http://localhost:8080/solr/gs')
+index = solr.Solr('http://localhost:8080/solr/germania-sacra')
 #index = solr.Solr('http://vlib.sub.uni-goettingen.de/solr/germania-sacra')
 
 import mysql.connector
@@ -137,7 +139,6 @@ for values in cursor:
 		docKloster["band_id"] = docURL["band_uid"]
 		docKloster["band_titel"] = docURL["band_titel"]
 		docKloster["band_nummer"] = docURL["band_nummer"]
-		docKloster["band_url"] = docURL["url"]
 	
 	queryKlosterURL = """
 	SELECT
@@ -191,10 +192,25 @@ for values in cursor:
 	cursor2.execute(queryStandort, [str(docKloster["sql_uid"])])
 	for values2 in cursor2:
 		docStandort = dict(zip(cursor2.column_names, values2))
+		breite = None
+		laenge = None
 		if docStandort["standort_laenge"] and docStandort["standort_breite"]:
-			docStandort["koordinaten"] = str(docStandort["standort_breite"]) + "," + str(docStandort["standort_laenge"])
+			breite = docStandort["standort_breite"]
+			laenge = docStandort["standort_laenge"]
+			docStandort["koordinaten_institutionengenau"] = True
 		elif docStandort["ort_laenge"] and docStandort["ort_breite"]:
-			docStandort["koordinaten"] = str(docStandort["ort_breite"]) + "," + str(docStandort["ort_laenge"])
+			breite = docStandort["ort_breite"]
+			laenge = docStandort["ort_laenge"]
+			docStandort["koordinaten_institutionengenau"] = False
+		if breite and laenge:
+			docStandort["koordinaten"] = str(breite) + "," + str(laenge)
+			docStandort["geohash"] = []
+			geohash = Geohash.encode(breite, laenge)
+			i = 1
+			while (i <= len(geohash)):
+				docStandort["geohash"] += [str(i) + "-" + geohash[0:i]]
+				i += 1
+			
 		del docStandort["standort_laenge"]
 		del docStandort["standort_breite"]
 		del docStandort["ort_laenge"]

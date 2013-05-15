@@ -55,7 +55,6 @@
 		<field name="band_nummer" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_titel" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_id" type="int" indexed="true" stored="true" multiValued="true"/>
-		<field name="band_url" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="status" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="gruender" type="string" indexed="true" stored="true" multiValued="true"/>
 
@@ -70,6 +69,8 @@
 
 		<field name="geonames" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="koordinaten" type="location_rpt" indexed="true" stored="true" multiValued="true"/>
+		<field name="koordinaten_institutionengenau" type="boolean" indexed="true" stored="true" multiValued="true"/>
+		<field name="geohash" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="ort" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="gemeinde" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="kreis" type="string" indexed="true" stored="true" multiValued="true"/>
@@ -114,7 +115,7 @@
 
 		<field name="bemerkung" type="text_de" indexed="true" stored="true" multiValued="true"/>
 
-		<field name="all" type="text_de" indexed="true" stored="false" multiValued="true"/>
+		<field name="text" type="text_de" indexed="true" stored="false" multiValued="true"/>
 		<field name="_version_" type="long" indexed="true" stored="true"/>
         
         
@@ -140,40 +141,55 @@
 	<!--
 		Copy fields.
 	-->
+	<copyField source="url" dest="text"/>
+
+	<copyField source="patrozinium" dest="text"/>
+	<copyField source="kloster" dest="text"/>
+	<copyField source="text_gs_band" dest="text"/>
+	<copyField source="band_nummer" dest="text"/>
+	<copyField source="band_titel" dest="text"/>
+	<copyField source="gruender" dest="text"/>
+	<copyField source="literatur" dest="text"/>
+	<copyField source="gnd" dest="text"/>
+	<copyField source="geonames" dest="text"/>
+	<copyField source="koordinaten" dest="text"/>
+	<copyField source="ort" dest="text"/>
+	<copyField source="gemeinde" dest="text"/>
+	<copyField source="kreis" dest="text"/>
+	<copyField source="land" dest="text"/>
+	<copyField source="bistum" dest="text"/>
+	<copyField source="kirchenprovinz" dest="text"/>
+	<copyField source="orden" dest="text"/>
+	<copyField source="ordo" dest="text"/>
+	<copyField source="ordenstyp" dest="text"/>
+
 	<copyField source="bemerkung_kloster" dest="bemerkung"/>
-	<copyField source="bemerkung_orden" dest="bemerkung"/>
 	<copyField source="bemerkung_standort" dest="bemerkung"/>
 	<copyField source="bemerkung_kloster_standort" dest="bemerkung"/>
+	<copyField source="bemerkung_orden" dest="bemerkung"/>
+	<copyField source="bemerkung_kloster" dest="text"/>
+	<copyField source="bemerkung_standort" dest="text"/>
+	<copyField source="bemerkung_kloster_standort" dest="text"/>
+	<copyField source="bemerkung_orden" dest="text"/>
 
-	<copyField source="*_von_von" dest="zeitraum_von_von"/>
-	<copyField source="*_von_bis" dest="zeitraum_von_bis"/>
-	<copyField source="*_von_verbal" dest="zeitraum_von_verbal"/>
-	<copyField source="*_bis_von" dest="zeitraum_bis_von"/>
-	<copyField source="*_bis_bis" dest="zeitraum_bis_von"/>
-	<copyField source="*_bis_verbal" dest="zeitraum_bis_verbal"/>
+	<copyField source="orden_von_von" dest="zeitraum_von_von"/>
+	<copyField source="orden_von_bis" dest="zeitraum_von_bis"/>
+	<copyField source="orden_von_verbal" dest="zeitraum_von_verbal"/>
+	<copyField source="orden_bis_von" dest="zeitraum_bis_von"/>
+	<copyField source="orden_bis_bis" dest="zeitraum_bis_von"/>
+	<copyField source="orden_bis_verbal" dest="zeitraum_bis_verbal"/>
+	<copyField source="standort_von_von" dest="zeitraum_von_von"/>
+	<copyField source="standort_von_bis" dest="zeitraum_von_bis"/>
+	<copyField source="standort_von_verbal" dest="zeitraum_von_verbal"/>
+	<copyField source="standort_bis_von" dest="zeitraum_bis_von"/>
+	<copyField source="standort_bis_bis" dest="zeitraum_bis_von"/>
+	<copyField source="standort_bis_verbal" dest="zeitraum_bis_verbal"/>
+	<copyField source="orden_von_verbal" dest="all"/>
+	<copyField source="orden_bis_verbal" dest="all"/>
+	<copyField source="standort_von_verbal" dest="all"/>
+	<copyField source="standort_bis_verbal" dest="all"/>
 
-	<copyField source="patrozinium" dest="all"/>
-	<copyField source="kloster" dest="all"/>
-	<copyField source="text_gs_band" dest="all"/>
-	<copyField source="band_titel" dest="all"/>
-	<copyField source="band_nummer" dest="all"/>
-	<copyField source="gruender" dest="all"/>
-	<copyField source="literatur" dest="all"/>
-	<copyField source="url" dest="all"/>
-	<copyField source="gnd" dest="all"/>
-	<copyField source="geonames" dest="all"/>
-	<copyField source="koordinaten" dest="all"/>
-	<copyField source="ort" dest="all"/>
-	<copyField source="gemeinde" dest="all"/>
-	<copyField source="kreis" dest="all"/>
-	<copyField source="land" dest="all"/>
-	<copyField source="bistum" dest="all"/>
-	<copyField source="kirchenprovinz" dest="all"/>
-	<copyField source="orden" dest="all"/>
-	<copyField source="ordo" dest="all"/>
-	<copyField source="symbol" dest="all"/>
-	<copyField source="ordenstyp" dest="all"/>
-	<copyField source="bemerkung" dest="all"/>
+
 
 
 	<types>
