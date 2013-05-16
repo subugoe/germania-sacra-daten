@@ -71,7 +71,7 @@
 		<field name="koordinaten" type="location_rpt" indexed="true" stored="true" multiValued="true"/>
 		<field name="koordinaten_institutionengenau" type="boolean" indexed="true" stored="true" multiValued="true"/>
 		<field name="geohash" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="ort" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="ort" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="gemeinde" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="kreis" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="land" type="string" indexed="true" stored="true" multiValued="true"/>
@@ -80,11 +80,11 @@
 		<field name="bemerkung_standort" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="bemerkung_kloster_standort" type="text_de" indexed="true" stored="true" multiValued="true"/>
 
-		<field name="bistum" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="bistum" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="kirchenprovinz" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="ist_erzbistum" type="boolean" indexed="true" stored="true" multiValued="true"/>
 
-        <field name="orden" type="string" indexed="true" stored="true" multiValued="true"/>
+        <field name="orden" type="text_de" indexed="true" stored="true" multiValued="true"/>
         <field name="ordo" type="string" indexed="true" stored="true" multiValued="true"/>
         <field name="symbol" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="ordenstyp" type="string" indexed="true" stored="true" multiValued="true"/>
@@ -114,6 +114,8 @@
 		<field name="zeitraum_jahr50" type="int" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="bemerkung" type="text_de" indexed="true" stored="true" multiValued="true"/>
+
+		<dynamicField name="*_facet" type="string" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="text" type="text_de" indexed="true" stored="false" multiValued="true"/>
 		<field name="_version_" type="long" indexed="true" stored="true"/>
@@ -184,12 +186,14 @@
 	<copyField source="standort_bis_von" dest="zeitraum_bis_von"/>
 	<copyField source="standort_bis_bis" dest="zeitraum_bis_von"/>
 	<copyField source="standort_bis_verbal" dest="zeitraum_bis_verbal"/>
-	<copyField source="orden_von_verbal" dest="all"/>
-	<copyField source="orden_bis_verbal" dest="all"/>
-	<copyField source="standort_von_verbal" dest="all"/>
-	<copyField source="standort_bis_verbal" dest="all"/>
+	<copyField source="orden_von_verbal" dest="text"/>
+	<copyField source="orden_bis_verbal" dest="text"/>
+	<copyField source="standort_von_verbal" dest="text"/>
+	<copyField source="standort_bis_verbal" dest="text"/>
 
-
+	<copyField source="orden" dest="orden_facet"/>
+	<copyField source="bistum" dest="bistum_facet"/>
+	<copyField source="land" dest="land_facet"/>
 
 
 	<types>

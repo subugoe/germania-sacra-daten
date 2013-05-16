@@ -49,13 +49,12 @@ def mergeDocIntoDoc (new, target):
 
 def improveZeitraumVerbalForDocument (doc, prefix):
 	if not doc[prefix + "_verbal"]:
-		if doc[prefix + "_von"] == minYear or doc[prefix + "_von"] == maxYear:
-			doc[prefix + "_verbal"] = ""
-		else:
+		if doc[prefix + "_von"] != minYear and doc[prefix + "_von"] != maxYear:
 			doc[prefix + "_verbal"] = str(doc[prefix + "_von"])
 		
-		if doc[prefix + "_von"] != doc[prefix + "_bis"]:
-			doc[prefix + "_verbal"] += '-' +  str(doc[prefix + "_bis"])
+		if doc[prefix + "_bis"] != minYear and doc[prefix + "_bis"] != maxYear:
+			if doc[prefix + "_von"] != doc[prefix + "_bis"]:
+				doc[prefix + "_verbal"] += '/' +  str(doc[prefix + "_bis"])
 
 
 def improveZeitraumForDocument (doc, prefix):
@@ -165,7 +164,7 @@ for values in cursor:
 			else:
 				print "keine GND URL: " + docURL["url"]
 	
-	
+	literaturDict = {}
 	queryStandort = """
 	SELECT
 		standort.uid AS standort_uid, standort.gruender, standort.bemerkung as bemerkung_kloster_standort, standort.bemerkung_standort,
@@ -188,6 +187,11 @@ for values in cursor:
 		ort.land_uid = land.uid AND
 		(ort.bistum_uid = bistum.uid OR (ort.bistum_uid IS NULL AND bistum.uid = 1)) AND
 		standort.zeitraum_uid = zeitraum.uid
+	ORDER BY
+		zeitraum.von_von,
+		zeitraum.von_bis,
+		zeitraum.bis_von,
+		zeitraum.bis_bis
 	"""
 	cursor2.execute(queryStandort, [str(docKloster["sql_uid"])])
 	for values2 in cursor2:
@@ -260,23 +264,21 @@ for values in cursor:
 			bibitem.uid = literatur.bibitem_uid
 		"""
 		cursor3.execute(queryLiteratur, [str(docStandort["standort_uid"])])
+		literaturDict2 = {}
 		for values3 in cursor3:
 			docLiteratur = dict(zip(cursor3.column_names, values3))
 			literatur = docLiteratur["bibitem"]
 			if docLiteratur["beschreibung"]:
 				literatur += ", " + docLiteratur["beschreibung"]
 			if literatur:
-				if not docStandort.has_key("literatur"):
-					docStandort["literatur"] = []
-				docStandort["literatur"] += [literatur]
-				if not docStandort.has_key("literatur-id"):
-					docStandort["literatur-id"] = []
-				docStandort["literatur-id"] += [literatur]
+				literaturDict[literatur] = True
+		
 
 		mergeDocIntoDoc(docStandort, docKloster)
 		doc2 = copy.deepcopy(docStandort)
 		doc2["id"] = "kloster-standort-" + str(doc2["standort_uid"])
 		doc2["sql_uid"] = doc2["standort_uid"]
+		doc2["literatur"] = literaturDict.keys()
 		del doc2["standort_uid"]
 		doc2["typ"] = "kloster-standort"
 		docs += [doc2]
@@ -298,6 +300,11 @@ for values in cursor:
 		kloster_orden.orden_uid = orden.uid AND
 		orden.ordenstyp_uid = ordenstyp.uid AND
 		kloster_orden.zeitraum_uid = zeitraum.uid
+	ORDER BY
+		zeitraum.von_von,
+		zeitraum.von_bis,
+		zeitraum.bis_von,
+		zeitraum.bis_bis
 	"""
 	cursor2.execute(queryOrden, [str(docKloster["sql_uid"])])
 	for values2 in cursor2:
@@ -310,7 +317,9 @@ for values in cursor:
 		del doc2["kloster_orden_uid"]
 		doc2["typ"] = "kloster-orden"
 		docs += [doc2]
-		
+	
+	docKloster["literatur"] = literaturDict.keys()
+	
 	docs += [docKloster]
 
 
