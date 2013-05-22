@@ -157,7 +157,7 @@ for values in cursor:
 		urls = urls.split('#')
 		for myURL in urls:
 			myURL = myURL.strip().strip('# ')
-			URLRelation = makeURLData(myURL, '', 'URL', uid)
+			URLRelation = makeURLData(myURL, 'Germania Sacra ' + r['nummer'] + ': ' + r['titel'] , 'Dokument', uid)
 			if URLRelation:
 				key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
 				band_has_urlDict[key] = URLRelation
@@ -200,7 +200,8 @@ for values in cursor:
 		urls = urls.replace(chr(9), ' ').replace('http:// ', '').replace(' http', ';http').replace(';', '#').split('#')
 		for myURL in urls:
 			myURL = myURL.strip().strip('# ')
-			URLRelation = makeURLData(myURL, '', 'GND', uid)
+			GNDID = re.sub(r'http://d-nb.info/gnd/', '', myURL)
+			URLRelation = makeURLData(myURL, r['kloster'] + ' (' + GNDID + ')', 'GND', uid)
 			if URLRelation:
 				key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
 				kloster_has_urlDict[key] = URLRelation
@@ -209,11 +210,13 @@ for values in cursor:
 	if urls:
 		urls = urls.replace('http:// ', '').replace(';', '#').split('#')
 		for myURL in urls:
-			URLRelation = makeURLData(myURL, '', 'Wikipedia', uid)
+			lemma = re.sub(r'.*/wiki/' , '', myURL).replace('_', ' ')
+			lemma = urllib.unquote(lemma)
+			URLRelation = makeURLData(myURL, lemma, 'Wikipedia', uid)
 			if URLRelation:
 				key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
 				kloster_has_urlDict[key] = URLRelation
-    
+
 
 
 
@@ -333,7 +336,7 @@ for values in cursor:
 	url = row['GeoNameId']
 	if url:
 		myURL = 'http://geonames.org/' + str(url)
-		URLRelation = makeURLData(myURL, '', 'Geonames', uid)
+		URLRelation = makeURLData(myURL, r['ort'] + ' (' + str(url) + ')', 'Geonames', uid)
 		if URLRelation:
 			key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
 			ort_has_urlDict[key] = URLRelation
