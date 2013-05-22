@@ -28,7 +28,7 @@ cursor3 = db3.cursor()
 
 
 minYear = 500
-maxYear = 2500
+maxYear = 2050
 
 
 def addValueForKeyToDict (value, key, myDict):
@@ -99,14 +99,23 @@ docs = []
 queryKloster = """
 SELECT
 	kloster.uid AS sql_uid, kloster.kloster, kloster.patrozinium, kloster.bemerkung AS bemerkung_kloster,
-	kloster.text_gs_band, kloster.band_uid
+	kloster.text_gs_band, kloster.band_uid AS band_id, kloster.band_seite,
+	band.nummer AS band_nummer, band.titel AS band_titel
 FROM 
-	tx_gs_domain_model_kloster AS kloster
+	tx_gs_domain_model_kloster AS kloster,
+	tx_gs_domain_model_band AS band
+WHERE
+	band.uid = kloster.band_uid OR (kloster.band_uid IS NULL AND band.uid = 1)
+
 """
 cursor.execute(queryKloster)
 for values in cursor:
 	docKloster = dict(zip(cursor.column_names, values))
-	
+	if not docKloster["band_id"]:
+		del docKloster["band_id"]
+		del docKloster["band_nummer"]
+		del docKloster["band_titel"]
+
 	docKloster["typ"] = "kloster"
 	docKloster["id"] = 'kloster-' + str(docKloster["sql_uid"])
 	docKloster["url"] = []
@@ -117,27 +126,23 @@ for values in cursor:
 
 	queryBandURL = """
 	SELECT
-		band.uid AS band_uid, band.nummer AS band_nummer, band.titel AS band_titel,
 		url.url, url.bemerkung, url.art
 	FROM
-		tx_gs_domain_model_band AS band,
 		tx_gs_domain_model_url AS url,
 		tx_gs_band_url_mm AS relation		
 	WHERE
-		band.uid = %s AND
-		relation.uid_local = band.uid AND
+		relation.uid_local = %s AND
 		url.uid = relation.uid_foreign
 	"""
-	cursor2.execute(queryBandURL, [str(docKloster["band_uid"])])
-	for values2 in cursor2:
-		docURL = dict(zip(cursor2.column_names, values2))
-		docKloster["url"] += [docURL["url"]]
-		docKloster["url_bemerkung"] += [docURL["bemerkung"]]
-		docKloster["url_art"] += [docURL["art"]]
-		docKloster["url_relation"] += ["band"]
-		docKloster["band_id"] = docURL["band_uid"]
-		docKloster["band_titel"] = docURL["band_titel"]
-		docKloster["band_nummer"] = docURL["band_nummer"]
+	if docKloster.has_key("band_id"):
+		cursor2.execute(queryBandURL, [str(docKloster["band_id"])])
+		for values2 in cursor2:
+			docURL = dict(zip(cursor2.column_names, values2))
+			docKloster["url"] += [docURL["url"]]
+			docKloster["url_bemerkung"] += [docURL["bemerkung"]]
+			docKloster["url_art"] += [docURL["art"]]
+			docKloster["url_relation"] += ["band"]
+			docKloster["band_url"] = [docURL["url"]]
 	
 	queryKlosterURL = """
 	SELECT

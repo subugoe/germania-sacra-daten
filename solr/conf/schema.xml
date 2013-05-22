@@ -4,7 +4,7 @@
 	
 	2013 Sven-S. Porst, SUB Göttingen <porst@sub.uni-goettingen.de>
 -->
-<schema name="edfu" version="1.5">
+<schema name="germania-sacra" version="1.5">
 
 	<fields>
 		<!--
@@ -53,8 +53,10 @@
 
 		<field name="text_gs_band" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_nummer" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="band_seite" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_titel" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_id" type="int" indexed="true" stored="true" multiValued="true"/>
+		<field name="band_url" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="status" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="gruender" type="string" indexed="true" stored="true" multiValued="true"/>
 
@@ -63,6 +65,7 @@
 
 		<field name="url" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="url_bemerkung" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="url_detail" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="url_art" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="url_relation" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="gnd" type="string" indexed="true" stored="true" multiValued="true"/>
