@@ -122,6 +122,7 @@ for values in cursor:
 	docKloster["url_bemerkung"] = []
 	docKloster["url_art"] = []
 	docKloster["url_relation"] = []
+	docKloster["url_wikipedia"] = []
 	docKloster["gnd"] = []
 
 	queryBandURL = """
@@ -138,10 +139,12 @@ for values in cursor:
 		cursor2.execute(queryBandURL, [str(docKloster["band_id"])])
 		for values2 in cursor2:
 			docURL = dict(zip(cursor2.column_names, values2))
+			"""
 			docKloster["url"] += [docURL["url"]]
 			docKloster["url_bemerkung"] += [docURL["bemerkung"]]
 			docKloster["url_art"] += [docURL["art"]]
 			docKloster["url_relation"] += ["band"]
+			"""
 			docKloster["band_url"] = [docURL["url"]]
 	
 	queryKlosterURL = """
@@ -157,10 +160,14 @@ for values in cursor:
 	cursor2.execute(queryKlosterURL, [str(docKloster["sql_uid"])])
 	for values2 in cursor2:
 		docURL = dict(zip(cursor2.column_names, values2))
-		docKloster["url"] += [docURL["url"]]
-		docKloster["url_bemerkung"] += [docURL["bemerkung"]]
-		docKloster["url_art"] += [docURL["art"]]
-		docKloster["url_relation"] += ["kloster"]
+		
+		if docURL["art"] != "Wikipedia":
+			docKloster["url"] += [docURL["url"]]
+			docKloster["url_bemerkung"] += [docURL["bemerkung"]]
+			docKloster["url_art"] += [docURL["art"]]
+			docKloster["url_relation"] += ["kloster"]
+		else:
+			docKloster["url_wikipedia"] += [docURL["url"]]
 		
 		if docURL["art"] == "GND":
 			components = docURL["url"].split("/gnd/")

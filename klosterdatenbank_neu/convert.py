@@ -202,7 +202,7 @@ for values in cursor:
 		for myURL in urls:
 			myURL = myURL.strip().strip('# ')
 			GNDID = re.sub(r'http://d-nb.info/gnd/', '', myURL)
-			URLRelation = makeURLData(myURL, r['kloster'] + ' (' + GNDID + ')', 'GND', uid)
+			URLRelation = makeURLData(myURL, r['kloster'] + ' [' + GNDID + ']', 'GND', uid)
 			if URLRelation:
 				key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
 				kloster_has_urlDict[key] = URLRelation
@@ -337,7 +337,7 @@ for values in cursor:
 	url = row['GeoNameId']
 	if url:
 		myURL = 'http://geonames.org/' + str(url)
-		URLRelation = makeURLData(myURL, r['ort'] + ' (' + str(url) + ')', 'Geonames', uid)
+		URLRelation = makeURLData(myURL, r['ort'] + ' [' + str(url) + ']', 'Geonames', uid)
 		if URLRelation:
 			key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
 			ort_has_urlDict[key] = URLRelation
@@ -467,7 +467,8 @@ schema = re.sub(r'DROP .*`' + writePrefix + r'domain_model_([a-z_]+)_has_([a-z_]
 	schema)
 #print schema
 for result in cursor.execute(schema, multi=True):
-	print result
+	1
+	#print result
 
 db.commit()
 

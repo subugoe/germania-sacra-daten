@@ -69,6 +69,7 @@
 		<field name="url_art" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="url_relation" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="gnd" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="url_wikipedia" type="string" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="geonames" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="koordinaten" type="location_rpt" indexed="true" stored="true" multiValued="true"/>
