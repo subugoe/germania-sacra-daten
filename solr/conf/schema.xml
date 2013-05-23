@@ -75,6 +75,7 @@
 		<field name="koordinaten_institutionengenau" type="boolean" indexed="true" stored="true" multiValued="true"/>
 		<field name="geohash" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="ort" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="ort_sort" type="string" indexed="true" stored="true" multiValued="false"/>
 		<field name="gemeinde" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="kreis" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="land" type="string" indexed="true" stored="true" multiValued="true"/>

@@ -325,6 +325,9 @@ for values in cursor:
 	
 	docKloster["literatur"] = literaturDict.keys()
 	
+	if docKloster.has_key('ort') and len(docKloster['ort']) > 0:
+		docKloster['ort_sort'] = docKloster['ort'][0]
+	
 	docs += [docKloster]
 
 
