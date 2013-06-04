@@ -26,6 +26,10 @@ cursor = db.cursor()
 cursor2 = db2.cursor()
 cursor3 = db3.cursor()
 
+import json
+jsonFile = open('../Personendatenbank/export.json')
+personen = json.load(jsonFile)
+jsonFile.close()
 
 minYear = 500
 maxYear = 2050
@@ -179,7 +183,7 @@ for values in cursor:
 	literaturDict = {}
 	queryStandort = """
 	SELECT
-		standort.uid AS standort_uid, standort.gruender, standort.bemerkung as bemerkung_kloster_standort, standort.bemerkung_standort,
+		standort.uid AS standort_uid, standort.gruender, standort.bemerkung as bemerkung_kloster_standort,
 		standort.breite AS standort_breite, standort.laenge AS standort_laenge,
 		ort.uid AS ort_uid, ort.ort, ort.gemeinde, ort.kreis, ort.bistum_uid AS bistum_uid, ort.wuestung, ort.breite AS ort_breite, ort.laenge AS ort_laenge,
 		land.land, land.ist_in_deutschland,
@@ -336,6 +340,12 @@ for values in cursor:
 		docKloster['ort_sort'] = docKloster['ort'][0]
 	
 	docs += [docKloster]
+
+	# Informationen aus der Personendatenbank in den Index einfügen.
+	if personen.has_key(str(docKloster["sql_uid"])):
+		klosterPersonen = personen[str(docKloster["sql_uid"])]
+		for person in klosterPersonen:
+			mergeDocIntoDoc(person, docKloster)
 
 
 # Replace None by empty strings

@@ -118,6 +118,21 @@
 		<field name="zeitraum_bis_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="zeitraum_jahr50" type="int" indexed="true" stored="true" multiValued="true"/>
 
+		<field name="person_name" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="person_vorname" type="text_de" indexed="true" stored="false" multiValued="true"/>
+		<field name="person_namensalternativen" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="person_anmerkung" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="person_bezeichnung" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="person_von_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="person_bis_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="person_von" type="int" indexed="true" stored="false" multiValued="true"/>
+		<field name="person_bis" type="int" indexed="true" stored="false" multiValued="true"/>
+		<field name="person_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="person_gnd" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="person_gso" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="person_id" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="person_office_id" type="string" indexed="true" stored="true" multiValued="true"/>
+
 		<field name="bemerkung" type="text_de" indexed="true" stored="true" multiValued="true"/>
 
 		<dynamicField name="*_facet" type="string" indexed="true" stored="true" multiValued="true"/>
