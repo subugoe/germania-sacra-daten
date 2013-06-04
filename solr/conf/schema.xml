@@ -121,6 +121,7 @@
 		<field name="bemerkung" type="text_de" indexed="true" stored="true" multiValued="true"/>
 
 		<dynamicField name="*_facet" type="string" indexed="true" stored="true" multiValued="true"/>
+		<dynamicField name="*_suggest" type="text_de" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="text" type="text_de" indexed="true" stored="false" multiValued="true"/>
 		<field name="_version_" type="long" indexed="true" stored="true"/>
@@ -199,6 +200,13 @@
 	<copyField source="orden" dest="orden_facet"/>
 	<copyField source="bistum" dest="bistum_facet"/>
 	<copyField source="land" dest="land_facet"/>
+	
+	<copyField source="kloster" dest="all_suggest"/>
+	<copyField source="ort" dest="all_suggest"/>
+	<copyField source="gemeinde" dest="all_suggest"/>
+	<copyField source="kreis" dest="all_suggest"/>
+	<copyField source="bistum" dest="all_suggest"/>
+	<copyField source="orden" dest="all_suggest"/>
 
 
 	<types>

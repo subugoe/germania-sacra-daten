@@ -1204,9 +1204,18 @@
          component
       -->
 
-    <!-- a spellchecker built from a field of the main index -->
+  <!-- config from: http://wiki.apache.org/solr/Suggester -->
     <lst name="spellchecker">
       <str name="name">default</str>
+      <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+    <str name="lookupImpl">org.apache.solr.spelling.suggest.tst.TSTLookup</str>
+    <str name="field">all_suggest</str>
+    </lst>
+    
+    
+    <!-- a spellchecker built from a field of the main index -->
+    <lst name="spellchecker">
+      <str name="name">example</str>
       <str name="field">name</str>
       <str name="classname">solr.DirectSolrSpellChecker</str>
       <!-- the spellcheck distance measure used, the default is the internal levenshtein -->
@@ -1224,7 +1233,7 @@
       <!-- maximum threshold of documents a query term can appear to be considered for correction -->
       <float name="maxQueryFrequency">0.01</float>
       <!-- uncomment this to require suggestions to occur in 1% of the documents
-      	<float name="thresholdTokenFrequency">.01</float>
+        <float name="thresholdTokenFrequency">.01</float>
       -->
     </lst>
     
@@ -1276,6 +1285,41 @@
        </lst>
       -->
   </searchComponent>
+
+
+    <!-- from: http://wiki.apache.org/solr/Suggester -->
+    <searchComponent class="solr.SpellCheckComponent" name="suggest">
+      <lst name="spellchecker">
+        <str name="name">suggest</str>
+        <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+        <str name="lookupImpl">org.apache.solr.spelling.suggest.tst.TSTLookup</str>
+        <!-- Alternatives to lookupImpl: 
+             org.apache.solr.spelling.suggest.fst.FSTLookup   [finite state automaton]
+             org.apache.solr.spelling.suggest.fst.WFSTLookupFactory [weighted finite state automaton]
+             org.apache.solr.spelling.suggest.jaspell.JaspellLookup [default, jaspell-based]
+             org.apache.solr.spelling.suggest.tst.TSTLookup   [ternary trees]
+        -->
+        <str name="field">all_suggest</str>  <!-- the indexed field to derive suggestions from -->
+        <float name="threshold">0.005</float>
+        <str name="buildOnCommit">true</str>
+        <!--
+             <str name="sourceLocation">american-english</str>
+        -->
+      </lst>
+    </searchComponent>
+    <requestHandler name="/suggest" class="solr.SearchHandler" startup="lazy">
+      <lst name="defaults">
+        <str name="spellcheck">true</str>
+        <str name="spellcheck.dictionary">suggest</str>
+        <str name="spellcheck.onlyMorePopular">true</str>
+        <str name="spellcheck.count">6</str>
+        <str name="spellcheck.collate">true</str>
+      </lst>
+      <arr name="components">
+        <str>suggest</str>
+      </arr>
+    </requestHandler>
+
 
   <!-- A request handler for demonstrating the spellcheck component.  
 
