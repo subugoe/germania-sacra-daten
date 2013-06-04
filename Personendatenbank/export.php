@@ -64,16 +64,20 @@
 	if ($sql) {
 		if (mysql_select_db($sqlDatabase)) {
 			$query = '
-			SELECT
-				vorname, vornamenvarianten, familienname, familiennamenvarianten, titel, namenspraefix, namenszusatz, persons.item_id AS person_id, gsonummer, gndnummer,
-				offices.id AS office_id, bezeichnung, klosterid, von, bis, anmerkung
-			FROM
-				persons, offices
-			WHERE
-				offices.person_id = persons.id AND
-				offices.klosterid != ""
-			ORDER BY
-				klosterid	
+SELECT
+	vorname, vornamenvarianten, familienname, familiennamenvarianten, titel, namenspraefix, namenszusatz, persons.item_id AS person_id, gsonummer, gndnummer,
+	offices.id AS office_id, bezeichnung, klosterid, von, bis, anmerkung
+FROM
+	persons, offices, items
+WHERE
+	offices.person_id = persons.id AND
+	offices.klosterid != "" AND
+	persons.item_id = items.id AND
+	persons.deleted = 0 AND
+	items.deleted = 0 AND
+	items.status = "online"
+ORDER BY
+	klosterid
 			';
 			$sql_result = mysql_query($query, $sql);
 

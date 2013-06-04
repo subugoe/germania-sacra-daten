@@ -31,6 +31,9 @@ jsonFile = open('../Personendatenbank/export.json')
 personen = json.load(jsonFile)
 jsonFile.close()
 
+import xml.etree.ElementTree
+
+
 minYear = 500
 maxYear = 2050
 
@@ -110,6 +113,7 @@ FROM
 	tx_gs_domain_model_band AS band
 WHERE
 	band.uid = kloster.band_uid OR (kloster.band_uid IS NULL AND band.uid = 1)
+	
 
 """
 cursor.execute(queryKloster)
@@ -345,6 +349,19 @@ for values in cursor:
 	if personen.has_key(str(docKloster["sql_uid"])):
 		klosterPersonen = personen[str(docKloster["sql_uid"])]
 		for person in klosterPersonen:
+			if person['person_namensalternativen'] != '':
+				XMLString = u"<span class='namensalternativen'>" + person['person_namensalternativen'] + u"</span>"
+				XMLUTF8 = XMLString.encode('utf-8')
+				# print person['person_gso'].encode('utf-8') + ' - ' + XMLString
+				try:
+					XML = xml.etree.ElementTree.fromstring(XMLUTF8)
+					person['person_namensalternativen_xml'] = XMLString
+				except:
+					print u"FEHLER person_namensalternativen wird gelöscht, da nicht als XML lesbar: " + person['person_gso'] + u" - " + person['person_namensalternativen']
+					person['person_namensalternativen_xml'] = ''
+					
+				del person['person_namensalternativen']
+		
 			mergeDocIntoDoc(person, docKloster)
 
 
@@ -360,7 +377,6 @@ for doc in docs:
 #pprint.pprint(docs)
 
 index.add_many(docs)
-
 
 index.commit()
 

@@ -120,7 +120,7 @@
 
 		<field name="person_name" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="person_vorname" type="text_de" indexed="true" stored="false" multiValued="true"/>
-		<field name="person_namensalternativen" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="person_namensalternativen_xml" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="person_anmerkung" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="person_bezeichnung" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="person_von_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
@@ -185,6 +185,10 @@
 	<copyField source="orden" dest="text"/>
 	<copyField source="ordo" dest="text"/>
 	<copyField source="ordenstyp" dest="text"/>
+	<copyField source="person_name" dest="text"/>
+	<copyField source="person_namensalternativen_xml" dest="text"/>
+	<copyField source="person_bezeichnung" dest="text"/>
+	<copyField source="person_gso" dest="text"/>
 
 	<copyField source="bemerkung_kloster" dest="bemerkung"/>
 	<copyField source="bemerkung_standort" dest="bemerkung"/>
