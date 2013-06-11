@@ -48,7 +48,7 @@
         
 		<field name="patrozinium" type="string" indexed="true" stored="true"/>
 		<field name="kloster" type="string" indexed="true" stored="true"/>
-		<field name="kloster_id" type="int" indexed="true" stored="true"/>
+		<field name="kloster_id" type="string" indexed="true" stored="true"/>
 		<field name="bemerkung_kloster" type="text_de" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="text_gs_band" type="text_de" indexed="true" stored="true" multiValued="true"/>
@@ -219,6 +219,7 @@
 	<copyField source="orden" dest="orden_facet"/>
 	<copyField source="bistum" dest="bistum_facet"/>
 	<copyField source="land" dest="land_facet"/>
+	<copyField source="person_bezeichnung" dest="person_bezeichnung_facet"/>
 	
 	<copyField source="kloster" dest="all_suggest"/>
 	<copyField source="ort" dest="all_suggest"/>
