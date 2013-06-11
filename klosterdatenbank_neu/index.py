@@ -16,7 +16,7 @@ import Geohash
 
 import solr
 index = solr.Solr('http://localhost:8080/solr/germania-sacra')
-#index = solr.Solr('http://vlib.sub.uni-goettingen.de/solr/germania-sacra')
+index = solr.Solr('http://vlib.sub.uni-goettingen.de/solr/germania-sacra')
 
 import mysql.connector
 db = mysql.connector.connect(user='root', host='127.0.0.1', database='kloster')
@@ -294,10 +294,12 @@ for values in cursor:
 				literaturDict[literatur] = True
 		
 
+
 		mergeDocIntoDoc(docStandort, docKloster)
 		doc2 = copy.deepcopy(docStandort)
 		doc2["id"] = "kloster-standort-" + str(doc2["standort_uid"])
 		doc2["sql_uid"] = doc2["standort_uid"]
+		doc2["kloster_id"] = docKloster['id']
 		doc2["literatur"] = literaturDict.keys()
 		del doc2["standort_uid"]
 		doc2["typ"] = "kloster-standort"
@@ -334,6 +336,7 @@ for values in cursor:
 		doc2 = copy.deepcopy(docOrden)
 		doc2["id"] = "kloster-orden-" + str(doc2["kloster_orden_uid"])
 		doc2["sql_uid"] = doc2["kloster_orden_uid"]
+		doc2["kloster_id"] = docKloster['id']
 		del doc2["kloster_orden_uid"]
 		doc2["typ"] = "kloster-orden"
 		docs += [doc2]
