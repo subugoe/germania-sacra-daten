@@ -240,12 +240,12 @@ for values in cursor:
 		del docStandort["ort_laenge"]
 		del docStandort["ort_breite"]
 		
-		# ohne bistum_uid sind die Felder zum Bistum Fake -> löschen
+		# ohne bistum_uid sind die Felder zum Bistum Fake -> leeren
 		if not docStandort["bistum_uid"]:
-			del docStandort["bistum"]
-			del docStandort["kirchenprovinz"]
-			del docStandort["bemerkung_bistum"]
-			del docStandort["ist_erzbistum"]
+			docStandort["bistum"] = ''
+			docStandort["kirchenprovinz"] = ''
+			docStandort["bemerkung_bistum"] = ''
+			docStandort["ist_erzbistum"] = ''
 		
 		docStandort["url"] = []
 		docStandort["url_bemerkung"] = []
