@@ -359,8 +359,10 @@ for values in cursor:
 				except:
 					print u"FEHLER person_namensalternativen wird gelöscht, da nicht als XML lesbar: " + person['person_gso'] + u" - " + person['person_namensalternativen']
 					person['person_namensalternativen_xml'] = ''
+			else:
+				person['person_namensalternativen_xml']	= ''
 					
-				del person['person_namensalternativen']
+			del person['person_namensalternativen']
 		
 			mergeDocIntoDoc(person, docKloster)
 
