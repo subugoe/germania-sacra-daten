@@ -16,7 +16,7 @@ import Geohash
 
 import solr
 index = solr.Solr('http://localhost:8080/solr/germania-sacra')
-index = solr.Solr('http://vlib.sub.uni-goettingen.de/solr/germania-sacra')
+#index = solr.Solr('http://vlib.sub.uni-goettingen.de/solr/germania-sacra')
 
 import mysql.connector
 db = mysql.connector.connect(user='root', host='127.0.0.1', database='kloster')
@@ -187,7 +187,7 @@ for values in cursor:
 	literaturDict = {}
 	queryStandort = """
 	SELECT
-		standort.uid AS standort_uid, standort.gruender, standort.bemerkung as bemerkung_kloster_standort,
+		standort.uid AS standort_uid, standort.gruender,
 		standort.breite AS standort_breite, standort.laenge AS standort_laenge,
 		ort.uid AS ort_uid, ort.ort, ort.gemeinde, ort.kreis, ort.bistum_uid AS bistum_uid, ort.wuestung, ort.breite AS ort_breite, ort.laenge AS ort_laenge,
 		land.land, land.ist_in_deutschland,
