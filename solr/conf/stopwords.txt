@@ -1,1 +1,5 @@
 # Stopwords
+der
+an
+am
+hl
