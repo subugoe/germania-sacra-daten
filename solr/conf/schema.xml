@@ -232,6 +232,10 @@
 	<copyField source="kreis" dest="all_suggest"/>
 	<copyField source="bistum" dest="all_suggest"/>
 	<copyField source="orden" dest="all_suggest"/>
+	<copyField source="bistum" dest="bistum_suggest"/>
+	<copyField source="orden" dest="orden_suggest"/>
+	
+	
 
 
 	<types>

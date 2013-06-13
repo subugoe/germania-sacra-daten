@@ -1117,6 +1117,100 @@
        "master" used for indexing and "slaves" used for queries.
 
        http://wiki.apache.org/solr/SolrReplication 
+	<!-- Search Components
+
+		Search components are registered to SolrCore and used by 
+		instances of SearchHandler (which can access them by name)
+
+		By default, the following components are available:
+
+		<searchComponent name="query"     class="solr.QueryComponent" />
+		<searchComponent name="facet"     class="solr.FacetComponent" />
+		<searchComponent name="mlt"       class="solr.MoreLikeThisComponent" />
+		<searchComponent name="highlight" class="solr.HighlightComponent" />
+		<searchComponent name="stats"     class="solr.StatsComponent" />
+		<searchComponent name="debug"     class="solr.DebugComponent" />
+
+		Default configuration in a requestHandler would look like:
+
+		<arr name="components">
+		 <str>query</str>
+		 <str>facet</str>
+		 <str>mlt</str>
+		 <str>highlight</str>
+		 <str>stats</str>
+		 <str>debug</str>
+		</arr>
+
+		If you register a searchComponent to one of the standard names, 
+		that will be used instead of the default.
+
+		To insert components before or after the 'standard' components, use:
+
+		<arr name="first-components">
+		 <str>myFirstComponentName</str>
+		</arr>
+
+		<arr name="last-components">
+		 <str>myLastComponentName</str>
+		</arr>
+
+		NOTE: The component registered with the name "debug" will
+		always be executed after the "last-components" 
+
+	-->
+
+
+	<!--
+		from: http://wiki.apache.org/solr/Suggester
+	-->
+	<searchComponent class="solr.SpellCheckComponent" name="spellcheck">
+		<lst name="spellchecker">
+			<str name="name">suggest</str>
+			<str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+			<str name="lookupImpl">org.apache.solr.spelling.suggest.tst.TSTLookup</str>
+			<!-- Alternatives to lookupImpl: 
+			     org.apache.solr.spelling.suggest.fst.FSTLookup   [finite state automaton]
+			     org.apache.solr.spelling.suggest.fst.WFSTLookupFactory [weighted finite state automaton]
+			     org.apache.solr.spelling.suggest.jaspell.JaspellLookup [default, jaspell-based]
+			     org.apache.solr.spelling.suggest.tst.TSTLookup   [ternary trees]
+			-->
+			<str name="field">all_suggest</str>  <!-- the indexed field to derive suggestions from -->
+			<float name="threshold">0.0005</float>
+			<str name="buildOnCommit">true</str>
+		</lst>
+		
+		<lst name="spellchecker">
+			<str name="name">bistum_suggest</str>
+			<str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+			<str name="lookupImpl">org.apache.solr.spelling.suggest.tst.TSTLookup</str>
+			<str name="field">bistum_suggest</str>  <!-- the indexed field to derive suggestions from -->
+			<float name="threshold">0.0005</float>
+			<str name="buildOnCommit">true</str>
+		</lst>
+
+		<lst name="spellchecker">
+			<str name="name">orden_suggest</str>
+			<str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+			<str name="lookupImpl">org.apache.solr.spelling.suggest.tst.TSTLookup</str>
+			<str name="field">orden_suggest</str>  <!-- the indexed field to derive suggestions from -->
+			<float name="threshold">0.0005</float>
+			<str name="buildOnCommit">true</str>
+		</lst>
+	</searchComponent>
+	
+	<requestHandler name="/suggest" class="solr.SearchHandler" startup="lazy">
+		<lst name="defaults">
+			<str name="spellcheck">true</str>
+			<str name="spellcheck.dictionary">suggest</str>
+			<str name="spellcheck.onlyMorePopular">true</str>
+			<str name="spellcheck.count">6</str>
+			<str name="spellcheck.collate">true</str>
+		</lst>
+		<arr name="components">
+			<str>spellcheck</str>
+		</arr>
+	</requestHandler>
 
        It is also neccessary for SolrCloud to function (in Cloud mode, the 
        replication handler is used to bulk transfer segments when nodes 
