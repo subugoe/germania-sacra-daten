@@ -1300,7 +1300,7 @@
              org.apache.solr.spelling.suggest.tst.TSTLookup   [ternary trees]
         -->
         <str name="field">all_suggest</str>  <!-- the indexed field to derive suggestions from -->
-        <float name="threshold">0.005</float>
+        <float name="threshold">0.0005</float>
         <str name="buildOnCommit">true</str>
         <!--
              <str name="sourceLocation">american-english</str>
