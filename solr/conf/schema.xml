@@ -497,25 +497,8 @@
 			</analyzer>
 		</fieldType>
 
-
-		<!-- Strip suffixes from hieroglyph transliteration -->
-		<fieldType name="transliteration" class="solr.TextField" positionIncrementGap="100">
-			<analyzer>
-				<tokenizer class="solr.StandardTokenizerFactory"/>
-				<filter class="solr.LowerCaseFilterFactory"/>
-			</analyzer>
-		</fieldType>
-
-
-		<!-- Strip suffixes from hieroglyph transliteration -->
-		<fieldType name="transliteration_nosuffix" class="solr.TextField" positionIncrementGap="100">
-			<analyzer>
-				<tokenizer class="solr.StandardTokenizerFactory"/>
-				<filter class="solr.LowerCaseFilterFactory"/>
-				<filter class="solr.PatternReplaceFilterFactory" pattern=":[aeiou].*" replacement=""/>
-			</analyzer>
-		</fieldType>
-
 	</types>
+
+	<solrQueryParser defaultOperator="AND"/>
 	
 </schema>
