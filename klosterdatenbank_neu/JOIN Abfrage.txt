@@ -1,0 +1,24 @@
+Abfrage zum Bestimmen aller Klöster in Halberstadt, Havelberg und Stendal im 14. Jahrhundert.
+
+{!join from=kloster_id to=id} 
+( 
+	typ:kloster-standort
+	AND
+	(
+		bistum_facet:Halberstadt
+		OR
+		bistum_facet:Havelberg
+		OR
+		bistum_facet:Stendal
+	)
+	AND
+	standort_jahr50:[1300 TO 1399]
+)
+OR
+(
+	typ:kloster-orden
+	AND
+	orden_facet:Benediktiner
+	AND
+	orden_jahr50:[1300 TO 1399]
+)
