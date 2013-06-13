@@ -61,7 +61,7 @@
 		<field name="gruender" type="string" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="literatur" type="text_de" indexed="true" stored="true" multiValued="true"/>
-		<field name="literatur-id" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="literatur_id" type="string" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="url" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="url_bemerkung" type="text_de" indexed="true" stored="true" multiValued="true"/>
@@ -76,6 +76,7 @@
 		<field name="koordinaten_institutionengenau" type="boolean" indexed="true" stored="true" multiValued="true"/>
 		<field name="geohash" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="ort" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="ort_uid" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="ort_sort" type="string" indexed="true" stored="true" multiValued="false"/>
 		<field name="gemeinde" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="kreis" type="string" indexed="true" stored="true" multiValued="true"/>
@@ -84,16 +85,19 @@
 		<field name="wuestung" type="boolean" indexed="true" stored="true" multiValued="true"/>
 		<field name="bemerkung_standort" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="bemerkung_kloster_standort" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="standort_uid" type="int" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="bistum" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="bistum_uid" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="kirchenprovinz" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="ist_erzbistum" type="boolean" indexed="true" stored="true" multiValued="true"/>
 
-        <field name="orden" type="text_de" indexed="true" stored="true" multiValued="true"/>
-        <field name="ordo" type="string" indexed="true" stored="true" multiValued="true"/>
-        <field name="symbol" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="orden" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="ordo" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="symbol" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="ordenstyp" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="bemerkung_orden" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="kloster_orden_uid" type="int" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="orden_von_von" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="orden_von_bis" type="int" indexed="true" stored="true" multiValued="true"/>
@@ -117,6 +121,7 @@
 		<field name="zeitraum_bis_bis" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="zeitraum_bis_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="zeitraum_jahr50" type="int" indexed="true" stored="true" multiValued="true"/>
+		<field name="zeitraum_uid" type="int" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="person_name" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="person_vorname" type="text_de" indexed="true" stored="false" multiValued="true"/>
@@ -140,16 +145,16 @@
 
 		<field name="text" type="text_de" indexed="true" stored="false" multiValued="true"/>
 		<field name="_version_" type="long" indexed="true" stored="true"/>
-        
-        
-        <!--
-        	uncomment the following to ignore any fields that don't already match an existing
-        	field name or dynamic field, rather than reporting them as an error.
-        	alternately, change the type="ignored" to some other type e.g. "text" if you want
-        	unknown fields indexed and/or stored by default
-        -->
-        <dynamicField name="*" type="ignored" multiValued="true"/>
-        
+
+
+		<!--
+			uncomment the following to ignore any fields that don't already match an existing
+			field name or dynamic field, rather than reporting them as an error.
+			alternately, change the type="ignored" to some other type e.g. "text" if you want
+			unknown fields indexed and/or stored by default
+		-->
+		<!--<dynamicField name="*" type="ignored" multiValued="true"/>-->
+
 	</fields>
 	
 	
