@@ -194,7 +194,7 @@ for values in cursor:
 		zeitraum.uid AS zeitraum_uid,
 		zeitraum.von_von AS standort_von_von, zeitraum.von_bis AS standort_von_bis, zeitraum.von_verbal AS standort_von_verbal,
 		zeitraum.bis_von AS standort_bis_von, zeitraum.bis_bis AS standort_bis_bis, zeitraum.bis_verbal AS standort_bis_verbal,
-		bistum.bistum, bistum.kirchenprovinz, bistum.bemerkung AS bemerkung_bistum, bistum.ist_erzbistum
+		bistum.bistum, bistum.kirchenprovinz, bistum.ist_erzbistum
 	FROM 
 		tx_gs_domain_model_kloster_standort AS standort,
 		tx_gs_domain_model_ort AS ort,
@@ -242,9 +242,9 @@ for values in cursor:
 		
 		# ohne bistum_uid sind die Felder zum Bistum Fake -> leeren
 		if not docStandort["bistum_uid"]:
+			docStandort["bistum_uid"] = -1
 			docStandort["bistum"] = ''
 			docStandort["kirchenprovinz"] = ''
-			docStandort["bemerkung_bistum"] = ''
 			docStandort["ist_erzbistum"] = ''
 		
 		docStandort["url"] = []
