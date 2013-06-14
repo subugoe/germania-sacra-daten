@@ -46,8 +46,8 @@
 		<field name="sql_uid" type="int" indexed="true" stored="true"/>
 		<field name="typ" type="string" indexed="true" stored="true"/>
         
-		<field name="patrozinium" type="string" indexed="true" stored="true"/>
-		<field name="kloster" type="string" indexed="true" stored="true"/>
+		<field name="patrozinium" type="text_de" indexed="true" stored="true"/>
+		<field name="kloster" type="text_de" indexed="true" stored="true"/>
 		<field name="kloster_id" type="string" indexed="true" stored="true"/>
 		<field name="bemerkung_kloster" type="text_de" indexed="true" stored="true" multiValued="true"/>
 
@@ -57,8 +57,8 @@
 		<field name="band_titel" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_id" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_url" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="status" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="gruender" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="status" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="gruender" type="text_de" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="literatur" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="literatur_id" type="string" indexed="true" stored="true" multiValued="true"/>
@@ -78,9 +78,9 @@
 		<field name="ort" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="ort_uid" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="ort_sort" type="string" indexed="true" stored="true" multiValued="false"/>
-		<field name="gemeinde" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="kreis" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="land" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="gemeinde" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="kreis" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="land" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="ist_in_deutschland" type="boolean" indexed="true" stored="true" multiValued="true"/>
 		<field name="wuestung" type="boolean" indexed="true" stored="true" multiValued="true"/>
 		<field name="bemerkung_standort" type="text_de" indexed="true" stored="true" multiValued="true"/>
@@ -89,13 +89,13 @@
 
 		<field name="bistum" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="bistum_uid" type="int" indexed="true" stored="true" multiValued="true"/>
-		<field name="kirchenprovinz" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="kirchenprovinz" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="ist_erzbistum" type="boolean" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="orden" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="ordo" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="symbol" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="ordenstyp" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="ordenstyp" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="bemerkung_orden" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="kloster_orden_uid" type="int" indexed="true" stored="true" multiValued="true"/>
 
