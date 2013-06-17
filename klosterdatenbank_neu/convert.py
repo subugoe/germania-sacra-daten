@@ -76,7 +76,7 @@ defaultFields = {
 
 def addRecordsToTable (records, tableName):
 	global db, cursor
-	print "\n\nTabelle »" + tableName + "«\n\n"
+	print "\n\nTabelle »" + tableName + "«"
 
 	if len(records) > 0:
 		for record in records:
@@ -115,9 +115,9 @@ def makeURLData (URL, bemerkung, art, record_uid):
 				'bemerkung': bemerkung,
 				'art': art
 			}
-			print u"neue URL »" + URL + u"«"
+			# print u"INFO: neue URL »" + URL + u"«"
 		else:
-			print u"URL »" + URL + u"« existiert bereits: doppelt nutzen."
+			print u"INFO: URL »" + URL + u"« existiert bereits: doppelt nutzen."
 			
 		URLRelation = {
 			'uid_local': record_uid,
@@ -329,7 +329,7 @@ for values in cursor:
 		kloster_orden += [r]
 	else:
 		print "WARNUNG: orden_uid fehlt in: "
-		print r
+		pprint.pprint(r)
 
 
 
@@ -448,7 +448,7 @@ for values in cursor:
 						'bibitem': buch
 					}
 					bibitemDict[buch] = r3
-					print u"neues Buch »" + buch + u"«"
+					print u"INFO: neues Buch »" + buch + u"«"
 				
 			
 				literatur_uid = len(literatur) + 1
