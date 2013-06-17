@@ -34,6 +34,20 @@ bearbeiterDict = {
 	9: 32, # Fenna Campen
 }
 
+bearbeitungsstatusDict = {
+	u'Angaben unklar': 0,
+	u'Daten importiert': 1,
+	u'Quellenlage unvollständig': 2,
+	u'Geprüft (bei Eingabe)': 3,
+	u'Redaktionell geprüft': 4,
+	u'Neuaufnahme, unvollständig': 5,
+	u'Online': 6
+}
+
+bearbeitungsstatus = []
+for status in bearbeitungsstatusDict:
+	bearbeitungsstatus += [{'uid': bearbeitungsstatusDict[status], 'name': status}]
+
 defaultDate = int(time.mktime(time.strptime('2000-01-01 00:00:00', '%Y-%m-%d %H:%M:%S')))
 defaultFields = {
 	'tstamp': int(time.time()),
@@ -78,9 +92,14 @@ def addRecordsToTable (records, tableName):
 			fieldNames = '(' + ', '.join(record.keys()) + ')'
 			values = '(%(' + ')s, %('.join(record.keys()) + ')s)'
 			insertStatement = "INSERT INTO `" + prefix + tableName + "` " + fieldNames + " VALUES " + values
-
+			#print tableName
+			#pprint.pprint(record)
+			if tableName == 'bistum':
+				cursor.execute('SET foreign_key_checks = 0')
 			cursor.execute(insertStatement, record)
-			#print cursor.statement
+			if tableName == 'bistum':
+				cursor.execute('SET foreign_key_checks = 1')
+			# print cursor.statement
 			
 		db.commit()
 
@@ -118,7 +137,7 @@ tabelle = readPrefix + 'Bistum'
 query = "SELECT * from " + tabelle
 cursor.execute(query)
 
-bistum = []
+bistumDict = {}
 for values in cursor:
 	row = dict(zip(cursor.column_names, values))
 	ist_erzbistum = (row['ErzbistumAuswahlfeld'] == 'Erzbistum')
@@ -127,10 +146,12 @@ for values in cursor:
 		'bistum': row['Bistum'],
 		'kirchenprovinz': row['Kirchenprovinz'],
 		'bemerkung': row['Bemerkung'],
-		'ist_erzbistum': ist_erzbistum
+		'ist_erzbistum': ist_erzbistum,
+		'shapefile': row['Shapefile'],
+		'ort_uid': row['Bistumssitz']
 	}
 	
-	bistum += [r]
+	bistumDict[row['ID']] = r
 
 
 
@@ -153,20 +174,25 @@ for values in cursor:
 	band += [r]
 	
 	urls = row['url']
+	buchtitel = 'Germania Sacra ' + r['nummer'] + ': ' + r['titel']
 	if urls:
 		urls = urls.split('#')
 		for myURL in urls:
 			myURL = myURL.strip().strip('# ')
-			URLRelation = makeURLData(myURL, 'Germania Sacra ' + r['nummer'] + ': ' + r['titel'] , 'Dokument', uid)
+			URLRelation = makeURLData(myURL, buchtitel, 'Dokument', uid)
 			if URLRelation:
 				key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
 				band_has_urlDict[key] = URLRelation
-	
+	if row['handle']:
+		URLRelation = makeURLData(row['handle'].strip('#'), buchtitel, 'Handle', uid)
+		if URLRelation:
+			key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
+			band_has_urlDict[key] = URLRelation
 
 
 # Kloster Stammblatt
 tabelle = readPrefix + 'KlosterStammblatt'
-query = "SELECT * from " + tabelle
+query = "SELECT * from " + tabelle + " ORDER BY Klosternummer"
 cursor.execute(query)
 
 klosterDict =  {}
@@ -174,50 +200,66 @@ kloster_has_urlDict = {}
 for values in cursor:
 	row = dict(zip(cursor.column_names, values))
 	uid = row['Klosternummer']
-
-	if row['Datensatz angelegt'] != None:
-		crdate = int(time.mktime(time.strptime(str(row['Datensatz angelegt']), '%Y-%m-%d %H:%M:%S')))
-	if not crdate:
-		crdate = defaultDate
-	cruser_id = bearbeiterDict[row['Bearbeiter']]
 	
-	r = {
-		'uid': uid,
-		'kloster': row['Klostername'],
-		'patrozinium': row['Patrozinium'],
-		'status': row['Status'],
-		'bemerkung': row['Bemerkungen'],
-		'band_uid': row['GermaniaSacraBandNr'],
-		'band_seite': row['GSBandSeite'],
-		'text_gs_band': row['TextGSBand'],
-		'crdate': crdate,
-		'cruser_id': cruser_id
-	}
-	klosterDict[uid] = r
+	if uid != None:
+		crdate = None
+		if row['Datensatz angelegt'] != None:
+			crdate = int(time.mktime(time.strptime(str(row['Datensatz angelegt']), '%Y-%m-%d %H:%M:%S')))
+		if not crdate:
+			crdate = defaultDate
+		cruser_id = 1
+		if bearbeiterDict.has_key(row['Bearbeiter']):
+			cruser_id = bearbeiterDict[row['Bearbeiter']]
+		else:
+			print u"WARNUNG: ungültige Bearbeiter ID »" + str(row['Bearbeiter']) + u"« in klosterStammblatt " + str(uid) + u". Verwende: 1"
+	
+		status = 0
+		if bearbeitungsstatusDict.has_key(row['Status']):
+			status = bearbeitungsstatusDict[row['Status']]
+		else:
+			print u"WARNUNG: ungültiger Bearbeitungstatus »" + str(row['Status']) + u"« in klosterStammblatt " + str(uid) + u". Verwende: 0"
+		
+	
+		r = {
+			'uid': uid,
+			'kloster_id': uid,
+			'kloster': row['Klostername'],
+			'patrozinium': row['Patrozinium'],
+			'bemerkung': row['Bemerkungen'],
+			'band_uid': row['GermaniaSacraBandNr'],
+			'band_seite': row['GSBandSeite'],
+			'text_gs_band': row['TextGSBand'],
+			'crdate': crdate,
+			'cruser_id': cruser_id,
+			'bearbeitungsstatus_uid': status,
+		}
+		klosterDict[uid] = r
 	
 
-	urls = row['GND']
-	if urls:
-		urls = urls.replace(chr(9), ' ').replace('http:// ', '').replace(' http', ';http').replace(';', '#').split('#')
-		for myURL in urls:
-			myURL = myURL.strip().strip('# ')
-			GNDID = re.sub(r'http://d-nb.info/gnd/', '', myURL)
-			URLRelation = makeURLData(myURL, r['kloster'] + ' [' + GNDID + ']', 'GND', uid)
-			if URLRelation:
-				key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
-				kloster_has_urlDict[key] = URLRelation
+		urls = row['GND']
+		if urls:
+			urls = urls.replace(chr(9), ' ').replace('http:// ', '').replace(' http', ';http').replace(';', '#').split('#')
+			for myURL in urls:
+				myURL = myURL.strip().strip('# ')
+				GNDID = re.sub(r'http://d-nb.info/gnd/', '', myURL)
+				URLRelation = makeURLData(myURL, r['kloster'] + ' [' + GNDID + ']', 'GND', uid)
+				if URLRelation:
+					key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
+					kloster_has_urlDict[key] = URLRelation
 
-	urls = row['Wikipedia']
-	if urls:
-		urls = urls.replace('http:// ', '').replace(';', '#').split('#')
-		for myURL in urls:
-			lemma = re.sub(r'.*/wiki/' , '', myURL).replace('_', ' ')
-			lemma = urllib.unquote(lemma)
-			URLRelation = makeURLData(myURL, lemma, 'Wikipedia', uid)
-			if URLRelation:
-				key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
-				kloster_has_urlDict[key] = URLRelation
-
+		urls = row['Wikipedia']
+		if urls:
+			urls = urls.replace('http:// ', '').replace(';', '#').split('#')
+			for myURL in urls:
+				lemma = re.sub(r'.*/wiki/' , '', myURL).replace('_', ' ')
+				lemma = urllib.unquote(lemma)
+				URLRelation = makeURLData(myURL, lemma, 'Wikipedia', uid)
+				if URLRelation:
+					key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
+					kloster_has_urlDict[key] = URLRelation
+	else:
+		print u"FEHLER: klosterStammblatt Datensatz ohne Klosternummer:"
+		pprint.pprint(row)
 
 
 
@@ -249,7 +291,6 @@ for values in cursor:
 		ordenstypDict[r2['ordenstyp']] = r2
 	r['ordenstyp_uid'] = ordenstypDict[ordenstyp]['uid']
 	orden += [r]
-
 
 
 # Kloster Orden
@@ -318,9 +359,12 @@ ort = []
 ort_has_urlDict = {}
 for values in cursor:
 	row = dict(zip(cursor.column_names, values))
-
 	uid = row['ID']
-	
+	bistum_uid = row['ID_Bistum']
+	if not (bistum_uid == None or bistumDict.has_key(bistum_uid)):
+		print u"FEHLER: Feld »ID_Bistum« hat ungültigen Wert »" + str(bistum_uid) + u"« in alleOrte " + str(uid) + ". Verwende: 1"
+		bistum_uid = 1
+				
 	r = {
 		'uid': uid,
 		'ort': row['Ort'],
@@ -330,10 +374,10 @@ for values in cursor:
 		'wuestung': row[u'Wüstung'],
 		'breite': row['Breite'],
 		'laenge': row['Laenge'],
-        'bistum_uid': row['ID_Bistum']
+        'bistum_uid': bistum_uid
 	}
 	ort += [r]
-	
+
 	url = row['GeoNameId']
 	if url:
 		myURL = 'http://geonames.org/' + str(url)
@@ -346,7 +390,7 @@ for values in cursor:
 
 # Kloster Standort
 tabelle = readPrefix + 'KlosterStandort'
-query = "SELECT * from " + tabelle
+query = "SELECT * from " + tabelle + " ORDER BY Klosternummer"
 cursor.execute(query)
 
 kloster_standort = []
@@ -359,7 +403,7 @@ for values in cursor:
 	kloster_uid = row['Klosternummer']
 	ort_uid = row['ID_alleOrte']
 
-	if ort_uid:
+	if ort_uid and kloster_uid:
 		r = {
 			'uid': standort_uid,
 			'kloster_uid': kloster_uid,
@@ -423,7 +467,10 @@ for values in cursor:
 				}]
 
 	else:
-		print u"WARNUNG: Feld »ID_alleOrte« leer in KlosterStandort " + str(standort_uid) + ": auslassen"
+		if not ort_uid:
+			print u"FEHLER: Feld »ID_alleOrte« leer in KlosterStandort " + str(standort_uid) + ": auslassen"
+		if not kloster_uid:
+			print u"FEHLER: Feld »Klosternummer« leer in KlosterStandort " + str(standort_uid) + ": auslassen"
 
 
 
@@ -480,11 +527,14 @@ addRecordsToTable(url, 'url')
 
 addRecordsToTable(zeitraum, 'zeitraum')
 
+bistum = bistumDict.values()
 addRecordsToTable(bistum, 'bistum')
 
 addRecordsToTable(band, 'band')
 band_has_url = band_has_urlDict.values()
 addRecordsToTable(band_has_url, 'band_url_mm')
+
+addRecordsToTable(bearbeitungsstatus, 'bearbeitungsstatus')
 
 kloster = klosterDict.values()
 addRecordsToTable(kloster, 'kloster')

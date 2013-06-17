@@ -41,6 +41,52 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `mydb`.`land`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`land` ;
+
+CREATE  TABLE IF NOT EXISTS `mydb`.`land` (
+  `uid` INT NOT NULL AUTO_INCREMENT ,
+  `land` VARCHAR(45) NULL ,
+  `ist_in_deutschland` TINYINT NULL ,
+  PRIMARY KEY (`uid`) ,
+  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`ort`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`ort` ;
+
+CREATE  TABLE IF NOT EXISTS `mydb`.`ort` (
+  `uid` INT NOT NULL AUTO_INCREMENT ,
+  `ort` VARCHAR(255) NULL ,
+  `gemeinde` VARCHAR(255) NULL ,
+  `kreis` VARCHAR(255) NULL ,
+  `land_uid` INT NULL ,
+  `wuestung` TINYINT NULL ,
+  `breite` FLOAT NULL ,
+  `laenge` FLOAT NULL ,
+  `bistum_uid` INT NULL ,
+  PRIMARY KEY (`uid`) ,
+  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
+  INDEX `fk_ort_bundesland1_idx` (`land_uid` ASC) ,
+  INDEX `fk_ort_bistum1_idx` (`bistum_uid` ASC) ,
+  CONSTRAINT `fk_ort_bundesland1`
+    FOREIGN KEY (`land_uid` )
+    REFERENCES `mydb`.`land` (`uid` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_ort_bistum1`
+    FOREIGN KEY (`bistum_uid` )
+    REFERENCES `mydb`.`bistum` (`uid` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `mydb`.`bistum`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`bistum` ;
@@ -51,8 +97,16 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`bistum` (
   `kirchenprovinz` VARCHAR(255) NULL ,
   `bemerkung` TEXT NULL ,
   `ist_erzbistum` TINYINT NULL ,
+  `shapefile` VARCHAR(255) NULL ,
+  `ort_uid` INT NULL ,
   PRIMARY KEY (`uid`) ,
-  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) )
+  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
+  INDEX `fk_bistum_ort1_idx` (`ort_uid` ASC) ,
+  CONSTRAINT `fk_bistum_ort1`
+    FOREIGN KEY (`ort_uid` )
+    REFERENCES `mydb`.`ort` (`uid` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -78,25 +132,45 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `mydb`.`bearbeitungsstatus`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`bearbeitungsstatus` ;
+
+CREATE  TABLE IF NOT EXISTS `mydb`.`bearbeitungsstatus` (
+  `uid` INT NOT NULL ,
+  `name` VARCHAR(45) NULL ,
+  PRIMARY KEY (`uid`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `mydb`.`kloster`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`kloster` ;
 
 CREATE  TABLE IF NOT EXISTS `mydb`.`kloster` (
   `uid` INT NOT NULL AUTO_INCREMENT ,
+  `kloster_id` INT NOT NULL ,
   `kloster` VARCHAR(255) NULL ,
   `patrozinium` VARCHAR(255) NULL ,
-  `status` VARCHAR(255) NULL ,
   `bemerkung` TEXT NULL ,
   `band_uid` INT NULL ,
   `band_seite` VARCHAR(45) NULL ,
   `text_gs_band` TEXT NULL ,
+  `bearbeitungsstatus_uid` INT NOT NULL ,
   PRIMARY KEY (`uid`) ,
   UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
   INDEX `fk_kloster_band1_idx` (`band_uid` ASC) ,
+  UNIQUE INDEX `kloster_id_UNIQUE` (`kloster_id` ASC) ,
+  INDEX `fk_kloster_bearbeitungsstatus1_idx` (`bearbeitungsstatus_uid` ASC) ,
   CONSTRAINT `fk_kloster_band1`
     FOREIGN KEY (`band_uid` )
     REFERENCES `mydb`.`band` (`uid` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_kloster_bearbeitungsstatus1`
+    FOREIGN KEY (`bearbeitungsstatus_uid` )
+    REFERENCES `mydb`.`bearbeitungsstatus` (`uid` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -213,52 +287,6 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`kloster_has_url` (
   CONSTRAINT `fk_kloster_has_url_url1`
     FOREIGN KEY (`uid_foreign` )
     REFERENCES `mydb`.`url` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`land`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`land` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`land` (
-  `uid` INT NOT NULL AUTO_INCREMENT ,
-  `land` VARCHAR(45) NULL ,
-  `ist_in_deutschland` TINYINT NULL ,
-  PRIMARY KEY (`uid`) ,
-  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) )
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`ort`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`ort` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`ort` (
-  `uid` INT NOT NULL AUTO_INCREMENT ,
-  `ort` VARCHAR(255) NULL ,
-  `gemeinde` VARCHAR(255) NULL ,
-  `kreis` VARCHAR(255) NULL ,
-  `land_uid` INT NULL ,
-  `wuestung` TINYINT NULL ,
-  `breite` FLOAT NULL ,
-  `laenge` FLOAT NULL ,
-  `bistum_uid` INT NULL ,
-  PRIMARY KEY (`uid`) ,
-  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
-  INDEX `fk_ort_bundesland1_idx` (`land_uid` ASC) ,
-  INDEX `fk_ort_bistum1_idx` (`bistum_uid` ASC) ,
-  CONSTRAINT `fk_ort_bundesland1`
-    FOREIGN KEY (`land_uid` )
-    REFERENCES `mydb`.`land` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_ort_bistum1`
-    FOREIGN KEY (`bistum_uid` )
-    REFERENCES `mydb`.`bistum` (`uid` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
