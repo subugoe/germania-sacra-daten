@@ -177,12 +177,13 @@ for values in cursor:
 	buchtitel = 'Germania Sacra ' + r['nummer'] + ': ' + r['titel']
 	if urls:
 		urls = urls.split('#')
-		for myURL in urls:
-			myURL = myURL.strip().strip('# ')
-			URLRelation = makeURLData(myURL, buchtitel, 'Dokument', uid)
-			if URLRelation:
-				key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
-				band_has_urlDict[key] = URLRelation
+		#for myURL in urls:
+		myURL = urls[0]
+		myURL = myURL.strip().strip('# ')
+		URLRelation = makeURLData(myURL, buchtitel, 'Dokument', uid)
+		if URLRelation:
+			key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
+			band_has_urlDict[key] = URLRelation
 	if row['handle']:
 		URLRelation = makeURLData(row['handle'].strip('#'), buchtitel, 'Handle', uid)
 		if URLRelation:
