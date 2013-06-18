@@ -1,21 +1,3 @@
-FEHLER: klosterStammblatt Datensatz ohne Klosternummer:
-{u'Auswahl': 0,
- u'Bearbeiter': 3,
- u'Bearbeitungsstand': None,
- u'Bemerkungen': None,
- u'Datensatz angelegt': None,
- u'Deleted': 0,
- u'GND': None,
- u'GSBandSeite': None,
- u'GermaniaSacraBandNr': None,
- u'Klostername': None,
- u'Klosternummer': None,
- u'Patrozinium': None,
- u'Status': None,
- u'TextGSBand': None,
- u'URN': None,
- u'Wikipedia': None}
-WARNUNG: ungültige Bearbeiter ID »None« in klosterStammblatt 47. Verwende: 1
 INFO: URL »http://d-nb.info/gnd/4683949-5« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4355884-7« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4355889-6« existiert bereits: doppelt nutzen.
@@ -44,7 +26,6 @@ INFO: URL »http://d-nb.info/gnd/4391709-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4391709-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/16277070-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4385833-8« existiert bereits: doppelt nutzen.
-WARNUNG: ungültiger Bearbeitungstatus »None« in klosterStammblatt 3129. Verwende: 0
 WARNUNG: orden_uid fehlt in: 
 {'bemerkung': u'Teileweise Tertiaren',
  'crdate': 1368741600,
@@ -91,9 +72,9 @@ WARNUNG: orden_uid fehlt in:
  'uid': 1726,
  'zeitraum_uid': 175}
 FEHLER: Feld »ID_Bistum« hat ungültigen Wert »73« in alleOrte 5421. Verwende: 1
-FEHLER: Feld »Klosternummer« leer in KlosterStandort 1561: auslassen
-FEHLER: Feld »ID_alleOrte« leer in KlosterStandort 1560: auslassen
-FEHLER: Feld »Klosternummer« leer in KlosterStandort 1560: auslassen
+FEHLER: Feld »ID_Bistum« hat ungültigen Wert »73« in alleOrte 46479153. Verwende: 1
+FEHLER: Feld »ID_Bistum« hat ungültigen Wert »73« in alleOrte 46479162. Verwende: 1
+FEHLER: Feld »ID_Bistum« hat ungültigen Wert »73« in alleOrte 46479182. Verwende: 1
 INFO: neues Buch »«
 INFO: neues Buch »Niedersächsisches Klosterbuch 1«
 INFO: neues Buch »STREICH, Klöster«
