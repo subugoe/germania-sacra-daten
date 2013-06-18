@@ -99,6 +99,10 @@
 		<field name="bemerkung_orden" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="kloster_orden_uid" type="int" indexed="true" stored="true" multiValued="true"/>
 
+		<field name="von" type="int" indexed="true" stored="true" multiValued="true"/>
+		<field name="bis" type="int" indexed="true" stored="true" multiValued="true"/>
+		<field name="jahr50" type="int" indexed="true" stored="true" multiValued="true"/>
+
 		<field name="orden_von_von" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="orden_von_bis" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="orden_von_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
@@ -179,16 +183,16 @@
 	<copyField source="gruender" dest="text"/>
 	<copyField source="literatur" dest="text"/>
 	<copyField source="gnd" dest="text"/>
-	<copyField source="geonames" dest="text"/>
+<!--	<copyField source="geonames" dest="text"/> -->
 	<copyField source="koordinaten" dest="text"/>
 	<copyField source="ort" dest="text"/>
 	<copyField source="gemeinde" dest="text"/>
 	<copyField source="kreis" dest="text"/>
 	<copyField source="land" dest="text"/>
 	<copyField source="bistum" dest="text"/>
-	<copyField source="kirchenprovinz" dest="text"/>
+<!--	<copyField source="kirchenprovinz" dest="text"/> -->
 	<copyField source="orden" dest="text"/>
-	<copyField source="ordo" dest="text"/>
+<!--	<copyField source="ordo" dest="text"/> -->
 	<copyField source="ordenstyp" dest="text"/>
 	<copyField source="person_name" dest="text"/>
 	<copyField source="person_namensalternativen_xml" dest="text"/>

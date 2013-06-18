@@ -64,10 +64,8 @@ def improveZeitraumVerbalForDocument (doc, prefix):
 				doc[prefix + "_verbal"] += '/' +  str(doc[prefix + "_bis"])
 
 
+
 def improveZeitraumForDocument (doc, prefix):
-	if not doc.has_key(prefix + "_jahr50"):
-		doc[prefix + "_jahr50"] = []
-		
 	if doc[prefix + "_von_von"]:
 		if not doc[prefix + "_von_bis"]:
 			doc[prefix + "_von_bis"] = doc[prefix + "_von_von"]
@@ -92,12 +90,20 @@ def improveZeitraumForDocument (doc, prefix):
 	bis = int(doc[prefix + "_bis_bis"])
 	improveZeitraumVerbalForDocument(doc, prefix + "_bis")
 	
+	# Jahr 50
+	jahr50 = {}
 	start = minYear
 	while start < maxYear:
 		if von < (start + 50) and start <= bis:
-			doc[prefix + "_jahr50"] += [start]
+			jahr50[start] = True
 		start += 50
-
+	doc[prefix + "_jahr50"] = jahr50.keys()
+	if not doc.has_key("jahr50"):
+		doc["jahr50"] = []
+	for j in jahr50:
+		if not j in doc["jahr50"]:
+			doc["jahr50"] += [j]
+	
 
 docs = []
 
@@ -105,7 +111,7 @@ docs = []
 # kloster
 queryKloster = """
 SELECT
-	kloster.uid AS sql_uid, kloster.kloster, kloster.patrozinium, kloster.bemerkung AS bemerkung_kloster,
+	kloster.uid AS sql_uid, kloster.kloster_id as kloster_id, kloster.kloster, kloster.patrozinium, kloster.bemerkung AS bemerkung_kloster,
 	kloster.text_gs_band, kloster.band_uid AS band_id, kloster.band_seite,
 	band.nummer AS band_nummer, band.titel AS band_titel
 FROM 
@@ -118,6 +124,9 @@ WHERE
 """
 cursor.execute(queryKloster)
 for values in cursor:
+	standorte = []
+	orden = []
+	
 	docKloster = dict(zip(cursor.column_names, values))
 	if not docKloster["band_id"]:
 		del docKloster["band_id"]
@@ -125,7 +134,7 @@ for values in cursor:
 		del docKloster["band_titel"]
 
 	docKloster["typ"] = "kloster"
-	docKloster["id"] = 'kloster-' + str(docKloster["sql_uid"])
+	docKloster["id"] = 'kloster-' + str(docKloster["kloster_id"])
 	docKloster["url"] = []
 	docKloster["url_bemerkung"] = []
 	docKloster["url_art"] = []
@@ -183,6 +192,9 @@ for values in cursor:
 				docKloster["gnd"] += [components[1]]
 			else:
 				print "keine GND URL: " + docURL["url"]
+
+	docOrdenStandort = copy.deepcopy(docKloster)
+
 	
 	literaturDict = {}
 	queryStandort = """
@@ -304,6 +316,7 @@ for values in cursor:
 		del doc2["standort_uid"]
 		doc2["typ"] = "kloster-standort"
 		docs += [doc2]
+		standorte += [copy.deepcopy(docStandort)]
 		
 		
 	queryOrden = """
@@ -340,6 +353,7 @@ for values in cursor:
 		del doc2["kloster_orden_uid"]
 		doc2["typ"] = "kloster-orden"
 		docs += [doc2]
+		orden += [copy.deepcopy(docOrden)]
 	
 	docKloster["literatur"] = literaturDict.keys()
 	
@@ -369,6 +383,37 @@ for values in cursor:
 		
 			mergeDocIntoDoc(person, docKloster)
 
+	# Standorte und Ordenszugehörigkeiten »ausmultiplizieren« und eigene Datensätze für die Kombinationen erzeugen
+	standortOrdenCount = 1
+	for myOrden in orden:
+		for myStandort in standorte:
+			if myOrden['orden_von_von'] < myStandort['standort_bis_bis'] \
+				and myStandort['standort_von_von'] < myOrden['orden_bis_bis']:
+				doc = copy.deepcopy(docOrdenStandort)
+				
+				# von/bis und Jahr 50
+				doc['von'] = max(myOrden['orden_von_von'], myStandort['standort_von_von'])
+				doc['bis'] = min(myOrden['orden_bis_bis'], myStandort['standort_bis_bis'])
+				doc['jahr50'] = []
+				start = minYear
+				while start < maxYear:
+					if doc['von'] < (start + 50) and start <= doc['bis']:
+						doc["jahr50"] += [start]
+					start += 50
+				
+				# Orden und Standort Felder
+				mergeDocIntoDoc(myOrden, doc)
+				mergeDocIntoDoc(myStandort, doc)
+				doc['literatur'] = literaturDict.keys()
+				
+				# Verwaltungsfelder
+				doc['typ'] = 'standort-orden'
+				doc['kloster_id'] = str(docKloster["id"])
+				doc['id'] = 'standort-orden-' + str(docKloster["kloster_id"]) + '-' + str(standortOrdenCount)
+				standortOrdenCount += 1
+				docs += [doc]
+	
+	
 
 # Replace None by empty strings
 for doc in docs:
