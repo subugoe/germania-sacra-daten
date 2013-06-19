@@ -193,7 +193,7 @@ for values in cursor:
 			else:
 				print "keine GND URL: " + docURL["url"]
 
-	docOrdenStandort = copy.deepcopy(docKloster)
+	docKlosterBasic = copy.deepcopy(docKloster)
 
 	
 	literaturDict = {}
@@ -392,16 +392,16 @@ for values in cursor:
 		for myStandort in standorte:
 			if myOrden['orden_von_von'] < myStandort['standort_bis_bis'] \
 				and myStandort['standort_von_von'] < myOrden['orden_bis_bis']:
-				doc = copy.deepcopy(docOrdenStandort)
+				doc = copy.deepcopy(docKlosterBasic)
 				
 				# von/bis und Jahr 50
-				doc['von'] = max(myOrden['orden_von_von'], myStandort['standort_von_von'])
-				doc['bis'] = min(myOrden['orden_bis_bis'], myStandort['standort_bis_bis'])
-				doc['jahr50'] = []
+				doc['orden_standort_von'] = max(myOrden['orden_von_von'], myStandort['standort_von_von'])
+				doc['orden_standort_bis'] = min(myOrden['orden_bis_bis'], myStandort['standort_bis_bis'])
+				doc['orden_standort_jahr50'] = []
 				start = minYear
 				while start < maxYear:
-					if doc['von'] < (start + 50) and start <= doc['bis']:
-						doc["jahr50"] += [start]
+					if doc['orden_standort_von'] < (start + 50) and start <= doc['orden_standort_bis']:
+						doc['orden_standort_jahr50'] += [start]
 					start += 50
 				
 				# Orden und Standort Felder
