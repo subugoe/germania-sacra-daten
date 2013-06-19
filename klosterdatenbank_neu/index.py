@@ -14,10 +14,6 @@ import pprint
 # benötigt das Modul Geohash (z.B. über easy_install)
 import Geohash
 
-import solr
-index = solr.Solr('http://localhost:8080/solr/germania-sacra')
-#index = solr.Solr('http://vlib.sub.uni-goettingen.de/solr/germania-sacra')
-
 import mysql.connector
 db = mysql.connector.connect(user='root', host='127.0.0.1', database='kloster')
 db2 = mysql.connector.connect(user='root', host='127.0.0.1', database='kloster')
@@ -428,8 +424,13 @@ for doc in docs:
 				
 
 #pprint.pprint(docs)
-
+import solr
+index = solr.Solr('http://localhost:8080/solr/germania-sacra')
 index.add_many(docs)
+
+index = solr.Solr('http://vlib.sub.uni-goettingen.de/solr/germania-sacra')
+index.add_many(docs)
+
 
 index.commit()
 
