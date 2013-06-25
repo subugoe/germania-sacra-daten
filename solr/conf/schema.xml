@@ -77,7 +77,7 @@
 		<field name="geohash" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="ort" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="ort_uid" type="int" indexed="true" stored="true" multiValued="true"/>
-		<field name="ort_sort" type="string" indexed="true" stored="true" multiValued="false"/>
+		<field name="ort_sort" type="text_general" indexed="true" stored="true" multiValued="false"/>
 		<field name="gemeinde" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="kreis" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="land" type="text_de" indexed="true" stored="true" multiValued="true"/>
