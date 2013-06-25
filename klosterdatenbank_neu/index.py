@@ -109,14 +109,17 @@ queryKloster = """
 SELECT
 	kloster.uid AS sql_uid, kloster.kloster_id as kloster_id, kloster.kloster, kloster.patrozinium, kloster.bemerkung AS bemerkung_kloster,
 	kloster.text_gs_band, kloster.band_uid AS band_id, kloster.band_seite,
-	band.nummer AS band_nummer, band.titel AS band_titel
+	band.nummer AS band_nummer, band.titel AS band_titel,
+	tx_gs_domain_model_bearbeitungsstatus.name as bearbeitungsstatus
 FROM 
 	tx_gs_domain_model_kloster AS kloster,
-	tx_gs_domain_model_band AS band
+	tx_gs_domain_model_band AS band,
+	tx_gs_domain_model_bearbeitungsstatus
 WHERE
-	band.uid = kloster.band_uid OR (kloster.band_uid IS NULL AND band.uid = 1)
-	
-
+	(band.uid = kloster.band_uid OR (kloster.band_uid IS NULL AND band.uid = 1)) AND
+	tx_gs_domain_model_bearbeitungsstatus.uid = kloster.bearbeitungsstatus_uid
+ORDER BY
+	sql_uid
 """
 cursor.execute(queryKloster)
 for values in cursor:

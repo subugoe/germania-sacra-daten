@@ -49,6 +49,7 @@
 		<field name="patrozinium" type="text_de" indexed="true" stored="true"/>
 		<field name="kloster" type="text_de" indexed="true" stored="true"/>
 		<field name="kloster_id" type="string" indexed="true" stored="true"/>
+		<field name="bearbeitungsstatus" type="string" indexed="true" stored="true" multiValued="false"/>
 		<field name="bemerkung_kloster" type="text_de" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="text_gs_band" type="text_de" indexed="true" stored="true" multiValued="true"/>
