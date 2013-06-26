@@ -254,7 +254,7 @@ for values in cursor:
 		# ohne bistum_uid sind die Felder zum Bistum Fake -> leeren
 		if not docStandort["bistum_uid"]:
 			docStandort["bistum_uid"] = -1
-			docStandort["bistum"] = ''
+			docStandort["bistum"] = 'nicht erfasst'
 			docStandort["kirchenprovinz"] = ''
 			docStandort["ist_erzbistum"] = ''
 		
