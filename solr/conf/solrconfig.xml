@@ -906,8 +906,8 @@
 					<str name="hl.bs.type">WORD</str>
 					<!-- language and country are used when constructing Locale object.  -->
 					<!-- And the Locale object will be used when getting instance of BreakIterator -->
-					<str name="hl.bs.language">en</str>
-					<str name="hl.bs.country">US</str>
+					<str name="hl.bs.language">de</str>
+					<str name="hl.bs.country">DE</str>
 				</lst>
 			</boundaryScanner>
 		</highlighting>
