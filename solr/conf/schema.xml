@@ -51,6 +51,8 @@
 		<field name="kloster_id" type="string" indexed="true" stored="true"/>
 		<field name="bearbeitungsstatus" type="string" indexed="true" stored="true" multiValued="false"/>
 		<field name="bemerkung_kloster" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="von" type="int" indexed="true" stored="true" multiValued="false"/>
+		<field name="bis" type="int" indexed="true" stored="true" multiValued="false"/>
 
 		<field name="text_gs_band" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_nummer" type="string" indexed="true" stored="true" multiValued="true"/>

@@ -362,8 +362,6 @@ for values in cursor:
 	if docKloster.has_key('ort') and len(docKloster['ort']) > 0:
 		docKloster['ort_sort'] = docKloster['ort'][0]
 	
-	docs += [docKloster]
-
 	# Informationen aus der Personendatenbank in den Index einfügen.
 	if personen.has_key(str(docKloster["sql_uid"])):
 		klosterPersonen = personen[str(docKloster["sql_uid"])]
@@ -414,6 +412,14 @@ for values in cursor:
 				standortOrdenCount += 1
 				docs += [doc]
 	
+	
+	# von und bis Felder hinzufügen
+	if docKloster.has_key('standort_von_von') and docKloster.has_key('orden_von_von'):
+		docKloster['von'] = min(docKloster['standort_von_von'] + docKloster['orden_von_von'])
+	if docKloster.has_key('standort_bis_bis') and docKloster.has_key('orden_bis_bis'):
+		docKloster['bis'] = min(docKloster['standort_bis_bis'] + docKloster['orden_bis_bis'])
+	
+	docs += [docKloster]
 	
 
 # Replace None by empty strings
