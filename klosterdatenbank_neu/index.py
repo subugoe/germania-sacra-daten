@@ -22,6 +22,8 @@ cursor = db.cursor()
 cursor2 = db2.cursor()
 cursor3 = db3.cursor()
 
+
+# Informationen aus der Personendatenbank als JSON lesen
 import json
 jsonFile = open('../Personendatenbank/export.json')
 personen = json.load(jsonFile)

@@ -50,13 +50,36 @@
 			$result = 0;
 		}
 
-		return $result;		
+		return $result;
 	}
 
 
+	$aemter = array();
+	$csvFile = fopen(dirname(__FILE__) . '/Ämter.csv', 'r');
+	while (($line = fgetcsv($csvFile, 1000, ",")) !== FALSE) {
+		if (count($line) === 2) {
+			$aemter[$line[0]] = $line[1];
+		}
+		else {
+			print "Zeile »" . str($line) . "« hat nicht 2 Spalten.";
+		}
+	}
+	fclose($csvFile);
+	
 	function klosterinfocompare ($a, $b) {
-		$aString = $a['person_bezeichnung'] . '-' . str_pad($a['person_von'], 4, '0') . '-' . str_pad($a['person_bis'], 4, '0') . '-' . $a['person_vorname'];
-		$bString = $b['person_bezeichnung'] . '-' . str_pad($b['person_von'], 4, '0') . '-' . str_pad($b['person_bis'], 4, '0') . '-' . $b['person_vorname'];
+		global $aemter;
+		
+		$aAmt = $a['person_bezeichnung'];
+		if (array_key_exists($aAmt, $aemter)) {
+			$aAmt = $aemter[$aAmt];
+		}
+		$bAmt = $b['person_bezeichnung'];
+		if (array_key_exists($bAmt, $aemter)) {
+			$bAmt = $aemter[$bAmt];
+		}
+
+		$aString = $aAmt . '-' . str_pad($a['person_von'], 4, '0') . '-' . str_pad($a['person_bis'], 4, '0') . '-' . $a['person_vorname'];
+		$bString = $bAmt . '-' . str_pad($b['person_von'], 4, '0') . '-' . str_pad($b['person_bis'], 4, '0') . '-' . $b['person_vorname'];
 		return strcmp($aString, $bString);
 	}
 
