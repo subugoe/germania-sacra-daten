@@ -3,8 +3,8 @@
 """
 Skript zur Indexierung der Germania Sacra Daten.
 Liest die Daten aus MySQL,
-denormalisiert sie in flache Solr Dokumente
-und spielt sie in einen Solr Index.
+denormalisiert sie in Solr Dokumente
+und spielt sie in Solr Index(e).
 
 2013 Sven-S. Porst, SUB Göttingen <porst@sub.uni-goettingen.de>
 """
@@ -431,22 +431,25 @@ for doc in docs:
 			for i, value in enumerate(item):
 				if value == None:
 					item[i] = ""
-				
-
-#pprint.pprint(docs)
-import solr
-index = solr.Solr('http://localhost:8080/solr/germania-sacra')
-index.add_many(docs)
-
-index = solr.Solr('http://vlib.sub.uni-goettingen.de/solr/germania-sacra')
-index.add_many(docs)
 
 
-index.commit()
 
+# MySQL Verbindungen schließen
 cursor3.close()
 cursor2.close()	
 cursor.close()
 db3.close()
 db2.close()
 db.close()
+
+
+#pprint.pprint(docs)
+# Indexieren
+import solr
+index = solr.Solr('http://localhost:8080/solr/germania-sacra')
+index.add_many(docs)
+index.commit()
+
+index = solr.Solr('http://vlib.sub.uni-goettingen.de/solr/germania-sacra')
+index.add_many(docs)
+index.commit()
