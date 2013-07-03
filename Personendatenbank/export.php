@@ -32,9 +32,10 @@
  */
 	$sqlServer = '127.0.0.1';
 	$sqlUsername = 'root';
+	$sqlPassword = '';
 	$sqlDatabase = 'personen';
 	
-	$sql = mysql_connect($sqlServer, $sqlUsername);
+	$sql = mysql_connect($sqlServer, $sqlUsername, $sqlPassword);
 	
 	function improveYear ($yearString) {
 		$matches = array();
