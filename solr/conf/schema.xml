@@ -136,6 +136,7 @@
 		<field name="person_namensalternativen_xml" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="person_anmerkung" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="person_bezeichnung" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="person_bezeichnung_plural" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="person_von_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="person_bis_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="person_von" type="int" indexed="true" stored="false" multiValued="true"/>
@@ -232,7 +233,6 @@
 	<!-- <copyField source="orden" dest="orden_facet"/> Ordensfacette wird (leicht anders) im Indexierungsskript gefüllt -->
 	<copyField source="bistum" dest="bistum_facet"/>
 	<copyField source="land" dest="land_facet"/>
-	<copyField source="person_bezeichnung" dest="person_bezeichnung_facet"/>
 	
 	<copyField source="kloster" dest="all_suggest"/>
 	<copyField source="ort" dest="all_suggest"/>

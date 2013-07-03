@@ -1,330 +1,313 @@
-Amtsbezeichnung,Sortierschlüssel
-Gegenpapst,10000
-Papst,10000
-Kardinal,10010
-Bischof,10020
-Erzbischof,10020
-Kardinal Bischof,10020
-Weihbischof,10020
-Chorbischof,10020
-Titularbischof,10020
-Abt,10100
-Äbtissin,10105
-Gegenäbtissin,10105
-Mater,10115
-Mutter,10115
-Speichermeister,10130
-Spitalmeister,10130
-Prior,10140
-Subprior,10140
-Priorin,10145
-Subpriorin,10145
-Unterpriorin,10145
-Dompropst,10150
-Propst,10150
-Stiftspropst,10150
-Pröpstin,10155
-Vizepropst,10157
-Dekan,10160
-Dechant,10160
-Domdechant,10160
-Domdekan,10160
-Stiftsdekan,10160
-Subdechant,10160
-Subdekan,10160
-Dechantin,10165
-Dekanin,10165
-Domscholaster,10170
-Scholaster,10170
-Scholasticus,10170
-Stiftsscholaster,10170
-Scholastica,10175
-Scholasterin,10175
-Kellner,10180
-Cellerar,10180
-Domkellner,10180
-Kellerar,10180
-Kellerer,10180
-Celleraria,10185
-Kellnersche,10185
-Kellerin,10185
-Kellermeisterin,10185
-Kellnerin,10185
-Domkämmerer,10190
-Kämmerer,10190
-Cameraria,10195
-Kustos,10200
-Custos,10200
-Domküster,10200
-Domkustos,10200
-Küster,10200
-Kustode,10200
-Stiftskustode,10200
-Küstersche,10205
-Küsterin,10205
-Kustorin,10205
-Domthesaurar,10210
-Thesaurar,10210
-Thesauraria,10215
-Cantor,10220
-Domkantor,10220
-Kantor,10220
-Stiftskantor,10220
-Kantorin,10225
-Guardian,10310
-Vizeguardian,10310
-Novizenmeister,10500
-Novizenmeisterin,10505
-Pförtner,10550
-Portarius,10550
-Pförtnerin,10555
-Portnerin,10555
-granarius,10560
-Infirmar,10570
-Infirmarius,10570
-Inhaber der Sonderkanonikate,10570
-Jahrzeitmeister,10570
-Kammerkleriker,10570
-Infirmarin,10575
-Pater,10950
-Domherr,11000
-Domkanoniker,11000
-Kanoniker,11000
-Regularkanoniker,11000
-Kanoniker (Kapitelsliste),11000
-Kanonisse,11005
-Kanonisse (?),11005
-Kanonikerin,11005
-Kanonikatsanwärter,11010
-Kanoniker (can. provisus),11010
-Kanonikeranwärter,11010
-Kanoniker-Bewerber,11010
-Mönch,11010
-Profeßmönch,11010
-Hospitalar,11010
-Tertian,11010
-Nonne,11015
-Klosterfrau,11015
-Bruder,11020
-Schwester,11025
-Domsenior,11030
-Senior,11030
-Senior des Domkapitels,11030
-Seniorin,11035
-Konverse,11050
-Konversen,11050
-Konversenmeister,11050
-Konversmönch,11050
-Laienbruder,11050
-Konversin,11055
-Laienschwester,11055
-Novizin,11065
-Konventuale,11070
-Konventualin,11075
-Benefiziat,12500
-Präbendat,12500
-Pfründner,12510
-Pfründnerin,12515
-presbiter,13010
-presbiterus,13010
-Presbyter,13010
-Priester,13010
-sacerdos,13010
-Archipresbyter,13010
-Sacerdotalkanoniker,13010
-Säkularpriester,13010
-Pastor,13020
-pastor parochialis,13020
-Pfarrer,13020
-Pleban,13020
-plebanus forensis ecclesia,13020
-vicepastor,13020
-Stadtpfarrer,13020
-Beichtvater,13030
-confessarius,13030
-Confessarius claustralis,13030
-Konventbeichtvater,13030
-Domprediger,13040
-Prediger,13040
-clericus,13070
-Archidiakon,13100
-Diakon,13110
-Diakonalkanoniker,13110
-subdiaconus,13120
-Subdiakonalkanoniker,13120
-capellanus,13140
-capellanus abbatiae,13140
-capellanus abbatisae,13140
-capellanus abbatissae,13140
-Kaplan,13140
-Kaplan des Abtes,13140
-Kaplan der Äbtissin,13145
-Sakristan,13150
-sacellanus,13160
-Regens,13230
-Regens Chori,13230
-vicarius,13300
-Vikar,13300
-Domvikar,13300
-Pfarrvikar,13300
-curatus,13310
-vicecuratus,13310
-rector,13320
-rector altaris,13320
-rector ecclesiae,13320
-Rektor,13320
-Provisor,13330
-Altarist,13350
-Primissarius,13370
-Administrator,15000
-Generalvikar,15050
-Offizial,15100
-Offiziant,15100
-Prokurator,15300
-Bischöflicher Notar,15310
-päpstlicher Nuntius,15340
-commissarius,15360
-Secretarius,15550
-Sekretär des Konvents,15550
-Syndikus,15560
-Bischöflicher Schreiber,15600
-Schreiber,15600
-Schreiberin,15605
-Siegler,15610
-cancellarius,15700
-Kanzler,15700
-Vizekanzler,15700
-Bursar,16110
-Bursner,16110
-Dombursar,16110
-Professor,50110
-rector scolarium,50130
-Schulmeister,50130
-Schulmeisterin,50135
-Lektor,50190
-Bibliothekar,50200
-Archivar,50220
-oeconomus,52200
-Küchenmeister,52300
-Küchenmeisterin,52305
-Organist,52430
-Organistin,52435
-Baumeister,52500
-Verwalter,70100
-Graf,70150
-Gräfin,70151
-Gräfin zu Salm,70151
-Vogt,70300
-Amtmann,70400
-Amtjungfer,70405
-Schultheiß,70450
-Hofmeister,70500
-Rentmeister,70620
-dt. König,75000
-Kaiser,75000
-König,75000
-Kaiserin,75005
-Königin,75005
-Concionator,80100
-Präsenzmeister,80300
-Archivrat,90000
-Beamter,90000
-Bistumsarchivar,90000
-Deutschordenskomtur,90000
-Ehrenstiftsdame,90000
-Erbhofmarschall,90000
-Generalsuperintendent,90000
-Herzog,90000
-Herzogin,90000
-Holzvogt,90000
-Jungherzog,90000
-Klosterschüler,90000
-Konrektor,90000
-Kurfürst,90000
-Markgraf,90000
-Markgräfin,90000
-Pfortenamtsschreiber,90000
-Psaltersche,90000
-rector parochialis,90000
-Templier,90000
-Vikar-Bewerber,90000
-Wild- u. Rheingräfin,90000
-Apothekerin,90000
-Brauereiinspektor,90000
-Bursiererin,90000
-Chorregent,90000
-Chorschwester,90000
-Commendatarius,90000
-Depositarius,90000
-Director fratrum,90000
-Direktoren der Hofkammer,90000
-Dompropsteiverwalter,90000
-Donat,90000
-Donate,90000
-Elemosinar,90000
-Elemosynar,90000
-Emigrant,90000
-Exulant,90000
-Fabrikmeister,90000
-Finanzverwalter,90000
-Fischereiverwalter,90000
-Fürstbischöflicher Archivar,90000
-Fürstbischöflicher Sekretär,90000
-Gartenmeister,90000
-Gastmeister,90000
-Gastmeisterin,90000
-Gastpater,90000
-Geheimer Sekretär,90000
-Gerichtsassessor,90000
-Hausmeister,90000
-Holzherr,90000
-Holzschaffer,90000
-Hospitalsmeister,90000
-Hospites,90000
-Kanzleiangehöriger,90000
-Kanzleidirektor,90000
-Kapellane der Bischöfe,90000
-Kastner,90000
-Kastnerin,90000
-Katechet,90000
-Kleidermeisterschen,90000
-Konviktsregens,90000
-Kooperator,90000
-Kornmeister,90000
-Kornschreiber,90000
-Kostgängerin,90000
-Krankenmeister,90000
-Krankenwartin,90000
-Kuchlmeister,90000
-Landrentmeister,90000
-magister noviciorum,90000
-Magistri tumbae,90000
-Moderator clericorum,90000
-Monitor conventus,90000
-Notarius apostolicus,90000
-Oblatin,90000
-Obleier,90000
-organoedus,90000
-Pfarrektor,90000
-Pfennigmeister,90000
-Pitanzer,90000
-Pitanzerin,90000
-Pitanziar,90000
-praefectus culinae,90000
-Praefectus Seminarii,90000
-Präsident der Hofkammer,90000
-Präsident des Geheimen Rates,90000
-Präsident und Verwalter des Weltlichen Hofgerichtes,90000
-Refectorarius,90000
-Refektorare,90000
-Siechenmeister,90000
-Siechenmeisterin,90000
-Spindarius,90000
-Stiftsbäcker,90000
-Subseniorin,90000
-Vicedomini,90000
-Viztum,90000
-Waldmeister,90000
-Waldpräfekt,90000
-Weinkellerin,90000
-Wohltäter,90000
+Amtsbezeichnung,Amtsbezeichnung Plural,Sortierschlüssel
+Gegenpapst,Gegenpäpste,10000
+Papst,Päpste,10000
+Kardinal,Kardinäle,10010
+Bischof,Bischöfe,10020
+Erzbischof,Erzbischöfe,10020
+Kardinalbischof,Kardinalbischöfe,10020
+Weihbischof,Weihbischöfe,10020
+Chorbischof,Chorbischöfe,10020
+Titularbischof,Titularbischöfe,10020
+Abt,Äbte,10100
+Äbtissin,Äbtissinnen,10105
+Gegenäbtissin,Gegenäbtissinnen,10105
+Mater,Matres,10115
+Mutter,Mütter,10115
+Speichermeister,Speichermeister,10130
+Spitalmeister,Spitalmeister,10130
+Prior,Prioren,10140
+Subprior,Subprioren,10140
+Priorin,Priorinnen,10145
+Subpriorin,Subpriorinnen,10145
+Unterpriorin,Unterpriorinnen,10145
+Dompropst,Dompröpste,10150
+Propst,Pröpste,10150
+Stiftspropst,Stiftspröpste,10150
+Pröpstin,Pröpstinnen,10155
+Vizepropst,Vizepröpste,10157
+Dekan,Dekane,10160
+Dechant,Dechanten,10160
+Domdechant,Domdechanten,10160
+Domdekan,Domdekane,10160
+Stiftsdekan,Stiftsdekane,10160
+Subdechant,Subdechanten,10160
+Subdekan,Subdekane,10160
+Dechantin,Dechantinnen,10165
+Dekanin,Dekaninnen,10165
+Domscholaster,Domscholaster,10170
+Scholaster,Scholaster,10170
+Scholasticus,Scholastici,10170
+Stiftsscholaster,Stiftsscholaster,10170
+Scholastica,Scholasticae,10175
+Scholasterin,Scholasterinnen,10175
+Kellner,Kellner,10180
+Cellerar,Cellerari,10180
+Domkellner,Domkellner,10180
+Kellerar,Kellerare,10180
+Kellerer,Kellerer,10180
+Celleraria,Cellerariae,10185
+Kellnersche,Kellnerschen,10185
+Kellerin,Kellerinnen,10185
+Kellermeisterin,Kellermeisterinnen,10185
+Kellnerin,Kellnerinnen,10185
+Domkämmerer,Domkämmerer,10190
+Kämmerer,Kämmerer,10190
+Cameraria,Camerariae,10195
+Kustos,Kustoden,10200
+Custos,Custodes,10200
+Domküster,Domküster,10200
+Domkustos,Domkustoden,10200
+Küster,Küster,10200
+Kustode,Kustoden,10200
+Stiftskustode,Stiftskustoden,10200
+Küstersche,Küsterschen,10205
+Küsterin,Küsterinnen,10205
+Kustorin,Kustorinnen,10205
+Domthesaurar,Domthesaurare,10210
+Thesaurar,Thesaurare,10210
+Thesauraria,Thesaurariae,10215
+Cantor,Cantores,10220
+Domkantor,Domkantoren,10220
+Kantor,Kantoren,10220
+Stiftskantor,Stiftskantoren,10220
+Kantorin,Kantorinnen,10225
+Guardian,Guardiane,10310
+Vizeguardian,Vizeguardiane,10310
+Novizenmeister,Novizenmeister,10500
+Novizenmeisterin,Novizenmeisterinnen,10505
+Pförtner,Pförtner,10550
+Portarius,Portarii,10550
+Pförtnerin,Pförtnerinnen,10555
+Portnerin,Portnerinnen,10555
+granarius,granarii,10560
+Infirmar,Infirmare,10570
+Infirmarius,Infirmarii,10570
+Inhaber der Sonderkanonikate,Inhaber der Sonderkanonikate,10570
+Jahrzeitmeister,Jahrzeitmeister,10570
+Kammerkleriker,Kammerkleriker,10570
+Infirmarin,Infirmarinnen,10575
+Pater,Patres,10950
+Domherr,Domherren,11000
+Domkanoniker,Domkanoniker,11000
+Kanoniker,Kanoniker,11000
+Regularkanoniker,Regularkanoniker,11000
+Kanoniker (Kapitelsliste),Kanoniker (Kapitelsliste),11000
+Kanonisse,Kanonissen,11005
+Kanonisse (?),Kanonissen,11005
+Kanonikerin,Kanonikerinnen,11005
+Kanonikatsanwärter,Kanonikatsanwärter,11010
+Kanoniker (can. provisus),Kanoniker,11010
+Kanonikeranwärter,Kanonikeranwärter,11010
+Kanoniker-Bewerber,Kanoniker-Bewerber,11010
+Mönch,Mönche,11010
+Profeßmönch,Professmönche,11010
+Hospitalar,Hospitalare,11010
+Tertian,Tertiane,11010
+Nonne,Nonnen,11015
+Klosterfrau,Klosterfrauen,11015
+Bruder,Brüder,11020
+Schwester,Schwestern,11025
+Domsenior,Domsenioren,11030
+Senior,Senioren,11030
+Senior des Domkapitels,Senioren des Domkapitels,11030
+Seniorin,Seniorinnen,11035
+Konverse,Konversen,11050
+Konversenmeister,Konversenmeister,11050
+Konversmönch,Konversmönche,11050
+Laienbruder,Laienbrüder,11050
+Konversin,Konversinnen,11055
+Laienschwester,Laienschwestern,11055
+Novizin,Novizinnen,11065
+Konventuale,Konventualen,11070
+Konventualin,Konventualinnen,11075
+Benefiziat,Benefiziaten,12500
+Präbendat,Präbendaten,12500
+Pfründner,Pfründner,12510
+Pfründnerin,Pfründnerinnen,12515
+presbiter,Presbyter/Presbyteri,13010
+presbiterus,Presbyter/Presbyteri,13010
+Presbyter,Presbyter/Presbyteri,13010
+Priester,Priester,13010
+sacerdos,sacerdotes,13010
+Archipresbyter,Archipresbyteri,13010
+Sacerdotalkanoniker,Sacerdotalkanoniker,13010
+Säkularpriester,Säkularpriester,13010
+Pastor,Pastoren,13020
+Pfarrer,Pfarrer,13020
+Pleban,Plebane,13020
+vicepastor,vicepastores,13020
+Stadtpfarrer,Stadtpfarrer,13020
+Beichtvater,Beichtväter,13030
+confessarius,confessarii,13030
+Konventbeichtvater,Konventbeichtväter,13030
+Domprediger,Domprediger,13040
+Prediger,Prediger,13040
+clericus,clerici,13070
+Archidiakon,Archidiakone,13100
+Diakon,Diakone,13110
+Diakonalkanoniker,Diakonalkanoniker,13110
+subdiaconus,subdiaconi,13120
+Subdiakonalkanoniker,Subdiakonalkanoniker,13120
+capellanus,capellani,13140
+capellanus abbatiae,capellani abbatiae,13140
+capellanus abbatisae,capellani abbatiae,13140
+capellanus abbatissae,capellani abbatiae,13140
+Kaplan,Kapläne,13140
+Kaplan des Abtes,Kapläne des Abtes,13140
+Kaplan der Äbtissin,Kapläne der Äbtissin,13145
+Sakristan,Sakristane,13150
+sacellanus,sacellani,13160
+Regens,Regentes,13230
+Regens Chori,Regentes Chori,13230
+vicarius,vicarii,13300
+Vikar,Vikare,13300
+Domvikar,Domvikare,13300
+Pfarrvikar,Pfarrvikare,13300
+curatus,curati,13310
+vicecuratus,vicecurati,13310
+rector,rectores,13320
+rector altaris,rectores altaris,13320
+rector ecclesiae,rectores ecclesiae,13320
+Rektor,Rektoren,13320
+Provisor,Provisoren,13330
+Templier,Templier,13330
+Altarist,Altaristen,13350
+Primissarius,Primissarii,13370
+Administrator,Administratoren,15000
+Generalvikar,Generalvikare,15050
+Offizial,Offiziale,15100
+Offiziant,Offizianten,15100
+Prokurator,Prokuratoren,15300
+Bischöflicher Notar,Bischöfliche Notare,15310
+päpstlicher Nuntius,päpstliche Nuntien,15340
+commissarius,commissarii,15360
+Secretarius,Secretarii,15550
+Sekretär des Konvents,Sekretäre des Konvents,15550
+Syndikus,Syndizi/Syndikusse,15560
+Bischöflicher Schreiber,Bischöfliche Schreiber,15600
+Schreiber,Schreiber,15600
+Schreiberin,Schreiberinnen,15605
+Siegler,Siegler,15610
+cancellarius,cancellarii,15700
+Kanzler,Kanzler,15700
+Vizekanzler,Vizekanzler,15700
+Bursar,Bursare,16110
+Bursner,Bursner,16110
+Dombursar,Dombursare,16110
+Bursiererin,Bursiererinnen,16115
+Professor,Professoren,50110
+rector scolarium,rectores scolarium,50130
+Schulmeister,Schulmeister,50130
+Schulmeisterin,Schulmeisterinnen,50135
+Lektor,Lektoren,50190
+Bibliothekar,Bibliothekare,50200
+Archivar,Archivare,50220
+Küchenmeister,Küchenmeister,52300
+Küchenmeisterin,Küchenmeisterinnen,52305
+Organist,Organisten,52430
+Organistin,Organistinnen,52435
+Baumeister,Baumeister,52500
+Verwalter,Verwalter,70100
+Graf,Grafen,70150
+Gräfin,Gräfinnen,70155
+Gräfin zu Salm,Gräfinnen zu Salm,70155
+Vogt,Vögte,70300
+Amtmann,Amtmänner,70400
+Amtjungfer,Amtjungfern,70405
+Schultheiß,Schultheißen,70450
+Hofmeister,Hofmeister,70500
+Rentmeister,Rentmeister,70620
+dt. König,dt. Könige,75000
+Kaiser,Kaiser,75000
+König,Könige,75000
+Kaiserin,Kaiserinnen,75005
+Königin,Königinnen,75005
+Concionator,Concionatores,80100
+Präsenzmeister,Präsenzmeister,80300
+Archivrat,Archivräte,90000
+Beamter,Beamten,90000
+Bistumsarchivar,Bistumsarchivare,90000
+Deutschordenskomtur,Deutschordenskomture,90000
+Ehrenstiftsdame,Ehrenstiftsdamen,90000
+Erbhofmarschall,Erbhofmarschälle,90000
+Generalsuperintendent,Generalsuperintendenten,90000
+Herzog,Herzöge,90000
+Herzogin,Herzoginnen,90000
+Holzvogt,Holzvögte,90000
+Jungherzog,Jungherzöge,90000
+Klosterschüler,Klosterschüler,90000
+Konrektor,Konrektoren,90000
+Kurfürst,Kurfürsten,90000
+Markgraf,Markgrafen,90000
+Markgräfin,Markgräfinnen,90000
+Pfortenamtsschreiber,Pfortenamtsschreiber,90000
+Psaltersche,Psalterschen,90000
+rector parochialis,rectores parochialis,90000
+Vikar-Bewerber,Vikar-Bewerber,90000
+Wild- u. Rheingräfin,Wild- und Rheingräfinnen,90000
+Apothekerin,Apothekerinnen,90000
+Brauereiinspektor,Brauereiinspektoren,90000
+Chorregent,Chorregenten,90000
+Chorschwester,Chorschwestern,90000
+Commendatarius,Commendatarii,90000
+Depositarius,Depositarii,90000
+Director fratrum,Directores fratrum,90000
+Direktoren der Hofkammer,Direktoren der Hofkammer,90000
+Dompropsteiverwalter,Dompropsteiverwalter,90000
+Donat,Donaten,90000
+Donate,Donaten,90000
+Elemosinar,Elemosinare,90000
+Elemosynar,Elemosynare,90000
+Emigrant,Emigranten,90000
+Exulant,Exulanten,90000
+Fabrikmeister,Fabrikmeister,90000
+Finanzverwalter,Finanzverwalter,90000
+Fischereiverwalter,Fischereiverwalter,90000
+Fürstbischöflicher Archivar,Fürstbischöfliche Archivare,90000
+Fürstbischöflicher Sekretär,Fürstbischöfliche Sekretäre,90000
+Gartenmeister,Gartenmeister,90000
+Gastmeister,Gastmeister,90000
+Gastmeisterin,Gastmeisterinnen,90000
+Gastpater,Gastpater/Gastpatres,90000
+Geheimer Sekretär,Geheime Sekretäre,90000
+Gerichtsassessor,Gerichtsassessoren,90000
+Hausmeister,Hausmeister,90000
+Holzherr,Holzherren,90000
+Holzschaffer,Holzschaffer,90000
+Hospitalsmeister,Hospitalsmeister,90000
+Kanzleiangehöriger,Kanzleiangehörige,90000
+Kanzleidirektor,Kanzleidirektoren,90000
+Kastner,Kastner,90000
+Kastnerin,Kastnerinnen,90000
+Katechet,Katecheten,90000
+Konviktsregens,Konviktsregentes,90000
+Kooperator,Kooperatoren,90000
+Kornmeister,Kornmeister,90000
+Kornschreiber,Kornschreiber,90000
+Kostgängerin,Kostgängerinnen,90000
+Krankenmeister,Krankenmeister,90000
+Krankenwartin,Krankenwartinnen,90000
+Kuchlmeister,Kuchlmeister,90000
+Landrentmeister,Landrentmeister,90000
+magister noviciorum,magistri noviciorum,90000
+Moderator clericorum,Moderatores clericorum,90000
+Oblatin,Oblatinnen,90000
+Obleier,Obleier,90000
+Pfarrektor,(Pfarrrektor) Pfarrrektoren,90000
+Pfennigmeister,Pfennigmeister,90000
+Praefectus Seminarii,Praefecti Seminarii,90000
+Präsident der Hofkammer,Präsidenten der Hofkammer,90000
+Präsident des Geheimen Rates,Präsidenten des Geheimen Rates,90000
+Präsident und Verwalter des Weltlichen Hofgerichtes,Präsidenten und Verwalter des Weltlichen Hofgerichtes ,90000
+Refectorarius,Refectorarii,90000
+Siechenmeister,Siechenmeister,90000
+Siechenmeisterin,Siechenmeisterinnen,90000
+Spindarius,Spindarii,90000
+Stiftsbäcker,Stiftsbäcker,90000
+Subseniorin,Subseniorinnen,90000
+Vicedominus,Vicedomini,90000
+Viztum,Viztume,90000
+Waldmeister,Waldmeister,90000
+Waldpräfekt,Waldpräfekten,90000
+Weinkellerin,Weinkellerinnen,90000
+Wohltäter,Wohltäter,90000

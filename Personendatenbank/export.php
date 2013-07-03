@@ -1,21 +1,35 @@
 #!/usr/bin/env php -f
-# Skript zum Export der relevanten Personendaten aus der Personendatenbank
-# zur Anreicherung des Indexed der Klosterdatenbank.
-# 
-# Exportiert werden Daten zu Ämtern, die mit einer Klosternummer versehen sind.
-# Die Daten sind ein JSON Objekt der Form:
-# {
-#	KLOSTERNUMMER: [
-#		{ PERSONENINFORMATIONEN }, 
-#		…
-#	],
-#	…
-# }
-# das in die Datei »export.json« geschrieben wird.
-#
-# 2013 Sven-S. Porst, SUB Göttingen (porst@sub.uni-goettingen.de)
-#
 <?php
+/**
+ * Skript zum Export der relevanten Personendaten aus der Personendatenbank
+ * zur Anreicherung des Indexed der Klosterdatenbank.
+ * 
+ * Exportiert werden Daten zu Ämtern, die mit einer Klosternummer versehen sind.
+ * Die Daten sind ein JSON Objekt der Form:
+ * {
+ *	KLOSTERNUMMER: [
+ *		{ PERSONENINFORMATION },
+ *		…
+ *	],
+ *	…
+ * }
+ * das in die Datei »export.json« geschrieben wird.
+ * Hierbei ist { PERSONENINFORMATION } ein JSON Objekt mit den Feldern:
+ *  * person_vorname
+ *  * person_name
+ *  * person_namensalternativen
+ *  * person_gso
+ *  * person_gnd
+ *  * person_bezeichnung
+ *  * person_bezeichnung_plural
+ *  * person_anmerkung
+ *  * person_von_verbal
+ *  * person_von
+ *  * person_bis_verbal
+ *  * person_bis
+ *
+ * 2013 Sven-S. Porst, SUB Göttingen (porst@sub.uni-goettingen.de)
+ */
 	$sqlServer = '127.0.0.1';
 	$sqlUsername = 'root';
 	$sqlDatabase = 'personen';
@@ -56,12 +70,12 @@
 
 	$aemter = array();
 	$csvFile = fopen(dirname(__FILE__) . '/Ämter.csv', 'r');
-	while (($line = fgetcsv($csvFile, 1000, ",")) !== FALSE) {
-		if (count($line) === 2) {
-			$aemter[$line[0]] = $line[1];
+	while (($line = fgetcsv($csvFile, 1000, ',')) !== FALSE) {
+		if (count($line) === 3) {
+			$aemter[$line[0]] = array('plural' => $line[1], 'sortierung' => $line[2]);
 		}
 		else {
-			print "Zeile »" . str($line) . "« hat nicht 2 Spalten.";
+			print 'FEHLER: Zeile »' . str($line) . '« hat nicht 3 Spalten.';
 		}
 	}
 	fclose($csvFile);
@@ -71,11 +85,11 @@
 		
 		$aAmt = $a['person_bezeichnung'];
 		if (array_key_exists($aAmt, $aemter)) {
-			$aAmt = $aemter[$aAmt] . '-' . $aAmt;
+			$aAmt = $aemter[$aAmt]['sortierung'] . '-' . $aAmt;
 		}
 		$bAmt = $b['person_bezeichnung'];
 		if (array_key_exists($bAmt, $aemter)) {
-			$bAmt = $aemter[$bAmt] . '-' . $bAmt;
+			$bAmt = $aemter[$bAmt]['sortierung'] . '-' . $bAmt;
 		}
 
 		$aString = $aAmt . '-' . str_pad($a['person_von'], 4, '0') . '-' . str_pad($a['person_bis'], 4, '0') . '-' . $a['person_vorname'];
@@ -137,11 +151,14 @@ ORDER BY
 					else {
 						$personeninfo['person_gnd'] = '';
 					}
-		
-					// $personeninfo['person_office_id'] = $row['office_id'];
-					$personeninfo['person_bezeichnung'] = $row['bezeichnung'];
-					$personeninfo['person_anmerkung'] = $row['anmerkung'];
 
+					$job = $row['bezeichnung'];
+					$personeninfo['person_bezeichnung'] = $job;
+					$personeninfo['person_bezeichnung_plural'] = $job;
+					if (array_key_exists($job, $aemter)) {
+						$personeninfo['person_bezeichnung_plural'] = $aemter[$job]['plural'];
+					}
+					$personeninfo['person_anmerkung'] = $row['anmerkung'];
 					$personeninfo['person_von_verbal'] = $row['von'];
 					$personeninfo['person_von'] = improveYear($row['von']);
 					$personeninfo['person_bis_verbal'] = $row['bis'];
