@@ -71,11 +71,11 @@
 		
 		$aAmt = $a['person_bezeichnung'];
 		if (array_key_exists($aAmt, $aemter)) {
-			$aAmt = $aemter[$aAmt];
+			$aAmt = $aemter[$aAmt] . '-' . $aAmt;
 		}
 		$bAmt = $b['person_bezeichnung'];
 		if (array_key_exists($bAmt, $aemter)) {
-			$bAmt = $aemter[$bAmt];
+			$bAmt = $aemter[$bAmt] . '-' . $bAmt;
 		}
 
 		$aString = $aAmt . '-' . str_pad($a['person_von'], 4, '0') . '-' . str_pad($a['person_bis'], 4, '0') . '-' . $a['person_vorname'];
