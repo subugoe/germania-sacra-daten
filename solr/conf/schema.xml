@@ -60,6 +60,7 @@
 		<field name="band_titel" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_id" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_url" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="band_url_seitengenau" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="status" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="gruender" type="text_de" indexed="true" stored="true" multiValued="true"/>
 

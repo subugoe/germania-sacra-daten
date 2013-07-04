@@ -160,13 +160,10 @@ for values in cursor:
 		cursor2.execute(queryBandURL, [str(docKloster["band_id"])])
 		for values2 in cursor2:
 			docURL = dict(zip(cursor2.column_names, values2))
-			"""
-			docKloster["url"] += [docURL["url"]]
-			docKloster["url_bemerkung"] += [docURL["bemerkung"]]
-			docKloster["url_art"] += [docURL["art"]]
-			docKloster["url_relation"] += ["band"]
-			"""
-			docKloster["band_url"] = [docURL["url"]]
+			if docURL["art"] == 'Dokument':
+				docKloster["band_url"] = [docURL["url"]]
+			elif docURL["art"] == 'Findpage':
+				docKloster["band_url_seitengenau"] = [docURL["url"]]
 	
 	queryKlosterURL = """
 	SELECT
