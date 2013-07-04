@@ -457,9 +457,11 @@ db.close()
 # Indexieren
 import solr
 index = solr.Solr('http://localhost:8080/solr/germania-sacra')
+index.delete_query('*:*')
 index.add_many(docs)
 index.commit()
 
 index = solr.Solr('http://vlib.sub.uni-goettingen.de/solr/germania-sacra')
+index.delete_query('*:*')
 index.add_many(docs)
 index.commit()
