@@ -39,6 +39,9 @@ maxYear = 2050
 def addValueForKeyToDict (value, key, myDict):
 	if not myDict.has_key(key):
 		myDict[key] = []
+	insertValue = value
+	if value == None:
+		insertValue = ''
 	myDict[key] += [value]
 
 
@@ -279,6 +282,7 @@ for values in cursor:
 		cursor3.execute(queryOrtURL, [str(docStandort["ort_uid"])])
 		for values3 in cursor3:
 			docURL = dict(zip(cursor3.column_names, values3))
+			docURL["geonames"] = []
 			if docURL["url_art"] == "Geonames":
 				docURL["geonames"] += [docURL["url"].split("geonames.org/")[1]]
 			mergeDocIntoDoc(docURL, docStandort)
@@ -323,8 +327,8 @@ for values in cursor:
 	queryOrden = """
 	SELECT
 		kloster_orden.uid AS kloster_orden_uid, kloster_orden.status, kloster_orden.bemerkung AS bemerkung_orden,
-		orden.orden, orden.ordo, orden.symbol,
-		ordenstyp.ordenstyp,
+		orden.orden, orden.ordo AS orden_ordo, orden.symbol AS orden_symbol, orden.graphik AS orden_graphik,
+		ordenstyp.ordenstyp AS orden_typ,
 		zeitraum.uid AS zeitraum_uid, zeitraum.von_von AS orden_von_von, zeitraum.von_bis AS orden_von_bis, zeitraum.von_verbal AS orden_von_verbal, zeitraum.bis_von AS orden_bis_von, zeitraum.bis_bis AS orden_bis_bis, zeitraum.bis_verbal AS orden_bis_verbal
 	FROM
 		tx_gs_domain_model_kloster_orden AS kloster_orden,

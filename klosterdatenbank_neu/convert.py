@@ -189,6 +189,11 @@ for values in cursor:
 		if URLRelation:
 			key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
 			band_has_urlDict[key] = URLRelation
+	if row['findpage']:
+		URLRelation = makeURLData(row['findpage'].strip('#').split('#')[0].strip('/'), buchtitel, 'Findpage', uid)
+		if URLRelation:
+			key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
+			band_has_urlDict[key] = URLRelation
 
 
 # Kloster Stammblatt
@@ -274,11 +279,15 @@ orden = []
 ordenstypDict = {}
 for values in cursor:
 	row = dict(zip(cursor.column_names, values))
+	graphik = None
+	if row['Grafikdatei']:
+		graphik = row['Grafikdatei'].split('.png')[0]
 	r = {
 		'uid': row['ID_Ordo'],
 		'orden': row['Ordensbezeichnung'],
 		'ordo': row['Ordo'],
-		'symbol': row['Symbol']
+		'symbol': row['Symbol'],
+		'graphik': graphik
 	}
 
 	ordenstyp = row['Geschlecht']

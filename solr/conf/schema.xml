@@ -96,16 +96,16 @@
 		<field name="ist_erzbistum" type="boolean" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="orden" type="text_de" indexed="true" stored="true" multiValued="true"/>
-		<field name="ordo" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="symbol" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="ordenstyp" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="orden_graphik" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="orden_ordo" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="orden_symbol" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="orden_typ" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="bemerkung_orden" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="kloster_orden_uid" type="int" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="orden_standort_von" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="orden_standort_bis" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="orden_standort_jahr50" type="int" indexed="true" stored="true" multiValued="true"/>
-		<field name="jahr50" type="int" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="orden_von_von" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="orden_von_bis" type="int" indexed="true" stored="true" multiValued="true"/>
@@ -121,6 +121,8 @@
 		<field name="standort_bis_bis" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="standort_bis_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="standort_jahr50" type="int" indexed="true" stored="false" multiValued="true"/>
+
+		<field name="jahr50" type="int" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="zeitraum_von_von" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="zeitraum_von_bis" type="int" indexed="true" stored="true" multiValued="true"/>
@@ -197,8 +199,8 @@
 	<copyField source="bistum" dest="text"/>
 <!--	<copyField source="kirchenprovinz" dest="text"/> -->
 	<copyField source="orden" dest="text"/>
-<!--	<copyField source="ordo" dest="text"/> -->
-	<copyField source="ordenstyp" dest="text"/>
+<!--	<copyField source="orden_ordo" dest="text"/> -->
+	<copyField source="orden_typ" dest="text"/>
 	<copyField source="person_name" dest="text"/>
 	<copyField source="person_namensalternativen_xml" dest="text"/>
 	<copyField source="person_bezeichnung" dest="text"/>
