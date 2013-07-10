@@ -34,7 +34,7 @@
 	$sqlUsername = 'root';
 	$sqlPassword = '';
 	$sqlDatabase = 'personen';
-	
+
 	$sql = mysql_connect($sqlServer, $sqlUsername, $sqlPassword);
 	
 	function improveYear ($yearString) {
@@ -70,16 +70,22 @@
 
 
 	$aemter = array();
-	$csvFile = fopen(dirname(__FILE__) . '/Ämter.csv', 'r');
-	while (($line = fgetcsv($csvFile, 1000, ',')) !== FALSE) {
-		if (count($line) === 3) {
-			$aemter[$line[0]] = array('plural' => $line[1], 'sortierung' => $line[2]);
+	$csvFileName = dirname(__FILE__) . '/Aemter.csv';
+	$csvFile = fopen($csvFileName, 'r');
+	if ($csvFile) {
+		while (($line = fgetcsv($csvFile, 1000, ',')) !== FALSE) {
+			if (count($line) === 3) {
+				$aemter[$line[0]] = array('plural' => $line[1], 'sortierung' => $line[2]);
+			}
+			else {
+				print 'FEHLER: Zeile »' . str($line) . '« hat nicht 3 Spalten.';
+			}
 		}
-		else {
-			print 'FEHLER: Zeile »' . str($line) . '« hat nicht 3 Spalten.';
-		}
+		fclose($csvFile);
 	}
-	fclose($csvFile);
+	else {
+		echo "PROBLEM: »" . $csvFileName . "« konnte nicht gelesen werden.";
+	}
 	
 	function klosterinfocompare ($a, $b) {
 		global $aemter;
@@ -178,7 +184,12 @@ ORDER BY
 	
 				$json = json_encode($results);
 				$jsonPath = dirname(__FILE__) . '/export.json';
-				file_put_contents($jsonPath, $json);
+				if (file_put_contents($jsonPath, $json)) {
+					echo 'Datei »' . $jsonPath . '« erfolgreich geschrieben';
+				}
+				else {
+					echo 'Datei »' . $jsonPath . '« konnte nicht geschrieben werden. Hat der Webserver Schreibrechte für sie?.';
+				}
 			}
 			else {
 				echo "Keine Ergebnisse für die SQL Abfrage.";
