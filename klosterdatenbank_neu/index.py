@@ -380,7 +380,7 @@ for values in cursor:
 		for person in klosterPersonen:
 			person['person_namensalternativen_xml'] = ''
 			if person.has_key('person_namensalternativen'):
-				if person['person_namensalternativen'] != '':
+				if person['person_namensalternativen']:
 					XMLString = u"<span class='namensalternativen'>" + person['person_namensalternativen'] + u"</span>"
 					XMLUTF8 = XMLString.encode('utf-8')
 					# print person['person_gso'].encode('utf-8') + ' - ' + XMLString
