@@ -36,6 +36,7 @@
 	$sqlDatabase = 'personen';
 
 	$sql = mysql_connect($sqlServer, $sqlUsername, $sqlPassword);
+	mysql_set_charset('utf8', $sql);
 	
 	function improveYear ($yearString) {
 		$matches = array();
