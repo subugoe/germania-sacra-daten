@@ -16,17 +16,24 @@
  * das in die Datei »export.json« geschrieben wird.
  * Hierbei ist { PERSONENINFORMATION } ein JSON Objekt mit den Feldern:
  *  * person_vorname
- *  * person_name
- *  * person_namensalternativen
+ *  * person_name_xml
+ *  * person_namensalternativen_xml
  *  * person_gso
  *  * person_gnd
  *  * person_bezeichnung
  *  * person_bezeichnung_plural
- *  * person_anmerkung
+ *  * person_anmerkung_xml
  *  * person_von_verbal
  *  * person_von
  *  * person_bis_verbal
  *  * person_bis
+ *
+ * Die auf _xml endenden Felder enthalten gültiges XML, das ohne escaping in die
+ * Webseite eingefügt werden kann. Feldinhalte, die nicht geparsed werden können,
+ * werden verworfen und eine Lognachricht geschrieben.
+ *
+ * Aufstellung der Felder unter:
+ * https://docs.google.com/spreadsheet/ccc?key=0Ah9t1ddBuxv8dFJRQjN4LXA5MXk4bEtseVZjVGEweWc&usp=sharing
  *
  * 2013 Sven-S. Porst, SUB Göttingen (porst@sub.uni-goettingen.de)
  */
@@ -37,7 +44,9 @@
 
 	$sql = mysql_connect($sqlServer, $sqlUsername, $sqlPassword);
 	mysql_set_charset('utf8', $sql);
-	
+
+	header("Content-Type: text/plain; charset=utf-8");
+
 	function improveYear ($yearString) {
 		$matches = array();
 		
@@ -70,6 +79,40 @@
 	}
 
 
+	function handleError ($errno, $errstr, $errfile, $errline) {
+		if ((substr_count($errstr,"DOMDocument::loadXML()")>0)){
+		}
+		else {
+			return false;
+		}
+	}
+
+	set_error_handler('handleError');
+
+	function makeXMLField (&$record, $feldName) {
+        $name = 'person_' . $feldName;
+        $nameXML = $name . '_xml';
+        $record[$nameXML] = '';
+
+        if ($record[$name]) {
+            $content = $record[$name];
+            $XMLString = '<span class="' . $name. '">' . $content . '</span>';
+            $XML = new DOMDocument();
+            if ($XML->loadXML($XMLString)) {
+                $record[$nameXML] = $XML->saveXML($XML->documentElement);
+            }
+            else {
+				echo "FEHLER: ungültiges XML:\n";
+				echo "  Person GSO Nummer: " . $record['person_gso'] . "\n";
+				echo "  " . $name . ": " . $record[$name] . "\n";
+				echo "  Feld nicht übernommen.\n\n";
+            }
+        }
+
+        unset($record[$name]);
+    }
+
+
 	$aemter = array();
 	$csvFileName = dirname(__FILE__) . '/Aemter.csv';
 	$csvFile = fopen($csvFileName, 'r');
@@ -79,13 +122,13 @@
 				$aemter[$line[0]] = array('plural' => $line[1], 'sortierung' => $line[2]);
 			}
 			else {
-				print 'FEHLER: Zeile »' . str($line) . '« hat nicht 3 Spalten.';
+				echo 'FEHLER: Zeile »' . $line . '« hat nicht 3 Spalten.\n';
 			}
 		}
 		fclose($csvFile);
 	}
 	else {
-		echo "PROBLEM: »" . $csvFileName . "« konnte nicht gelesen werden.";
+		echo "PROBLEM: »" . $csvFileName . "« konnte nicht gelesen werden.\n";
 	}
 	
 	function klosterinfocompare ($a, $b) {
@@ -175,33 +218,39 @@ ORDER BY
 					if (!array_key_exists($row['klosterid'], $results)) {
 						$results[$row['klosterid']] = array();
 					}
-					
+
+                    // Felder mit XML bearbeiten
+                    $xmlFelder = array('name', 'namensalternativen', 'anmerkung');
+                    foreach ($xmlFelder as $feldName) {
+						makeXMLField($personeninfo, $feldName);
+                    }
+
 					$results[$row['klosterid']][] = $personeninfo;
 				}
 		
-				foreach ($results as &$result) {
+				foreach ($results as $result) {
 					usort($result, 'klosterinfocompare');
 				}
 	
 				$json = json_encode($results);
 				$jsonPath = dirname(__FILE__) . '/export.json';
 				if (file_put_contents($jsonPath, $json)) {
-					echo 'Datei »' . $jsonPath . '« erfolgreich geschrieben';
+					echo 'Datei »' . $jsonPath . "« erfolgreich geschrieben\n";
 				}
 				else {
-					echo 'Datei »' . $jsonPath . '« konnte nicht geschrieben werden. Hat der Webserver Schreibrechte für sie?.';
+					echo 'Datei »' . $jsonPath . "« konnte nicht geschrieben werden. Hat der Webserver Schreibrechte für sie?.\n";
 				}
 			}
 			else {
-				echo "Keine Ergebnisse für die SQL Abfrage.";
+				echo "Keine Ergebnisse für die SQL Abfrage.\n";
 			}
 		}
 		else {
-			echo "Kein Zugriff auf Datenbank »" . $sqlDatabase . "«.";
+			echo "Kein Zugriff auf Datenbank »" . $sqlDatabase . "«.\n";
 		}
 		mysql_close($sql);
 	}
 	else {
-		echo "Keine Verbindung zum SQL Server »" . $sqlServer . "«.";
+		echo "Keine Verbindung zum MySQL Server »" . $sqlServer . "«.\n";
 	}
 ?>

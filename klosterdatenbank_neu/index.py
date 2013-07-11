@@ -378,20 +378,6 @@ for values in cursor:
 	if personen.has_key(str(docKloster["sql_uid"])):
 		klosterPersonen = personen[str(docKloster["sql_uid"])]
 		for person in klosterPersonen:
-			person['person_namensalternativen_xml'] = ''
-			if person.has_key('person_namensalternativen'):
-				if person['person_namensalternativen']:
-					XMLString = u"<span class='namensalternativen'>" + person['person_namensalternativen'] + u"</span>"
-					XMLUTF8 = XMLString.encode('utf-8')
-					# print person['person_gso'].encode('utf-8') + ' - ' + XMLString
-					try:
-						XML = xml.etree.ElementTree.fromstring(XMLUTF8)
-						person['person_namensalternativen_xml'] = XMLString
-					except:
-						print u"FEHLER person_namensalternativen wird gelöscht, da nicht als XML lesbar: " + person['person_gso'] + u" - " + person['person_namensalternativen']
-					
-				del person['person_namensalternativen']
-		
 			mergeDocIntoDoc(person, docKloster)
 
 	# Standorte und Ordenszugehörigkeiten »ausmultiplizieren« und eigene Datensätze für die Kombinationen erzeugen
