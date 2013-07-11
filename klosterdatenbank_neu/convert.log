@@ -26,14 +26,6 @@ INFO: URL »http://d-nb.info/gnd/4391709-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4391709-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/16277070-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4385833-8« existiert bereits: doppelt nutzen.
-WARNUNG: ungültiger Bearbeitungstatus »None« in klosterStammblatt 3190. Verwende: 0
-WARNUNG: ungültiger Bearbeitungstatus »None« in klosterStammblatt 3216. Verwende: 0
-WARNUNG: ungültiger Bearbeitungstatus »None« in klosterStammblatt 3221. Verwende: 0
-WARNUNG: ungültiger Bearbeitungstatus »None« in klosterStammblatt 3231. Verwende: 0
-WARNUNG: ungültiger Bearbeitungstatus »None« in klosterStammblatt 3235. Verwende: 0
-WARNUNG: ungültiger Bearbeitungstatus »None« in klosterStammblatt 3240. Verwende: 0
-WARNUNG: ungültiger Bearbeitungstatus »None« in klosterStammblatt 3254. Verwende: 0
-WARNUNG: ungültiger Bearbeitungstatus »None« in klosterStammblatt 3257. Verwende: 0
 WARNUNG: orden_uid fehlt in: 
 {'bemerkung': u'Teileweise Tertiaren',
  'crdate': 1368741600,
@@ -142,6 +134,15 @@ WARNUNG: orden_uid fehlt in:
  'status': None,
  'uid': 1992,
  'zeitraum_uid': 418}
+WARNUNG: orden_uid fehlt in: 
+{'bemerkung': None,
+ 'crdate': 1372975200,
+ 'cruser_id': 37,
+ 'kloster_uid': 3290,
+ 'orden_uid': None,
+ 'status': None,
+ 'uid': 2012,
+ 'zeitraum_uid': 438}
 INFO: neues Buch »«
 INFO: neues Buch »Niedersächsisches Klosterbuch 1«
 INFO: neues Buch »STREICH, Klöster«
@@ -190,7 +191,7 @@ INFO: neues Buch »Albert Hauck, Kirchengeschichte Deutschlands, 5 Bde., Berlin 
 INFO: neues Buch »Albert Hauck, Kirchengeschichte Deutschlands, 5 Bde., Berlin 1954 [Bd. II-IV: Klosterverzeichnisse], Bd. III«
 INFO: neues Buch »Hauck, Kirchengeschichte 3«
 INFO: neues Buch »Georg Dehio, Handbuch der deutschen Kunstdenkmäler: Sachsen-Anhalt I, Regierungsbezirk Magdeburg, München, Berlin 2002«
-INFO: neues Buch »Alfred Wendehorst/ Stefan Benz, Verzeichnis der Säkularkanonikerstifte der Reichskirche (Schriften des Zentralinstituts für fränkische Landeskunde und allgemeine Regionalforschung; 35), Neustadt 1997, 154 f.«
+INFO: neues Buch »Alfred Wendehorst/ Stefan Benz, Verzeichnis der Säkularkanonikerstifte der Reichskirche (Schriften des Zentralinstituts für fränkische Landeskunde und allgemeine Regionalforschung; 35), Neustadt 1997, 154f.«
 INFO: neues Buch »Dehio, Sachsen-Anhalt I: Regierungsbezirk Magdeburg, Berlin 2002«
 INFO: neues Buch »Alfred Wendehorst/ Stefan Benz, Verzeichnis der Stifte der Augustiner-Chorherren und -Chorfrauen, in: Jahrbuch für fränkische Landesforschung 56 (1996), S: 44 (Stw. Hamersleben).«
 INFO: neues Buch »Albert Hauck, Kirchengeschichte Deutschlands, 5 Bde, Berlin 1954 [Bd. II-IV: Klosterverzeichnisse], Bd. IV«
@@ -394,6 +395,7 @@ FEHLER: Feld »ID_alleOrte« leer in KlosterStandort 1582: auslassen
 INFO: neues Buch »Wendhorst/benz, Säkularkanonikerstifte«
 INFO: neues Buch »Wendehorst/benz, Säkularkanonikerstifte«
 FEHLER: Feld »ID_alleOrte« leer in KlosterStandort 1677: auslassen
+FEHLER: Feld »ID_alleOrte« leer in KlosterStandort 1726: auslassen
 
 
 Tabelle »url«
