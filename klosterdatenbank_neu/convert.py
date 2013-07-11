@@ -258,7 +258,8 @@ for values in cursor:
 			urls = urls.replace('http:// ', '').replace(';', '#').split('#')
 			for myURL in urls:
 				lemma = re.sub(r'.*/wiki/' , '', myURL).replace('_', ' ')
-				lemma = urllib.unquote(lemma)
+				lemma = urllib.unquote(str(lemma))
+				lemma = lemma.decode('utf-8')
 				URLRelation = makeURLData(myURL, lemma, 'Wikipedia', uid)
 				if URLRelation:
 					key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
