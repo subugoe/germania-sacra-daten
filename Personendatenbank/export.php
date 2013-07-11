@@ -228,7 +228,7 @@ ORDER BY
 					$results[$row['klosterid']][] = $personeninfo;
 				}
 		
-				foreach ($results as $result) {
+				foreach ($results as &$result) {
 					usort($result, 'klosterinfocompare');
 				}
 	
