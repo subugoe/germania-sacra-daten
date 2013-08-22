@@ -9,6 +9,7 @@ INFO: URL »http://d-nb.info/gnd/4203234-9« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4477426-6« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/1237290-0« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4347890-6« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/7781918-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4391709-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4413410-1« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4644031-8« existiert bereits: doppelt nutzen.
@@ -143,6 +144,24 @@ WARNUNG: orden_uid fehlt in:
  'status': None,
  'uid': 2012,
  'zeitraum_uid': 438}
+WARNUNG: orden_uid fehlt in: 
+{'bemerkung': None,
+ 'crdate': 1373580000,
+ 'cruser_id': 37,
+ 'kloster_uid': 3421,
+ 'orden_uid': None,
+ 'status': None,
+ 'uid': 2190,
+ 'zeitraum_uid': 615}
+WARNUNG: orden_uid fehlt in: 
+{'bemerkung': None,
+ 'crdate': 1373580000,
+ 'cruser_id': 37,
+ 'kloster_uid': 3427,
+ 'orden_uid': None,
+ 'status': None,
+ 'uid': 2200,
+ 'zeitraum_uid': 625}
 INFO: neues Buch »«
 INFO: neues Buch »Niedersächsisches Klosterbuch 1«
 INFO: neues Buch »STREICH, Klöster«
@@ -152,6 +171,7 @@ INFO: neues Buch »Niedersächsisches Klosterbuch 2012 Bd. 1«
 INFO: neues Buch »Niedersächsisches Klosterbuch 2012«
 INFO: neues Buch »Niedersächsisches Klosterbuch 2012 Bd.1«
 INFO: neues Buch »Ehlers, Integration Sachsens«
+INFO: neues Buch »Niedersächsiches Klosterbuch 2012, Band 1«
 INFO: neues Buch »Niedersächsisches Klosterbuch 2012 Bd. 2«
 INFO: neues Buch »Niedersächsisches Klosterbuch 1, 2012«
 INFO: neues Buch »Wendehorst/Benz, Säkularkanonikerstifte«
@@ -396,6 +416,7 @@ INFO: neues Buch »Wendhorst/benz, Säkularkanonikerstifte«
 INFO: neues Buch »Wendehorst/benz, Säkularkanonikerstifte«
 FEHLER: Feld »ID_alleOrte« leer in KlosterStandort 1677: auslassen
 FEHLER: Feld »ID_alleOrte« leer in KlosterStandort 1726: auslassen
+INFO: neues Buch »endehorst/Benz, Säkularkanonikerstifte«
 
 
 Tabelle »url«
