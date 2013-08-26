@@ -115,7 +115,7 @@
 		<field name="orden_bis_von" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="orden_bis_bis" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="orden_bis_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="orden_jahr50" type="int" indexed="true" stored="true" multiValued="true"/>
+		<field name="orden_jahr50" type="int" indexed="true" stored="false" multiValued="true"/>
 		<field name="standort_von_von" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="standort_von_bis" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="standort_von_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
@@ -124,7 +124,7 @@
 		<field name="standort_bis_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="standort_jahr50" type="int" indexed="true" stored="false" multiValued="true"/>
 
-		<field name="jahr50" type="int" indexed="true" stored="true" multiValued="true"/>
+		<field name="jahr50" type="int" indexed="true" stored="false" multiValued="true"/>
 
 		<field name="zeitraum_von_von" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="zeitraum_von_bis" type="int" indexed="true" stored="true" multiValued="true"/>
