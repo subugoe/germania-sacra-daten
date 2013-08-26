@@ -136,6 +136,8 @@ for values in cursor:
 		del docKloster["band_id"]
 		del docKloster["band_nummer"]
 		del docKloster["band_titel"]
+	else:
+		docKloster["band_facet"] = [docKloster["band_nummer"], "hat_band"]
 
 	docKloster["typ"] = "kloster"
 	docKloster["id"] = 'kloster-' + str(docKloster["kloster_id"])

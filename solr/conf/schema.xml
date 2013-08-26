@@ -56,6 +56,7 @@
 
 		<field name="text_gs_band" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_nummer" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="band_facet" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_seite" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_titel" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_id" type="int" indexed="true" stored="true" multiValued="true"/>
