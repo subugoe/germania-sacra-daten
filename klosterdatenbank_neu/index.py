@@ -32,8 +32,9 @@ jsonFile.close()
 import xml.etree.ElementTree
 
 
-minYear = 500
-maxYear = 2050
+minYear = 700
+maxYear = 1810
+yearStep = 10
 
 
 def addValueForKeyToDict (value, key, myDict):
@@ -95,9 +96,9 @@ def improveZeitraumForDocument (doc, prefix):
 	jahr50 = {}
 	start = minYear
 	while start < maxYear:
-		if von < (start + 50) and start <= bis:
+		if von < (start + yearStep) and start <= bis:
 			jahr50[start] = True
-		start += 50
+		start += yearStep
 	doc[prefix + "_jahr50"] = jahr50.keys()
 	if not doc.has_key("jahr50"):
 		doc["jahr50"] = []
@@ -396,9 +397,9 @@ for values in cursor:
 				doc['orden_standort_jahr50'] = []
 				start = minYear
 				while start < maxYear:
-					if doc['orden_standort_von'] < (start + 50) and start <= doc['orden_standort_bis']:
+					if doc['orden_standort_von'] < (start + yearStep) and start <= doc['orden_standort_bis']:
 						doc['orden_standort_jahr50'] += [start]
-					start += 50
+					start += yearStep
 				
 				# Orden und Standort Felder
 				mergeDocIntoDoc(myOrden, doc)
