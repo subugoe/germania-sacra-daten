@@ -115,7 +115,7 @@ queryKloster = """
 SELECT
 	kloster.uid AS sql_uid, kloster.kloster_id as kloster_id, kloster.kloster, kloster.patrozinium, kloster.bemerkung AS bemerkung_kloster,
 	kloster.text_gs_band, kloster.band_uid AS band_id, kloster.band_seite,
-	band.nummer AS band_nummer, band.titel AS band_titel,
+	band.nummer AS band_nummer, band.titel AS band_titel, band.sortierung AS band_sortierung,
 	tx_gs_domain_model_bearbeitungsstatus.name as bearbeitungsstatus
 FROM 
 	tx_gs_domain_model_kloster AS kloster,
@@ -137,8 +137,9 @@ for values in cursor:
 		del docKloster["band_id"]
 		del docKloster["band_nummer"]
 		del docKloster["band_titel"]
+		del docKloster["band_sortierung"]
 	else:
-		docKloster["band_facet"] = [docKloster["band_nummer"], "hat_band"]
+		docKloster["band_facet"] = [docKloster["band_sortierung"], "hat_band"]
 
 	docKloster["typ"] = "kloster"
 	docKloster["id"] = 'kloster-' + str(docKloster["kloster_id"])

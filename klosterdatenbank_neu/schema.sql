@@ -119,6 +119,7 @@ DROP TABLE IF EXISTS `mydb`.`band` ;
 CREATE  TABLE IF NOT EXISTS `mydb`.`band` (
   `uid` INT NOT NULL AUTO_INCREMENT ,
   `nummer` VARCHAR(255) NULL ,
+  `sortierung` INT NOT NULL ,
   `titel` TEXT NULL ,
   `bistum_uid` INT NOT NULL ,
   PRIMARY KEY (`uid`) ,

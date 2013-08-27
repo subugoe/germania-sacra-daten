@@ -27,6 +27,7 @@ INFO: URL »http://d-nb.info/gnd/4391709-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4391709-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/16277070-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4385833-8« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/7749511-1« existiert bereits: doppelt nutzen.
 WARNUNG: orden_uid fehlt in: 
 {'bemerkung': u'Teileweise Tertiaren',
  'crdate': 1368741600,
@@ -152,7 +153,7 @@ WARNUNG: orden_uid fehlt in:
  'orden_uid': None,
  'status': None,
  'uid': 2190,
- 'zeitraum_uid': 615}
+ 'zeitraum_uid': 614}
 WARNUNG: orden_uid fehlt in: 
 {'bemerkung': None,
  'crdate': 1373580000,
@@ -161,7 +162,7 @@ WARNUNG: orden_uid fehlt in:
  'orden_uid': None,
  'status': None,
  'uid': 2200,
- 'zeitraum_uid': 625}
+ 'zeitraum_uid': 624}
 INFO: neues Buch »«
 INFO: neues Buch »Niedersächsisches Klosterbuch 1«
 INFO: neues Buch »STREICH, Klöster«
@@ -409,65 +410,65 @@ INFO: neues Buch »Wendehost/Benz, Säkularkanonikerstifte«
 INFO: neues Buch »Wendehorst/Benz, Säklularkanonikerstifte«
 INFO: neues Buch »Wendehorst/Benz, Säkularkanoniker«
 INFO: neues Buch »Wendehorst/Benz; Säkularkanonikerstifte«
-FEHLER: Feld »ID_alleOrte« leer in KlosterStandort 1457: auslassen
 INFO: neues Buch »Benz/Wendehorst, Säkularkanonikerstifte«
 FEHLER: Feld »ID_alleOrte« leer in KlosterStandort 1582: auslassen
 INFO: neues Buch »Wendhorst/benz, Säkularkanonikerstifte«
 INFO: neues Buch »Wendehorst/benz, Säkularkanonikerstifte«
 FEHLER: Feld »ID_alleOrte« leer in KlosterStandort 1677: auslassen
+INFO: neues Buch »http://www.klosterlexikon-rlp.de/nc/eifel-ahr/muenstermaifeld-stiftskirche-st-martin-und-st-severus.html?sword_list%5B%5D=M%DCnstermaifeld«
 FEHLER: Feld »ID_alleOrte« leer in KlosterStandort 1726: auslassen
 INFO: neues Buch »endehorst/Benz, Säkularkanonikerstifte«
 
 
-Tabelle »url«
+Tabelle »url«: 332 Datensätze
 
 
-Tabelle »zeitraum«
+Tabelle »zeitraum«: 3422 Datensätze
 
 
-Tabelle »bistum«
+Tabelle »bistum«: 60 Datensätze
 
 
-Tabelle »band«
+Tabelle »band«: 73 Datensätze
 
 
-Tabelle »band_url_mm«
+Tabelle »band_url_mm«: 120 Datensätze
 
 
-Tabelle »bearbeitungsstatus«
+Tabelle »bearbeitungsstatus«: 7 Datensätze
 
 
-Tabelle »kloster«
+Tabelle »kloster«: 1399 Datensätze
 
 
-Tabelle »kloster_url_mm«
+Tabelle »kloster_url_mm«: 213 Datensätze
 
 
-Tabelle »ordenstyp«
+Tabelle »ordenstyp«: 4 Datensätze
 
 
-Tabelle »orden«
+Tabelle »orden«: 66 Datensätze
 
 
-Tabelle »kloster_orden«
+Tabelle »kloster_orden«: 1957 Datensätze
 
 
-Tabelle »land«
+Tabelle »land«: 27 Datensätze
 
 
-Tabelle »ort«
+Tabelle »ort«: 44192 Datensätze
 
 
-Tabelle »ort_url_mm«
+Tabelle »ort_url_mm«: 2 Datensätze
 
 
-Tabelle »bibitem«
+Tabelle »bibitem«: 252 Datensätze
 
 
-Tabelle »literatur«
+Tabelle »literatur«: 1856 Datensätze
 
 
-Tabelle »kloster_standort«
+Tabelle »kloster_standort«: 1450 Datensätze
 
 
-Tabelle »kloster_standort_literatur_mm«
+Tabelle »kloster_standort_literatur_mm«: 1856 Datensätze

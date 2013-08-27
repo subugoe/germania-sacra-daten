@@ -76,7 +76,7 @@ defaultFields = {
 
 def addRecordsToTable (records, tableName):
 	global db, cursor
-	print "\n\nTabelle »" + tableName + "«"
+	print u"\n\nTabelle »" + tableName + u"«: " + str(len(records)) + u" Datensätze"
 
 	if len(records) > 0:
 		for record in records:
@@ -168,6 +168,7 @@ for values in cursor:
 	r = {
 		'uid': uid,
 		'nummer': row['Bandnummer'],
+		'sortierung': row['Sortierung'],
 		'titel': row['Kurztitel'],
 		'bistum_uid': row['Bistum']
 	}
