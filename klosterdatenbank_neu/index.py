@@ -13,6 +13,9 @@ import copy
 import pprint
 # benötigt das Modul Geohash (z.B. über easy_install)
 import Geohash
+import urllib
+import json
+import xml.etree.ElementTree
 
 import mysql.connector
 db = mysql.connector.connect(user='root', host='127.0.0.1', database='kloster')
@@ -23,13 +26,14 @@ cursor2 = db2.cursor()
 cursor3 = db3.cursor()
 
 
-# Informationen aus der Personendatenbank als JSON lesen
-import json
-jsonFile = open('../Personendatenbank/export.json')
+# Informationen aus der Personendatenbank als JSON laden und lesen
+personenURL = 'http://personendatenbank.germania-sacra.de/export/export.json'
+personenPath = '../Personendatenbank/export.json'
+urllib.urlretrieve(personenURL, personenPath)
+jsonFile = open(personenPath)
 personen = json.load(jsonFile)
 jsonFile.close()
 
-import xml.etree.ElementTree
 
 
 minYear = 700
