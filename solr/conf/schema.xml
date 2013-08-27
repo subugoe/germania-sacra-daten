@@ -126,12 +126,12 @@
 
 		<field name="jahr50" type="int" indexed="true" stored="false" multiValued="true"/>
 
-		<field name="zeitraum_von_von" type="int" indexed="true" stored="true" multiValued="true"/>
-		<field name="zeitraum_von_bis" type="int" indexed="true" stored="true" multiValued="true"/>
-		<field name="zeitraum_von_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="zeitraum_bis_von" type="int" indexed="true" stored="true" multiValued="true"/>
-		<field name="zeitraum_bis_bis" type="int" indexed="true" stored="true" multiValued="true"/>
-		<field name="zeitraum_bis_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="zeitraum_von_von" type="int" indexed="true" stored="false" multiValued="true"/>
+		<field name="zeitraum_von_bis" type="int" indexed="true" stored="false" multiValued="true"/>
+		<field name="zeitraum_von_verbal" type="string" indexed="true" stored="false" multiValued="true"/>
+		<field name="zeitraum_bis_von" type="int" indexed="true" stored="false" multiValued="true"/>
+		<field name="zeitraum_bis_bis" type="int" indexed="true" stored="false" multiValued="true"/>
+		<field name="zeitraum_bis_verbal" type="string" indexed="true" stored="false" multiValued="true"/>
 		<field name="zeitraum_jahr50" type="int" indexed="true" stored="false" multiValued="true"/>
 		<field name="zeitraum_uid" type="int" indexed="true" stored="true" multiValued="true"/>
 
