@@ -119,7 +119,7 @@ queryKloster = """
 SELECT
 	kloster.uid AS sql_uid, kloster.kloster_id as kloster_id, kloster.kloster, kloster.patrozinium, kloster.bemerkung AS bemerkung_kloster,
 	kloster.text_gs_band, kloster.band_uid AS band_id, kloster.band_seite,
-	band.nummer AS band_nummer, band.titel AS band_titel, band.sortierung AS band_sortierung,
+	band.nummer AS band_nummer, band.titel AS band_titel, band.kurztitel AS band_kurztitel, band.sortierung AS band_sortierung,
 	tx_gs_domain_model_bearbeitungsstatus.name as bearbeitungsstatus
 FROM 
 	tx_gs_domain_model_kloster AS kloster,
@@ -141,9 +141,10 @@ for values in cursor:
 		del docKloster["band_id"]
 		del docKloster["band_nummer"]
 		del docKloster["band_titel"]
+		del docKloster["band_kurztitel"]
 		del docKloster["band_sortierung"]
 	else:
-		bandSortName = ('%04d' % docKloster["band_sortierung"]) + '####' + docKloster["band_nummer"] + ' ' + docKloster["band_titel"]
+		bandSortName = ('%04d' % docKloster["band_sortierung"]) + '####' + docKloster["band_nummer"] + ' ' + docKloster["band_kurztitel"]
 		docKloster["band_facet"] = [bandSortName, "hat_band"]
 
 	docKloster["typ"] = "kloster"
@@ -341,18 +342,23 @@ for values in cursor:
 		
 	queryOrden = """
 	SELECT
-		kloster_orden.uid AS kloster_orden_uid, kloster_orden.status, kloster_orden.bemerkung AS bemerkung_orden,
+		kloster_orden.uid AS kloster_orden_uid, kloster_orden.bemerkung AS bemerkung_orden,
 		orden.orden, orden.ordo AS orden_ordo, orden.symbol AS orden_symbol, orden.graphik AS orden_graphik,
 		ordenstyp.ordenstyp AS orden_typ,
-		zeitraum.uid AS zeitraum_uid, zeitraum.von_von AS orden_von_von, zeitraum.von_bis AS orden_von_bis, zeitraum.von_verbal AS orden_von_verbal, zeitraum.bis_von AS orden_bis_von, zeitraum.bis_bis AS orden_bis_bis, zeitraum.bis_verbal AS orden_bis_verbal
+		kloster_status.status AS kloster_status,
+		zeitraum.uid AS zeitraum_uid, zeitraum.von_von AS orden_von_von, zeitraum.von_bis AS orden_von_bis,
+		zeitraum.von_verbal AS orden_von_verbal, zeitraum.bis_von AS orden_bis_von,
+		zeitraum.bis_bis AS orden_bis_bis, zeitraum.bis_verbal AS orden_bis_verbal
 	FROM
 		tx_gs_domain_model_kloster_orden AS kloster_orden,
 		tx_gs_domain_model_orden AS orden,
+		tx_gs_domain_model_klosterstatus AS kloster_status,
 		tx_gs_domain_model_ordenstyp AS ordenstyp,
 		tx_gs_domain_model_zeitraum AS zeitraum
 	WHERE
 		kloster_orden.kloster_uid = %s AND
 		kloster_orden.orden_uid = orden.uid AND
+		kloster_orden.klosterstatus_uid = kloster_status.uid AND
 		orden.ordenstyp_uid = ordenstyp.uid AND
 		kloster_orden.zeitraum_uid = zeitraum.uid
 	ORDER BY

@@ -60,10 +60,11 @@
 		<field name="band_facet" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_seite" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_titel" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="band_kurztitel" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_id" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_url" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="band_url_seitengenau" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="status" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="kloster_status" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="gruender" type="text_de" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="literatur" type="text_de" indexed="true" stored="true" multiValued="true"/>
@@ -236,7 +237,7 @@
 	<!-- <copyField source="orden" dest="orden_facet"/> Ordensfacette wird (leicht anders) im Indexierungsskript gefüllt -->
 	<copyField source="bistum" dest="bistum_facet"/>
 	<copyField source="land" dest="land_facet"/>
-	<copyField source="status" dest="status_facet"/>
+	<copyField source="kloster_status" dest="status_facet"/>
 	
 	<copyField source="kloster" dest="all_suggest"/>
 	<copyField source="ort" dest="all_suggest"/>
