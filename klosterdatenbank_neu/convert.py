@@ -170,6 +170,7 @@ for values in cursor:
 		'nummer': row['Bandnummer'],
 		'sortierung': row['Sortierung'],
 		'titel': row['Kurztitel'],
+		'kurztitel': row['KurztitelFacette'],
 		'bistum_uid': row['Bistum']
 	}
 	band += [r]

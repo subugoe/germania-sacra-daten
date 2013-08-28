@@ -121,6 +121,7 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`band` (
   `nummer` VARCHAR(255) NULL ,
   `sortierung` INT NOT NULL ,
   `titel` TEXT NULL ,
+  `kurztitel` TEXT NULL ,
   `bistum_uid` INT NOT NULL ,
   PRIMARY KEY (`uid`) ,
   UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,

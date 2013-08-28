@@ -1,20 +1,3 @@
-FEHLER: klosterStammblatt Datensatz ohne Klosternummer:
-{u'Auswahl': 0,
- u'Bearbeiter': 7,
- u'Bearbeitungsstand': u'Daten strukturiert',
- u'Bemerkungen': u'',
- u'Datensatz angelegt': datetime.datetime(2008, 1, 17, 0, 0),
- u'Deleted': 0,
- u'GND': None,
- u'GSBandSeite': None,
- u'GermaniaSacraBandNr': None,
- u'Klostername': u'Kollegiatstift St. Ludgeri, M\xfcnster',
- u'Klosternummer': None,
- u'Patrozinium': u'Liudger (Barbara)',
- u'Status': u'Daten importiert',
- u'TextGSBand': None,
- u'URN': None,
- u'Wikipedia': None}
 INFO: URL »http://d-nb.info/gnd/4683949-5« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4355884-7« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4355889-6« existiert bereits: doppelt nutzen.
@@ -45,164 +28,186 @@ INFO: URL »http://d-nb.info/gnd/4385833-8« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4558940-9« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/2064415-2« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/7749511-1« existiert bereits: doppelt nutzen.
-WARNUNG: orden_uid fehlt in: 
-{'bemerkung': u'Teileweise Tertiaren',
- 'crdate': 1368741600,
- 'cruser_id': 37,
- 'kloster_uid': 3049,
- 'klosterstatus_uid': {'status': None, 'uid': 0},
- 'orden_uid': None,
- 'uid': 1635,
- 'zeitraum_uid': 84}
-WARNUNG: orden_uid fehlt in: 
-{'bemerkung': None,
- 'crdate': 1369260000,
- 'cruser_id': 37,
- 'kloster_uid': 3071,
- 'klosterstatus_uid': {'status': u'Kollegiatstift', 'uid': 1},
- 'orden_uid': None,
- 'uid': 1668,
- 'zeitraum_uid': 116}
-WARNUNG: orden_uid fehlt in: 
-{'bemerkung': None,
- 'crdate': 1369778400,
- 'cruser_id': 37,
- 'kloster_uid': 3086,
- 'klosterstatus_uid': {'status': None, 'uid': 0},
- 'orden_uid': None,
- 'uid': 1689,
- 'zeitraum_uid': 136}
-WARNUNG: orden_uid fehlt in: 
-{'bemerkung': None,
- 'crdate': 1370469600,
- 'cruser_id': 37,
- 'kloster_uid': 3106,
- 'klosterstatus_uid': {'status': None, 'uid': 0},
- 'orden_uid': None,
- 'uid': 1725,
- 'zeitraum_uid': 171}
-WARNUNG: orden_uid fehlt in: 
-{'bemerkung': None,
- 'crdate': 1370556000,
- 'cruser_id': 37,
- 'kloster_uid': 3136,
- 'klosterstatus_uid': {'status': None, 'uid': 0},
- 'orden_uid': None,
- 'uid': 1776,
- 'zeitraum_uid': 218}
-WARNUNG: orden_uid fehlt in: 
-{'bemerkung': None,
- 'crdate': 1372370400,
- 'cruser_id': 37,
- 'kloster_uid': 3205,
- 'klosterstatus_uid': {'status': u'Kollegiatstift', 'uid': 1},
- 'orden_uid': None,
- 'uid': 1895,
- 'zeitraum_uid': 321}
-WARNUNG: orden_uid fehlt in: 
-{'bemerkung': None,
- 'crdate': 1372370400,
- 'cruser_id': 37,
- 'kloster_uid': 3210,
- 'klosterstatus_uid': {'status': None, 'uid': 0},
- 'orden_uid': None,
- 'uid': 1900,
- 'zeitraum_uid': 326}
-WARNUNG: orden_uid fehlt in: 
-{'bemerkung': None,
- 'crdate': 1372370400,
- 'cruser_id': 37,
- 'kloster_uid': 3211,
- 'klosterstatus_uid': {'status': None, 'uid': 0},
- 'orden_uid': None,
- 'uid': 1902,
- 'zeitraum_uid': 328}
-WARNUNG: orden_uid fehlt in: 
-{'bemerkung': None,
- 'crdate': 1372370400,
- 'cruser_id': 37,
- 'kloster_uid': 3213,
- 'klosterstatus_uid': {'status': u'Kollegiatstift', 'uid': 1},
- 'orden_uid': None,
- 'uid': 1904,
- 'zeitraum_uid': 330}
-WARNUNG: orden_uid fehlt in: 
-{'bemerkung': None,
- 'crdate': 1372370400,
- 'cruser_id': 37,
- 'kloster_uid': 3219,
- 'klosterstatus_uid': {'status': None, 'uid': 0},
- 'orden_uid': None,
- 'uid': 1913,
- 'zeitraum_uid': 339}
-WARNUNG: orden_uid fehlt in: 
-{'bemerkung': u'M\xf6che',
- 'crdate': 946681200,
- 'cruser_id': 31,
- 'kloster_uid': 3263,
- 'klosterstatus_uid': {'status': None, 'uid': 0},
- 'orden_uid': None,
- 'uid': 1971,
- 'zeitraum_uid': 397}
-WARNUNG: orden_uid fehlt in: 
-{'bemerkung': u'reguliert',
- 'crdate': 1372888800,
- 'cruser_id': 37,
- 'kloster_uid': 3276,
- 'klosterstatus_uid': {'status': None, 'uid': 0},
- 'orden_uid': None,
- 'uid': 1992,
- 'zeitraum_uid': 418}
-WARNUNG: orden_uid fehlt in: 
-{'bemerkung': None,
- 'crdate': 1372975200,
- 'cruser_id': 37,
- 'kloster_uid': 3290,
- 'klosterstatus_uid': {'status': None, 'uid': 0},
- 'orden_uid': None,
- 'uid': 2012,
- 'zeitraum_uid': 438}
-WARNUNG: orden_uid fehlt in: 
-{'bemerkung': None,
- 'crdate': 1373580000,
- 'cruser_id': 37,
- 'kloster_uid': 3421,
- 'klosterstatus_uid': {'status': None, 'uid': 0},
- 'orden_uid': None,
- 'uid': 2190,
- 'zeitraum_uid': 614}
-WARNUNG: orden_uid fehlt in: 
-{'bemerkung': None,
- 'crdate': 1373580000,
- 'cruser_id': 37,
- 'kloster_uid': 3427,
- 'klosterstatus_uid': {'status': None, 'uid': 0},
- 'orden_uid': None,
- 'uid': 2200,
- 'zeitraum_uid': 624}
-{None: {'status': None, 'uid': 0},
- u'': {'status': u'', 'uid': 10},
- u'Abtei': {'status': u'Abtei', 'uid': 6},
- u'Bruderhaus': {'status': u'Bruderhaus', 'uid': 7},
- u'Domstift': {'status': u'Domstift', 'uid': 5},
- u'Doppelkommende': {'status': u'Doppelkommende', 'uid': 15},
- u'Hospiz': {'status': u'Hospiz', 'uid': 18},
- u'Kloster': {'status': u'Kloster', 'uid': 2},
- u'Kolleg': {'status': u'Kolleg', 'uid': 20},
- u'Kollegiatstift': {'status': u'Kollegiatstift', 'uid': 1},
- u'Kommende': {'status': u'Kommende', 'uid': 11},
- u'Komturei': {'status': u'Komturei', 'uid': 12},
- u'Niederlassung': {'status': u'Niederlassung', 'uid': 17},
- u'Priorat': {'status': u'Priorat', 'uid': 4},
- u'Priorei': {'status': u'Priorei', 'uid': 13},
- u'Propstei': {'status': u'Propstei', 'uid': 8},
- u'Reichsabtei': {'status': u'Reichsabtei', 'uid': 14},
- u'Schwesternhaus': {'status': u'Schwesternhaus', 'uid': 16},
- u'Stift': {'status': u'Stift', 'uid': 3},
- u'Stift geplant': {'status': u'Stift geplant', 'uid': 19},
- u'keine Angabe': {'status': u'keine Angabe', 'uid': 9}}
-INFO: neues Buch »Westfälisches Klosterbuch 2«
-INFO: neues Buch »Wendehorst/Benz, Säkularkanonikerstifte«
+FEHLER: orden_uid fehlt in klosterOrden ID 1635: Datensatz verwerfen
+{u'ID_KlosterOrden': 1635,
+ u'Klosternummer': 3049,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': None,
+ u'Ordenszugeh\xf6rigkeit_bis_von': 1537,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1411,
+ u'Ordenszugeh\xf6rigkeitvon__bis': None,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': u'Teileweise Tertiaren'}
+FEHLER: orden_uid fehlt in klosterOrden ID 1668: Datensatz verwerfen
+{u'ID_KlosterOrden': 1668,
+ u'Klosternummer': 3071,
+ u'Klosterstatus': u'Kollegiatstift',
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': None,
+ u'Ordenszugeh\xf6rigkeit_bis_von': 1806,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1276,
+ u'Ordenszugeh\xf6rigkeitvon__bis': None,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 1689: Datensatz verwerfen
+{u'ID_KlosterOrden': 1689,
+ u'Klosternummer': 3086,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': u'ca. 1540',
+ u'Ordenszugeh\xf6rigkeitVerbal_von': None,
+ u'Ordenszugeh\xf6rigkeit_bis_von': 1535,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1197,
+ u'Ordenszugeh\xf6rigkeitvon__bis': None,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': 1545,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 1725: Datensatz verwerfen
+{u'ID_KlosterOrden': 1725,
+ u'Klosternummer': 3106,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': None,
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': None,
+ u'Ordenszugeh\xf6rigkeitvon__bis': None,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 1776: Datensatz verwerfen
+{u'ID_KlosterOrden': 1776,
+ u'Klosternummer': 3136,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': None,
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': None,
+ u'Ordenszugeh\xf6rigkeitvon__bis': None,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 1895: Datensatz verwerfen
+{u'ID_KlosterOrden': 1895,
+ u'Klosternummer': 3205,
+ u'Klosterstatus': u'Kollegiatstift',
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': None,
+ u'Ordenszugeh\xf6rigkeit_bis_von': 1562,
+ u'Ordenszugeh\xf6rigkeit_von_von': None,
+ u'Ordenszugeh\xf6rigkeitvon__bis': None,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': 1563,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 1900: Datensatz verwerfen
+{u'ID_KlosterOrden': 1900,
+ u'Klosternummer': 3210,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': u'w\xe4hrend der Franz. Revolution',
+ u'Ordenszugeh\xf6rigkeitVerbal_von': None,
+ u'Ordenszugeh\xf6rigkeit_bis_von': 1789,
+ u'Ordenszugeh\xf6rigkeit_von_von': 973,
+ u'Ordenszugeh\xf6rigkeitvon__bis': None,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': 1799,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 1902: Datensatz verwerfen
+{u'ID_KlosterOrden': 1902,
+ u'Klosternummer': 3211,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': None,
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1112,
+ u'Ordenszugeh\xf6rigkeitvon__bis': None,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 1904: Datensatz verwerfen
+{u'ID_KlosterOrden': 1904,
+ u'Klosternummer': 3213,
+ u'Klosterstatus': u'Kollegiatstift',
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': u' vor 1015 oder um 1056',
+ u'Ordenszugeh\xf6rigkeit_bis_von': 1797,
+ u'Ordenszugeh\xf6rigkeit_von_von': 965,
+ u'Ordenszugeh\xf6rigkeitvon__bis': 1061,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 1913: Datensatz verwerfen
+{u'ID_KlosterOrden': 1913,
+ u'Klosternummer': 3219,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': None,
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': None,
+ u'Ordenszugeh\xf6rigkeitvon__bis': None,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 1971: Datensatz verwerfen
+{u'ID_KlosterOrden': 1971,
+ u'Klosternummer': 3263,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': None,
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1171,
+ u'Ordenszugeh\xf6rigkeitvon__bis': None,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': u'M\xf6che'}
+FEHLER: orden_uid fehlt in klosterOrden ID 1992: Datensatz verwerfen
+{u'ID_KlosterOrden': 1992,
+ u'Klosternummer': 3276,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': u'um 1122',
+ u'Ordenszugeh\xf6rigkeit_bis_von': 1128,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1117,
+ u'Ordenszugeh\xf6rigkeitvon__bis': 1127,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': u'reguliert'}
+FEHLER: orden_uid fehlt in klosterOrden ID 2012: Datensatz verwerfen
+{u'ID_KlosterOrden': 2012,
+ u'Klosternummer': 3290,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': u'1102 bis 1139',
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1102,
+ u'Ordenszugeh\xf6rigkeitvon__bis': 1139,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 2190: Datensatz verwerfen
+{u'ID_KlosterOrden': 2190,
+ u'Klosternummer': 3421,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': None,
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': None,
+ u'Ordenszugeh\xf6rigkeitvon__bis': None,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 2200: Datensatz verwerfen
+{u'ID_KlosterOrden': 2200,
+ u'Klosternummer': 3427,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': None,
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': None,
+ u'Ordenszugeh\xf6rigkeitvon__bis': None,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
 INFO: neues Buch »«
 INFO: neues Buch »Niedersächsisches Klosterbuch 1«
 INFO: neues Buch »STREICH, Klöster«
@@ -215,6 +220,7 @@ INFO: neues Buch »Ehlers, Integration Sachsens«
 INFO: neues Buch »Niedersächsiches Klosterbuch 2012, Band 1«
 INFO: neues Buch »Niedersächsisches Klosterbuch 2012 Bd. 2«
 INFO: neues Buch »Niedersächsisches Klosterbuch 1, 2012«
+INFO: neues Buch »Wendehorst/Benz, Säkularkanonikerstifte«
 INFO: neues Buch »Niedersächsisches Klosterbuch 2012 Bd. 2. S. 698-705. –Wendehorst/Benz, Säkularkanonikestifte«
 INFO: neues Buch »Niedersächsisches Klosterbuch 2«
 INFO: neues Buch »Niedersächsisches Klosterbuch 2012 2«
@@ -308,6 +314,7 @@ INFO: neues Buch »Karl Hengst (Hg.), Westfälisches Klosterbuch. Lexikon der vo
 INFO: neues Buch »Mülheim (Veröffentlichungen der Historischen Kommission für Westfalen 44/Quellen und Forschungen zur Kirchen- und Religionsgeschichte 2,1), Münster 1992«
 INFO: neues Buch »Wilhelm Honselmann, Art. „Marsberg«
 INFO: neues Buch »Benediktiner“, in: Karl Hengst (Hg.), Westfälisches Klosterbuch. Lexikon der vor 1815 errichteten Stifte und Klöster von ihrer Gründung bis zur Aufhebung 1: Ahlen-Mülheim (Veröffentlichungen der Historischen Kommission für Westfalen 44/Quellen und Forschungen zur Kirchen- und Religionsgeschichte 2,1), Münster 1992«
+INFO: neues Buch »Westfälisches Klosterbuch 2«
 INFO: neues Buch »Klosterbuch Schleswig-Holstein Online (April 2011)«
 INFO: neues Buch »Schleswig-Holsteinisches Klosterbuch Online, April 2011. Wendehorst/Benz, Säkularkanonikerstifte«
 INFO: neues Buch »Schleswig-Holsteinisches Klosterbuch Online (April 2011)«
@@ -458,7 +465,7 @@ INFO: neues Buch »endehorst/Benz, Säkularkanonikerstifte«
 Tabelle »url«: 327 Datensätze
 
 
-Tabelle »zeitraum«: 3425 Datensätze
+Tabelle »zeitraum«: 3410 Datensätze
 
 
 Tabelle »bistum«: 60 Datensätze
@@ -473,7 +480,7 @@ Tabelle »band_url_mm«: 120 Datensätze
 Tabelle »bearbeitungsstatus«: 7 Datensätze
 
 
-Tabelle »kloster«: 1398 Datensätze
+Tabelle »kloster«: 1399 Datensätze
 
 
 Tabelle »kloster_url_mm«: 206 Datensätze
@@ -482,10 +489,31 @@ Tabelle »kloster_url_mm«: 206 Datensätze
 Tabelle »ordenstyp«: 4 Datensätze
 
 
-Tabelle »klosterstatus«: 21 Datensätze
+Tabelle »klosterstatus«: 19 Datensätze
 
 
 Tabelle »orden«: 66 Datensätze
 
 
 Tabelle »kloster_orden«: 1957 Datensätze
+
+
+Tabelle »land«: 27 Datensätze
+
+
+Tabelle »ort«: 44193 Datensätze
+
+
+Tabelle »ort_url_mm«: 2 Datensätze
+
+
+Tabelle »bibitem«: 252 Datensätze
+
+
+Tabelle »literatur«: 1859 Datensätze
+
+
+Tabelle »kloster_standort«: 1453 Datensätze
+
+
+Tabelle »kloster_standort_literatur_mm«: 1859 Datensätze
