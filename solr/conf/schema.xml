@@ -236,6 +236,7 @@
 	<!-- <copyField source="orden" dest="orden_facet"/> Ordensfacette wird (leicht anders) im Indexierungsskript gefüllt -->
 	<copyField source="bistum" dest="bistum_facet"/>
 	<copyField source="land" dest="land_facet"/>
+	<copyField source="status" dest="status_facet"/>
 	
 	<copyField source="kloster" dest="all_suggest"/>
 	<copyField source="ort" dest="all_suggest"/>
