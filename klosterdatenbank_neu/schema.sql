@@ -197,6 +197,18 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `mydb`.`klosterstatus`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`klosterstatus` ;
+
+CREATE  TABLE IF NOT EXISTS `mydb`.`klosterstatus` (
+  `uid` INT NOT NULL ,
+  `status` VARCHAR(255) NULL ,
+  PRIMARY KEY (`uid`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `mydb`.`kloster_orden`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`kloster_orden` ;
@@ -205,7 +217,7 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`kloster_orden` (
   `uid` INT NOT NULL AUTO_INCREMENT ,
   `kloster_uid` INT NOT NULL ,
   `orden_uid` INT NOT NULL ,
-  `status` VARCHAR(255) NULL ,
+  `klosterstatus_uid` INT NOT NULL ,
   `zeitraum_uid` INT NOT NULL ,
   `bemerkung` TEXT NULL ,
   PRIMARY KEY (`uid`) ,
@@ -213,6 +225,7 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`kloster_orden` (
   INDEX `fk_kloster_orden_orden1_idx` (`orden_uid` ASC) ,
   INDEX `fk_kloster_orden_kloster2_idx` (`kloster_uid` ASC) ,
   INDEX `fk_kloster_orden_zeitraum1_idx` (`zeitraum_uid` ASC) ,
+  INDEX `fk_kloster_orden_klosterstatus1_idx` (`klosterstatus_uid` ASC) ,
   CONSTRAINT `fk_kloster_orden_orden1`
     FOREIGN KEY (`orden_uid` )
     REFERENCES `mydb`.`orden` (`uid` )
@@ -226,6 +239,11 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`kloster_orden` (
   CONSTRAINT `fk_kloster_orden_zeitraum1`
     FOREIGN KEY (`zeitraum_uid` )
     REFERENCES `mydb`.`zeitraum` (`uid` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_kloster_orden_klosterstatus1`
+    FOREIGN KEY (`klosterstatus_uid` )
+    REFERENCES `mydb`.`klosterstatus` (`uid` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

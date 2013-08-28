@@ -309,40 +309,57 @@ for values in cursor:
 tabelle = readPrefix + 'KlosterOrden'
 query = "SELECT * from " + tabelle
 cursor.execute(query)
+klosterstatusDict = {}
 
 kloster_orden = []
 for values in cursor:
 	row = dict(zip(cursor.column_names, values))
 	kloster_uid = row['Klosternummer']
-	r = {
-		'uid': row['ID_KlosterOrden'],
-		'kloster_uid': kloster_uid,
-		'orden_uid': row[u'Ordenszugehörigkeit'],
-		'status': row['Klosterstatus'],
-		'bemerkung': row['interne_Anmerkungen'],
-		'crdate': klosterDict[kloster_uid]['crdate'],
-		'cruser_id': klosterDict[kloster_uid]['cruser_id']
-	}
+	orden_uid = row[u'Ordenszugehörigkeit']
 	
-	r2 = {
-		'uid': len(zeitraum) + 1,
-		'von_von': row[u'Ordenszugehörigkeit_von_von'],
-		'von_bis': row[u'Ordenszugehörigkeitvon__bis'],
-		'von_verbal': row[u'OrdenszugehörigkeitVerbal_von'],
-		'bis_von': row[u'Ordenszugehörigkeit_bis_von'],
-		'bis_bis': row[u'Ordenzugehörigkeit_bis_bis'],
-		'bis_verbal': row[u'OrdenszugehörigkeitVerbal_bis'],
-		'crdate': klosterDict[kloster_uid]['crdate'],
-		'cruser_id': klosterDict[kloster_uid]['cruser_id']
-	}
-	zeitraum += [r2]
-	r['zeitraum_uid'] = r2['uid']
-	if r['orden_uid']:
+	if kloster_uid and orden_uid:
+		if row['Klosterstatus'] == None or row['Klosterstatus'] == '':
+			row['Klosterstatus'] = u'keine Angabe'
+		
+		if not klosterstatusDict.has_key(row['Klosterstatus']):
+			klosterstatusDict[row['Klosterstatus']] = {
+				'uid': len(klosterstatusDict),
+				'status': row['Klosterstatus']
+			}
+		klosterstatus_uid = klosterstatusDict[row['Klosterstatus']]['uid']
+	
+		r = {
+			'uid': row['ID_KlosterOrden'],
+			'kloster_uid': kloster_uid,
+			'orden_uid': orden_uid,
+			'klosterstatus_uid': klosterstatus_uid,
+			'bemerkung': row['interne_Anmerkungen'],
+			'crdate': klosterDict[kloster_uid]['crdate'],
+			'cruser_id': klosterDict[kloster_uid]['cruser_id']
+		}
+	
+		r2 = {
+			'uid': len(zeitraum) + 1,
+			'von_von': row[u'Ordenszugehörigkeit_von_von'],
+			'von_bis': row[u'Ordenszugehörigkeitvon__bis'],
+			'von_verbal': row[u'OrdenszugehörigkeitVerbal_von'],
+			'bis_von': row[u'Ordenszugehörigkeit_bis_von'],
+			'bis_bis': row[u'Ordenzugehörigkeit_bis_bis'],
+			'bis_verbal': row[u'OrdenszugehörigkeitVerbal_bis'],
+			'crdate': klosterDict[kloster_uid]['crdate'],
+			'cruser_id': klosterDict[kloster_uid]['cruser_id']
+		}
+		zeitraum += [r2]
+		r['zeitraum_uid'] = r2['uid']
+		
 		kloster_orden += [r]
+		
 	else:
-		print "WARNUNG: orden_uid fehlt in: "
-		pprint.pprint(r)
-
+		if not kloster_uid:
+			print u"FEHLER: Klosternummer fehlt in klosterOrden ID " + str(row['ID_KlosterOrden']) + u": Datensatz verwerfen"
+		elif not orden_uid:
+			print "FEHLER: orden_uid fehlt in klosterOrden ID " + str(row['ID_KlosterOrden']) + u": Datensatz verwerfen"
+		pprint.pprint(row)
 
 
 # Land
@@ -480,9 +497,9 @@ for values in cursor:
 
 	else:
 		if not ort_uid:
-			print u"FEHLER: Feld »ID_alleOrte« leer in KlosterStandort " + str(standort_uid) + ": auslassen"
+			print u"FEHLER: Feld »ID_alleOrte« leer in KlosterStandort " + str(standort_uid) + ": verwerfen"
 		if not kloster_uid:
-			print u"FEHLER: Feld »Klosternummer« leer in KlosterStandort " + str(standort_uid) + ": auslassen"
+			print u"FEHLER: Feld »Klosternummer« leer in KlosterStandort " + str(standort_uid) + ": verwerfen"
 
 
 
@@ -555,6 +572,8 @@ addRecordsToTable(kloster_has_url, 'kloster_url_mm')
 
 ordenstyp = ordenstypDict.values()
 addRecordsToTable(ordenstyp, 'ordenstyp')
+klosterstatus = klosterstatusDict.values()
+addRecordsToTable(klosterstatus, 'klosterstatus')
 addRecordsToTable(orden, 'orden')
 addRecordsToTable(kloster_orden, 'kloster_orden')
 
