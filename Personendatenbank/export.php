@@ -37,6 +37,8 @@
  *
  * 2013 Sven-S. Porst, SUB Göttingen (porst@sub.uni-goettingen.de)
  */
+	setlocale(LC_ALL, 'de_DE.utf8');
+
 	$sqlServer = '127.0.0.1';
 	$sqlUsername = 'root';
 	$sqlPassword = '';
