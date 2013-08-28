@@ -143,7 +143,8 @@ for values in cursor:
 		del docKloster["band_titel"]
 		del docKloster["band_sortierung"]
 	else:
-		docKloster["band_facet"] = [docKloster["band_sortierung"], "hat_band"]
+		bandSortName = str(docKloster["band_sortierung"]) + '||||' + docKloster["band_nummer"] + ' ' + docKloster["band_titel"]
+		docKloster["band_facet"] = [bandSortName, "hat_band"]
 
 	docKloster["typ"] = "kloster"
 	docKloster["id"] = 'kloster-' + str(docKloster["kloster_id"])
