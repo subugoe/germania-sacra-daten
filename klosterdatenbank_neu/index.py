@@ -264,7 +264,7 @@ for values in cursor:
 			geohash = Geohash.encode(breite, laenge)
 			i = 1
 			while (i <= len(geohash)):
-				docStandort["geohash"] += [str(i) + "-" + geohash[0:i]]
+				docStandort["geohash"] += [('%02d' % i) + "-" + geohash[0:i]]
 				i += 1
 			
 		del docStandort["standort_laenge"]
