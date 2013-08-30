@@ -28,177 +28,11 @@ INFO: URL »http://d-nb.info/gnd/4385833-8« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4558940-9« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/2064415-2« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/7749511-1« existiert bereits: doppelt nutzen.
-FEHLER: orden_uid fehlt in klosterOrden ID 1635: Datensatz verwerfen
-{u'ID_KlosterOrden': 1635,
- u'Klosternummer': 3049,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': 1537,
- u'Ordenszugeh\xf6rigkeit_von_von': 1411,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': u'Teileweise Tertiaren'}
-FEHLER: orden_uid fehlt in klosterOrden ID 1668: Datensatz verwerfen
-{u'ID_KlosterOrden': 1668,
- u'Klosternummer': 3071,
- u'Klosterstatus': u'Kollegiatstift',
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': 1806,
- u'Ordenszugeh\xf6rigkeit_von_von': 1276,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 1689: Datensatz verwerfen
-{u'ID_KlosterOrden': 1689,
- u'Klosternummer': 3086,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': u'ca. 1540',
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': 1535,
- u'Ordenszugeh\xf6rigkeit_von_von': 1197,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': 1545,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 1725: Datensatz verwerfen
-{u'ID_KlosterOrden': 1725,
+WARNUNG: ungültiger Bearbeitungstatus »None« in klosterStammblatt 3476. Verwende: 0
+WARNUNG: ungültiger Bearbeitungstatus »None« in klosterStammblatt 3478. Verwende: 0
+FEHLER: orden_uid fehlt in klosterOrden ID 1726: Datensatz verwerfen
+{u'ID_KlosterOrden': 1726,
  u'Klosternummer': 3106,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': None,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 1776: Datensatz verwerfen
-{u'ID_KlosterOrden': 1776,
- u'Klosternummer': 3136,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': None,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 1895: Datensatz verwerfen
-{u'ID_KlosterOrden': 1895,
- u'Klosternummer': 3205,
- u'Klosterstatus': u'Kollegiatstift',
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': 1562,
- u'Ordenszugeh\xf6rigkeit_von_von': None,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': 1563,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 1900: Datensatz verwerfen
-{u'ID_KlosterOrden': 1900,
- u'Klosternummer': 3210,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': u'w\xe4hrend der Franz. Revolution',
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': 1789,
- u'Ordenszugeh\xf6rigkeit_von_von': 973,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': 1799,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 1902: Datensatz verwerfen
-{u'ID_KlosterOrden': 1902,
- u'Klosternummer': 3211,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': 1112,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 1904: Datensatz verwerfen
-{u'ID_KlosterOrden': 1904,
- u'Klosternummer': 3213,
- u'Klosterstatus': u'Kollegiatstift',
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': u' vor 1015 oder um 1056',
- u'Ordenszugeh\xf6rigkeit_bis_von': 1797,
- u'Ordenszugeh\xf6rigkeit_von_von': 965,
- u'Ordenszugeh\xf6rigkeitvon__bis': 1061,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 1913: Datensatz verwerfen
-{u'ID_KlosterOrden': 1913,
- u'Klosternummer': 3219,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': None,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 1971: Datensatz verwerfen
-{u'ID_KlosterOrden': 1971,
- u'Klosternummer': 3263,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': 1171,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': u'M\xf6che'}
-FEHLER: orden_uid fehlt in klosterOrden ID 1992: Datensatz verwerfen
-{u'ID_KlosterOrden': 1992,
- u'Klosternummer': 3276,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': u'um 1122',
- u'Ordenszugeh\xf6rigkeit_bis_von': 1128,
- u'Ordenszugeh\xf6rigkeit_von_von': 1117,
- u'Ordenszugeh\xf6rigkeitvon__bis': 1127,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': u'reguliert'}
-FEHLER: orden_uid fehlt in klosterOrden ID 2012: Datensatz verwerfen
-{u'ID_KlosterOrden': 2012,
- u'Klosternummer': 3290,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': u'1102 bis 1139',
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': 1102,
- u'Ordenszugeh\xf6rigkeitvon__bis': 1139,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 2190: Datensatz verwerfen
-{u'ID_KlosterOrden': 2190,
- u'Klosternummer': 3421,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': None,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 2200: Datensatz verwerfen
-{u'ID_KlosterOrden': 2200,
- u'Klosternummer': 3427,
  u'Klosterstatus': None,
  u'Ordenszugeh\xf6rigkeit': None,
  u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
@@ -214,7 +48,6 @@ INFO: neues Buch »STREICH, Klöster«
 INFO: neues Buch »Jürgen ASCH, Amelungsborn, in: Germ. Ben. 12«
 INFO: neues Buch »Friedrich BUCHHOLZ, Geschichte von Bockenem, Hildesheim 1843 (ND Hildesheim 1975).«
 INFO: neues Buch »Niedersächsisches Klosterbuch 2012 Bd. 1«
-INFO: neues Buch »Niedersächsisches Klosterbuch 2012«
 INFO: neues Buch »Niedersächsisches Klosterbuch 2012 Bd.1«
 INFO: neues Buch »Ehlers, Integration Sachsens«
 INFO: neues Buch »Niedersächsiches Klosterbuch 2012, Band 1«
@@ -441,6 +274,7 @@ INFO: neues Buch »Germania Sacra NF 14, Wendehorst/Benz, Säkularkanonikerstift
 INFO: neues Buch »Klöster in Baden-Württemberg: http://www.kloester-bw.de/?nr=156 (abgerufen: 13.09.2012)«
 INFO: neues Buch »Klöster in Baden-Württemberg: http://www.kloester-bw.de/?nr=551 (abgerufen am 13.09.2012)«
 INFO: neues Buch »Pirmin Lindner, Germania monasti«
+INFO: neues Buch »Wendhorst/benz, Säkularkanonikerstifte«
 INFO: neues Buch »http://www.kloester-bw.de/?nr=615 (abgerufen: 13.09.2012).«
 INFO: neues Buch »http://www.kloester-bw.de/?nr=715 (abgerufen: 13.09.2012)«
 INFO: neues Buch »http://www.kloester-bw.de/?nr=61 (abgerufen: 13.09.2012)«
@@ -456,16 +290,17 @@ INFO: neues Buch »Wendehorst/Benz, Säklularkanonikerstifte«
 INFO: neues Buch »Wendehorst/Benz, Säkularkanoniker«
 INFO: neues Buch »Wendehorst/Benz; Säkularkanonikerstifte«
 INFO: neues Buch »Benz/Wendehorst, Säkularkanonikerstifte«
-INFO: neues Buch »Wendhorst/benz, Säkularkanonikerstifte«
 INFO: neues Buch »Wendehorst/benz, Säkularkanonikerstifte«
 INFO: neues Buch »http://www.klosterlexikon-rlp.de/nc/eifel-ahr/muenstermaifeld-stiftskirche-st-martin-und-st-severus.html?sword_list%5B%5D=M%DCnstermaifeld«
 INFO: neues Buch »endehorst/Benz, Säkularkanonikerstifte«
+INFO: neues Buch »Wendehorst/Benz, Säkularkanikerstifte«
+INFO: neues Buch »Wendehorst/Benz, Säkularkanonikerstife«
 
 
-Tabelle »url«: 327 Datensätze
+Tabelle »url«: 328 Datensätze
 
 
-Tabelle »zeitraum«: 3410 Datensätze
+Tabelle »zeitraum«: 3485 Datensätze
 
 
 Tabelle »bistum«: 60 Datensätze
@@ -480,10 +315,10 @@ Tabelle »band_url_mm«: 120 Datensätze
 Tabelle »bearbeitungsstatus«: 7 Datensätze
 
 
-Tabelle »kloster«: 1399 Datensätze
+Tabelle »kloster«: 1428 Datensätze
 
 
-Tabelle »kloster_url_mm«: 206 Datensätze
+Tabelle »kloster_url_mm«: 207 Datensätze
 
 
 Tabelle »ordenstyp«: 4 Datensätze
@@ -495,25 +330,25 @@ Tabelle »klosterstatus«: 19 Datensätze
 Tabelle »orden«: 66 Datensätze
 
 
-Tabelle »kloster_orden«: 1957 Datensätze
+Tabelle »kloster_orden«: 2003 Datensätze
 
 
 Tabelle »land«: 27 Datensätze
 
 
-Tabelle »ort«: 44193 Datensätze
+Tabelle »ort«: 44206 Datensätze
 
 
 Tabelle »ort_url_mm«: 2 Datensätze
 
 
-Tabelle »bibitem«: 252 Datensätze
+Tabelle »bibitem«: 253 Datensätze
 
 
-Tabelle »literatur«: 1859 Datensätze
+Tabelle »literatur«: 1894 Datensätze
 
 
-Tabelle »kloster_standort«: 1453 Datensätze
+Tabelle »kloster_standort«: 1482 Datensätze
 
 
-Tabelle »kloster_standort_literatur_mm«: 1859 Datensätze
+Tabelle »kloster_standort_literatur_mm«: 1894 Datensätze
