@@ -145,8 +145,8 @@
 			$bAmt = $aemter[$bAmt]['sortierung'] . '-' . $bAmt;
 		}
 
-		$aString = $aAmt . '-' . str_pad($a['person_von'], 4, '0') . '-' . str_pad($a['person_bis'], 4, '0') . '-' . $a['person_vorname'];
-		$bString = $bAmt . '-' . str_pad($b['person_von'], 4, '0') . '-' . str_pad($b['person_bis'], 4, '0') . '-' . $b['person_vorname'];
+		$aString = $aAmt . '-' . str_pad($a['person_von'], 4, '0', STR_PAD_LEFT) . '-' . str_pad($a['person_bis'], 4, '0') . '-' . $a['person_vorname'];
+		$bString = $bAmt . '-' . str_pad($b['person_von'], 4, '0', STR_PAD_LEFT) . '-' . str_pad($b['person_bis'], 4, '0') . '-' . $b['person_vorname'];
 		return strcmp($aString, $bString);
 	}
 
