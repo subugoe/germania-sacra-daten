@@ -28,20 +28,6 @@ INFO: URL »http://d-nb.info/gnd/4385833-8« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4558940-9« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/2064415-2« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/7749511-1« existiert bereits: doppelt nutzen.
-WARNUNG: ungültiger Bearbeitungstatus »None« in klosterStammblatt 3476. Verwende: 0
-WARNUNG: ungültiger Bearbeitungstatus »None« in klosterStammblatt 3478. Verwende: 0
-FEHLER: orden_uid fehlt in klosterOrden ID 1726: Datensatz verwerfen
-{u'ID_KlosterOrden': 1726,
- u'Klosternummer': 3106,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': None,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
 INFO: neues Buch »«
 INFO: neues Buch »Niedersächsisches Klosterbuch 1«
 INFO: neues Buch »STREICH, Klöster«
@@ -313,6 +299,9 @@ Tabelle »band_url_mm«: 120 Datensätze
 
 
 Tabelle »bearbeitungsstatus«: 7 Datensätze
+
+
+Tabelle »personallistenstatus«: 2 Datensätze
 
 
 Tabelle »kloster«: 1428 Datensätze

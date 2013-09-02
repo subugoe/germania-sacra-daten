@@ -135,6 +135,18 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `mydb`.`personallistenstatus`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`personallistenstatus` ;
+
+CREATE  TABLE IF NOT EXISTS `mydb`.`personallistenstatus` (
+  `uid` INT NOT NULL ,
+  `name` VARCHAR(45) NULL ,
+  PRIMARY KEY (`uid`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `mydb`.`bearbeitungsstatus`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`bearbeitungsstatus` ;
@@ -160,15 +172,22 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`kloster` (
   `band_uid` INT NULL ,
   `band_seite` VARCHAR(45) NULL ,
   `text_gs_band` TEXT NULL ,
-  `bearbeitungsstatus_uid` INT NULL ,
+  `bearbeitungsstatus_uid` INT NOT NULL ,
+  `personallistenstatus_uid` INT NOT NULL ,
   PRIMARY KEY (`uid`) ,
   UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
   INDEX `fk_kloster_band1_idx` (`band_uid` ASC) ,
   UNIQUE INDEX `kloster_id_UNIQUE` (`kloster_id` ASC) ,
+  INDEX `fk_kloster_personallistenstatus1_idx` (`personallistenstatus_uid` ASC) ,
   INDEX `fk_kloster_bearbeitungsstatus1_idx` (`bearbeitungsstatus_uid` ASC) ,
   CONSTRAINT `fk_kloster_band1`
     FOREIGN KEY (`band_uid` )
     REFERENCES `mydb`.`band` (`uid` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_kloster_personallistenstatus1`
+    FOREIGN KEY (`personallistenstatus_uid` )
+    REFERENCES `mydb`.`personallistenstatus` (`uid` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_kloster_bearbeitungsstatus1`

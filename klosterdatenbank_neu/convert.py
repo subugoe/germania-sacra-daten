@@ -44,10 +44,6 @@ bearbeitungsstatusDict = {
 	u'Online': 6
 }
 
-bearbeitungsstatus = []
-for status in bearbeitungsstatusDict:
-	bearbeitungsstatus += [{'uid': bearbeitungsstatusDict[status], 'name': status}]
-
 defaultDate = int(time.mktime(time.strptime('2000-01-01 00:00:00', '%Y-%m-%d %H:%M:%S')))
 defaultFields = {
 	'tstamp': int(time.time()),
@@ -205,6 +201,7 @@ cursor.execute(query)
 
 klosterDict =  {}
 kloster_has_urlDict = {}
+personallistenstatusDict = {}
 for values in cursor:
 	row = dict(zip(cursor.column_names, values))
 	uid = row['Klosternummer']
@@ -216,17 +213,24 @@ for values in cursor:
 		if not crdate:
 			crdate = defaultDate
 		cruser_id = 1
+		
 		if bearbeiterDict.has_key(row['Bearbeiter']):
 			cruser_id = bearbeiterDict[row['Bearbeiter']]
 		else:
 			print u"WARNUNG: ungültige Bearbeiter ID »" + str(row['Bearbeiter']) + u"« in klosterStammblatt " + str(uid) + u". Verwende: 1"
-	
-		status = 0
+				
+		bearbeitungsstatus = 0
 		if bearbeitungsstatusDict.has_key(row['Status']):
-			status = bearbeitungsstatusDict[row['Status']]
+			bearbeitungsstatus = bearbeitungsstatusDict[row['Status']]
 		else:
-			print u"WARNUNG: ungültiger Bearbeitungstatus »" + str(row['Status']) + u"« in klosterStammblatt " + str(uid) + u". Verwende: 0"
+			print u"WARNUNG: ungültiger Bearbeitungstatus »" + str(row['Status']) + u"« in klosterStammblatt " + str(uid) + u". Verwende: " + str(bearbeitungsstatus)
 		
+		if not personallistenstatusDict.has_key(row['Personallisten']):
+			personallistenstatusDict[row['Personallisten']] = {
+				'uid': len(personallistenstatusDict),
+				'name': row['Personallisten']
+			}
+		personallistenstatus = personallistenstatusDict[row['Personallisten']]['uid']
 	
 		r = {
 			'uid': uid,
@@ -239,7 +243,8 @@ for values in cursor:
 			'text_gs_band': row['TextGSBand'],
 			'crdate': crdate,
 			'cruser_id': cruser_id,
-			'bearbeitungsstatus_uid': status,
+			'bearbeitungsstatus_uid': bearbeitungsstatus,
+			'personallistenstatus_uid': personallistenstatus
 		}
 		klosterDict[uid] = r
 	
@@ -564,7 +569,12 @@ addRecordsToTable(band, 'band')
 band_has_url = band_has_urlDict.values()
 addRecordsToTable(band_has_url, 'band_url_mm')
 
+bearbeitungsstatus = []
+for status in bearbeitungsstatusDict:
+	bearbeitungsstatus += [{'uid': bearbeitungsstatusDict[status], 'name': status}]
 addRecordsToTable(bearbeitungsstatus, 'bearbeitungsstatus')
+personallistenstatus = personallistenstatusDict.values()
+addRecordsToTable(personallistenstatus, 'personallistenstatus')
 
 kloster = klosterDict.values()
 addRecordsToTable(kloster, 'kloster')
