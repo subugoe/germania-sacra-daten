@@ -726,6 +726,15 @@
 			<float name="threshold">0.0005</float>
 			<str name="buildOnCommit">true</str>
 		</lst>
+
+		<lst name="spellchecker">
+			<str name="name">klostername_suggest</str>
+			<str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+			<str name="lookupImpl">org.apache.solr.spelling.suggest.tst.TSTLookup</str>
+			<str name="field">klostername_suggest</str>  <!-- the indexed field to derive suggestions from -->
+			<float name="threshold">0.0005</float>
+			<str name="buildOnCommit">true</str>
+		</lst>
 	</searchComponent>
 
 	<requestHandler name="/suggest" class="solr.SearchHandler" startup="lazy">

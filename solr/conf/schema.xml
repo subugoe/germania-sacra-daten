@@ -246,6 +246,8 @@
 	<copyField source="kreis" dest="all_suggest"/>
 	<copyField source="bistum" dest="all_suggest"/>
 	<copyField source="orden" dest="all_suggest"/>
+
+	<copyField source="kloster" dest="klostername_suggest"/>
 	<copyField source="bistum" dest="bistum_suggest"/>
 	<copyField source="orden" dest="orden_suggest"/>
 	<copyField source="ort" dest="ort_suggest"/>
