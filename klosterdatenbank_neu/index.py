@@ -16,6 +16,7 @@ import Geohash
 import urllib
 import json
 import xml.etree.ElementTree
+import os
 
 import mysql.connector
 db = mysql.connector.connect(user='root', host='127.0.0.1', database='kloster')
@@ -30,6 +31,7 @@ cursor3 = db3.cursor()
 personenURL = 'http://personendatenbank.germania-sacra.de/export/export.json'
 personenPath = '../Personendatenbank/export.json'
 urllib.urlretrieve(personenURL, personenPath)
+os.system("json_pp < " + personenPath + " > ../Personendatenbank/export-pp.json ")
 jsonFile = open(personenPath)
 personen = json.load(jsonFile)
 jsonFile.close()
