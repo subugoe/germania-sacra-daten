@@ -70,6 +70,70 @@ defaultFields = {
 }
 
 
+# from http://docs.python.org/2/library/csv.html
+import csv, codecs, cStringIO
+
+class UTF8Recoder:
+    """
+    Iterator that reads an encoded stream and reencodes the input to UTF-8
+    """
+    def __init__(self, f, encoding):
+        self.reader = codecs.getreader(encoding)(f)
+
+    def __iter__(self):
+        return self
+
+    def next(self):
+        return self.reader.next().encode("utf-8")
+
+class UnicodeReader:
+    """
+    A CSV reader which will iterate over lines in the CSV file "f",
+    which is encoded in the given encoding.
+    """
+
+    def __init__(self, f, dialect=csv.excel, encoding="utf-8", **kwds):
+        f = UTF8Recoder(f, encoding)
+        self.reader = csv.reader(f, dialect=dialect, **kwds)
+
+    def next(self):
+        row = self.reader.next()
+        return [unicode(s, "utf-8") for s in row]
+
+    def __iter__(self):
+        return self
+
+
+class UnicodeWriter:
+    """
+    A CSV writer which will write rows to CSV file "f",
+    which is encoded in the given encoding.
+    """
+
+    def __init__(self, f, dialect=csv.excel, encoding="utf-8", **kwds):
+        # Redirect output to a queue
+        self.queue = cStringIO.StringIO()
+        self.writer = csv.writer(self.queue, dialect=dialect, **kwds)
+        self.stream = f
+        self.encoder = codecs.getincrementalencoder(encoding)()
+
+    def writerow(self, row):
+        self.writer.writerow([s.encode("utf-8") for s in row])
+        # Fetch UTF-8 output from the queue ...
+        data = self.queue.getvalue()
+        data = data.decode("utf-8")
+        # ... and reencode it into the target encoding
+        data = self.encoder.encode(data)
+        # write to the target stream
+        self.stream.write(data)
+        # empty queue
+        self.queue.truncate(0)
+
+    def writerows(self, rows):
+        for row in rows:
+            self.writerow(row)
+
+
 def addRecordsToTable (records, tableName):
 	global db, cursor
 	print u"\n\nTabelle »" + tableName + u"«: " + str(len(records)) + u" Datensätze"
@@ -126,6 +190,25 @@ def makeURLData (URL, bemerkung, art, record_uid):
 urlDict = {}
 zeitraum = []
 
+
+
+# CSV Datei mit Mapping Literaturdaten auf citekeys lesen
+citekeyDict = {}
+with open('GS-citekeys.csv', 'rb') as citekeysCSV:
+	citekeyReader = UnicodeReader(citekeysCSV, delimiter=',')
+	columnDict = {}
+	for row in citekeyReader:
+		if row[0] == 'uid':
+			# Spaltennummern für Felder feststellen
+			for index, value in enumerate(row):
+				columnDict[value] = index
+		else:
+			citeInfo = {
+				'titel': row[columnDict['titel']],
+				'citekey': row[columnDict['citekey']],
+				'detail': row[columnDict['detail']]
+			}
+			citekeyDict[citeInfo['titel']] = citeInfo
 
 
 # Bistümer
@@ -483,14 +566,24 @@ for values in cursor:
 						'bibitem': buch
 					}
 					bibitemDict[buch] = r3
-					print u"INFO: neues Buch »" + buch + u"«"
+					# print u"INFO: neues Buch »" + buch + u"«"
 				
-			
+				
+				citekey = citekeyDict[buch]['citekey']
+				beschreibung = seite
+				if citekey and citekeyDict[buch]['detail']:
+					if beschreibung and citekeyDict[buch]['detail'].find(beschreibung) == -1:
+						beschreibung = citekeyDict[buch]['detail'] + ', ' + beschreibung
+						print u"INFO: " + str(kloster_uid) + u" Zwei Beschreibungsfelder für: »" + citekey + u"« zusammenfügen: " + beschreibung
+					else:
+						beschreibung = citekeyDict[buch]['detail']
+						
 				literatur_uid = len(literatur) + 1
 				r4 = {
 					'uid': literatur_uid,
+					'citekey': citekey,
+					'beschreibung': beschreibung,
 					'bibitem_uid': bibitemDict[buch]['uid'],
-					'beschreibung': seite,
 					'crdate': klosterDict[kloster_uid]['crdate'],
 					'cruser_id': klosterDict[kloster_uid]['cruser_id']
 				}

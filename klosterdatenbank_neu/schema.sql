@@ -413,6 +413,7 @@ DROP TABLE IF EXISTS `mydb`.`literatur` ;
 
 CREATE  TABLE IF NOT EXISTS `mydb`.`literatur` (
   `uid` INT NOT NULL AUTO_INCREMENT ,
+  `citekey` VARCHAR(255) NULL ,
   `bibitem_uid` INT NOT NULL ,
   `beschreibung` TEXT NULL ,
   PRIMARY KEY (`uid`) ,
