@@ -309,38 +309,30 @@ for values in cursor:
 			if docURL["url_art"] == "Geonames":
 				docURL["geonames"] += [docURL["url"].split("geonames.org/")[1]]
 			mergeDocIntoDoc(docURL, docStandort)
-		 
+		
 						
 		queryLiteratur = """
 		SELECT 
-			literatur.uid, literatur.beschreibung, bibitem.bibitem
+			literatur.uid, literatur.citekey, literatur.beschreibung
 		FROM
 			tx_gs_domain_model_literatur AS literatur,
-			tx_gs_domain_model_bibitem AS bibitem,
 			tx_gs_kloster_standort_literatur_mm AS relation
 		WHERE
 			relation.uid_local = %s AND
-			relation.uid_foreign = literatur.uid AND
-			bibitem.uid = literatur.bibitem_uid
+			relation.uid_foreign = literatur.uid
 		"""
 		cursor3.execute(queryLiteratur, [str(docStandort["standort_uid"])])
-		literaturDict2 = {}
 		for values3 in cursor3:
 			docLiteratur = dict(zip(cursor3.column_names, values3))
-			literatur = docLiteratur["bibitem"]
-			if docLiteratur["beschreibung"]:
-				literatur += ", " + docLiteratur["beschreibung"]
-			if literatur:
-				literaturDict[literatur] = True
+			literaturDict[docLiteratur["citekey"]] = docLiteratur["beschreibung"]
 		
-
-
 		mergeDocIntoDoc(docStandort, docKloster)
 		doc2 = copy.deepcopy(docStandort)
 		doc2["id"] = "kloster-standort-" + str(doc2["standort_uid"])
 		doc2["sql_uid"] = doc2["standort_uid"]
 		doc2["kloster_id"] = docKloster['id']
-		doc2["literatur"] = literaturDict.keys()
+		doc2["literatur_citekey"] = literaturDict.keys()
+		doc2["literatur_beschreibung"] = literaturDict.values()
 		del doc2["standort_uid"]
 		doc2["typ"] = "kloster-standort"
 		docs += [doc2]
@@ -391,7 +383,8 @@ for values in cursor:
 		docs += [doc2]
 		orden += [copy.deepcopy(docOrden)]
 	
-	docKloster["literatur"] = literaturDict.keys()
+	docKloster["literatur_citekey"] = literaturDict.keys()
+	docKloster["literatur_beschreibung"] = literaturDict.values()
 	
 	if docKloster.has_key('ort') and len(docKloster['ort']) > 0:
 		docKloster['ort_sort'] = docKloster['ort'][0]
@@ -423,7 +416,8 @@ for values in cursor:
 				# Orden und Standort Felder
 				mergeDocIntoDoc(myOrden, doc)
 				mergeDocIntoDoc(myStandort, doc)
-				doc['literatur'] = literaturDict.keys()
+				doc["literatur_citekey"] = literaturDict.keys()
+				doc["literatur_beschreibung"] = literaturDict.values()
 				
 				# Verwaltungsfelder
 				doc['typ'] = 'standort-orden'

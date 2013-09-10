@@ -68,8 +68,8 @@
 		<field name="kloster_status" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="gruender" type="text_de" indexed="true" stored="true" multiValued="true"/>
 
-		<field name="literatur" type="text_de" indexed="true" stored="true" multiValued="true"/>
-		<field name="literatur_id" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="literatur_citekey" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="literatur_beschreibung" type="string" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="url" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="url_bemerkung" type="text_de" indexed="true" stored="true" multiValued="true"/>
