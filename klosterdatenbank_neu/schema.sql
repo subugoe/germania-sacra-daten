@@ -347,6 +347,7 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`kloster_standort` (
   `breite` FLOAT NULL ,
   `laenge` FLOAT NULL ,
   `bemerkung_standort` TEXT NULL ,
+  `temp_literatur_alt` TEXT NULL ,
   PRIMARY KEY (`uid`) ,
   UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
   INDEX `fk_kloster_standort_kloster1_idx` (`kloster_uid` ASC) ,

@@ -528,9 +528,10 @@ for values in cursor:
 			'ort_uid': ort_uid,
 			'gruender': row['Gruender'],
 			'bemerkung': row['interne_Anmerkungen'],
-            'breite': row['Breite'],
-            'laenge': row['Laenge'],
-            'bemerkung_standort': row['BemerkungenStandort'],
+			'breite': row['Breite'],
+			'laenge': row['Laenge'],
+			'bemerkung_standort': row['BemerkungenStandort'],
+			'temp_literatur_alt': row['Literaturnachweise'],
 			'crdate': klosterDict[kloster_uid]['crdate'],
 			'cruser_id': klosterDict[kloster_uid]['cruser_id']
 		}
@@ -569,14 +570,15 @@ for values in cursor:
 					# print u"INFO: neues Buch »" + buch + u"«"
 				
 				
-				citekey = citekeyDict[buch]['citekey']
 				beschreibung = seite
-				if citekey and citekeyDict[buch]['detail']:
-					if beschreibung and citekeyDict[buch]['detail'].find(beschreibung) == -1:
-						beschreibung = citekeyDict[buch]['detail'] + ', ' + beschreibung
-						print u"INFO: " + str(kloster_uid) + u" Zwei Beschreibungsfelder für: »" + citekey + u"« zusammenfügen: " + beschreibung
-					else:
-						beschreibung = citekeyDict[buch]['detail']
+				if citekeyDict.has_key(buch):
+					citekey = citekeyDict[buch]['citekey']
+					if citekey and citekeyDict[buch]['detail'] and citekeyDict[buch]['detail'] != u'#N/A':
+						if beschreibung and citekeyDict[buch]['detail'].find(beschreibung) == -1:
+							beschreibung = citekeyDict[buch]['detail'] + ', ' + beschreibung
+							print u"INFO: " + str(kloster_uid) + u" Zwei Beschreibungsfelder für: »" + citekey + u"« zusammenfügen: " + beschreibung
+						else:
+							beschreibung = citekeyDict[buch]['detail']
 						
 				literatur_uid = len(literatur) + 1
 				r4 = {

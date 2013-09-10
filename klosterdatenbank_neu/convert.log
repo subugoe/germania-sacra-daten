@@ -28,9 +28,8 @@ INFO: URL »http://d-nb.info/gnd/4385833-8« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4558940-9« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/2064415-2« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/7749511-1« existiert bereits: doppelt nutzen.
-INFO: 169 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel „Arneburg. Benediktiner“, S. 127-130, hier S. 127
+INFO: 169 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel „Arneburg. Benediktiner“, hier S. 127, S. 127-130, hier S. 127
 INFO: 176 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel „Kalbe/Milde. Benediktinerinnen/Kanonissen (?)“, S. 671-675, hier S. 671
-INFO: 459 Zwei Beschreibungsfelder für: »Hengst.1992« zusammenfügen: Artikel „Böddeken“, S. 102-105
 INFO: 459 Zwei Beschreibungsfelder für: »Hengst.1992« zusammenfügen: Artikel „Augustiner-Chorherren“, S. 105-112
 INFO: 611 Zwei Beschreibungsfelder für: »Hengst.1992« zusammenfügen: Artikel „Benediktiner“, S. 574-577, hier S. 574f
 INFO: 735 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel „Fürstenwalde. Domkapitel des Bistums Lebus“, S. 481-499, hier S. 481
@@ -74,10 +73,10 @@ INFO: 771 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artik
 INFO: 772 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artikel „Zinna. Zisterzienser“, S. 1359-1384, hier S. 1347
 
 
-Tabelle »url«: 328 Datensätze
+Tabelle »url«: 334 Datensätze
 
 
-Tabelle »zeitraum«: 3485 Datensätze
+Tabelle »zeitraum«: 3487 Datensätze
 
 
 Tabelle »bistum«: 60 Datensätze
@@ -86,7 +85,7 @@ Tabelle »bistum«: 60 Datensätze
 Tabelle »band«: 73 Datensätze
 
 
-Tabelle »band_url_mm«: 120 Datensätze
+Tabelle »band_url_mm«: 126 Datensätze
 
 
 Tabelle »bearbeitungsstatus«: 7 Datensätze
@@ -110,7 +109,7 @@ Tabelle »klosterstatus«: 19 Datensätze
 Tabelle »orden«: 66 Datensätze
 
 
-Tabelle »kloster_orden«: 2003 Datensätze
+Tabelle »kloster_orden«: 2005 Datensätze
 
 
 Tabelle »land«: 27 Datensätze
@@ -122,13 +121,13 @@ Tabelle »ort«: 44206 Datensätze
 Tabelle »ort_url_mm«: 2 Datensätze
 
 
-Tabelle »bibitem«: 253 Datensätze
+Tabelle »bibitem«: 251 Datensätze
 
 
-Tabelle »literatur«: 1894 Datensätze
+Tabelle »literatur«: 1899 Datensätze
 
 
 Tabelle »kloster_standort«: 1482 Datensätze
 
 
-Tabelle »kloster_standort_literatur_mm«: 1894 Datensätze
+Tabelle »kloster_standort_literatur_mm«: 1899 Datensätze
