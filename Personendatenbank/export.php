@@ -16,21 +16,21 @@
  * das in die Datei »export.json« geschrieben wird.
  * Hierbei ist { PERSONENINFORMATION } ein JSON Objekt mit den Feldern:
  *  * person_vorname
- *  * person_name_xml
- *  * person_namensalternativen_xml
+ *  * person_name
+ *  * person_namensalternativen
  *  * person_gso
  *  * person_gnd
  *  * person_bezeichnung
  *  * person_bezeichnung_plural
- *  * person_anmerkung_xml
+ *  * person_anmerkung
  *  * person_von_verbal
  *  * person_von
  *  * person_bis_verbal
  *  * person_bis
  *
- * Die auf _xml endenden Felder enthalten gültiges XML, das ohne escaping in die
- * Webseite eingefügt werden kann. Feldinhalte, die nicht geparsed werden können,
- * werden verworfen und eine Lognachricht geschrieben.
+ * Inhalte der Felder name, vorname, namensalternativen und anmerkung werden von XML
+ * Tags befreit. Enthalten sie ungültiges XML, das zu einer unbeabsichtigten Anzeige
+ * führt, wird eine Lognachricht geschrieben.
  *
  * Aufstellung der Felder unter:
  * https://docs.google.com/spreadsheet/ccc?key=0Ah9t1ddBuxv8dFJRQjN4LXA5MXk4bEtseVZjVGEweWc&usp=sharing
@@ -92,27 +92,26 @@
 	set_error_handler('handleError');
 
 	function makeXMLField (&$record, $feldName) {
-        $name = 'person_' . $feldName;
-        $nameXML = $name . '_xml';
-        $record[$nameXML] = '';
+		$name = 'person_' . $feldName;
 
-        if ($record[$name]) {
-            $content = $record[$name];
-            $XMLString = '<span class="' . $name. '">' . $content . '</span>';
-            $XML = new DOMDocument();
-            if ($XML->loadXML($XMLString)) {
-                $record[$nameXML] = $XML->saveXML($XML->documentElement);
-            }
-            else {
+		if ($record[$name]) {
+			$content = $record[$name];
+			$XMLString = '<span class="' . $name. '">' . $content . '</span>';
+			$XML = new DOMDocument();
+			if ($XML->loadXML($XMLString)) {
+				$record[$name] = $XML->textContent;
+				if ($record[$name] !== $content) {
+					# echo "INFO: XML entfernt (" . $record['person_gso'] . ", " . $content . ")\n";
+				}
+			}
+			else {
 				echo "FEHLER: ungültiges XML:\n";
 				echo "  Person GSO Nummer: " . $record['person_gso'] . "\n";
 				echo "  " . $name . ": " . $record[$name] . "\n";
-				echo "  Feld nicht übernommen.\n\n";
-            }
-        }
-
-        unset($record[$name]);
-    }
+				echo "  Feld wird falsch angezeigt.\n\n";
+			}
+		}
+	}
 
 
 	$aemter = array();
@@ -222,7 +221,7 @@ ORDER BY
 					}
 
                     // Felder mit XML bearbeiten
-                    $xmlFelder = array('name', 'namensalternativen', 'anmerkung');
+                    $xmlFelder = array('name', 'vorname', 'namensalternativen', 'anmerkung');
                     foreach ($xmlFelder as $feldName) {
 						makeXMLField($personeninfo, $feldName);
                     }
