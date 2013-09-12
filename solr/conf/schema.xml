@@ -191,7 +191,6 @@
 	<copyField source="band_nummer" dest="text"/>
 	<copyField source="band_titel" dest="text"/>
 	<copyField source="gruender" dest="text"/>
-	<copyField source="literatur" dest="text"/>
 	<copyField source="gnd" dest="text"/>
 <!--	<copyField source="geonames" dest="text"/> -->
 	<copyField source="koordinaten" dest="text"/>
