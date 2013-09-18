@@ -164,6 +164,35 @@ def addRecordsToTable (records, tableName):
 		db.commit()
 
 
+def addGNDURLToDoc (row, fieldName, doc, note, relationDict):
+	urls = row[fieldName]
+	if urls:
+		urls = urls.replace(chr(9), ' ').replace('http:// ', '').replace(' http', ';http').replace(';', '#').split('#')
+		for myURL in urls:
+			myURL = myURL.strip().strip('# ')
+			GNDID = re.sub(r'http://d-nb.info/gnd/', '', myURL)
+			URLRelation = makeURLData(myURL, note + ' [' + GNDID + ']', 'GND', doc['uid'])
+			if URLRelation:
+				key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
+				relationDict[key] = URLRelation
+
+
+
+def addWikipediaURLToDoc (row, fieldName, doc, relationDict):
+	urls = row[fieldName]
+	if urls:
+		urls = urls.replace('http:// ', '').replace(';', '#').split('#')
+		for myURL in urls:
+			lemma = re.sub(r'.*/wiki/' , '', myURL).replace('_', ' ')
+			lemma = urllib.unquote(str(lemma))
+			lemma = lemma.decode('utf-8')
+			URLRelation = makeURLData(myURL, lemma, 'Wikipedia', doc['uid'])
+			if URLRelation:
+				key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
+				relationDict[key] = URLRelation
+
+
+
 def makeURLData (URL, bemerkung, art, record_uid):
 	global urlDict
 	URLRelation = None
@@ -217,6 +246,7 @@ query = "SELECT * from " + tabelle
 cursor.execute(query)
 
 bistumDict = {}
+bistum_has_urlDict = {}
 for values in cursor:
 	row = dict(zip(cursor.column_names, values))
 	ist_erzbistum = (row['ErzbistumAuswahlfeld'] == 'Erzbistum')
@@ -230,7 +260,17 @@ for values in cursor:
 		'ort_uid': row['Bistumssitz']
 	}
 	
+	GNDLabel = ''
+	if r['ist_erzbistum']:
+		GNDLabel = 'Erzbistum'
+	else:
+		GNDLabel = 'Bistum'
+	GNDLabel += ' ' + r['bistum']
+	addGNDURLToDoc(row, 'GND_Dioezese', r, r['bistum'], bistum_has_urlDict)
+	addWikipediaURLToDoc(row, 'Wikipedia_Dioezese', r, bistum_has_urlDict)
+	
 	bistumDict[row['ID']] = r
+	
 
 
 
@@ -331,29 +371,9 @@ for values in cursor:
 		}
 		klosterDict[uid] = r
 	
+		addGNDURLToDoc(row, 'GND', r, r['kloster'], kloster_has_urlDict)
+		addWikipediaURLToDoc(row, 'Wikipedia', r, kloster_has_urlDict)
 
-		urls = row['GND']
-		if urls:
-			urls = urls.replace(chr(9), ' ').replace('http:// ', '').replace(' http', ';http').replace(';', '#').split('#')
-			for myURL in urls:
-				myURL = myURL.strip().strip('# ')
-				GNDID = re.sub(r'http://d-nb.info/gnd/', '', myURL)
-				URLRelation = makeURLData(myURL, r['kloster'] + ' [' + GNDID + ']', 'GND', uid)
-				if URLRelation:
-					key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
-					kloster_has_urlDict[key] = URLRelation
-
-		urls = row['Wikipedia']
-		if urls:
-			urls = urls.replace('http:// ', '').replace(';', '#').split('#')
-			for myURL in urls:
-				lemma = re.sub(r'.*/wiki/' , '', myURL).replace('_', ' ')
-				lemma = urllib.unquote(str(lemma))
-				lemma = lemma.decode('utf-8')
-				URLRelation = makeURLData(myURL, lemma, 'Wikipedia', uid)
-				if URLRelation:
-					key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
-					kloster_has_urlDict[key] = URLRelation
 	else:
 		print u"FEHLER: klosterStammblatt Datensatz ohne Klosternummer:"
 		pprint.pprint(row)
@@ -368,6 +388,7 @@ cursor.execute(query)
 
 orden = []
 ordenstypDict = {}
+orden_has_urlDict = {}
 for values in cursor:
 	row = dict(zip(cursor.column_names, values))
 	graphik = None
@@ -391,6 +412,10 @@ for values in cursor:
 		}
 		ordenstypDict[r2['ordenstyp']] = r2
 	r['ordenstyp_uid'] = ordenstypDict[ordenstyp]['uid']
+	
+	addGNDURLToDoc(row, 'GND_Orden', r, r['orden'], orden_has_urlDict)
+	addWikipediaURLToDoc(row, 'Wikipedia_Orden', r, orden_has_urlDict)
+	
 	orden += [r]
 
 
@@ -659,6 +684,8 @@ addRecordsToTable(zeitraum, 'zeitraum')
 
 bistum = bistumDict.values()
 addRecordsToTable(bistum, 'bistum')
+bistum_has_url = bistum_has_urlDict.values()
+addRecordsToTable(bistum_has_url, 'bistum_url_mm')
 
 addRecordsToTable(band, 'band')
 band_has_url = band_has_urlDict.values()
@@ -682,6 +709,8 @@ klosterstatus = klosterstatusDict.values()
 addRecordsToTable(klosterstatus, 'klosterstatus')
 addRecordsToTable(orden, 'orden')
 addRecordsToTable(kloster_orden, 'kloster_orden')
+orden_has_url = orden_has_urlDict.values()
+addRecordsToTable(orden_has_url, 'orden_url_mm')
 
 addRecordsToTable(land, 'land')
 addRecordsToTable(ort, 'ort')

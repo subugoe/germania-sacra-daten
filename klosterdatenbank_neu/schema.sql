@@ -452,6 +452,54 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`kloster_standort_has_literatur` (
 ENGINE = InnoDB;
 
 
+-- -----------------------------------------------------
+-- Table `mydb`.`orden_has_url`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`orden_has_url` ;
+
+CREATE  TABLE IF NOT EXISTS `mydb`.`orden_has_url` (
+  `uid_local` INT NOT NULL ,
+  `uid_foreign` INT NOT NULL ,
+  PRIMARY KEY (`uid_local`, `uid_foreign`) ,
+  INDEX `fk_orden_has_url_url1_idx` (`uid_foreign` ASC) ,
+  INDEX `fk_orden_has_url_orden1_idx` (`uid_local` ASC) ,
+  CONSTRAINT `fk_orden_has_url_orden1`
+    FOREIGN KEY (`uid_local` )
+    REFERENCES `mydb`.`orden` (`uid` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_orden_has_url_url1`
+    FOREIGN KEY (`uid_foreign` )
+    REFERENCES `mydb`.`url` (`uid` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`bistum_has_url`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`bistum_has_url` ;
+
+CREATE  TABLE IF NOT EXISTS `mydb`.`bistum_has_url` (
+  `uid_local` INT NOT NULL ,
+  `uid_foreign` INT NOT NULL ,
+  PRIMARY KEY (`uid_local`, `uid_foreign`) ,
+  INDEX `fk_bistum_has_url_url1_idx` (`uid_foreign` ASC) ,
+  INDEX `fk_bistum_has_url_bistum1_idx` (`uid_local` ASC) ,
+  CONSTRAINT `fk_bistum_has_url_bistum1`
+    FOREIGN KEY (`uid_local` )
+    REFERENCES `mydb`.`bistum` (`uid` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_bistum_has_url_url1`
+    FOREIGN KEY (`uid_foreign` )
+    REFERENCES `mydb`.`url` (`uid` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

@@ -1,3 +1,15 @@
+INFO: URL »http://d-nb.info/gnd/4229740-0« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/1001902-9« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4044284-6« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4106813-0« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/2029618-6« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4069671-6« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/7551559-3« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4997248-0« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/5150774-2« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/5107923-9« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/10106304-0« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4506809-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4683949-5« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4355884-7« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4355889-6« existiert bereits: doppelt nutzen.
@@ -28,6 +40,36 @@ INFO: URL »http://d-nb.info/gnd/4385833-8« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4558940-9« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/2064415-2« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/7749511-1« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/2180420-5« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/1018585-9« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4029781-0« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/1016737-7« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4224957-0« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/5288901-4« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/1008640-7« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/1009039-3« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4003631-5« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/25880-5« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/1022996-6« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/2001462-4« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4011800-9« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/80092-2« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4139813-0« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4191568-9« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4647658-1« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4190971-9« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4168735-8« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4005487-1« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4573408-2« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4134088-7« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4222227-8« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4028323-9« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/1016737-7« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/1016737-7« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/16325580-5« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/1008643-2« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/5299650-5« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4449082-3« existiert bereits: doppelt nutzen.
 INFO: 169 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel „Arneburg. Benediktiner“, hier S. 127, S. 127-130, hier S. 127
 INFO: 176 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel „Kalbe/Milde. Benediktinerinnen/Kanonissen (?)“, S. 671-675, hier S. 671
 INFO: 459 Zwei Beschreibungsfelder für: »Hengst.1992« zusammenfügen: Artikel „Augustiner-Chorherren“, S. 105-112
@@ -73,13 +115,16 @@ INFO: 771 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artik
 INFO: 772 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artikel „Zinna. Zisterzienser“, S. 1359-1384, hier S. 1347
 
 
-Tabelle »url«: 334 Datensätze
+Tabelle »url«: 446 Datensätze
 
 
 Tabelle »zeitraum«: 3487 Datensätze
 
 
 Tabelle »bistum«: 60 Datensätze
+
+
+Tabelle »bistum_url_mm«: 58 Datensätze
 
 
 Tabelle »band«: 73 Datensätze
@@ -106,10 +151,13 @@ Tabelle »ordenstyp«: 4 Datensätze
 Tabelle »klosterstatus«: 19 Datensätze
 
 
-Tabelle »orden«: 66 Datensätze
+Tabelle »orden«: 67 Datensätze
 
 
 Tabelle »kloster_orden«: 2005 Datensätze
+
+
+Tabelle »orden_url_mm«: 55 Datensätze
 
 
 Tabelle »land«: 27 Datensätze
