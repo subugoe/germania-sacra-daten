@@ -2623,8 +2623,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-01212-001",
-         "person_name" : "Johann Dam",
+         "person_gso" : "065-01893-001",
+         "person_name" : "Johann Gessing",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Küster",
          "person_von" : 0,
@@ -2637,8 +2637,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-01893-001",
-         "person_name" : "Johann Gessing",
+         "person_gso" : "065-01212-001",
+         "person_name" : "Johann Dam",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Küster",
          "person_von" : 0,
@@ -2847,20 +2847,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-00137-001",
-         "person_name" : "Alheidis Kerckerinck",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Jungfern",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Jungfer",
-         "person_vorname" : "Alheidis",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "065-00135-001",
          "person_name" : "Alheidis Borkes",
          "person_bis_verbal" : "",
@@ -2875,8 +2861,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-00145-001",
-         "person_name" : "Alheidis Moerken",
+         "person_gso" : "065-00147-001",
+         "person_name" : "Alheidis Morken",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Jungfern",
          "person_von" : 0,
@@ -2903,8 +2889,22 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-00147-001",
-         "person_name" : "Alheidis Morken",
+         "person_gso" : "065-00145-001",
+         "person_name" : "Alheidis Moerken",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Jungfern",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Jungfer",
+         "person_vorname" : "Alheidis",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "065-00137-001",
+         "person_name" : "Alheidis Kerckerinck",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Jungfern",
          "person_von" : 0,
@@ -2959,20 +2959,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-00200-001",
-         "person_name" : "Angela Blomensaet",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Jungfern",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Jungfer",
-         "person_vorname" : "Angela",
-         "person_namensalternativen" : "Engel; Blomensanden",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "065-00204-001",
          "person_name" : "Angela Warendorp",
          "person_bis_verbal" : "",
@@ -2987,8 +2973,22 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-00545-001",
-         "person_name" : "Anna Blancker",
+         "person_gso" : "065-00200-001",
+         "person_name" : "Angela Blomensaet",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Jungfern",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Jungfer",
+         "person_vorname" : "Angela",
+         "person_namensalternativen" : "Engel; Blomensanden",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "065-00213-001",
+         "person_name" : "Anna Grüters",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Jungfern",
          "person_von" : 0,
@@ -3015,6 +3015,20 @@
          "person_anmerkung" : ""
       },
       {
+         "person_gso" : "065-03529-001",
+         "person_name" : "Anna Ordt",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Jungfern",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Jungfer",
+         "person_vorname" : "Anna",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
          "person_gso" : "065-00211-001",
          "person_name" : "Anna (von) Brüninghausen",
          "person_bis_verbal" : "",
@@ -3029,22 +3043,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-00213-001",
-         "person_name" : "Anna Grüters",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Jungfern",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Jungfer",
-         "person_vorname" : "Anna",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
-         "person_gso" : "065-03529-001",
-         "person_name" : "Anna Ordt",
+         "person_gso" : "065-00545-001",
+         "person_name" : "Anna Blancker",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Jungfern",
          "person_von" : 0,
@@ -3169,8 +3169,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-00866-001",
-         "person_name" : "Catharina Heerde",
+         "person_gso" : "065-00869-001",
+         "person_name" : "Catharina von der Wick",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Jungfern",
          "person_von" : 0,
@@ -3183,8 +3183,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-00869-001",
-         "person_name" : "Catharina von der Wick",
+         "person_gso" : "065-00866-001",
+         "person_name" : "Catharina Heerde",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Jungfern",
          "person_von" : 0,
@@ -3207,6 +3207,34 @@
          "person_von_verbal" : "",
          "person_bezeichnung" : "Jungfer",
          "person_vorname" : "Catharina Luthrudis",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "065-00929-001",
+         "person_name" : "Christina Blomensaet",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Jungfern",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Jungfer",
+         "person_vorname" : "Christina",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "065-00951-001",
+         "person_name" : "Christina",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Jungfern",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Jungfer",
+         "person_vorname" : "Christina",
          "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
@@ -3239,20 +3267,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-00936-001",
-         "person_name" : "Christina von Drolshagen",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Jungfern",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Jungfer",
-         "person_vorname" : "Christina",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "065-00941-001",
          "person_name" : "Christina Herding",
          "person_bis_verbal" : "",
@@ -3267,36 +3281,22 @@
          "person_anmerkung" : ""
       },
       {
+         "person_gso" : "065-00936-001",
+         "person_name" : "Christina von Drolshagen",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Jungfern",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Jungfer",
+         "person_vorname" : "Christina",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
          "person_gso" : "065-00934-001",
          "person_name" : "Christina Cleihorst",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Jungfern",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Jungfer",
-         "person_vorname" : "Christina",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
-         "person_gso" : "065-00951-001",
-         "person_name" : "Christina",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Jungfern",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Jungfer",
-         "person_vorname" : "Christina",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
-         "person_gso" : "065-00929-001",
-         "person_name" : "Christina Blomensaet",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Jungfern",
          "person_von" : 0,
@@ -3337,6 +3337,20 @@
          "person_anmerkung" : ""
       },
       {
+         "person_gso" : "065-01492-001",
+         "person_name" : "Elisabeth Moerken",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Jungfern",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Jungfer",
+         "person_vorname" : "Elisabeth",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
          "person_gso" : "065-01472-001",
          "person_name" : "Elisabeth von Beinhem",
          "person_bis_verbal" : "",
@@ -3353,20 +3367,6 @@
       {
          "person_gso" : "065-01476-001",
          "person_name" : "Elisabeth ten Brincke",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Jungfern",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Jungfer",
-         "person_vorname" : "Elisabeth",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
-         "person_gso" : "065-01492-001",
-         "person_name" : "Elisabeth Moerken",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Jungfern",
          "person_von" : 0,
@@ -3407,20 +3407,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-01879-001",
-         "person_name" : "Gertrudis Noerden",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Jungfern",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Jungfer",
-         "person_vorname" : "Gertrudis",
-         "person_namensalternativen" : "Norendin?",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "065-01886-001",
          "person_name" : "Gertrudis Warendorp",
          "person_bis_verbal" : "",
@@ -3432,6 +3418,20 @@
          "person_bezeichnung" : "Jungfer",
          "person_vorname" : "Gertrudis",
          "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "065-01879-001",
+         "person_name" : "Gertrudis Noerden",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Jungfern",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Jungfer",
+         "person_vorname" : "Gertrudis",
+         "person_namensalternativen" : "Norendin?",
          "person_anmerkung" : ""
       },
       {
@@ -3505,20 +3505,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-02225-001",
-         "person_name" : "Helena Cleivorn",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Jungfern",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Jungfer",
-         "person_vorname" : "Helena",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "065-04470-001",
          "person_name" : "Helena von Twickel",
          "person_bis_verbal" : "",
@@ -3530,6 +3516,20 @@
          "person_bezeichnung" : "Jungfer",
          "person_vorname" : "Helena",
          "person_namensalternativen" : "Schwickel, Frickler",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "065-02225-001",
+         "person_name" : "Helena Cleivorn",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Jungfern",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Jungfer",
+         "person_vorname" : "Helena",
+         "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
       {
@@ -3547,20 +3547,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-02356-001",
-         "person_name" : "Hildburgis von Heek",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Jungfern",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Jungfer",
-         "person_vorname" : "Hildburgis",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "065-02357-001",
          "person_name" : "Hildburgis Norendin",
          "person_bis_verbal" : "",
@@ -3572,6 +3558,20 @@
          "person_bezeichnung" : "Jungfer",
          "person_vorname" : "Hildburgis",
          "person_namensalternativen" : "Hildegundis",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "065-02356-001",
+         "person_name" : "Hildburgis von Heek",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Jungfern",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Jungfer",
+         "person_vorname" : "Hildburgis",
+         "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
       {
@@ -3645,34 +3645,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-02962-001",
-         "person_name" : "Margaretha Bolandes",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Jungfern",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Jungfer",
-         "person_vorname" : "Margaretha",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
-         "person_gso" : "065-02965-001",
-         "person_name" : "Margaretha Budde",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Jungfern",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Jungfer",
-         "person_vorname" : "Margaretha",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "065-02967-001",
          "person_name" : "Margaretha Fransois",
          "person_bis_verbal" : "",
@@ -3687,8 +3659,36 @@
          "person_anmerkung" : ""
       },
       {
+         "person_gso" : "065-02962-001",
+         "person_name" : "Margaretha Bolandes",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Jungfern",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Jungfer",
+         "person_vorname" : "Margaretha",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
          "person_gso" : "065-02959-001",
          "person_name" : "Margaretha von Ascheberg",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Jungfern",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Jungfer",
+         "person_vorname" : "Margaretha",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "065-02965-001",
+         "person_name" : "Margaretha Budde",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Jungfern",
          "person_von" : 0,
@@ -4429,20 +4429,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-03047-001",
-         "person_name" : "Elisabeth von Meverden",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Jungfern",
-         "person_von" : 1549,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "1549",
-         "person_bezeichnung" : "Jungfer",
-         "person_vorname" : "Elisabeth",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "065-04050-001",
          "person_name" : "Elisabeth Schnelle",
          "person_bis_verbal" : "",
@@ -4454,6 +4440,20 @@
          "person_bezeichnung" : "Jungfer",
          "person_vorname" : "Elisabeth",
          "person_namensalternativen" : "Snelle",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "065-03047-001",
+         "person_name" : "Elisabeth von Meverden",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Jungfern",
+         "person_von" : 1549,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "1549",
+         "person_bezeichnung" : "Jungfer",
+         "person_vorname" : "Elisabeth",
+         "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
       {
@@ -5745,7 +5745,7 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-02757-001",
+         "person_gso" : "066-03482-001",
          "person_name" : "Liborius",
          "person_bis_verbal" : "1214",
          "person_bezeichnung_plural" : "Confessare",
@@ -6935,6 +6935,20 @@
          "person_anmerkung" : "Vikar und Kaplan"
       },
       {
+         "person_gso" : "065-00118-001",
+         "person_name" : "Hermann Alers",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Vikare",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Vikar",
+         "person_vorname" : "Hermann",
+         "person_namensalternativen" : "Ahlers",
+         "person_anmerkung" : ""
+      },
+      {
          "person_gso" : "065-03059-001",
          "person_name" : "Hermann Meiners",
          "person_bis_verbal" : "",
@@ -6946,20 +6960,6 @@
          "person_bezeichnung" : "Vikar",
          "person_vorname" : "Hermann",
          "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
-         "person_gso" : "065-04087-001",
-         "person_name" : "Hermann Schräder",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Vikare",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Vikar",
-         "person_vorname" : "Hermann",
-         "person_namensalternativen" : "Schräders, Schroder, Schröder",
          "person_anmerkung" : ""
       },
       {
@@ -6977,8 +6977,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-00118-001",
-         "person_name" : "Hermann Alers",
+         "person_gso" : "065-04087-001",
+         "person_name" : "Hermann Schräder",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Vikare",
          "person_von" : 0,
@@ -6987,7 +6987,7 @@
          "person_von_verbal" : "",
          "person_bezeichnung" : "Vikar",
          "person_vorname" : "Hermann",
-         "person_namensalternativen" : "Ahlers",
+         "person_namensalternativen" : "Schräders, Schroder, Schröder",
          "person_anmerkung" : ""
       },
       {
@@ -7016,20 +7016,6 @@
          "person_bezeichnung" : "Vikar",
          "person_vorname" : "Joachim Wilhelm",
          "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
-         "person_gso" : "065-02732-001",
-         "person_name" : "Johann Lehnert",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Vikare",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Vikar",
-         "person_vorname" : "Johann",
-         "person_namensalternativen" : "Lenert, Leinert",
          "person_anmerkung" : ""
       },
       {
@@ -7072,6 +7058,20 @@
          "person_bezeichnung" : "Vikar",
          "person_vorname" : "Johann",
          "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "065-02732-001",
+         "person_name" : "Johann Lehnert",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Vikare",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Vikar",
+         "person_vorname" : "Johann",
+         "person_namensalternativen" : "Lenert, Leinert",
          "person_anmerkung" : ""
       },
       {
@@ -9567,20 +9567,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-04091-001",
-         "person_name" : "Agatha Schrage",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Donatessen",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Donatesse",
-         "person_vorname" : "Agatha",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "065-04649-001",
          "person_name" : "Agatha Wesseling",
          "person_bis_verbal" : "",
@@ -9595,8 +9581,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-01150-001",
-         "person_name" : "Agnes Crucelman",
+         "person_gso" : "065-04091-001",
+         "person_name" : "Agatha Schrage",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Donatessen",
          "person_von" : 0,
@@ -9604,7 +9590,7 @@
          "person_gnd" : "",
          "person_von_verbal" : "",
          "person_bezeichnung" : "Donatesse",
-         "person_vorname" : "Agnes",
+         "person_vorname" : "Agatha",
          "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
@@ -9620,6 +9606,20 @@
          "person_bezeichnung" : "Donatesse",
          "person_vorname" : "Agnes",
          "person_namensalternativen" : "Swartenberg",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "065-01150-001",
+         "person_name" : "Agnes Crucelman",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Donatessen",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Donatesse",
+         "person_vorname" : "Agnes",
+         "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
       {
@@ -17341,20 +17341,6 @@
    ],
    "609" : [
       {
-         "person_gso" : "065-02757-001",
-         "person_name" : "Liborius",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Äbte",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Abt",
-         "person_vorname" : "Liborius",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "066-01564-001",
          "person_name" : "Eggehard",
          "person_bis_verbal" : "1193",
@@ -17369,20 +17355,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "061-02861-001",
-         "person_name" : "Gottfried",
-         "person_bis_verbal" : "1194",
-         "person_bezeichnung_plural" : "Äbte",
-         "person_von" : 1191,
-         "person_bis" : 1194,
-         "person_gnd" : "",
-         "person_von_verbal" : "1191",
-         "person_bezeichnung" : "Abt",
-         "person_vorname" : "Gottfried",
-         "person_namensalternativen" : "Godert",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "066-02188-001",
          "person_name" : "Gottfried",
          "person_bis_verbal" : "",
@@ -17393,12 +17365,26 @@
          "person_von_verbal" : "1193",
          "person_bezeichnung" : "Abt",
          "person_vorname" : "Gottfried",
-         "person_namensalternativen" : "Godefridus, Gotfridus",
+         "person_namensalternativen" : "Godefridus, Godfried, Gotfridus, Godert",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "066-02188-001",
+         "person_name" : "Gottfried",
+         "person_bis_verbal" : "1193",
+         "person_bezeichnung_plural" : "Äbte",
+         "person_von" : 1193,
+         "person_bis" : 1193,
+         "person_gnd" : "",
+         "person_von_verbal" : "1193",
+         "person_bezeichnung" : "Abt",
+         "person_vorname" : "Gottfried",
+         "person_namensalternativen" : "Godefridus, Godfried, Gotfridus, Godert",
          "person_anmerkung" : ""
       },
       {
          "person_gso" : "066-01843-001",
-         "person_name" : "Florentius",
+         "person_name" : "Florentius zur Lippe",
          "person_bis_verbal" : "1211",
          "person_bezeichnung_plural" : "Äbte",
          "person_von" : 1194,
@@ -17411,7 +17397,7 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "065-01664-001",
+         "person_gso" : "066-01843-001",
          "person_name" : "Florentius zur Lippe",
          "person_bis_verbal" : "1211",
          "person_bezeichnung_plural" : "Äbte",
@@ -17421,12 +17407,12 @@
          "person_von_verbal" : "1194",
          "person_bezeichnung" : "Abt",
          "person_vorname" : "Florentius",
-         "person_namensalternativen" : "",
+         "person_namensalternativen" : "Florinus, Florentinus",
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "061-02414-001",
-         "person_name" : "Florentius",
+         "person_gso" : "066-01843-001",
+         "person_name" : "Florentius zur Lippe",
          "person_bis_verbal" : "1211",
          "person_bezeichnung_plural" : "Äbte",
          "person_von" : 1194,
@@ -17435,7 +17421,7 @@
          "person_von_verbal" : "1194",
          "person_bezeichnung" : "Abt",
          "person_vorname" : "Florentius",
-         "person_namensalternativen" : "",
+         "person_namensalternativen" : "Florinus, Florentinus",
          "person_anmerkung" : ""
       },
       {
@@ -17465,6 +17451,20 @@
          "person_vorname" : "Giselbert",
          "person_namensalternativen" : "",
          "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "066-03482-001",
+         "person_name" : "Liborius",
+         "person_bis_verbal" : "1219",
+         "person_bezeichnung_plural" : "Äbte",
+         "person_von" : 1219,
+         "person_bis" : 1219,
+         "person_gnd" : "",
+         "person_von_verbal" : "1219",
+         "person_bezeichnung" : "Abt",
+         "person_vorname" : "Liborius",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : "zweites Abbatiat des Liborius"
       },
       {
          "person_gso" : "066-05728-001",
@@ -18475,20 +18475,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-00275-001",
-         "person_name" : "Arnoldus Eifler",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Mönche",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Mönch",
-         "person_vorname" : "Arnoldus",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "066-00282-001",
          "person_name" : "Arnoldus von Lemgo",
          "person_bis_verbal" : "",
@@ -18503,8 +18489,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-00493-001",
-         "person_name" : "Bernhardus Benholt",
+         "person_gso" : "066-00275-001",
+         "person_name" : "Arnoldus Eifler",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Mönche",
          "person_von" : 0,
@@ -18512,35 +18498,7 @@
          "person_gnd" : "",
          "person_von_verbal" : "",
          "person_bezeichnung" : "Mönch",
-         "person_vorname" : "Bernhardus",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
-         "person_gso" : "066-00527-001",
-         "person_name" : "Bernhardus Pelegrini",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Mönche",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Mönch",
-         "person_vorname" : "Bernhardus",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
-         "person_gso" : "066-00536-001",
-         "person_name" : "Bernhardus Stove",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Mönche",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Mönch",
-         "person_vorname" : "Bernhardus",
+         "person_vorname" : "Arnoldus",
          "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
@@ -18573,8 +18531,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-02073-001",
-         "person_name" : "Gerhardus von der Lippe",
+         "person_gso" : "066-00493-001",
+         "person_name" : "Bernhardus Benholt",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Mönche",
          "person_von" : 0,
@@ -18582,8 +18540,36 @@
          "person_gnd" : "",
          "person_von_verbal" : "",
          "person_bezeichnung" : "Mönch",
-         "person_vorname" : "Gerhardus",
-         "person_namensalternativen" : "Lippiae",
+         "person_vorname" : "Bernhardus",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "066-00536-001",
+         "person_name" : "Bernhardus Stove",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Mönche",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Mönch",
+         "person_vorname" : "Bernhardus",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "066-00527-001",
+         "person_name" : "Bernhardus Pelegrini",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Mönche",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Mönch",
+         "person_vorname" : "Bernhardus",
+         "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
       {
@@ -18598,6 +18584,20 @@
          "person_bezeichnung" : "Mönch",
          "person_vorname" : "Gerhardus",
          "person_namensalternativen" : "Gerd",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "066-02073-001",
+         "person_name" : "Gerhardus von der Lippe",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Mönche",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Mönch",
+         "person_vorname" : "Gerhardus",
+         "person_namensalternativen" : "Lippiae",
          "person_anmerkung" : ""
       },
       {
@@ -18671,20 +18671,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-00331-001",
-         "person_name" : "Heinrich Balcke Klostername Edmundus",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Mönche",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Mönch",
-         "person_vorname" : "Heinrich",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "066-02567-001",
          "person_name" : "Heinrich Hervordiae",
          "person_bis_verbal" : "",
@@ -18699,8 +18685,36 @@
          "person_anmerkung" : ""
       },
       {
+         "person_gso" : "066-04017-001",
+         "person_name" : "Heinrich Münsterman",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Mönche",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Mönch",
+         "person_vorname" : "Heinrich",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
          "person_gso" : "066-02505-001",
          "person_name" : "Heinrich",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Mönche",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Mönch",
+         "person_vorname" : "Heinrich",
+         "person_namensalternativen" : "Heinricus,\nHinricus,Henricus,\nHenneke, Hinrik",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "066-02617-001",
+         "person_name" : "Heinrich Werlis",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Mönche",
          "person_von" : 0,
@@ -18741,8 +18755,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-04017-001",
-         "person_name" : "Heinrich Münsterman",
+         "person_gso" : "066-02590-001",
+         "person_name" : "Heinrich Rosinck von Wiedenbrück",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Mönche",
          "person_von" : 0,
@@ -18755,8 +18769,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-02617-001",
-         "person_name" : "Heinrich Werlis",
+         "person_gso" : "066-00331-001",
+         "person_name" : "Heinrich Balcke Klostername Edmundus",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Mönche",
          "person_von" : 0,
@@ -18765,12 +18779,12 @@
          "person_von_verbal" : "",
          "person_bezeichnung" : "Mönch",
          "person_vorname" : "Heinrich",
-         "person_namensalternativen" : "Heinricus,\nHinricus,Henricus,\nHenneke, Hinrik",
+         "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-02590-001",
-         "person_name" : "Heinrich Rosinck von Wiedenbrück",
+         "person_gso" : "066-00467-001",
+         "person_name" : "Hermann Bergman",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Mönche",
          "person_von" : 0,
@@ -18778,7 +18792,21 @@
          "person_gnd" : "",
          "person_von_verbal" : "",
          "person_bezeichnung" : "Mönch",
-         "person_vorname" : "Heinrich",
+         "person_vorname" : "Hermann",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "066-02727-001",
+         "person_name" : "Hermann",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Mönche",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Mönch",
+         "person_vorname" : "Hermann",
          "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
@@ -18794,34 +18822,6 @@
          "person_bezeichnung" : "Mönch",
          "person_vorname" : "Hermann",
          "person_namensalternativen" : "Houbben",
-         "person_anmerkung" : ""
-      },
-      {
-         "person_gso" : "066-03933-001",
-         "person_name" : "Hermann Mowe",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Mönche",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Mönch",
-         "person_vorname" : "Hermann",
-         "person_namensalternativen" : "Mauwe",
-         "person_anmerkung" : ""
-      },
-      {
-         "person_gso" : "066-00467-001",
-         "person_name" : "Hermann Bergman",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Mönche",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Mönch",
-         "person_vorname" : "Hermann",
-         "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
       {
@@ -18853,8 +18853,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-02727-001",
-         "person_name" : "Hermann",
+         "person_gso" : "066-03933-001",
+         "person_name" : "Hermann Mowe",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Mönche",
          "person_von" : 0,
@@ -18863,7 +18863,7 @@
          "person_von_verbal" : "",
          "person_bezeichnung" : "Mönch",
          "person_vorname" : "Hermann",
-         "person_namensalternativen" : "",
+         "person_namensalternativen" : "Mauwe",
          "person_anmerkung" : ""
       },
       {
@@ -18909,20 +18909,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-00017-001",
-         "person_name" : "Johann Akolk",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Mönche",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Mönch",
-         "person_vorname" : "Johann",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "066-01115-001",
          "person_name" : "Johann Koleff",
          "person_bis_verbal" : "",
@@ -18937,8 +18923,22 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-03311-001",
-         "person_name" : "Johannes von Unna",
+         "person_gso" : "066-00017-001",
+         "person_name" : "Johann Akolk",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Mönche",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Mönch",
+         "person_vorname" : "Johann",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "066-03316-001",
+         "person_name" : "Johannes Wynter",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Mönche",
          "person_von" : 0,
@@ -18965,8 +18965,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-03316-001",
-         "person_name" : "Johannes Wynter",
+         "person_gso" : "066-03197-001",
+         "person_name" : "Johannes Bute",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Mönche",
          "person_von" : 0,
@@ -18979,8 +18979,22 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-03197-001",
-         "person_name" : "Johannes Bute",
+         "person_gso" : "066-03211-001",
+         "person_name" : "Johannes Danghe",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Mönche",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Mönch",
+         "person_vorname" : "Johannes",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "066-03239-001",
+         "person_name" : "Johannes Hantepage",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Mönche",
          "person_von" : 0,
@@ -19007,8 +19021,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-03211-001",
-         "person_name" : "Johannes Danghe",
+         "person_gso" : "066-03262-001",
+         "person_name" : "Johannes Lippe von der Recke",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Mönche",
          "person_von" : 0,
@@ -19035,22 +19049,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-03262-001",
-         "person_name" : "Johannes Lippe von der Recke",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Mönche",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Mönch",
-         "person_vorname" : "Johannes",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
-         "person_gso" : "066-03239-001",
-         "person_name" : "Johannes Hantepage",
+         "person_gso" : "066-03311-001",
+         "person_name" : "Johannes von Unna",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Mönche",
          "person_von" : 0,
@@ -19129,20 +19129,6 @@
          "person_von_verbal" : "",
          "person_bezeichnung" : "Mönch",
          "person_vorname" : "Lambertus",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
-         "person_gso" : "066-03482-001",
-         "person_name" : "Liborius",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Mönche",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Mönch",
-         "person_vorname" : "Liborius",
          "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
@@ -21639,20 +21625,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-01447-001",
-         "person_name" : "Reiner tom Drecke",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Mönche",
-         "person_von" : 1549,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "1549",
-         "person_bezeichnung" : "Mönch",
-         "person_vorname" : "Reiner",
-         "person_namensalternativen" : "Dreeke",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "066-04370-001",
          "person_name" : "Reiner Pagenstecher",
          "person_bis_verbal" : "",
@@ -21664,6 +21636,20 @@
          "person_bezeichnung" : "Mönch",
          "person_vorname" : "Reiner",
          "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "066-01447-001",
+         "person_name" : "Reiner tom Drecke",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Mönche",
+         "person_von" : 1549,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "1549",
+         "person_bezeichnung" : "Mönch",
+         "person_vorname" : "Reiner",
+         "person_namensalternativen" : "Dreeke",
          "person_anmerkung" : ""
       },
       {
@@ -25755,20 +25741,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-03307-001",
-         "person_name" : "Johannes von Stromberg",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Konversen",
-         "person_von" : 1307,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "1307",
-         "person_bezeichnung" : "Konverse",
-         "person_vorname" : "Johannes",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "066-03270-001",
          "person_name" : "Johannes von Münster",
          "person_bis_verbal" : "",
@@ -25780,6 +25752,20 @@
          "person_bezeichnung" : "Konverse",
          "person_vorname" : "Johannes",
          "person_namensalternativen" : "de Monasterio",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "066-03307-001",
+         "person_name" : "Johannes von Stromberg",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Konversen",
+         "person_von" : 1307,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "1307",
+         "person_bezeichnung" : "Konverse",
+         "person_vorname" : "Johannes",
+         "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
       {
@@ -25811,20 +25797,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-02714-001",
-         "person_name" : "Hermann",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Konversen",
-         "person_von" : 1372,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "1372",
-         "person_bezeichnung" : "Konverse",
-         "person_vorname" : "Hermann",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "066-02818-001",
          "person_name" : "Hermann Specht",
          "person_bis_verbal" : "",
@@ -25839,8 +25811,22 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-03304-001",
-         "person_name" : "Johannes Spole",
+         "person_gso" : "066-02714-001",
+         "person_name" : "Hermann",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Konversen",
+         "person_von" : 1372,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "1372",
+         "person_bezeichnung" : "Konverse",
+         "person_vorname" : "Hermann",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "066-03141-001",
+         "person_name" : "Johannes",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Konversen",
          "person_von" : 1372,
@@ -25853,8 +25839,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-03141-001",
-         "person_name" : "Johannes",
+         "person_gso" : "066-03304-001",
+         "person_name" : "Johannes Spole",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Konversen",
          "person_von" : 1372,
@@ -25951,20 +25937,6 @@
          "person_anmerkung" : "broder laicus"
       },
       {
-         "person_gso" : "066-03228-001",
-         "person_name" : "Johannes Viffhusen",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Konversen",
-         "person_von" : 1549,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_von_verbal" : "1549",
-         "person_bezeichnung" : "Konverse",
-         "person_vorname" : "Johannes",
-         "person_namensalternativen" : "Vyffhues",
-         "person_anmerkung" : "frater"
-      },
-      {
          "person_gso" : "066-03149-001",
          "person_name" : "Johannes",
          "person_bis_verbal" : "",
@@ -25977,6 +25949,20 @@
          "person_vorname" : "Johannes",
          "person_namensalternativen" : "",
          "person_anmerkung" : "frater laicus, sluiter"
+      },
+      {
+         "person_gso" : "066-03228-001",
+         "person_name" : "Johannes Viffhusen",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Konversen",
+         "person_von" : 1549,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_von_verbal" : "1549",
+         "person_bezeichnung" : "Konverse",
+         "person_vorname" : "Johannes",
+         "person_namensalternativen" : "Vyffhues",
+         "person_anmerkung" : "frater"
       },
       {
          "person_gso" : "066-03027-001",
@@ -26343,8 +26329,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-03223-001",
-         "person_name" : "Johannes von Essen",
+         "person_gso" : "066-03143-001",
+         "person_name" : "Johannes",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Konventualen",
          "person_von" : 0,
@@ -26353,12 +26339,12 @@
          "person_von_verbal" : "",
          "person_bezeichnung" : "Konventuale",
          "person_vorname" : "Johannes",
-         "person_namensalternativen" : "de Essendia",
+         "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-03143-001",
-         "person_name" : "Johannes",
+         "person_gso" : "066-03263-001",
+         "person_name" : "Johannes Lippe",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Konventualen",
          "person_von" : 0,
@@ -26399,8 +26385,8 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "066-03263-001",
-         "person_name" : "Johannes Lippe",
+         "person_gso" : "066-03223-001",
+         "person_name" : "Johannes von Essen",
          "person_bis_verbal" : "",
          "person_bezeichnung_plural" : "Konventualen",
          "person_von" : 0,
@@ -26409,7 +26395,7 @@
          "person_von_verbal" : "",
          "person_bezeichnung" : "Konventuale",
          "person_vorname" : "Johannes",
-         "person_namensalternativen" : "",
+         "person_namensalternativen" : "de Essendia",
          "person_anmerkung" : ""
       },
       {
