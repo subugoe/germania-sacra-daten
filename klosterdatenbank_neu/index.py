@@ -279,17 +279,46 @@ for values in cursor:
 		del docStandort["ort_laenge"]
 		del docStandort["ort_breite"]
 		
-		# ohne bistum_uid sind die Felder zum Bistum Fake -> leeren
-		if not docStandort["bistum_uid"]:
+		if docStandort["bistum_uid"]:
+			queryBistumURL = """
+			SELECT
+				url.url, url.bemerkung, url.art
+			FROM
+				tx_gs_domain_model_url AS url,
+				tx_gs_bistum_url_mm AS relation
+			WHERE
+				url.uid = relation.uid_foreign AND
+				relation.uid_local = %s
+			"""
+			bistum_gnd = ''
+			bistum_wikipedia = ''
+			cursor3.execute(queryBistumURL, [str(docStandort["bistum_uid"])])
+			for values3 in cursor3:
+				docURL = dict(zip(cursor3.column_names, values3))
+		
+				if docURL["art"] == "GND":
+					components = docURL["url"].split("/gnd/")
+					if len(components) > 1:
+						docStandort["bistum_gnd"] = components[1]
+					else:
+						print "keine GND URL: " + docURL["url"]
+				elif docURL["art"] == "Wikipedia":
+					bistum_wikipedia = docURL["url"]
+			docStandort["bistum_gnd"] = [bistum_gnd]
+			docStandort['bistum_wikipedia'] = [bistum_wikipedia]
+		else:
+			# ohne bistum_uid sind die Felder zum Bistum Fake -> leeren
 			docStandort["bistum_uid"] = -1
 			docStandort["bistum"] = 'nicht erfasst'
 			docStandort["kirchenprovinz"] = ''
 			docStandort["ist_erzbistum"] = ''
 		
+		
 		docStandort["url"] = []
 		docStandort["url_bemerkung"] = []
 		docStandort["url_art"] = []
 		docStandort["url_relation"] = []
+		docStandort["geonames"] = []
 		improveZeitraumForDocument(docStandort, "standort")
 		
 		queryOrtURL = """
@@ -303,14 +332,14 @@ for values in cursor:
 			relation.uid_local = %s
 		"""
 		cursor3.execute(queryOrtURL, [str(docStandort["ort_uid"])])
+		geoname = ''
 		for values3 in cursor3:
 			docURL = dict(zip(cursor3.column_names, values3))
-			docURL["geonames"] = []
 			if docURL["url_art"] == "Geonames":
-				docURL["geonames"] += [docURL["url"].split("geonames.org/")[1]]
+				geoname = docURL["url"].split("geonames.org/")[1]		
 			mergeDocIntoDoc(docURL, docStandort)
+		docStandort["geonames"] += [geoname]
 		
-						
 		queryLiteratur = """
 		SELECT 
 			literatur.uid, literatur.citekey, literatur.beschreibung
@@ -342,7 +371,8 @@ for values in cursor:
 	queryOrden = """
 	SELECT
 		kloster_orden.uid AS kloster_orden_uid, kloster_orden.bemerkung AS bemerkung_orden,
-		orden.orden, orden.ordo AS orden_ordo, orden.symbol AS orden_symbol, orden.graphik AS orden_graphik,
+		orden.uid AS orden_uid, orden.orden, orden.ordo AS orden_ordo,
+		orden.symbol AS orden_symbol, orden.graphik AS orden_graphik,
 		ordenstyp.ordenstyp AS orden_typ,
 		kloster_status.status AS kloster_status,
 		zeitraum.uid AS zeitraum_uid, zeitraum.von_von AS orden_von_von, zeitraum.von_bis AS orden_von_bis,
@@ -373,6 +403,36 @@ for values in cursor:
 			# Facettenfeld mit allen außer den evangelischen füllen.
 			docOrden['orden_facet'] = docOrden['orden']
 		improveZeitraumForDocument(docOrden, "orden")
+		
+		queryOrdenURL = """
+		SELECT
+			url.url, url.bemerkung, url.art
+		FROM
+			tx_gs_domain_model_url AS url,
+			tx_gs_orden_url_mm AS relation
+		WHERE
+			url.uid = relation.uid_foreign AND
+			relation.uid_local = %s
+		"""
+		cursor3.execute(queryOrdenURL, [str(docOrden["orden_uid"])])
+		orden_gnd = ''
+		orden_wikipedia = ''
+		for values3 in cursor3:
+			docURL = dict(zip(cursor3.column_names, values3))
+		
+			if docURL["art"] == "GND":
+				components = docURL["url"].split("/gnd/")
+				if len(components) > 1:
+					orden_gnd = components[1]
+				else:
+					print "keine GND URL: " + docURL["url"]
+			elif docURL["art"] == "Wikipedia":
+				orden_wikipedia = docURL["url"]
+		del docOrden['orden_uid']
+
+		docOrden['orden_gnd'] = [orden_gnd]
+		docOrden['orden_wikipedia'] = [orden_wikipedia]
+		
 		mergeDocIntoDoc(docOrden, docKloster)
 		doc2 = copy.deepcopy(docOrden)
 		doc2["id"] = "kloster-orden-" + str(doc2["kloster_orden_uid"])

@@ -97,10 +97,14 @@
 
 		<field name="bistum" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="bistum_uid" type="int" indexed="true" stored="true" multiValued="true"/>
+		<field name="bistum_gnd" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="bistum_wikipedia" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="kirchenprovinz" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="ist_erzbistum" type="boolean" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="orden" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="orden_gnd" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="orden_wikipedia" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="orden_graphik" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="orden_ordo" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="orden_symbol" type="string" indexed="true" stored="true" multiValued="true"/>
@@ -138,19 +142,20 @@
 		<field name="zeitraum_jahr50" type="int" indexed="true" stored="false" multiValued="true"/>
 		<field name="zeitraum_uid" type="int" indexed="true" stored="true" multiValued="true"/>
 
-		<field name="person_name" type="text_de" indexed="true" stored="true" multiValued="true"/>
-		<field name="person_vorname" type="text_de" indexed="true" stored="false" multiValued="true"/>
-		<field name="person_namensalternativen" type="text_de" indexed="true" stored="true" multiValued="true"/>
-		<field name="person_anmerkung" type="text_de" indexed="true" stored="true" multiValued="true"/>
+		<field name="person_name" type="text_de" indexed="true" stored="true" multiValued="true" termVectors="true" termPositions="true" termOffsets="true"/>
+		<field name="person_vorname" type="text_de" indexed="true" stored="false" multiValued="true" termVectors="true" termPositions="true" termOffsets="true"/>
+		<field name="person_namensalternativen" type="text_de" indexed="true" stored="true" multiValued="true" termVectors="true" termPositions="true" termOffsets="true"/>
+		<field name="person_anmerkung" type="text_de" indexed="true" stored="true" multiValued="true" termVectors="true" termPositions="true" termOffsets="true"/>
 		<field name="person_bezeichnung" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="person_bezeichnung_plural" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="person_von_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="person_bis_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="person_von" type="int" indexed="true" stored="false" multiValued="true"/>
-		<field name="person_bis" type="int" indexed="true" stored="false" multiValued="true"/>
+		<field name="person_von" type="int" indexed="true" stored="true" multiValued="true"/>
+		<field name="person_bis" type="int" indexed="true" stored="true" multiValued="true"/>
 		<field name="person_verbal" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="person_gnd" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="person_gso" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="person_office_id" type="string" indexed="true" stored="true" multiValued="true"/>
 
 		<field name="bemerkung" type="text_de" indexed="true" stored="true" multiValued="true"/>
 
