@@ -27,6 +27,7 @@
  *  * person_von
  *  * person_bis_verbal
  *  * person_bis
+ *  * person_office_id
  *
  * Inhalte der Felder name, vorname, namensalternativen und anmerkung werden von XML
  * Tags befreit. Enthalten sie ungültiges XML, das zu einer unbeabsichtigten Anzeige
@@ -215,6 +216,7 @@ ORDER BY
 					$personeninfo['person_von'] = improveYear($row['von']);
 					$personeninfo['person_bis_verbal'] = $row['bis'];
 					$personeninfo['person_bis'] = improveYear($row['bis']);
+					$personeninfo['person_office_id'] = $row['office_id'];
 
 					if (!array_key_exists($row['klosterid'], $results)) {
 						$results[$row['klosterid']] = array();
