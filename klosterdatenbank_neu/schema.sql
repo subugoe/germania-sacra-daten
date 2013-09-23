@@ -141,7 +141,7 @@ DROP TABLE IF EXISTS `mydb`.`personallistenstatus` ;
 
 CREATE  TABLE IF NOT EXISTS `mydb`.`personallistenstatus` (
   `uid` INT NOT NULL ,
-  `name` VARCHAR(45) NULL ,
+  `name` VARCHAR(255) NULL ,
   PRIMARY KEY (`uid`) )
 ENGINE = InnoDB;
 
