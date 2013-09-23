@@ -43,7 +43,6 @@ INFO: URL »http://d-nb.info/gnd/7749511-1« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/2180420-5« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/1018585-9« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4029781-0« existiert bereits: doppelt nutzen.
-INFO: URL »http://d-nb.info/gnd/1016737-7« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4224957-0« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/5288901-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/1008640-7« existiert bereits: doppelt nutzen.
@@ -58,14 +57,20 @@ INFO: URL »http://d-nb.info/gnd/4139813-0« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4191568-9« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4647658-1« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4190971-9« existiert bereits: doppelt nutzen.
-INFO: URL »http://d-nb.info/gnd/4168735-8« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4005487-1« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4573408-2« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4134088-7« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4222227-8« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/43583-1« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/43583-1« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4028323-9« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/1016737-7« existiert bereits: doppelt nutzen.
-INFO: URL »http://d-nb.info/gnd/1016737-7« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/2180420-5« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/2180420-5« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4067883-0« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4067883-0« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/1009039-3« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/1009039-3« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/16325580-5« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/1008643-2« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/5299650-5« existiert bereits: doppelt nutzen.
@@ -115,10 +120,10 @@ INFO: 771 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artik
 INFO: 772 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artikel „Zinna. Zisterzienser“, S. 1359-1384, hier S. 1347
 
 
-Tabelle »url«: 446 Datensätze
+Tabelle »url«: 457 Datensätze
 
 
-Tabelle »zeitraum«: 3487 Datensätze
+Tabelle »zeitraum«: 3486 Datensätze
 
 
 Tabelle »bistum«: 60 Datensätze
@@ -136,7 +141,7 @@ Tabelle »band_url_mm«: 126 Datensätze
 Tabelle »bearbeitungsstatus«: 7 Datensätze
 
 
-Tabelle »personallistenstatus«: 2 Datensätze
+Tabelle »personallistenstatus«: 3 Datensätze
 
 
 Tabelle »kloster«: 1428 Datensätze
@@ -151,13 +156,13 @@ Tabelle »ordenstyp«: 4 Datensätze
 Tabelle »klosterstatus«: 19 Datensätze
 
 
-Tabelle »orden«: 67 Datensätze
+Tabelle »orden«: 65 Datensätze
 
 
-Tabelle »kloster_orden«: 2005 Datensätze
+Tabelle »kloster_orden«: 2004 Datensätze
 
 
-Tabelle »orden_url_mm«: 55 Datensätze
+Tabelle »orden_url_mm«: 69 Datensätze
 
 
 Tabelle »land«: 27 Datensätze
@@ -169,13 +174,13 @@ Tabelle »ort«: 44206 Datensätze
 Tabelle »ort_url_mm«: 2 Datensätze
 
 
-Tabelle »bibitem«: 251 Datensätze
+Tabelle »bibitem«: 252 Datensätze
 
 
-Tabelle »literatur«: 1899 Datensätze
+Tabelle »literatur«: 1900 Datensätze
 
 
 Tabelle »kloster_standort«: 1482 Datensätze
 
 
-Tabelle »kloster_standort_literatur_mm«: 1899 Datensätze
+Tabelle »kloster_standort_literatur_mm«: 1900 Datensätze
