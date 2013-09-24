@@ -540,8 +540,8 @@ query = "SELECT * from " + tabelle + " ORDER BY Klosternummer"
 cursor.execute(query)
 
 kloster_standort = []
-literatur = []
-kloster_standort_has_literatur = []
+literaturDict = {}
+kloster_has_literatur = []
 bibitemDict = {}
 for values in cursor:
 	row = dict(zip(cursor.column_names, values))
@@ -610,28 +610,32 @@ for values in cursor:
 							print u"INFO: " + str(kloster_uid) + u" Zwei Beschreibungsfelder für: »" + citekey + u"« zusammenfügen: " + beschreibung
 						else:
 							beschreibung = citekeyDict[buch]['detail']
-						
-				literatur_uid = len(literatur) + 1
-				r4 = {
-					'uid': literatur_uid,
-					'citekey': citekey,
-					'beschreibung': beschreibung,
-					'bibitem_uid': bibitemDict[buch]['uid'],
-					'crdate': klosterDict[kloster_uid]['crdate'],
-					'cruser_id': klosterDict[kloster_uid]['cruser_id']
-				}
-				literatur += [r4]
 				
-				kloster_standort_has_literatur += [{
-					'uid_local': standort_uid,
-					'uid_foreign': literatur_uid
-				}]
+				literaturKey = citekey + u"-" + unicode(beschreibung)
+				if literaturDict.has_key(literaturKey):
+					print u"INFO: " + str(kloster_uid) + u" Doppelter Literaturverweis »" + literaturKey + u"«: auslassen"
+				else:
+					literatur_uid = len(literaturDict) + 1
+					r4 = {
+						'uid': literatur_uid,
+						'citekey': citekey,
+						'beschreibung': beschreibung,
+						'crdate': klosterDict[kloster_uid]['crdate'],
+						'cruser_id': klosterDict[kloster_uid]['cruser_id']
+					}
+					literaturDict[literaturKey] = r4
+				
+					kloster_has_literatur += [{
+						'uid_local': kloster_uid,
+						'uid_foreign': literatur_uid
+					}]
 
 	else:
 		if not ort_uid:
 			print u"FEHLER: Feld »ID_alleOrte« leer in KlosterStandort " + str(standort_uid) + ": verwerfen"
 		if not kloster_uid:
 			print u"FEHLER: Feld »Klosternummer« leer in KlosterStandort " + str(standort_uid) + ": verwerfen"
+
 
 
 
@@ -723,11 +727,10 @@ addRecordsToTable(ort, 'ort')
 ort_has_url = ort_has_urlDict.values()
 addRecordsToTable(ort_has_url, 'ort_url_mm')
 
-bibitem = bibitemDict.values()
-addRecordsToTable(bibitem, 'bibitem')
+literatur = literaturDict.values()
 addRecordsToTable(literatur, 'literatur')
 addRecordsToTable(kloster_standort, 'kloster_standort')
-addRecordsToTable(kloster_standort_has_literatur, 'kloster_standort_literatur_mm')
+addRecordsToTable(kloster_has_literatur, 'kloster_literatur_mm')
 
 
 

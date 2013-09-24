@@ -396,6 +396,20 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `mydb`.`literatur`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`literatur` ;
+
+CREATE  TABLE IF NOT EXISTS `mydb`.`literatur` (
+  `uid` INT NOT NULL AUTO_INCREMENT ,
+  `citekey` VARCHAR(255) NULL ,
+  `beschreibung` TEXT NULL ,
+  PRIMARY KEY (`uid`) ,
+  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `mydb`.`bibitem`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`bibitem` ;
@@ -404,51 +418,6 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`bibitem` (
   `uid` INT NOT NULL ,
   `bibitem` TEXT NULL ,
   PRIMARY KEY (`uid`) )
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`literatur`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`literatur` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`literatur` (
-  `uid` INT NOT NULL AUTO_INCREMENT ,
-  `citekey` VARCHAR(255) NULL ,
-  `bibitem_uid` INT NOT NULL ,
-  `beschreibung` TEXT NULL ,
-  PRIMARY KEY (`uid`) ,
-  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
-  INDEX `fk_literatur_bibitem1_idx` (`bibitem_uid` ASC) ,
-  CONSTRAINT `fk_literatur_bibitem1`
-    FOREIGN KEY (`bibitem_uid` )
-    REFERENCES `mydb`.`bibitem` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`kloster_standort_has_literatur`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`kloster_standort_has_literatur` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`kloster_standort_has_literatur` (
-  `uid_local` INT NOT NULL ,
-  `uid_foreign` INT NOT NULL ,
-  PRIMARY KEY (`uid_local`, `uid_foreign`) ,
-  INDEX `fk_kloster_standort_has_literatur_literatur1_idx` (`uid_foreign` ASC) ,
-  INDEX `fk_kloster_standort_has_literatur_kloster_standort1_idx` (`uid_local` ASC) ,
-  CONSTRAINT `fk_kloster_standort_has_literatur_kloster_standort1`
-    FOREIGN KEY (`uid_local` )
-    REFERENCES `mydb`.`kloster_standort` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_kloster_standort_has_literatur_literatur1`
-    FOREIGN KEY (`uid_foreign` )
-    REFERENCES `mydb`.`literatur` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -495,6 +464,30 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`bistum_has_url` (
   CONSTRAINT `fk_bistum_has_url_url1`
     FOREIGN KEY (`uid_foreign` )
     REFERENCES `mydb`.`url` (`uid` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`kloster_has_literatur`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`kloster_has_literatur` ;
+
+CREATE  TABLE IF NOT EXISTS `mydb`.`kloster_has_literatur` (
+  `uid_local` INT NOT NULL ,
+  `uid_foreign` INT NOT NULL ,
+  PRIMARY KEY (`uid_local`, `uid_foreign`) ,
+  INDEX `fk_kloster_has_literatur_literatur1_idx` (`uid_foreign` ASC) ,
+  INDEX `fk_kloster_has_literatur_kloster1_idx` (`uid_local` ASC) ,
+  CONSTRAINT `fk_kloster_has_literatur_kloster1`
+    FOREIGN KEY (`uid_local` )
+    REFERENCES `mydb`.`kloster` (`uid` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_kloster_has_literatur_literatur1`
+    FOREIGN KEY (`uid_foreign` )
+    REFERENCES `mydb`.`literatur` (`uid` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
