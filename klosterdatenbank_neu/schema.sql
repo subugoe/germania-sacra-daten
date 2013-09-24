@@ -207,10 +207,10 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`zeitraum` (
   `uid` INT NOT NULL AUTO_INCREMENT ,
   `von_von` INT NULL ,
   `von_bis` INT NULL ,
-  `von_verbal` VARCHAR(45) NULL ,
+  `von_verbal` VARCHAR(255) NULL ,
   `bis_von` INT NULL ,
   `bis_bis` INT NULL ,
-  `bis_verbal` VARCHAR(45) NULL ,
+  `bis_verbal` VARCHAR(255) NULL ,
   PRIMARY KEY (`uid`) ,
   UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) )
 ENGINE = InnoDB;

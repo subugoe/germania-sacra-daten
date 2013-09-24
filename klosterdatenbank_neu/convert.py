@@ -507,7 +507,10 @@ for values in cursor:
 	if not (bistum_uid == None or bistumDict.has_key(bistum_uid)):
 		print u"FEHLER: Feld »ID_Bistum« hat ungültigen Wert »" + str(bistum_uid) + u"« in alleOrte " + str(uid) + ". Verwende: 1"
 		bistum_uid = 1
-				
+	
+	if row['Laenge']:
+		row['Laenge'] = row['Laenge'].strip().replace(unichr(8206), '')
+	
 	r = {
 		'uid': uid,
 		'ort': row['Ort'],
@@ -545,6 +548,9 @@ for values in cursor:
 	standort_uid = row['ID_Kloster']
 	kloster_uid = row['Klosternummer']
 	ort_uid = row['ID_alleOrte']
+
+	if row['Laenge']:
+		row['Laenge'] = row['Laenge'].strip().replace(unichr(8206), '')
 
 	if ort_uid and kloster_uid:
 		r = {
