@@ -220,10 +220,27 @@ for values in cursor:
 			else:
 				print "keine GND URL: " + docURL["url"]
 
+	queryLiteratur = """
+	SELECT 
+		literatur.uid, literatur.citekey, literatur.beschreibung
+	FROM
+		tx_gs_domain_model_literatur AS literatur,
+		tx_gs_kloster_literatur_mm AS relation
+	WHERE
+		relation.uid_local = %s AND
+		relation.uid_foreign = literatur.uid
+	"""
+	literaturDict = {}
+	cursor2.execute(queryLiteratur, [str(docKloster["sql_uid"])])
+	for values2 in cursor2:
+		docLiteratur = dict(zip(cursor3.column_names, values3))
+		literaturDict[docLiteratur["citekey"]] = docLiteratur["beschreibung"]
+	docKloster["literatur_citekey"] = literaturDict.keys()
+	docKloster["literatur_beschreibung"] = literaturDict.values()
+
 	docKlosterBasic = copy.deepcopy(docKloster)
 
 	
-	literaturDict = {}
 	queryStandort = """
 	SELECT
 		standort.uid AS standort_uid, standort.gruender,
@@ -340,28 +357,11 @@ for values in cursor:
 			mergeDocIntoDoc(docURL, docStandort)
 		docStandort["geonames"] += [geoname]
 		
-		queryLiteratur = """
-		SELECT 
-			literatur.uid, literatur.citekey, literatur.beschreibung
-		FROM
-			tx_gs_domain_model_literatur AS literatur,
-			tx_gs_kloster_standort_literatur_mm AS relation
-		WHERE
-			relation.uid_local = %s AND
-			relation.uid_foreign = literatur.uid
-		"""
-		cursor3.execute(queryLiteratur, [str(docStandort["standort_uid"])])
-		for values3 in cursor3:
-			docLiteratur = dict(zip(cursor3.column_names, values3))
-			literaturDict[docLiteratur["citekey"]] = docLiteratur["beschreibung"]
-		
 		mergeDocIntoDoc(docStandort, docKloster)
 		doc2 = copy.deepcopy(docStandort)
 		doc2["id"] = "kloster-standort-" + str(doc2["standort_uid"])
 		doc2["sql_uid"] = doc2["standort_uid"]
 		doc2["kloster_id"] = docKloster['id']
-		doc2["literatur_citekey"] = literaturDict.keys()
-		doc2["literatur_beschreibung"] = literaturDict.values()
 		del doc2["standort_uid"]
 		doc2["typ"] = "kloster-standort"
 		docs += [doc2]
