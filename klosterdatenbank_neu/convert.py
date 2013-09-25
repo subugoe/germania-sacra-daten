@@ -584,7 +584,7 @@ for values in cursor:
 	
 		lit = row['Literaturnachweise']
 		if lit:
-			lit = lit.replace(u' − ', u' - ').replace(u' — ', u' - ').replace('\r\n', ' - ').replace(u'—', ' - ').replace(u' – ', ' - ').replace(r', S[^.]', ', S.').replace(r',S.', ', S.').split(' - ')
+			lit = lit.strip(u'- −').replace(u' − ', u' - ').replace(u' — ', u' - ').replace('\r\n', ' - ').replace(u'—', ' - ').replace(u' – ', ' - ').replace(r', S[^.]', ', S.').replace(r',S.', ', S.').split(' - ')
 			for litItem in lit:
 				parts = litItem.strip().rsplit(', S.')
 				buch = parts[0].strip()
@@ -611,24 +611,26 @@ for values in cursor:
 						else:
 							beschreibung = citekeyDict[buch]['detail']
 				
-				literaturKey = citekey + u"-" + unicode(beschreibung)
-				if literaturDict.has_key(literaturKey):
-					print u"INFO: " + str(kloster_uid) + u" Doppelter Literaturverweis »" + literaturKey + u"«: auslassen"
-				else:
-					literatur_uid = len(literaturDict) + 1
-					r4 = {
-						'uid': literatur_uid,
-						'citekey': citekey,
-						'beschreibung': beschreibung,
-						'crdate': klosterDict[kloster_uid]['crdate'],
-						'cruser_id': klosterDict[kloster_uid]['cruser_id']
-					}
-					literaturDict[literaturKey] = r4
+					literaturKey = str(kloster_uid) + u"-" + citekey + u"-" + unicode(beschreibung)
+					if literaturDict.has_key(literaturKey):
+						print u"INFO: " + str(kloster_uid) + u" Doppelter Literaturverweis »" + literaturKey + u"«: auslassen"
+					else:
+						literatur_uid = len(literaturDict) + 1
+						r4 = {
+							'uid': literatur_uid,
+							'citekey': citekey,
+							'beschreibung': beschreibung,
+							'crdate': klosterDict[kloster_uid]['crdate'],
+							'cruser_id': klosterDict[kloster_uid]['cruser_id']
+						}
+						literaturDict[literaturKey] = r4
 				
-					kloster_has_literatur += [{
-						'uid_local': kloster_uid,
-						'uid_foreign': literatur_uid
-					}]
+						kloster_has_literatur += [{
+							'uid_local': kloster_uid,
+							'uid_foreign': literatur_uid
+						}]
+				else:
+					print u"FEHLER: " + str(kloster_uid) + u" Kein citekey für Buch »" + buch + u"« gefunden: auslassen"
 
 	else:
 		if not ort_uid:

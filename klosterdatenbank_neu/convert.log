@@ -75,271 +75,63 @@ INFO: URL »http://d-nb.info/gnd/16325580-5« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/1008643-2« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/5299650-5« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4449082-3« existiert bereits: doppelt nutzen.
-INFO: 95 Doppelter Literaturverweis »Wendehorst.1997-S. 88«: auslassen
-INFO: 99 Doppelter Literaturverweis »Wendehorst.1997-S. 86«: auslassen
-INFO: 100 Doppelter Literaturverweis »Dolle.2012-S. 682-696«: auslassen
-INFO: 101 Doppelter Literaturverweis »-----«: auslassen
-INFO: 101 Doppelter Literaturverweis »Wendehorst.1997-S. 86«: auslassen
-INFO: 102 Doppelter Literaturverweis »-----«: auslassen
-INFO: 104 Doppelter Literaturverweis »-----«: auslassen
-INFO: 106 Doppelter Literaturverweis »-----«: auslassen
-INFO: 107 Doppelter Literaturverweis »-----«: auslassen
-INFO: 107 Doppelter Literaturverweis »Wendehorst.1997-S. 87«: auslassen
-INFO: 108 Doppelter Literaturverweis »-----«: auslassen
-INFO: 109 Doppelter Literaturverweis »Wendehorst.1997-S. 87«: auslassen
-INFO: 110 Doppelter Literaturverweis »-----«: auslassen
-INFO: 111 Doppelter Literaturverweis »-----«: auslassen
-INFO: 112 Doppelter Literaturverweis »-----«: auslassen
-INFO: 116 Doppelter Literaturverweis »-----«: auslassen
-INFO: 119 Doppelter Literaturverweis »-----«: auslassen
-INFO: 123 Doppelter Literaturverweis »-----«: auslassen
-INFO: 125 Doppelter Literaturverweis »-----«: auslassen
-INFO: 126 Doppelter Literaturverweis »-----«: auslassen
-INFO: 126 Doppelter Literaturverweis »Dolle.2012b-S. 1307-1314«: auslassen
-INFO: 136 Doppelter Literaturverweis »Streich.1986-S. 131«: auslassen
-INFO: 158 Doppelter Literaturverweis »Hauck.1954c-S. 985«: auslassen
-INFO: 161 Doppelter Literaturverweis »Hauck.1954c-S. 985«: auslassen
-INFO: 162 Doppelter Literaturverweis »Dolle.2012b-S. 1353-1357«: auslassen
-INFO: 164 Doppelter Literaturverweis »Hauck.1954c-S. 985«: auslassen
-INFO: 164 Doppelter Literaturverweis »Wendehorst.1997-S. 177«: auslassen
+FEHLER: 100 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
+FEHLER: 101 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
+FEHLER: 102 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
+FEHLER: 104 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
+FEHLER: 106 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
+FEHLER: 107 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
+FEHLER: 108 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
+FEHLER: 110 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
+FEHLER: 111 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
+FEHLER: 112 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
+FEHLER: 116 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
+FEHLER: 119 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
+FEHLER: 123 Kein citekey für Buch »– Niedersächsisches Klosterbuch 3« gefunden: auslassen
+FEHLER: 125 Kein citekey für Buch »– Niedersächsisches Klosterbuch 3« gefunden: auslassen
+FEHLER: 126 Kein citekey für Buch »– Streich, Klöster, Stifte Niedersachsen« gefunden: auslassen
+INFO: 126 Doppelter Literaturverweis »126-Dolle.2012b-S. 1307-1314«: auslassen
+INFO: 162 Doppelter Literaturverweis »162-Dolle.2012b-S. 1353-1357«: auslassen
+INFO: 164 Doppelter Literaturverweis »164-Wendehorst.1997-S. 177«: auslassen
 INFO: 169 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel „Arneburg. Benediktiner“, hier S. 127, S. 127-130, hier S. 127
-INFO: 173 Doppelter Literaturverweis »Hauck.1954c-S. 986«: auslassen
-INFO: 175 Doppelter Literaturverweis »Hauck.1954c-S. 986«: auslassen
 INFO: 176 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel „Kalbe/Milde. Benediktinerinnen/Kanonissen (?)“, S. 671-675, hier S. 671
-INFO: 182 Doppelter Literaturverweis »Wendehorst.1997-S. 177«: auslassen
-INFO: 187 Doppelter Literaturverweis »Hauck.1958-S. 1017«: auslassen
-INFO: 187 Doppelter Literaturverweis »Ehlers.2007-S. 419«: auslassen
-INFO: 187 Doppelter Literaturverweis »Wendehorst.1997-S. 24«: auslassen
-INFO: 191 Doppelter Literaturverweis »Hauck.1954b-S. 1018«: auslassen
-INFO: 192 Doppelter Literaturverweis »Wendehorst.1997-S. 78«: auslassen
-INFO: 192 Doppelter Literaturverweis »Hauck.1954b-S. 1018«: auslassen
-INFO: 195 Doppelter Literaturverweis »Hauck.1954b-S. 1018«: auslassen
-INFO: 196 Doppelter Literaturverweis »Hauck.1954c-S. 985«: auslassen
-INFO: 196 Doppelter Literaturverweis »Wendehorst.1997-S. 82«: auslassen
-INFO: 196 Doppelter Literaturverweis »Lindner.1917(ND1967)-S. 65«: auslassen
-INFO: 196 Doppelter Literaturverweis »Hauck.1954c-S. 985«: auslassen
-INFO: 198 Doppelter Literaturverweis »Hauck.1954b-S. 1017«: auslassen
-INFO: 198 Doppelter Literaturverweis »Wendehorst.1997-S. 88«: auslassen
-INFO: 206 Doppelter Literaturverweis »Hauck.1954b-S. 1017«: auslassen
-INFO: 210 Doppelter Literaturverweis »Ehlers.2007-S. 451«: auslassen
-INFO: 212 Doppelter Literaturverweis »Hauck.1954b-S. 1018«: auslassen
-INFO: 215 Doppelter Literaturverweis »Hauck.1954b-S. 1018«: auslassen
-INFO: 215 Doppelter Literaturverweis »Hauck.1954b-S. 1018«: auslassen
-INFO: 216 Doppelter Literaturverweis »Hauck.1954c-S. 986«: auslassen
-INFO: 216 Doppelter Literaturverweis »Wendehorst.1996-S. 44«: auslassen
-INFO: 218 Doppelter Literaturverweis »Hauck.1954c-S. 985«: auslassen
-INFO: 221 Doppelter Literaturverweis »Hauck.1954c-S. 986«: auslassen
-INFO: 222 Doppelter Literaturverweis »Hauck.1954c-S. 985«: auslassen
-INFO: 224 Doppelter Literaturverweis »Hauck.1954c-S. 985«: auslassen
-INFO: 239 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 240 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 244 Doppelter Literaturverweis »Hoogeweg.1908(Nachdruck1986)-S. 54«: auslassen
-INFO: 245 Doppelter Literaturverweis »Hauck.1954c-S. 985«: auslassen
-INFO: 246 Doppelter Literaturverweis »Ehlers.2007-S. 426«: auslassen
-INFO: 247 Doppelter Literaturverweis »Ehlers.2007-S. 426«: auslassen
-INFO: 248 Doppelter Literaturverweis »Hauck.1954b-S. 1017«: auslassen
-INFO: 251 Doppelter Literaturverweis »Hauck.1954b-S. 1017«: auslassen
-INFO: 253 Doppelter Literaturverweis »Hauck.1954b-S. 1018«: auslassen
-INFO: 254 Doppelter Literaturverweis »Lindner.1917(ND1967)-S. 140«: auslassen
-INFO: 259 Doppelter Literaturverweis »Hauck.1954c-S. 985«: auslassen
-INFO: 260 Doppelter Literaturverweis »Hauck.1954b-S. 1018«: auslassen
-INFO: 261 Doppelter Literaturverweis »Hauck.1954b-S. 1018«: auslassen
-INFO: 261 Doppelter Literaturverweis »Ehlers.2007-S. 433«: auslassen
-INFO: 261 Doppelter Literaturverweis »Ehlers.2007-S. 433«: auslassen
-INFO: 264 Doppelter Literaturverweis »Hauck.1954b-S. 1017«: auslassen
-INFO: 264 Doppelter Literaturverweis »Ehlers.2007-S. 424«: auslassen
-INFO: 265 Doppelter Literaturverweis »Hauck.1954b-S. 1018«: auslassen
-INFO: 265 Doppelter Literaturverweis »Hauck.1954b-S. 1018«: auslassen
-INFO: 265 Doppelter Literaturverweis »Lindner.1917(ND1967)-S. 38«: auslassen
-INFO: 265 Doppelter Literaturverweis »Schwinekoper.1987-S. 475f«: auslassen
-INFO: 265 Doppelter Literaturverweis »Ehlers.2007-S. 450«: auslassen
-INFO: 266 Doppelter Literaturverweis »Hauck.1954b-S. 1017«: auslassen
-INFO: 268 Doppelter Literaturverweis »Hauck.1954-S. 819«: auslassen
-INFO: 269 Doppelter Literaturverweis »Hauck.1954b-S. 1018«: auslassen
-INFO: 273 Doppelter Literaturverweis »Hauck.1954b-S. 1018«: auslassen
-INFO: 279 Doppelter Literaturverweis »Hauck.1954c-S. 986«: auslassen
-INFO: 280 Doppelter Literaturverweis »Hauck.1954c-S. 986«: auslassen
-INFO: 281 Doppelter Literaturverweis »Hauck.1954c-S. 986«: auslassen
-INFO: 283 Doppelter Literaturverweis »Schwinekoper.1987-S. 23-27«: auslassen
-INFO: 283 Doppelter Literaturverweis »Schrader.1977-S. 8«: auslassen
-INFO: 285 Doppelter Literaturverweis »Hauck.1954c-S. 985«: auslassen
-INFO: 286 Doppelter Literaturverweis »Lindner.1917(ND1967)-S. 122«: auslassen
-INFO: 288 Doppelter Literaturverweis »Hauck.1954c-S. 985«: auslassen
-INFO: 289 Doppelter Literaturverweis »Hauck.1954-S. 819«: auslassen
-INFO: 290 Doppelter Literaturverweis »Hauck.1954c-S. 986«: auslassen
-INFO: 293 Doppelter Literaturverweis »Schwinekoper.1987-S. 106«: auslassen
-INFO: 294 Doppelter Literaturverweis »Hauck.1954c-S. 985«: auslassen
-INFO: 296 Doppelter Literaturverweis »Hauck.1954b-S. 1016«: auslassen
-INFO: 296 Doppelter Literaturverweis »Schwinekoper.1987-S. 374-380«: auslassen
-INFO: 297 Doppelter Literaturverweis »Hauck.1954b-S. 1017«: auslassen
-INFO: 297 Doppelter Literaturverweis »Schwinekoper.1987-S. 374-380«: auslassen
-INFO: 299 Doppelter Literaturverweis »Hauck.1954c-S. 986«: auslassen
-INFO: 301 Doppelter Literaturverweis »Hauck.1954c-S. 986«: auslassen
-INFO: 305 Doppelter Literaturverweis »Hauck.1954c-S. 986«: auslassen
-INFO: 306 Doppelter Literaturverweis »Schwinekoper.1987-S. 173«: auslassen
-INFO: 307 Doppelter Literaturverweis »Hauck.1954b-S. 1017«: auslassen
-INFO: 307 Doppelter Literaturverweis »Ehlers.2007-S. 451«: auslassen
-INFO: 310 Doppelter Literaturverweis »Schrader.1977-None«: auslassen
-INFO: 311 Doppelter Literaturverweis »Schrader.1977-None«: auslassen
-INFO: 312 Doppelter Literaturverweis »Schrader.1977-S. 8«: auslassen
-INFO: 314 Doppelter Literaturverweis »Streich.1986-S. 37«: auslassen
-INFO: 314 Doppelter Literaturverweis »Streich.1986-S. 101«: auslassen
-INFO: 317 Doppelter Literaturverweis »Streich.1986-S. 37«: auslassen
-INFO: 317 Doppelter Literaturverweis »Dolle.2012b-S. 1044-1050«: auslassen
-INFO: 317 Doppelter Literaturverweis »Dolle.2012b-S. 1044-1050«: auslassen
-INFO: 318 Doppelter Literaturverweis »Streich.1986-S. 101«: auslassen
-INFO: 319 Doppelter Literaturverweis »Streich.1986-S. 38«: auslassen
-INFO: 319 Doppelter Literaturverweis »Streich.1986-S. 101«: auslassen
-INFO: 320 Doppelter Literaturverweis »Streich.1986-S. 38«: auslassen
-INFO: 321 Doppelter Literaturverweis »Streich.1986-S. 38 f«: auslassen
-INFO: 323 Doppelter Literaturverweis »Streich.1986-S. 40«: auslassen
-INFO: 324 Doppelter Literaturverweis »Ehlers.2007-S. 419«: auslassen
-INFO: 326 Doppelter Literaturverweis »Streich.1986-S. 41«: auslassen
-INFO: 327 Doppelter Literaturverweis »Ehlers.2007-S. 419«: auslassen
-INFO: 331 Doppelter Literaturverweis »Streich.1986-S. 42«: auslassen
-INFO: 333 Doppelter Literaturverweis »Streich.1986-S. 43«: auslassen
-INFO: 334 Doppelter Literaturverweis »Streich.1986-S. 43«: auslassen
-INFO: 335 Doppelter Literaturverweis »Streich.1986-None«: auslassen
-INFO: 337 Doppelter Literaturverweis »Streich.1986-S. 97«: auslassen
-INFO: 339 Doppelter Literaturverweis »Streich.1986-S. 44«: auslassen
-INFO: 345 Doppelter Literaturverweis »Streich.1986-S. 49«: auslassen
-INFO: 348 Doppelter Literaturverweis »Streich.1986-S. 49«: auslassen
-INFO: 349 Doppelter Literaturverweis »Streich.1986-S. 42«: auslassen
-INFO: 349 Doppelter Literaturverweis »Hoogeweg.1908(Nachdruck1986)-S. 19«: auslassen
-INFO: 349 Doppelter Literaturverweis »Streich.1986-S. 42«: auslassen
-INFO: 349 Doppelter Literaturverweis »Hoogeweg.1908(Nachdruck1986)-S. 19«: auslassen
-INFO: 351 Doppelter Literaturverweis »Streich.1986-S. 50«: auslassen
-INFO: 352 Doppelter Literaturverweis »Hoogeweg.1908(Nachdruck1986)-S. 19«: auslassen
-INFO: 355 Doppelter Literaturverweis »Streich.1986-S. 52«: auslassen
-INFO: 356 Doppelter Literaturverweis »Streich.1986-S. 52«: auslassen
-INFO: 357 Doppelter Literaturverweis »Streich.1986-S. 52«: auslassen
-INFO: 361 Doppelter Literaturverweis »Streich.1986-S. 54«: auslassen
-INFO: 365 Doppelter Literaturverweis »Hoogeweg.1908(Nachdruck1986)-S. 30«: auslassen
-INFO: 367 Doppelter Literaturverweis »Streich.1986-S. 56 f«: auslassen
-INFO: 367 Doppelter Literaturverweis »Hoogeweg.1908(Nachdruck1986)-S. 59 f«: auslassen
-INFO: 369 Doppelter Literaturverweis »Streich.1986-S. 57«: auslassen
-INFO: 369 Doppelter Literaturverweis »Wendehorst.1997-S. 57«: auslassen
-INFO: 370 Doppelter Literaturverweis »Hoogeweg.1908(Nachdruck1986)-S. 32«: auslassen
-INFO: 371 Doppelter Literaturverweis »Hoogeweg.1908(Nachdruck1986)-S. 32«: auslassen
-INFO: 372 Doppelter Literaturverweis »Streich.1986-S. 58«: auslassen
-INFO: 378 Doppelter Literaturverweis »Streich.1986-S. 61«: auslassen
-INFO: 378 Doppelter Literaturverweis »Ehlers.2007-S. 424«: auslassen
-INFO: 380 Doppelter Literaturverweis »Hoogeweg.1908(Nachdruck1986)-S. 37«: auslassen
-INFO: 382 Doppelter Literaturverweis »Streich.1986-S. 62«: auslassen
-INFO: 384 Doppelter Literaturverweis »Streich.1986-S. 63«: auslassen
-INFO: 385 Doppelter Literaturverweis »Streich.1986-S. 63«: auslassen
-INFO: 386 Doppelter Literaturverweis »Streich.1986-S. 63«: auslassen
-INFO: 388 Doppelter Literaturverweis »Streich.1986-S. 64«: auslassen
-INFO: 388 Doppelter Literaturverweis »Dolle.2012-S. 464-468«: auslassen
-INFO: 389 Doppelter Literaturverweis »Streich.1986-S. 64«: auslassen
-INFO: 390 Doppelter Literaturverweis »Ehlers.2007-S. 428«: auslassen
-INFO: 393 Doppelter Literaturverweis »Streich.1986-S. 68«: auslassen
-INFO: 394 Doppelter Literaturverweis »Streich.1986-S. 68«: auslassen
-INFO: 395 Doppelter Literaturverweis »Streich.1986-S. 68«: auslassen
-INFO: 396 Doppelter Literaturverweis »Streich.1986-S. 68«: auslassen
-INFO: 398 Doppelter Literaturverweis »Streich.1986-S. 69«: auslassen
-INFO: 399 Doppelter Literaturverweis »Ehlers.2007-S. 428«: auslassen
-INFO: 399 Doppelter Literaturverweis »Wendehorst.1997-S. 81«: auslassen
-INFO: 401 Doppelter Literaturverweis »Streich.1986-S. 70«: auslassen
-INFO: 402 Doppelter Literaturverweis »Streich.1986-S. 70 (Haste) und S. 87 (Rulle)«: auslassen
-INFO: 402 Doppelter Literaturverweis »Hoogeweg.1908(Nachdruck1986)-S. 55«: auslassen
-INFO: 403 Doppelter Literaturverweis »Hoogeweg.1908(Nachdruck1986)-S. 55«: auslassen
-INFO: 403 Doppelter Literaturverweis »Ehlers.2007-S. 428«: auslassen
-INFO: 403 Doppelter Literaturverweis »Hoogeweg.1908(Nachdruck1986)-S. 55«: auslassen
-INFO: 405 Doppelter Literaturverweis »Streich.1986-S. 71«: auslassen
-INFO: 406 Doppelter Literaturverweis »Streich.1986-S. 71«: auslassen
-INFO: 406 Doppelter Literaturverweis »Hoogeweg.1908(Nachdruck1986)-S. 56«: auslassen
-INFO: 409 Doppelter Literaturverweis »Hoogeweg.1908(Nachdruck1986)-S. 84«: auslassen
-INFO: 409 Doppelter Literaturverweis »Streich.1986-S. 72 (Heiligenthal)«: auslassen
-INFO: 414 Doppelter Literaturverweis »Streich.1986-S. 74«: auslassen
-INFO: 415 Doppelter Literaturverweis »Streich.1986-S. 74«: auslassen
-INFO: 418 Doppelter Literaturverweis »Lindner.1917(ND1967)-S. 156«: auslassen
-INFO: 419 Doppelter Literaturverweis »Streich.1986-S. 82«: auslassen
-INFO: 420 Doppelter Literaturverweis »Streich.1986-S. 82«: auslassen
-INFO: 424 Doppelter Literaturverweis »Streich.1986-S. 83«: auslassen
-INFO: 426 Doppelter Literaturverweis »Streich.1986-S. 84«: auslassen
-INFO: 428 Doppelter Literaturverweis »Streich.1986-S. 85«: auslassen
+INFO: 187 Doppelter Literaturverweis »187-Wendehorst.1997-S. 24«: auslassen
+INFO: 196 Doppelter Literaturverweis »196-Wendehorst.1997-S. 82«: auslassen
+INFO: 196 Doppelter Literaturverweis »196-Lindner.1917(ND1967)-S. 65«: auslassen
+INFO: 196 Doppelter Literaturverweis »196-Hauck.1954c-S. 985«: auslassen
+INFO: 215 Doppelter Literaturverweis »215-Hauck.1954b-S. 1018«: auslassen
+INFO: 261 Doppelter Literaturverweis »261-Ehlers.2007-S. 433«: auslassen
+INFO: 265 Doppelter Literaturverweis »265-Hauck.1954b-S. 1018«: auslassen
+INFO: 265 Doppelter Literaturverweis »265-Lindner.1917(ND1967)-S. 38«: auslassen
+INFO: 265 Doppelter Literaturverweis »265-Schwinekoper.1987-S. 475f«: auslassen
+INFO: 265 Doppelter Literaturverweis »265-Ehlers.2007-S. 450«: auslassen
+FEHLER: 298 Kein citekey für Buch »Besitzungen des Templerordens auf deutschem Gebiet (inklusive Österreich und Tschechien), 2010« gefunden: auslassen
+INFO: 314 Doppelter Literaturverweis »314-Streich.1986-S. 101«: auslassen
+INFO: 317 Doppelter Literaturverweis »317-Dolle.2012b-S. 1044-1050«: auslassen
+INFO: 317 Doppelter Literaturverweis »317-Dolle.2012b-S. 1044-1050«: auslassen
+INFO: 321 Doppelter Literaturverweis »321-Streich.1986-S. 38 f«: auslassen
+INFO: 345 Doppelter Literaturverweis »345-Streich.1986-S. 49«: auslassen
+INFO: 349 Doppelter Literaturverweis »349-Hoogeweg.1908(Nachdruck1986)-S. 19«: auslassen
+INFO: 349 Doppelter Literaturverweis »349-Streich.1986-S. 42«: auslassen
+INFO: 349 Doppelter Literaturverweis »349-Hoogeweg.1908(Nachdruck1986)-S. 19«: auslassen
+INFO: 367 Doppelter Literaturverweis »367-Streich.1986-S. 56 f«: auslassen
+INFO: 367 Doppelter Literaturverweis »367-Hoogeweg.1908(Nachdruck1986)-S. 59 f«: auslassen
+INFO: 402 Doppelter Literaturverweis »402-Streich.1986-S. 70 (Haste) und S. 87 (Rulle)«: auslassen
+INFO: 402 Doppelter Literaturverweis »402-Hoogeweg.1908(Nachdruck1986)-S. 55«: auslassen
+INFO: 403 Doppelter Literaturverweis »403-Hoogeweg.1908(Nachdruck1986)-S. 55«: auslassen
+INFO: 409 Doppelter Literaturverweis »409-Hoogeweg.1908(Nachdruck1986)-S. 84«: auslassen
+INFO: 409 Doppelter Literaturverweis »409-Streich.1986-S. 72 (Heiligenthal)«: auslassen
 INFO: 459 Zwei Beschreibungsfelder für: »Hengst.1992« zusammenfügen: Artikel „Augustiner-Chorherren“, S. 105-112
-INFO: 459 Doppelter Literaturverweis »Ehlers.2007-S. 420«: auslassen
-INFO: 461 Doppelter Literaturverweis »Ehlers.2007-S. 420«: auslassen
-INFO: 469 Doppelter Literaturverweis »Hengst.1992-S. 123f«: auslassen
-INFO: 475 Doppelter Literaturverweis »Hengst.1992-S. 147ff«: auslassen
-INFO: 512 Doppelter Literaturverweis »Ehlers.2007-S. 422«: auslassen
-INFO: 518 Doppelter Literaturverweis »Hengst.1992-S. 309f«: auslassen
-INFO: 527 Doppelter Literaturverweis »Ehlers.2007-S. 426«: auslassen
-INFO: 544 Doppelter Literaturverweis »Wendehorst.1997-S. 81«: auslassen
-INFO: 546 Doppelter Literaturverweis »Hengst.1992-S. 400f«: auslassen
-INFO: 550 Doppelter Literaturverweis »Ehlers.2007-S. 429«: auslassen
-INFO: 559 Doppelter Literaturverweis »Ehlers.2007-S. 430«: auslassen
-INFO: 565 Doppelter Literaturverweis »Hengst.1992-S. 462-466«: auslassen
 INFO: 611 Zwei Beschreibungsfelder für: »Hengst.1992« zusammenfügen: Artikel „Benediktiner“, S. 574-577, hier S. 574f
-INFO: 631 Doppelter Literaturverweis »Wendehorst.1997-S. 135«: auslassen
-INFO: 639 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 640 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 641 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 642 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 644 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 645 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 646 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 647 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 648 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 649 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 650 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 651 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 652 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 653 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 654 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 655 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 656 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 657 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 658 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 659 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 660 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 661 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 662 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 663 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 664 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 665 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 666 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 667 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 668 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 669 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 670 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 671 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 672 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 673 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 674 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 675 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 675 Doppelter Literaturverweis »Ehlers.2007-S. 427«: auslassen
-INFO: 676 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 677 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 679 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 680 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 683 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 687 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 688 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 688 Doppelter Literaturverweis »Ehlers.2007-S. 442«: auslassen
-INFO: 689 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 690 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 691 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 692 Doppelter Literaturverweis »ChristianAlbrechtsUniversitatKiel.-None«: auslassen
-INFO: 711 Doppelter Literaturverweis »Dolle.2012b-S. 417-423«: auslassen
-INFO: 713 Doppelter Literaturverweis »Streich.1986-S. 90«: auslassen
-INFO: 714 Doppelter Literaturverweis »Wendehorst.1997-S. 125«: auslassen
-INFO: 717 Doppelter Literaturverweis »Streich.1986-S. 128«: auslassen
-INFO: 718 Doppelter Literaturverweis »Streich.1986-S. 99«: auslassen
-INFO: 726 Doppelter Literaturverweis »Hauck.1954b-S. 1017«: auslassen
-INFO: 726 Doppelter Literaturverweis »Ehlers.2007-S. 442«: auslassen
-INFO: 726 Doppelter Literaturverweis »Hauck.1954b-S. 1017«: auslassen
-INFO: 726 Doppelter Literaturverweis »Lindner.1917(ND1967)-S. 29«: auslassen
-INFO: 726 Doppelter Literaturverweis »Ehlers.2007-S. 442«: auslassen
+INFO: 726 Doppelter Literaturverweis »726-Hauck.1954b-S. 1017«: auslassen
+INFO: 726 Doppelter Literaturverweis »726-Lindner.1917(ND1967)-S. 29«: auslassen
+INFO: 726 Doppelter Literaturverweis »726-Ehlers.2007-S. 442«: auslassen
 INFO: 735 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel „Fürstenwalde. Domkapitel des Bistums Lebus“, S. 481-499, hier S. 481
 INFO: 736 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel  „Göritz (Górzyca). Domkapitel des Bistums Lebus“, S. 514-519, hier S. 514
 INFO: 736 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artikel „Lebus. Domkapitel“, S. 750-763, hier S. 750f
 INFO: 737 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel „Gransee“, S. 536-542, hier S. 536
 INFO: 738 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel „Guben“, S. 560-572, hier S. 560
 INFO: 739 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel „Havelberg“, S. 573-592, hier S. 573
-INFO: 739 Doppelter Literaturverweis »Ehlers.2007-S. 428«: auslassen
 INFO: 740 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel „Heiligengrabe“, S. 593-605, hier S. 593
 INFO: 741 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel  „Herzberg“, S. 606-611, hier S. 606
 INFO: 742 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel „Himmelpfort“, S. 612-624, hier S. 612
@@ -353,7 +145,7 @@ INFO: 750 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artik
 INFO: 751 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artikel „Lietzen“, S. 805-817, hier S. 805
 INFO: 752 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artikel „Lindow“, S. 818-827, hier S. 818
 INFO: 752 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artikel „Lindow“, S. 818-827, hier S. 818
-INFO: 752 Doppelter Literaturverweis »Heimann.2010b-Artikel „Lindow“, S. 818-827, hier S. 818«: auslassen
+INFO: 752 Doppelter Literaturverweis »752-Heimann.2010b-Artikel „Lindow“, S. 818-827, hier S. 818«: auslassen
 INFO: 753 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artikel „Luckau“, S. 830-842, hier S. 830
 INFO: 754 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artikel „Lübben“, S. 843-849, hier S. 843
 INFO: 755 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artikel „Mühlberg“, S. 884-902, hier S. 884
@@ -374,395 +166,18 @@ INFO: 769 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artik
 INFO: 770 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artikel „Ziesar. Franziskaner“, S. 1345-1346, hier S. 1345
 INFO: 771 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artikel „Ziesar. Zisterzienserinnen“, S. 1347-1358, hier S. 1347
 INFO: 772 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artikel „Zinna. Zisterzienser“, S. 1359-1384, hier S. 1347
-INFO: 774 Doppelter Literaturverweis »Ehlers.2007-S. 423«: auslassen
-INFO: 775 Doppelter Literaturverweis »Ehlers.2007-S. 423«: auslassen
-INFO: 776 Doppelter Literaturverweis »Ehlers.2007-S. 423«: auslassen
-INFO: 777 Doppelter Literaturverweis »Ehlers.2007-S. 423«: auslassen
-INFO: 778 Doppelter Literaturverweis »Ehlers.2007-S. 422«: auslassen
-INFO: 779 Doppelter Literaturverweis »Ehlers.2007-S. 423«: auslassen
-INFO: 780 Doppelter Literaturverweis »Ehlers.2007-S. 423«: auslassen
-INFO: 781 Doppelter Literaturverweis »Ehlers.2007-S. 426«: auslassen
-INFO: 783 Doppelter Literaturverweis »Ehlers.2007-S. 427«: auslassen
-INFO: 784 Doppelter Literaturverweis »Ehlers.2007-S. 428«: auslassen
-INFO: 785 Doppelter Literaturverweis »Ehlers.2007-S. 429«: auslassen
-INFO: 786 Doppelter Literaturverweis »Ehlers.2007-S. 430«: auslassen
-INFO: 787 Doppelter Literaturverweis »Ehlers.2007-S. 432«: auslassen
-INFO: 790 Doppelter Literaturverweis »Ehlers.2007-S. 433«: auslassen
-INFO: 791 Doppelter Literaturverweis »Ehlers.2007-S. 434«: auslassen
-INFO: 792 Doppelter Literaturverweis »Ehlers.2007-S. 439«: auslassen
-INFO: 794 Doppelter Literaturverweis »Ehlers.2007-S. 439«: auslassen
-INFO: 796 Doppelter Literaturverweis »Ehlers.2007-S. 442«: auslassen
-INFO: 797 Doppelter Literaturverweis »Ehlers.2007-S. 443«: auslassen
-INFO: 798 Doppelter Literaturverweis »Ehlers.2007-S. 443«: auslassen
-INFO: 800 Doppelter Literaturverweis »Ehlers.2007-S. 444«: auslassen
-INFO: 801 Doppelter Literaturverweis »Ehlers.2007-S. 444«: auslassen
-INFO: 802 Doppelter Literaturverweis »Ehlers.2007-S. 444«: auslassen
-INFO: 802 Doppelter Literaturverweis »Ehlers.2007-S. 444«: auslassen
-INFO: 802 Doppelter Literaturverweis »Streich.1986-S. 105«: auslassen
-INFO: 803 Doppelter Literaturverweis »Ehlers.2007-S. 444«: auslassen
-INFO: 814 Doppelter Literaturverweis »Ehlers.2007-S. 450«: auslassen
-INFO: 818 Doppelter Literaturverweis »Wendehorst.1997-S. 194«: auslassen
-INFO: 819 Doppelter Literaturverweis »Ehlers.2007-S. 452«: auslassen
-INFO: 820 Doppelter Literaturverweis »Ehlers.2007-S. 441«: auslassen
-INFO: 820 Doppelter Literaturverweis »Ehlers.2007-S. 449«: auslassen
-INFO: 821 Doppelter Literaturverweis »Ehlers.2007-S. 442«: auslassen
-INFO: 823 Doppelter Literaturverweis »Ehlers.2007-S. 448«: auslassen
-INFO: 826 Doppelter Literaturverweis »Streich.1986-S. 69«: auslassen
-INFO: 835 Doppelter Literaturverweis »Streich.1986-S. 98«: auslassen
-INFO: 837 Doppelter Literaturverweis »Dolle.2012-S. 908-913«: auslassen
-INFO: 851 Doppelter Literaturverweis »Streich.1986-S. 96«: auslassen
-INFO: 854 Doppelter Literaturverweis »Streich.1986-S. 100«: auslassen
-INFO: 857 Doppelter Literaturverweis »Streich.1986-S. 102«: auslassen
-INFO: 858 Doppelter Literaturverweis »Streich.1986-S. 103«: auslassen
-INFO: 858 Doppelter Literaturverweis »Wendehorst.1997-S. 145«: auslassen
-INFO: 858 Doppelter Literaturverweis »Streich.1986-S. 103«: auslassen
-INFO: 858 Doppelter Literaturverweis »Dolle.2012b-S. 1100-1108«: auslassen
-INFO: 859 Doppelter Literaturverweis »Streich.1986-S. 105«: auslassen
-INFO: 869 Doppelter Literaturverweis »Wendehorst.1997-S. 149«: auslassen
-INFO: 876 Doppelter Literaturverweis »Wendehorst.1997-S. 147«: auslassen
-INFO: 880 Doppelter Literaturverweis »-----«: auslassen
-INFO: 882 Doppelter Literaturverweis »Wendehorst.1997-S. 156«: auslassen
-INFO: 886 Doppelter Literaturverweis »Streich.1986-S. 117«: auslassen
-INFO: 891 Doppelter Literaturverweis »Streich.1986-S. 120«: auslassen
-INFO: 892 Doppelter Literaturverweis »Streich.1986-S. 119«: auslassen
-INFO: 893 Doppelter Literaturverweis »Streich.1986-S. 120«: auslassen
-INFO: 895 Doppelter Literaturverweis »Streich.1986-S. 121«: auslassen
-INFO: 937 Doppelter Literaturverweis »Wendehorst.1997-S. 135«: auslassen
-INFO: 949 Doppelter Literaturverweis »Hengst.1994-S. 159-161«: auslassen
-INFO: 977 Doppelter Literaturverweis »Hengst.1994-S. 329-335«: auslassen
-INFO: 1041 Doppelter Literaturverweis »Wendehorst.1997-S. 147«: auslassen
-INFO: 1042 Doppelter Literaturverweis »Wendehorst.1997-S. 147«: auslassen
-INFO: 1043 Doppelter Literaturverweis »Wendehorst.1997-S. 105«: auslassen
-INFO: 1047 Doppelter Literaturverweis »Wendehorst.1997-S. 125«: auslassen
-INFO: 1049 Doppelter Literaturverweis »Lindner.1917(ND1967)-S. 174«: auslassen
-INFO: 1056 Doppelter Literaturverweis »Wendehorst.1997-S. 71«: auslassen
-INFO: 1057 Doppelter Literaturverweis »Wendehorst.1997-S. 53«: auslassen
-INFO: 1059 Doppelter Literaturverweis »Wendehorst.1997-S. 190«: auslassen
-INFO: 1067 Doppelter Literaturverweis »Wendehorst.1997-S. 167«: auslassen
-INFO: 1073 Doppelter Literaturverweis »Wiener.1998-S. 145«: auslassen
-INFO: 1075 Doppelter Literaturverweis »Wiener.1998-S. 146«: auslassen
-INFO: 1076 Doppelter Literaturverweis »Wiener.1998-S. 146«: auslassen
-INFO: 1077 Doppelter Literaturverweis »Wiener.1998-S. 146«: auslassen
-INFO: 1078 Doppelter Literaturverweis »Wiener.1998-S. 146«: auslassen
-INFO: 1079 Doppelter Literaturverweis »Wiener.1998-S. 146«: auslassen
-INFO: 1080 Doppelter Literaturverweis »Wiener.1998-S. 146«: auslassen
-INFO: 1081 Doppelter Literaturverweis »Wiener.1998-S. 146«: auslassen
-INFO: 1082 Doppelter Literaturverweis »Wiener.1998-S. 146«: auslassen
-INFO: 1083 Doppelter Literaturverweis »Wiener.1998-S. 146«: auslassen
-INFO: 1086 Doppelter Literaturverweis »Wiener.1998-S. 147«: auslassen
-INFO: 1087 Doppelter Literaturverweis »Wiener.1998-S. 147«: auslassen
-INFO: 1088 Doppelter Literaturverweis »Wiener.1998-S. 147«: auslassen
-INFO: 1090 Doppelter Literaturverweis »Wiener.1998-S. 147«: auslassen
-INFO: 1090 Doppelter Literaturverweis »Wiener.1998-S. 147«: auslassen
-INFO: 1090 Doppelter Literaturverweis »Wiener.1998-S. 147«: auslassen
-INFO: 1091 Doppelter Literaturverweis »Wiener.1998-S. 147«: auslassen
-INFO: 1092 Doppelter Literaturverweis »Wiener.1998-S. 147«: auslassen
-INFO: 1093 Doppelter Literaturverweis »Wiener.1998-S. 147«: auslassen
-INFO: 1094 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 1095 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 1096 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 1096 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 1097 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 1098 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 1099 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 2000 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 2001 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 2002 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 2003 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 2004 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 2005 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 2006 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 2007 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 2008 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 2009 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 2010 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 2012 Doppelter Literaturverweis »Ehlers.2007-S. 419«: auslassen
-INFO: 2012 Doppelter Literaturverweis »Ehlers.2007-S. 419«: auslassen
-INFO: 2065 Doppelter Literaturverweis ».2007-S. 56-57«: auslassen
-INFO: 2075 Doppelter Literaturverweis »Wiener.1998-S. 148«: auslassen
-INFO: 2079 Doppelter Literaturverweis »Wendehorst.1997-S. 23«: auslassen
-INFO: 2081 Doppelter Literaturverweis »Wendehorst.1997-S. 24«: auslassen
-INFO: 2082 Doppelter Literaturverweis »Wendehorst.1997-S. 24«: auslassen
-INFO: 2087 Doppelter Literaturverweis »Wendehorst.1997-S. 26«: auslassen
-INFO: 2091 Doppelter Literaturverweis »Wendehorst.1997-S. 27«: auslassen
-INFO: 2092 Doppelter Literaturverweis »Wendehorst.1997-S. 28«: auslassen
-INFO: 2093 Doppelter Literaturverweis »Wendehorst.1997-S. 28«: auslassen
-INFO: 2098 Doppelter Literaturverweis »Wendehorst.1997-S. 30«: auslassen
-INFO: 3002 Doppelter Literaturverweis »Wendehorst.1997-S. 31f«: auslassen
-INFO: 3004 Doppelter Literaturverweis »Wendehorst.1997-S. 32«: auslassen
-INFO: 3005 Doppelter Literaturverweis »Wendehorst.1997-S. 33«: auslassen
-INFO: 3006 Doppelter Literaturverweis »Wendehorst.1997-S. 33«: auslassen
-INFO: 3009 Doppelter Literaturverweis »Wendehorst.1997-S. 34«: auslassen
-INFO: 3011 Doppelter Literaturverweis »Wendehorst.1997-S. 35«: auslassen
-INFO: 3016 Doppelter Literaturverweis »Wendehorst.1997-S. 39«: auslassen
-INFO: 3018 Doppelter Literaturverweis »Wendehorst.1997-S. 40«: auslassen
-INFO: 3019 Doppelter Literaturverweis »Wendehorst.1997-S. 40«: auslassen
-INFO: 3020 Doppelter Literaturverweis »Wendehorst.1997-S. 40«: auslassen
-INFO: 3021 Doppelter Literaturverweis »Wendehorst.1997-S. 40«: auslassen
-INFO: 3023 Doppelter Literaturverweis »Wendehorst.1997-S. 42«: auslassen
-INFO: 3024 Doppelter Literaturverweis »Wendehorst.1997-S. 42«: auslassen
-INFO: 3030 Doppelter Literaturverweis »Wendehorst.1997-S. 46«: auslassen
-INFO: 3031 Doppelter Literaturverweis »Wendehorst.1997-S. 46«: auslassen
-INFO: 3032 Doppelter Literaturverweis »Wendehorst.1997-S. 46«: auslassen
-INFO: 3035 Doppelter Literaturverweis »Wendehorst.1997-S. 47«: auslassen
-INFO: 3038 Doppelter Literaturverweis »Wendehorst.1997-S. 48«: auslassen
-INFO: 3039 Doppelter Literaturverweis »Wendehorst.1997-S. 48«: auslassen
-INFO: 3040 Doppelter Literaturverweis »Wendehorst.1997-S. 48«: auslassen
-INFO: 3043 Doppelter Literaturverweis »Wendehorst.1997-S. 49«: auslassen
-INFO: 3044 Doppelter Literaturverweis »Wendehorst.1997-S. 49«: auslassen
-INFO: 3047 Doppelter Literaturverweis »Wendehorst.1997-S. 50«: auslassen
-INFO: 3048 Doppelter Literaturverweis »Wendehorst.1997-S. 50«: auslassen
-INFO: 3050 Doppelter Literaturverweis »Wendehorst.1997-S. 51«: auslassen
-INFO: 3051 Doppelter Literaturverweis »Wendehorst.1997-S. 51«: auslassen
-INFO: 3054 Doppelter Literaturverweis »Wendehorst.1997-S. 52«: auslassen
-INFO: 3055 Doppelter Literaturverweis »Wendehorst.1997-S. 52«: auslassen
-INFO: 3056 Doppelter Literaturverweis »Wendehorst.1997-S. 52«: auslassen
-INFO: 3057 Doppelter Literaturverweis »Wendehorst.1997-S. 53«: auslassen
-INFO: 3060 Doppelter Literaturverweis »Wendehorst.1997-S. 54«: auslassen
-INFO: 3061 Doppelter Literaturverweis »Wendehorst.1997-S. 54«: auslassen
-INFO: 3063 Doppelter Literaturverweis »Wendehorst.1997-S. 55«: auslassen
-INFO: 3064 Doppelter Literaturverweis »Wendehorst.1997-S. 55«: auslassen
-INFO: 3066 Doppelter Literaturverweis »Wendehorst.1997-S. 56«: auslassen
-INFO: 3067 Doppelter Literaturverweis »Wendehorst.1997-S. 56«: auslassen
-INFO: 3068 Doppelter Literaturverweis »Wendehorst.1997-S. 56«: auslassen
-INFO: 3069 Doppelter Literaturverweis »Wendehorst.1997-S. 56«: auslassen
-INFO: 3071 Doppelter Literaturverweis »Wendehorst.1997-S. 57«: auslassen
-INFO: 3074 Doppelter Literaturverweis »Wendehorst.1997-S. 58«: auslassen
-INFO: 3075 Doppelter Literaturverweis »Wendehorst.1997-S. 58«: auslassen
-INFO: 3076 Doppelter Literaturverweis »Wendehorst.1997-S. 58«: auslassen
-INFO: 3081 Doppelter Literaturverweis »Wendehorst.1997-S. 60«: auslassen
-INFO: 3085 Doppelter Literaturverweis »Wendehorst.1997-S. 63«: auslassen
-INFO: 3086 Doppelter Literaturverweis »Wendehorst.1997-S. 63«: auslassen
-INFO: 3088 Doppelter Literaturverweis »Wendehorst.1997-S. 64«: auslassen
-INFO: 3094 Doppelter Literaturverweis »Wendehorst.1997-S. 67«: auslassen
-INFO: 3096 Doppelter Literaturverweis »Wendehorst.1997-S. 68«: auslassen
-INFO: 3099 Doppelter Literaturverweis »Wendehorst.1997-S. 69«: auslassen
-INFO: 3102 Doppelter Literaturverweis »Wendehorst.1997-S. 70«: auslassen
-INFO: 3103 Doppelter Literaturverweis »Wendehorst.1997-S. 70«: auslassen
-INFO: 3104 Doppelter Literaturverweis »Wendehorst.1997-S. 71«: auslassen
-INFO: 3105 Doppelter Literaturverweis »Wendehorst.1997-S. 71«: auslassen
-INFO: 3106 Doppelter Literaturverweis »Wendehorst.1997-S. 71«: auslassen
-INFO: 3106 Doppelter Literaturverweis »Wendehorst.1997-S. 71«: auslassen
-INFO: 3109 Doppelter Literaturverweis »Wendehorst.1997-S. 72«: auslassen
-INFO: 3110 Doppelter Literaturverweis »Wendehorst.1997-S. 72«: auslassen
-INFO: 3111 Doppelter Literaturverweis »Wendehorst.1997-S. 72«: auslassen
-INFO: 3112 Doppelter Literaturverweis »Wendehorst.1997-S. 72«: auslassen
-INFO: 3114 Doppelter Literaturverweis »Wendehorst.1997-S. 74«: auslassen
-INFO: 3117 Doppelter Literaturverweis »Wendehorst.1997-S. 76«: auslassen
-INFO: 3118 Doppelter Literaturverweis »Wendehorst.1997-S. 76«: auslassen
-INFO: 3120 Doppelter Literaturverweis »Wendehorst.1997-S. 77«: auslassen
-INFO: 3121 Doppelter Literaturverweis »Wendehorst.1997-S. 77«: auslassen
-INFO: 3122 Doppelter Literaturverweis »Wendehorst.1997-S. 77«: auslassen
-INFO: 3123 Doppelter Literaturverweis »Wendehorst.1997-S. 78«: auslassen
-INFO: 3125 Doppelter Literaturverweis »Wendehorst.1997-S. 80«: auslassen
-INFO: 3126 Doppelter Literaturverweis »Wendehorst.1997-S. 80«: auslassen
-INFO: 3128 Doppelter Literaturverweis »Wendehorst.1997-S. 82«: auslassen
-INFO: 3129 Doppelter Literaturverweis »Wendehorst.1997-S. 82«: auslassen
-INFO: 3130 Doppelter Literaturverweis »Wendehorst.1997-S. 82«: auslassen
-INFO: 3131 Doppelter Literaturverweis »Wendehorst.1997-S. 83«: auslassen
-INFO: 3132 Doppelter Literaturverweis »Wendehorst.1997-S. 83«: auslassen
-INFO: 3133 Doppelter Literaturverweis »Wendehorst.1997-S. 83«: auslassen
-INFO: 3134 Doppelter Literaturverweis »Wendehorst.1997-S. 83«: auslassen
-INFO: 3135 Doppelter Literaturverweis »Wendehorst.1997-S. 84«: auslassen
-INFO: 3136 Doppelter Literaturverweis »Wendehorst.1997-S. 84«: auslassen
-INFO: 3137 Doppelter Literaturverweis »Wendehorst.1997-S. 85«: auslassen
-INFO: 3138 Doppelter Literaturverweis »Wendehorst.1997-S. 85«: auslassen
-INFO: 3139 Doppelter Literaturverweis »Wendehorst.1997-S. 86«: auslassen
-INFO: 3140 Doppelter Literaturverweis »Wendehorst.1997-S. 86«: auslassen
-INFO: 3141 Doppelter Literaturverweis »Wendehorst.1997-S. 88«: auslassen
-INFO: 3143 Doppelter Literaturverweis »Wendehorst.1997-S. 89«: auslassen
-INFO: 3144 Doppelter Literaturverweis »Wendehorst.1997-S. 89«: auslassen
-INFO: 3146 Doppelter Literaturverweis »Wendehorst.1997-S. 90«: auslassen
-INFO: 3147 Doppelter Literaturverweis »Wendehorst.1997-S. 90«: auslassen
-INFO: 3148 Doppelter Literaturverweis »Wendehorst.1997-S. 90«: auslassen
-INFO: 3149 Doppelter Literaturverweis »Wendehorst.1997-S. 90«: auslassen
-INFO: 3151 Doppelter Literaturverweis »Wendehorst.1997-S. 91«: auslassen
-INFO: 3152 Doppelter Literaturverweis »Wendehorst.1997-S. 91«: auslassen
-INFO: 3154 Doppelter Literaturverweis »Wendehorst.1997-S. 92«: auslassen
-INFO: 3158 Doppelter Literaturverweis »Wendehorst.1997-S. 94«: auslassen
-INFO: 3159 Doppelter Literaturverweis »Wendehorst.1997-S. 94«: auslassen
-INFO: 3161 Doppelter Literaturverweis »Wendehorst.1997-S. 95«: auslassen
-INFO: 3162 Doppelter Literaturverweis »Wendehorst.1997-S. 95«: auslassen
-INFO: 3163 Doppelter Literaturverweis »Wendehorst.1997-S. 95«: auslassen
-INFO: 3164 Doppelter Literaturverweis »Wendehorst.1997-S. 96«: auslassen
-INFO: 3165 Doppelter Literaturverweis »Wendehorst.1997-S. 96«: auslassen
-INFO: 3166 Doppelter Literaturverweis »Wendehorst.1997-S. 96«: auslassen
-INFO: 3167 Doppelter Literaturverweis »Wendehorst.1997-S. 96«: auslassen
-INFO: 3169 Doppelter Literaturverweis »Wendehorst.1997-S. 97«: auslassen
-INFO: 3170 Doppelter Literaturverweis »Wendehorst.1997-S. 97«: auslassen
-INFO: 3171 Doppelter Literaturverweis »Wendehorst.1997-S. 97«: auslassen
-INFO: 3173 Doppelter Literaturverweis »Wendehorst.1997-S. 98«: auslassen
-INFO: 3174 Doppelter Literaturverweis »Wendehorst.1997-S. 98«: auslassen
-INFO: 3186 Doppelter Literaturverweis »Wendehorst.1997-S. 104«: auslassen
-INFO: 3187 Doppelter Literaturverweis »Wendehorst.1997-S. 104«: auslassen
-INFO: 3188 Doppelter Literaturverweis »Wendehorst.1997-S. 105«: auslassen
-INFO: 3189 Doppelter Literaturverweis »Wendehorst.1997-S. 105«: auslassen
-INFO: 3190 Doppelter Literaturverweis »Wendehorst.1997-S. 105«: auslassen
-INFO: 3191 Doppelter Literaturverweis »Wendehorst.1997-S. 106«: auslassen
-INFO: 3192 Doppelter Literaturverweis »Wendehorst.1997-S. 106«: auslassen
-INFO: 3193 Doppelter Literaturverweis »Wendehorst.1997-S. 106«: auslassen
-INFO: 3196 Doppelter Literaturverweis »Wendehorst.1997-S. 107«: auslassen
-INFO: 3197 Doppelter Literaturverweis »Wendehorst.1997-S. 107«: auslassen
-INFO: 3198 Doppelter Literaturverweis »Wendehorst.1997-S. 107«: auslassen
-INFO: 3199 Doppelter Literaturverweis »Wendehorst.1997-S. 107«: auslassen
-INFO: 3202 Doppelter Literaturverweis »Wendehorst.1997-S. 108«: auslassen
-INFO: 3203 Doppelter Literaturverweis »Wendehorst.1997-S. 108«: auslassen
-INFO: 3206 Doppelter Literaturverweis »Wendehorst.1997-S. 109«: auslassen
-INFO: 3209 Doppelter Literaturverweis »Wendehorst.1997-S. 110«: auslassen
-INFO: 3210 Doppelter Literaturverweis »Wendehorst.1997-S. 110«: auslassen
-INFO: 3213 Doppelter Literaturverweis »Wendehorst.1997-S. 111«: auslassen
-INFO: 3215 Doppelter Literaturverweis »Wendehorst.1997-S. 112«: auslassen
-INFO: 3217 Doppelter Literaturverweis »Wendehorst.1997-S. 113«: auslassen
-INFO: 3218 Doppelter Literaturverweis »Wendehorst.1997-S. 113«: auslassen
-INFO: 3219 Doppelter Literaturverweis »Wendehorst.1997-S. 113«: auslassen
-INFO: 3221 Doppelter Literaturverweis »Wendehorst.1997-S. 114«: auslassen
-INFO: 3222 Doppelter Literaturverweis »Wendehorst.1997-S. 114«: auslassen
-INFO: 3229 Doppelter Literaturverweis »Wendehorst.1997-S. 117«: auslassen
-INFO: 3230 Doppelter Literaturverweis »Wendehorst.1997-S. 117«: auslassen
-INFO: 3231 Doppelter Literaturverweis »Wendehorst.1997-S. 117«: auslassen
-INFO: 3237 Doppelter Literaturverweis »Wendehorst.1997-S. 120«: auslassen
-INFO: 3238 Doppelter Literaturverweis »Wendehorst.1997-S. 120«: auslassen
-INFO: 3243 Doppelter Literaturverweis »Wendehorst.1997-S. 122«: auslassen
-INFO: 3244 Doppelter Literaturverweis »Wendehorst.1997-S. 122«: auslassen
-INFO: 3246 Doppelter Literaturverweis »Wendehorst.1997-S. 123«: auslassen
-INFO: 3249 Doppelter Literaturverweis »Wendehorst.1997-S. 124«: auslassen
-INFO: 3250 Doppelter Literaturverweis »Wendehorst.1997-S. 124«: auslassen
-INFO: 3251 Doppelter Literaturverweis »Wendehorst.1997-S. 125«: auslassen
-INFO: 3253 Doppelter Literaturverweis »Wendehorst.1997-S. 126«: auslassen
-INFO: 3254 Doppelter Literaturverweis »Wendehorst.1997-S. 126«: auslassen
-INFO: 3257 Doppelter Literaturverweis »Wendehorst.1997-S. 127«: auslassen
-INFO: 3258 Doppelter Literaturverweis »Wendehorst.1997-S. 127«: auslassen
-INFO: 3259 Doppelter Literaturverweis »Wendehorst.1997-S. 127«: auslassen
-INFO: 3263 Doppelter Literaturverweis »Wendehorst.1997-S. 128«: auslassen
-INFO: 3264 Doppelter Literaturverweis »Wendehorst.1997-S. 128«: auslassen
-INFO: 3265 Doppelter Literaturverweis »Wendehorst.1997-S. 128«: auslassen
-INFO: 3266 Doppelter Literaturverweis »Wendehorst.1997-S. 128«: auslassen
-INFO: 3267 Doppelter Literaturverweis »Wendehorst.1997-S. 129«: auslassen
-INFO: 3268 Doppelter Literaturverweis »Wendehorst.1997-S. 129«: auslassen
-INFO: 3271 Doppelter Literaturverweis »Wendehorst.1997-S. 130«: auslassen
-INFO: 3272 Doppelter Literaturverweis »Wendehorst.1997-S. 130«: auslassen
-INFO: 3275 Doppelter Literaturverweis »Wendehorst.1997-S. 131«: auslassen
-INFO: 3276 Doppelter Literaturverweis »Wendehorst.1997-S. 131«: auslassen
-INFO: 3277 Doppelter Literaturverweis »Wendehorst.1997-S. 131«: auslassen
-INFO: 3278 Doppelter Literaturverweis »Wendehorst.1997-S. 132«: auslassen
-INFO: 3279 Doppelter Literaturverweis »Wendehorst.1997-S. 132«: auslassen
-INFO: 3280 Doppelter Literaturverweis »Wendehorst.1997-S. 132«: auslassen
-INFO: 3283 Doppelter Literaturverweis »Wendehorst.1997-S. 133«: auslassen
-INFO: 3285 Doppelter Literaturverweis »Wendehorst.1997-S. 134«: auslassen
-INFO: 3286 Doppelter Literaturverweis »Wendehorst.1997-S. 134«: auslassen
-INFO: 3288 Doppelter Literaturverweis »Wendehorst.1997-S. 134«: auslassen
-INFO: 3290 Doppelter Literaturverweis »Wendehorst.1997-S. 135«: auslassen
-INFO: 3291 Doppelter Literaturverweis »Wendehorst.1997-S. 136«: auslassen
-INFO: 3293 Doppelter Literaturverweis »Wendehorst.1997-S. 137«: auslassen
-INFO: 3300 Doppelter Literaturverweis »Wendehorst.1997-S. 140«: auslassen
-INFO: 3302 Doppelter Literaturverweis »Wendehorst.1997-S. 141«: auslassen
-INFO: 3304 Doppelter Literaturverweis »Wendehorst.1997-S. 141«: auslassen
-INFO: 3306 Doppelter Literaturverweis »Wendehorst.1997-S. 142«: auslassen
-INFO: 3308 Doppelter Literaturverweis »Wendehorst.1997-S. 143«: auslassen
-INFO: 3309 Doppelter Literaturverweis »Wendehorst.1997-S. 143«: auslassen
-INFO: 3310 Doppelter Literaturverweis »Wendehorst.1997-S. 143«: auslassen
-INFO: 3312 Doppelter Literaturverweis »Wendehorst.1997-S. 143f«: auslassen
-INFO: 3317 Doppelter Literaturverweis »Wendehorst.1997-S. 146«: auslassen
-INFO: 3318 Doppelter Literaturverweis »Wendehorst.1997-S. 146«: auslassen
-INFO: 3319 Doppelter Literaturverweis »Wendehorst.1997-S. 146«: auslassen
-INFO: 3320 Doppelter Literaturverweis »Wendehorst.1997-S. 147«: auslassen
-INFO: 3321 Doppelter Literaturverweis »Wendehorst.1997-S. 147«: auslassen
-INFO: 3322 Doppelter Literaturverweis »Wendehorst.1997-S. 148«: auslassen
-INFO: 3323 Doppelter Literaturverweis »Wendehorst.1997-S. 148«: auslassen
-INFO: 3324 Doppelter Literaturverweis »Wendehorst.1997-S. 148«: auslassen
-INFO: 3326 Doppelter Literaturverweis »Wendehorst.1997-S. 149«: auslassen
-INFO: 3327 Doppelter Literaturverweis »Wendehorst.1997-S. 149«: auslassen
-INFO: 3329 Doppelter Literaturverweis »Wendehorst.1997-S. 150«: auslassen
-INFO: 3330 Doppelter Literaturverweis »Wendehorst.1997-S. 150«: auslassen
-INFO: 3332 Doppelter Literaturverweis »Wendehorst.1997-S. 151«: auslassen
-INFO: 3334 Doppelter Literaturverweis »Wendehorst.1997-S. 151f«: auslassen
-INFO: 3335 Doppelter Literaturverweis »Wendehorst.1997-S. 152«: auslassen
-INFO: 3336 Doppelter Literaturverweis »Wendehorst.1997-S. 152«: auslassen
-INFO: 3337 Doppelter Literaturverweis »Wendehorst.1997-S. 153«: auslassen
-INFO: 3338 Doppelter Literaturverweis »Wendehorst.1997-S. 153«: auslassen
-INFO: 3339 Doppelter Literaturverweis »Wendehorst.1997-S. 153«: auslassen
-INFO: 3340 Doppelter Literaturverweis »Wendehorst.1997-S. 153«: auslassen
-INFO: 3342 Doppelter Literaturverweis »Wendehorst.1997-S. 154«: auslassen
-INFO: 3343 Doppelter Literaturverweis »Wendehorst.1997-S. 154«: auslassen
-INFO: 3345 Doppelter Literaturverweis »Wendehorst.1997-S. 155«: auslassen
-INFO: 3346 Doppelter Literaturverweis »Wendehorst.1997-S. 155«: auslassen
-INFO: 3347 Doppelter Literaturverweis »Wendehorst.1997-S. 156«: auslassen
-INFO: 3348 Doppelter Literaturverweis »Wendehorst.1997-S. 156«: auslassen
-INFO: 3349 Doppelter Literaturverweis »Wendehorst.1997-S. 156«: auslassen
-INFO: 3352 Doppelter Literaturverweis »Wendehorst.1997-S. 157«: auslassen
-INFO: 3353 Doppelter Literaturverweis »Wendehorst.1997-S. 157«: auslassen
-INFO: 3355 Doppelter Literaturverweis »Wendehorst.1997-S. 158«: auslassen
-INFO: 3356 Doppelter Literaturverweis »Wendehorst.1997-S. 158«: auslassen
-INFO: 3357 Doppelter Literaturverweis »Wendehorst.1997-S. 158«: auslassen
-INFO: 3359 Doppelter Literaturverweis »Wendehorst.1997-S. 159«: auslassen
-INFO: 3360 Doppelter Literaturverweis »Wendehorst.1997-S. 159«: auslassen
-INFO: 3361 Doppelter Literaturverweis »Wendehorst.1997-S. 159«: auslassen
-INFO: 3364 Doppelter Literaturverweis »Wendehorst.1997-S. 160«: auslassen
-INFO: 3365 Doppelter Literaturverweis »Wendehorst.1997-S. 160f«: auslassen
-INFO: 3367 Doppelter Literaturverweis »Wendehorst.1997-S. 161«: auslassen
-INFO: 3368 Doppelter Literaturverweis »Wendehorst.1997-S. 161«: auslassen
-INFO: 3369 Doppelter Literaturverweis »Wendehorst.1997-S. 161«: auslassen
-INFO: 3370 Doppelter Literaturverweis »Wendehorst.1997-S. 162«: auslassen
-INFO: 3371 Doppelter Literaturverweis »Wendehorst.1997-S. 162«: auslassen
-INFO: 3372 Doppelter Literaturverweis »Wendehorst.1997-S. 162«: auslassen
-INFO: 3373 Doppelter Literaturverweis »Wendehorst.1997-S. 162«: auslassen
-INFO: 3374 Doppelter Literaturverweis »Wendehorst.1997-S. 163«: auslassen
-INFO: 3375 Doppelter Literaturverweis »Wendehorst.1997-S. 163«: auslassen
-INFO: 3378 Doppelter Literaturverweis »Wendehorst.1997-S. 166«: auslassen
-INFO: 3380 Doppelter Literaturverweis »Wendehorst.1997-S. 164«: auslassen
-INFO: 3383 Doppelter Literaturverweis »Wendehorst.1997-S. 165«: auslassen
-INFO: 3384 Doppelter Literaturverweis »Wendehorst.1997-S. 165«: auslassen
-INFO: 3385 Doppelter Literaturverweis »Wendehorst.1997-S. 166«: auslassen
-INFO: 3386 Doppelter Literaturverweis »Wendehorst.1997-S. 166«: auslassen
-INFO: 3387 Doppelter Literaturverweis »Wendehorst.1997-S. 167«: auslassen
-INFO: 3389 Doppelter Literaturverweis »Wendehorst.1997-S. 169«: auslassen
-INFO: 3392 Doppelter Literaturverweis »Wendehorst.1997-S. 171«: auslassen
-INFO: 3400 Doppelter Literaturverweis »Wendehorst.1997-S. 175«: auslassen
-INFO: 3401 Doppelter Literaturverweis »Wendehorst.1997-S. 177«: auslassen
-INFO: 3402 Doppelter Literaturverweis »Wendehorst.1997-S. 177«: auslassen
-INFO: 3406 Doppelter Literaturverweis »Wendehorst.1997-S. 179«: auslassen
-INFO: 3407 Doppelter Literaturverweis »Wendehorst.1997-S. 180«: auslassen
-INFO: 3409 Doppelter Literaturverweis »Wendehorst.1997-S. 181«: auslassen
-INFO: 3417 Doppelter Literaturverweis »Wendehorst.1997-S. 187«: auslassen
-INFO: 3419 Doppelter Literaturverweis »Wendehorst.1997-S. 189«: auslassen
-INFO: 3421 Doppelter Literaturverweis »Wendehorst.1997-S. 190«: auslassen
-INFO: 3425 Doppelter Literaturverweis »Wendehorst.1997-S. 195«: auslassen
-INFO: 3426 Doppelter Literaturverweis »Wendehorst.1997-S. 195«: auslassen
-INFO: 3429 Doppelter Literaturverweis »Wendehorst.1997-S. 199«: auslassen
-INFO: 3444 Doppelter Literaturverweis »Wendehorst.1997-S. 203«: auslassen
-INFO: 3447 Doppelter Literaturverweis »Wendehorst.1997-S. 204«: auslassen
-INFO: 3448 Doppelter Literaturverweis »Wendehorst.1997-S. 204«: auslassen
-INFO: 3449 Doppelter Literaturverweis »Wendehorst.1997-S. 165«: auslassen
-INFO: 3450 Doppelter Literaturverweis »Wendehorst.1997-S. 62«: auslassen
-INFO: 3451 Doppelter Literaturverweis »Wendehorst.1997-S. 64«: auslassen
-INFO: 3452 Doppelter Literaturverweis »Wendehorst.1997-S. 74«: auslassen
-INFO: 3453 Doppelter Literaturverweis »Wendehorst.1997-S. 58«: auslassen
-INFO: 3454 Doppelter Literaturverweis »Wendehorst.1997-S. 75«: auslassen
-INFO: 3455 Doppelter Literaturverweis »Wendehorst.1997-S. 82«: auslassen
-INFO: 3456 Doppelter Literaturverweis »Wendehorst.1997-S. 87«: auslassen
-INFO: 3457 Doppelter Literaturverweis »Wendehorst.1997-S. 165«: auslassen
-INFO: 3459 Doppelter Literaturverweis »Wendehorst.1997-S. 166«: auslassen
-INFO: 3460 Doppelter Literaturverweis »Wendehorst.1997-S. 167«: auslassen
-INFO: 3462 Doppelter Literaturverweis »Wendehorst.1997-S. 168«: auslassen
-INFO: 3463 Doppelter Literaturverweis »Wendehorst.1997-S. 168«: auslassen
-INFO: 3465 Doppelter Literaturverweis »Wendehorst.1997-S. 173«: auslassen
-INFO: 3466 Doppelter Literaturverweis »Wendehorst.1997-S. 173«: auslassen
-INFO: 3467 Doppelter Literaturverweis »Wendehorst.1997-S. 173«: auslassen
-INFO: 3468 Doppelter Literaturverweis »Wendehorst.1997-S. 174«: auslassen
-INFO: 3469 Doppelter Literaturverweis »Wendehorst.1997-S. 174«: auslassen
-INFO: 3470 Doppelter Literaturverweis »Wendehorst.1997-S. 174«: auslassen
-INFO: 3471 Doppelter Literaturverweis »Wendehorst.1997-S. 175«: auslassen
-INFO: 3473 Doppelter Literaturverweis »Wendehorst.1997-S. 177«: auslassen
-INFO: 3476 Doppelter Literaturverweis »Wendehorst.1997-S. 176«: auslassen
-INFO: 3477 Doppelter Literaturverweis »Wendehorst.1997-S. 176«: auslassen
-INFO: 3478 Doppelter Literaturverweis »Wendehorst.1997-S. 178«: auslassen
-INFO: 3479 Doppelter Literaturverweis »Wendehorst.1997-S. 178«: auslassen
-INFO: 3480 Doppelter Literaturverweis »Wendehorst.1997-S. 179«: auslassen
-INFO: 3482 Doppelter Literaturverweis »Wendehorst.1997-S. 182«: auslassen
-INFO: 3483 Doppelter Literaturverweis »Wendehorst.1997-S. 182«: auslassen
-INFO: 3484 Doppelter Literaturverweis »Wendehorst.1997-S. 182«: auslassen
-INFO: 3485 Doppelter Literaturverweis »Wendehorst.1997-S. 181«: auslassen
-INFO: 3486 Doppelter Literaturverweis »Wendehorst.1997-S. 183«: auslassen
+INFO: 802 Doppelter Literaturverweis »802-Ehlers.2007-S. 444«: auslassen
+INFO: 802 Doppelter Literaturverweis »802-Streich.1986-S. 105«: auslassen
+INFO: 858 Doppelter Literaturverweis »858-Streich.1986-S. 103«: auslassen
+INFO: 858 Doppelter Literaturverweis »858-Dolle.2012b-S. 1100-1108«: auslassen
+FEHLER: 880 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2012 Bd. 3« gefunden: auslassen
+INFO: 949 Doppelter Literaturverweis »949-Hengst.1994-S. 159-161«: auslassen
+INFO: 1067 Doppelter Literaturverweis »1067-Wendehorst.1997-S. 167«: auslassen
+INFO: 1090 Doppelter Literaturverweis »1090-Wiener.1998-S. 147«: auslassen
+INFO: 1090 Doppelter Literaturverweis »1090-Wiener.1998-S. 147«: auslassen
+INFO: 1096 Doppelter Literaturverweis »1096-Wiener.1998-S. 148«: auslassen
+INFO: 2012 Doppelter Literaturverweis »2012-Ehlers.2007-S. 419«: auslassen
+INFO: 3106 Doppelter Literaturverweis »3106-Wendehorst.1997-S. 71«: auslassen
 
 
 Tabelle »url«: 457 Datensätze
@@ -819,10 +234,10 @@ Tabelle »ort«: 44206 Datensätze
 Tabelle »ort_url_mm«: 2 Datensätze
 
 
-Tabelle »literatur«: 1204 Datensätze
+Tabelle »literatur«: 1773 Datensätze
 
 
 Tabelle »kloster_standort«: 1482 Datensätze
 
 
-Tabelle »kloster_literatur_mm«: 1204 Datensätze
+Tabelle »kloster_literatur_mm«: 1773 Datensätze

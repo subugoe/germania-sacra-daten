@@ -233,8 +233,11 @@ for values in cursor:
 	literaturDict = {}
 	cursor2.execute(queryLiteratur, [str(docKloster["sql_uid"])])
 	for values2 in cursor2:
-		docLiteratur = dict(zip(cursor3.column_names, values3))
-		literaturDict[docLiteratur["citekey"]] = docLiteratur["beschreibung"]
+		docLiteratur = dict(zip(cursor2.column_names, values2))
+		if literaturDict.has_key(docLiteratur["citekey"]):
+			literaturDict[docLiteratur["citekey"]] += ' / ' + docLiteratur["beschreibung"]
+		else:
+			literaturDict[docLiteratur["citekey"]] = docLiteratur["beschreibung"]
 	docKloster["literatur_citekey"] = literaturDict.keys()
 	docKloster["literatur_beschreibung"] = literaturDict.values()
 
@@ -442,10 +445,7 @@ for values in cursor:
 		doc2["typ"] = "kloster-orden"
 		docs += [doc2]
 		orden += [copy.deepcopy(docOrden)]
-	
-	docKloster["literatur_citekey"] = literaturDict.keys()
-	docKloster["literatur_beschreibung"] = literaturDict.values()
-	
+		
 	if docKloster.has_key('ort') and len(docKloster['ort']) > 0:
 		docKloster['ort_sort'] = docKloster['ort'][0]
 	
@@ -476,8 +476,6 @@ for values in cursor:
 				# Orden und Standort Felder
 				mergeDocIntoDoc(myOrden, doc)
 				mergeDocIntoDoc(myStandort, doc)
-				doc["literatur_citekey"] = literaturDict.keys()
-				doc["literatur_beschreibung"] = literaturDict.values()
 				
 				# Verwaltungsfelder
 				doc['typ'] = 'standort-orden'
