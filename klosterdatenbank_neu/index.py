@@ -158,18 +158,23 @@ for values in cursor:
 	docKloster["id"] = 'kloster-' + str(docKloster["kloster_id"])
 	docKloster["url"] = []
 	docKloster["url_bemerkung"] = []
-	docKloster["url_art"] = []
+	docKloster["url_typ"] = []
 	docKloster["url_relation"] = []
 	docKloster["url_wikipedia"] = []
+	docKloster["url_quelle"] = []
+	docKloster["url_quelle_titel"] = []
 	docKloster["gnd"] = []
 
 	queryBandURL = """
 	SELECT
-		url.url, url.bemerkung, url.art
+		url.url, url.bemerkung,
+		url_typ.name AS url_typ
 	FROM
 		tx_gs_domain_model_url AS url,
+		tx_gs_domain_model_url_typ AS url_typ,
 		tx_gs_band_url_mm AS relation		
 	WHERE
+		url.url_typ_uid = url_typ.uid AND
 		relation.uid_local = %s AND
 		url.uid = relation.uid_foreign
 	"""
@@ -178,7 +183,7 @@ for values in cursor:
 		docURLs = {}
 		for values2 in cursor2:
 			docURL = dict(zip(cursor2.column_names, values2))
-			docURLs[docURL["art"]] = docURL["url"]
+			docURLs[docURL["url_typ"]] = docURL["url"]
 
 		if docURLs.has_key('Handle'):
 			docKloster['band_url'] = [docURLs['Handle']]
@@ -193,11 +198,14 @@ for values in cursor:
 
 	queryKlosterURL = """
 	SELECT
-		url.url, url.bemerkung, url.art
+		url.url, url.bemerkung,
+		url_typ.name AS url_typ
 	FROM
 		tx_gs_domain_model_url AS url,
+		tx_gs_domain_model_url_typ AS url_typ,
 		tx_gs_kloster_url_mm AS relation
 	WHERE
+		url.url_typ_uid = url_typ.uid AND
 		url.uid = relation.uid_foreign AND
 		relation.uid_local = %s
 	"""
@@ -205,15 +213,18 @@ for values in cursor:
 	for values2 in cursor2:
 		docURL = dict(zip(cursor2.column_names, values2))
 		
-		if docURL["art"] != "Wikipedia":
+		if docURL["url_typ"] == "Wikipedia":
+			docKloster["url_wikipedia"] += [docURL["url"]]
+		elif docURL["url_typ"] == "Quelle":
+			docKloster["url_quelle"] += [docURL["url"]]
+			docKloster["url_quelle_titel"] += [docURL["bemerkung"]]
+		else:
 			docKloster["url"] += [docURL["url"]]
 			docKloster["url_bemerkung"] += [docURL["bemerkung"]]
-			docKloster["url_art"] += [docURL["art"]]
+			docKloster["url_typ"] += [docURL["url_typ"]]
 			docKloster["url_relation"] += ["kloster"]
-		else:
-			docKloster["url_wikipedia"] += [docURL["url"]]
 		
-		if docURL["art"] == "GND":
+		if docURL["url_typ"] == "GND":
 			components = docURL["url"].split("/gnd/")
 			if len(components) > 1:
 				docKloster["gnd"] += [components[1]]
@@ -302,11 +313,14 @@ for values in cursor:
 		if docStandort["bistum_uid"]:
 			queryBistumURL = """
 			SELECT
-				url.url, url.bemerkung, url.art
+				url.url, url.bemerkung,
+				url_typ.name AS url_typ
 			FROM
 				tx_gs_domain_model_url AS url,
+				tx_gs_domain_model_url_typ AS url_typ,
 				tx_gs_bistum_url_mm AS relation
 			WHERE
+				url.url_typ_uid = url_typ.uid AND
 				url.uid = relation.uid_foreign AND
 				relation.uid_local = %s
 			"""
@@ -316,13 +330,13 @@ for values in cursor:
 			for values3 in cursor3:
 				docURL = dict(zip(cursor3.column_names, values3))
 		
-				if docURL["art"] == "GND":
+				if docURL["url_typ"] == "GND":
 					components = docURL["url"].split("/gnd/")
 					if len(components) > 1:
 						docStandort["bistum_gnd"] = components[1]
 					else:
 						print "keine GND URL: " + docURL["url"]
-				elif docURL["art"] == "Wikipedia":
+				elif docURL["url_typ"] == "Wikipedia":
 					bistum_wikipedia = docURL["url"]
 			docStandort["bistum_gnd"] = [bistum_gnd]
 			docStandort['bistum_wikipedia'] = [bistum_wikipedia]
@@ -336,18 +350,21 @@ for values in cursor:
 		
 		docStandort["url"] = []
 		docStandort["url_bemerkung"] = []
-		docStandort["url_art"] = []
+		docStandort["url_typ"] = []
 		docStandort["url_relation"] = []
 		docStandort["geonames"] = []
 		improveZeitraumForDocument(docStandort, "standort")
 		
 		queryOrtURL = """
 		SELECT
-			url.url, url.bemerkung AS url_bemerkung, url.art AS url_art
+			url.url, url.bemerkung,
+			url_typ.name AS url_typ
 		FROM
 			tx_gs_domain_model_url AS url,
+			tx_gs_domain_model_url_typ AS url_typ,
 			tx_gs_ort_url_mm AS relation
 		WHERE
+			url.url_typ_uid = url_typ.uid AND
 			url.uid = relation.uid_foreign AND
 			relation.uid_local = %s
 		"""
@@ -355,7 +372,7 @@ for values in cursor:
 		geoname = ''
 		for values3 in cursor3:
 			docURL = dict(zip(cursor3.column_names, values3))
-			if docURL["url_art"] == "Geonames":
+			if docURL["url_typ"] == "Geonames":
 				geoname = docURL["url"].split("geonames.org/")[1]		
 			mergeDocIntoDoc(docURL, docStandort)
 		docStandort["geonames"] += [geoname]
@@ -409,11 +426,14 @@ for values in cursor:
 		
 		queryOrdenURL = """
 		SELECT
-			url.url, url.bemerkung, url.art
+			url.url, url.bemerkung,
+			url_typ.name AS url_typ
 		FROM
 			tx_gs_domain_model_url AS url,
+			tx_gs_domain_model_url_typ AS url_typ,
 			tx_gs_orden_url_mm AS relation
 		WHERE
+			url.url_typ_uid = url_typ.uid AND
 			url.uid = relation.uid_foreign AND
 			relation.uid_local = %s
 		"""
@@ -423,13 +443,13 @@ for values in cursor:
 		for values3 in cursor3:
 			docURL = dict(zip(cursor3.column_names, values3))
 		
-			if docURL["art"] == "GND":
+			if docURL["url_typ"] == "GND":
 				components = docURL["url"].split("/gnd/")
 				if len(components) > 1:
 					orden_gnd = components[1]
 				else:
 					print "keine GND URL: " + docURL["url"]
-			elif docURL["art"] == "Wikipedia":
+			elif docURL["url_typ"] == "Wikipedia":
 				orden_wikipedia = docURL["url"]
 		del docOrden['orden_uid']
 

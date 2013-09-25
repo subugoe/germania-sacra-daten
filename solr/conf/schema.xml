@@ -74,8 +74,10 @@
 		<field name="url" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="url_bemerkung" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="url_detail" type="text_de" indexed="true" stored="true" multiValued="true"/>
-		<field name="url_art" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="url_typ" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="url_relation" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="url_quelle" type="string" indexed="true" stored="true" multiValued="true"/>
+		<field name="url_quelle_titel" type="text_de" indexed="true" stored="true" multiValued="true"/>
 		<field name="gnd" type="string" indexed="true" stored="true" multiValued="true"/>
 		<field name="url_wikipedia" type="string" indexed="true" stored="true" multiValued="true"/>
 
