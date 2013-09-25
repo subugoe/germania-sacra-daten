@@ -194,15 +194,21 @@ def addWikipediaURLToDoc (row, fieldName, doc, relationDict):
 
 
 def makeURLData (URL, bemerkung, art, record_uid):
-	global urlDict
+	global urlDict, urlTypDict
 	URLRelation = None
-	if URL:
+	if URL:		
 		if not urlDict.has_key(URL):
+			if not urlTypDict.has_key(art):
+				urlTypDict[art] = {
+					'uid': len(urlTypDict) + 1,
+					'name': art
+				}
+			
 			urlDict[URL] = {
 				'uid': len(urlDict) + 1,
 				'url': URL,
 				'bemerkung': bemerkung,
-				'art': art
+				'url_typ_uid': urlTypDict[art]['uid']
 			}
 			# print u"INFO: neue URL »" + URL + u"«"
 		else:
@@ -217,6 +223,7 @@ def makeURLData (URL, bemerkung, art, record_uid):
 
 
 urlDict = {}
+urlTypDict = {}
 zeitraum = []
 
 
@@ -370,6 +377,14 @@ for values in cursor:
 			'personallistenstatus_uid': personallistenstatus
 		}
 		klosterDict[uid] = r
+	
+		if row['HauptRessource']:
+			parts = row['HauptRessource'].split('#')
+			if len(parts) > 1:
+				URLRelation = makeURLData(parts[1], parts[0], 'Quelle', r['uid'])
+				if URLRelation:
+					key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
+					kloster_has_urlDict[key] = URLRelation
 	
 		addGNDURLToDoc(row, 'GND', r, r['kloster'], kloster_has_urlDict)
 		addWikipediaURLToDoc(row, 'Wikipedia', r, kloster_has_urlDict)
@@ -689,6 +704,8 @@ db.commit()
 
 # Daten in Datenbank einspielen
 
+urlTyp = urlTypDict.values()
+addRecordsToTable(urlTyp, 'url_typ')
 url = urlDict.values()
 addRecordsToTable(url, 'url')
 

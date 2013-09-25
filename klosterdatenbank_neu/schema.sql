@@ -48,7 +48,7 @@ DROP TABLE IF EXISTS `mydb`.`land` ;
 
 CREATE  TABLE IF NOT EXISTS `mydb`.`land` (
   `uid` INT NOT NULL AUTO_INCREMENT ,
-  `land` VARCHAR(45) NULL ,
+  `land` VARCHAR(255) NULL ,
   `ist_in_deutschland` TINYINT NULL ,
   PRIMARY KEY (`uid`) ,
   UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) )
@@ -270,6 +270,18 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `mydb`.`url_typ`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`url_typ` ;
+
+CREATE  TABLE IF NOT EXISTS `mydb`.`url_typ` (
+  `uid` INT NOT NULL ,
+  `name` VARCHAR(255) NULL ,
+  PRIMARY KEY (`uid`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `mydb`.`url`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`url` ;
@@ -278,9 +290,15 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`url` (
   `uid` INT NOT NULL AUTO_INCREMENT ,
   `url` TEXT NULL ,
   `bemerkung` TEXT NULL ,
-  `art` VARCHAR(255) NULL ,
+  `url_typ_uid` INT NOT NULL ,
   PRIMARY KEY (`uid`) ,
-  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) )
+  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
+  INDEX `fk_url_url_typ1_idx` (`url_typ_uid` ASC) ,
+  CONSTRAINT `fk_url_url_typ1`
+    FOREIGN KEY (`url_typ_uid` )
+    REFERENCES `mydb`.`url_typ` (`uid` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
