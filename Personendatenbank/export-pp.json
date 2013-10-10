@@ -52651,23 +52651,6 @@
          "person_anmerkung" : ""
       }
    ],
-   "3089" : [
-      {
-         "person_gso" : "059-01594-001",
-         "person_name" : "Johann Tollhopf",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Pröpste",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_office_id" : "283324",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Propst",
-         "person_vorname" : "Johann",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      }
-   ],
    "535" : [
       {
          "person_gso" : "066-04133-001",
@@ -52756,6 +52739,23 @@
          "person_von_verbal" : "1507",
          "person_bezeichnung" : "Confessor",
          "person_vorname" : "Engelbert",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      }
+   ],
+   "3089" : [
+      {
+         "person_gso" : "059-01594-001",
+         "person_name" : "Johann Tollhopf",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Pröpste",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_office_id" : "283324",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Propst",
+         "person_vorname" : "Johann",
          "person_namensalternativen" : "",
          "person_anmerkung" : ""
       }
@@ -53988,7 +53988,7 @@
          "person_von" : 1310,
          "person_bis" : 1318,
          "person_gnd" : "",
-         "person_office_id" : "298942",
+         "person_office_id" : "298941",
          "person_von_verbal" : "1310",
          "person_bezeichnung" : "Dekan",
          "person_vorname" : "Albert",
@@ -54003,7 +54003,7 @@
          "person_von" : 1310,
          "person_bis" : 1318,
          "person_gnd" : "",
-         "person_office_id" : "298941",
+         "person_office_id" : "298942",
          "person_von_verbal" : "1310",
          "person_bezeichnung" : "Dekan",
          "person_vorname" : "Albert",
@@ -54836,6 +54836,21 @@
          "person_anmerkung" : ""
       },
       {
+         "person_gso" : "055-00558-001",
+         "person_name" : "Dietrich von der Palaststraße",
+         "person_bis_verbal" : "1315",
+         "person_bezeichnung_plural" : "Scholaster",
+         "person_von" : 1302,
+         "person_bis" : 1315,
+         "person_gnd" : "",
+         "person_office_id" : "299418",
+         "person_von_verbal" : "1302",
+         "person_bezeichnung" : "Scholaster",
+         "person_vorname" : "Dietrich",
+         "person_namensalternativen" : "Theoderich/Tilmann",
+         "person_anmerkung" : ""
+      },
+      {
          "person_gso" : "055-00524-001",
          "person_name" : "Dietrich",
          "person_bis_verbal" : "",
@@ -54998,6 +55013,36 @@
          "person_bezeichnung" : "Scholaster",
          "person_vorname" : "Emund",
          "person_namensalternativen" : "Edmund",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "055-01334-001",
+         "person_name" : "Heinrich Wampach",
+         "person_bis_verbal" : "1464",
+         "person_bezeichnung_plural" : "Scholaster",
+         "person_von" : 1464,
+         "person_bis" : 1464,
+         "person_gnd" : "",
+         "person_office_id" : "299419",
+         "person_von_verbal" : "vor 1464",
+         "person_bezeichnung" : "Scholaster",
+         "person_vorname" : "Heinrich",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : "Amt unsicher"
+      },
+      {
+         "person_gso" : "055-01675-001",
+         "person_name" : "Johann Coci",
+         "person_bis_verbal" : "1469",
+         "person_bezeichnung_plural" : "Scholaster",
+         "person_von" : 1464,
+         "person_bis" : 1469,
+         "person_gnd" : "",
+         "person_office_id" : "299420",
+         "person_von_verbal" : "1464/1465",
+         "person_bezeichnung" : "Scholaster",
+         "person_vorname" : "Johann",
+         "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
       {
@@ -55185,11 +55230,11 @@
          "person_name" : "Johann Gerhard Trarbach",
          "person_bis_verbal" : "1679",
          "person_bezeichnung_plural" : "Scholaster",
-         "person_von" : 1672,
+         "person_von" : 1665,
          "person_bis" : 1679,
          "person_gnd" : "",
          "person_office_id" : "289174",
-         "person_von_verbal" : "1672",
+         "person_von_verbal" : "1665",
          "person_bezeichnung" : "Scholaster",
          "person_vorname" : "Johann Gerhard",
          "person_namensalternativen" : "",
@@ -55466,6 +55511,21 @@
          "person_anmerkung" : ""
       },
       {
+         "person_gso" : "055-01591-001",
+         "person_name" : "Jakob von Wintrich",
+         "person_bis_verbal" : "1327",
+         "person_bezeichnung_plural" : "Kustoden",
+         "person_von" : 1307,
+         "person_bis" : 1327,
+         "person_gnd" : "",
+         "person_office_id" : "299444",
+         "person_von_verbal" : "1307",
+         "person_bezeichnung" : "Kustos",
+         "person_vorname" : "Jakob",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
          "person_gso" : "055-03262-001",
          "person_name" : "Richard von Daun",
          "person_bis_verbal" : "1362",
@@ -55558,10 +55618,10 @@
       {
          "person_gso" : "055-03536-001",
          "person_name" : "Simon von Straßburg",
-         "person_bis_verbal" : "vor 1489",
+         "person_bis_verbal" : "1466",
          "person_bezeichnung_plural" : "Kustoden",
          "person_von" : 1454,
-         "person_bis" : 1489,
+         "person_bis" : 1466,
          "person_gnd" : "",
          "person_office_id" : "288142",
          "person_von_verbal" : "1454/1463",
@@ -55663,10 +55723,10 @@
       {
          "person_gso" : "055-02989-001",
          "person_name" : "Augustin Pergener",
-         "person_bis_verbal" : "",
+         "person_bis_verbal" : "1537",
          "person_bezeichnung_plural" : "Kustoden",
          "person_von" : 1534,
-         "person_bis" : 0,
+         "person_bis" : 1537,
          "person_gnd" : "",
          "person_office_id" : "288880",
          "person_von_verbal" : "1534",
@@ -55718,20 +55778,35 @@
          "person_bezeichnung" : "Kustos",
          "person_vorname" : "Egidius",
          "person_namensalternativen" : "",
-         "person_anmerkung" : ""
+         "person_anmerkung" : "aedituus"
       },
       {
          "person_gso" : "055-04016-001",
          "person_name" : "Gerhard Wolsfeld",
-         "person_bis_verbal" : "1595",
+         "person_bis_verbal" : "1596",
          "person_bezeichnung_plural" : "Kustoden",
          "person_von" : 1589,
-         "person_bis" : 1595,
+         "person_bis" : 1596,
          "person_gnd" : "",
          "person_office_id" : "289091",
          "person_von_verbal" : "1589",
          "person_bezeichnung" : "Kustos",
          "person_vorname" : "Gerhard",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "055-00302-001",
+         "person_name" : "Matthias Binsfeld",
+         "person_bis_verbal" : "1620",
+         "person_bezeichnung_plural" : "Kustoden",
+         "person_von" : 1620,
+         "person_bis" : 1620,
+         "person_gnd" : "",
+         "person_office_id" : "299445",
+         "person_von_verbal" : "vor 1620",
+         "person_bezeichnung" : "Kustos",
+         "person_vorname" : "Matthias",
          "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
@@ -55871,12 +55946,27 @@
          "person_anmerkung" : ""
       },
       {
+         "person_gso" : "055-00090-001",
+         "person_name" : "Johann Heinrich (II.) von Anethan",
+         "person_bis_verbal" : "1750",
+         "person_bezeichnung_plural" : "Kustoden",
+         "person_von" : 1739,
+         "person_bis" : 1750,
+         "person_gnd" : "",
+         "person_office_id" : "299446",
+         "person_von_verbal" : "1739",
+         "person_bezeichnung" : "Kustos",
+         "person_vorname" : "Johann Heinrich (II.)",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
          "person_gso" : "055-02708-001",
          "person_name" : "Karl Kaspar (I.) Nalbach",
-         "person_bis_verbal" : "1756",
+         "person_bis_verbal" : "1751",
          "person_bezeichnung_plural" : "Kustoden",
          "person_von" : 1750,
-         "person_bis" : 1756,
+         "person_bis" : 1751,
          "person_gnd" : "",
          "person_office_id" : "286823",
          "person_von_verbal" : "1750",
@@ -56096,6 +56186,21 @@
          "person_anmerkung" : ""
       },
       {
+         "person_gso" : "055-01648-001",
+         "person_name" : "Johann von Bastogne",
+         "person_bis_verbal" : "1390/1392",
+         "person_bezeichnung_plural" : "Kantoren",
+         "person_von" : 1366,
+         "person_bis" : 1390,
+         "person_gnd" : "",
+         "person_office_id" : "299447",
+         "person_von_verbal" : "1366",
+         "person_bezeichnung" : "Kantor",
+         "person_vorname" : "Johann",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
          "person_gso" : "055-00953-001",
          "person_name" : "Friedrich Schavard",
          "person_bis_verbal" : "1406",
@@ -56158,13 +56263,13 @@
       {
          "person_gso" : "055-01774-001",
          "person_name" : "Johann Meisenberg",
-         "person_bis_verbal" : "1476",
+         "person_bis_verbal" : "1484",
          "person_bezeichnung_plural" : "Kantoren",
-         "person_von" : 1467,
-         "person_bis" : 1476,
+         "person_von" : 1478,
+         "person_bis" : 1484,
          "person_gnd" : "",
          "person_office_id" : "288365",
-         "person_von_verbal" : "1467/1470",
+         "person_von_verbal" : "1478",
          "person_bezeichnung" : "Kantor",
          "person_vorname" : "Johann",
          "person_namensalternativen" : "Meisenburg",
@@ -56242,6 +56347,21 @@
          "person_von_verbal" : "vor 1553",
          "person_bezeichnung" : "Kantor",
          "person_vorname" : "Gregor",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "055-03915-001",
+         "person_name" : "Wilhelm Widderstein von Biedenkopf",
+         "person_bis_verbal" : "1583",
+         "person_bezeichnung_plural" : "Kantoren",
+         "person_von" : 1568,
+         "person_bis" : 1583,
+         "person_gnd" : "",
+         "person_office_id" : "299448",
+         "person_von_verbal" : "1568",
+         "person_bezeichnung" : "Kantor",
+         "person_vorname" : "Wilhelm",
          "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
@@ -56393,6 +56513,21 @@
          "person_bezeichnung" : "Kantor",
          "person_vorname" : "Karl Theodor Anton",
          "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "055-01473-001",
+         "person_name" : "Peter Josef von Hontheim",
+         "person_bis_verbal" : "1779",
+         "person_bezeichnung_plural" : "Kantoren",
+         "person_von" : 1774,
+         "person_bis" : 1779,
+         "person_gnd" : "",
+         "person_office_id" : "299449",
+         "person_von_verbal" : "1774",
+         "person_bezeichnung" : "Kantor",
+         "person_vorname" : "Peter Josef",
+         "person_namensalternativen" : "Johann Peter Josef Ignaz",
          "person_anmerkung" : ""
       },
       {
@@ -56786,6 +56921,21 @@
          "person_anmerkung" : ""
       },
       {
+         "person_gso" : "055-01283-001",
+         "person_name" : "Heinrich Henrici von Geldorp",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Kanonikatsbewerber",
+         "person_von" : 1427,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_office_id" : "288126",
+         "person_von_verbal" : "1427",
+         "person_bezeichnung" : "Kanonikatsbewerber",
+         "person_vorname" : "Heinrich",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
          "person_gso" : "055-01272-001",
          "person_name" : "Heinrich Finck von Monzingen",
          "person_bis_verbal" : "",
@@ -56809,21 +56959,6 @@
          "person_bis" : 0,
          "person_gnd" : "",
          "person_office_id" : "288119",
-         "person_von_verbal" : "1427",
-         "person_bezeichnung" : "Kanonikatsbewerber",
-         "person_vorname" : "Heinrich",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
-         "person_gso" : "055-01283-001",
-         "person_name" : "Heinrich Henrici von Geldorp",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Kanonikatsbewerber",
-         "person_von" : 1427,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_office_id" : "288126",
          "person_von_verbal" : "1427",
          "person_bezeichnung" : "Kanonikatsbewerber",
          "person_vorname" : "Heinrich",
@@ -57386,21 +57521,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "062-00563-001",
-         "person_name" : "Johann von Daun",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Kanoniker",
-         "person_von" : 0,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_office_id" : "1647",
-         "person_von_verbal" : "",
-         "person_bezeichnung" : "Kanoniker",
-         "person_vorname" : "Johann",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "055-01752-001",
          "person_name" : "Johann Leyendecker",
          "person_bis_verbal" : "",
@@ -57409,6 +57529,21 @@
          "person_bis" : 0,
          "person_gnd" : "",
          "person_office_id" : "299032",
+         "person_von_verbal" : "",
+         "person_bezeichnung" : "Kanoniker",
+         "person_vorname" : "Johann",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "062-00563-001",
+         "person_name" : "Johann von Daun",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Kanoniker",
+         "person_von" : 0,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_office_id" : "1647",
          "person_von_verbal" : "",
          "person_bezeichnung" : "Kanoniker",
          "person_vorname" : "Johann",
@@ -59966,21 +60101,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "055-01587-001",
-         "person_name" : "Jakob der Waile",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Kanoniker",
-         "person_von" : 1400,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_office_id" : "288067",
-         "person_von_verbal" : "1400",
-         "person_bezeichnung" : "Kanoniker",
-         "person_vorname" : "Jakob",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "055-01549-001",
          "person_name" : "Jakob",
          "person_bis_verbal" : "",
@@ -59989,6 +60109,21 @@
          "person_bis" : 0,
          "person_gnd" : "",
          "person_office_id" : "287200",
+         "person_von_verbal" : "1400",
+         "person_bezeichnung" : "Kanoniker",
+         "person_vorname" : "Jakob",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "055-01587-001",
+         "person_name" : "Jakob der Waile",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Kanoniker",
+         "person_von" : 1400,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_office_id" : "288067",
          "person_von_verbal" : "1400",
          "person_bezeichnung" : "Kanoniker",
          "person_vorname" : "Jakob",
@@ -60378,7 +60513,7 @@
          "person_von" : 1428,
          "person_bis" : 1430,
          "person_gnd" : "",
-         "person_office_id" : "299023",
+         "person_office_id" : "299022",
          "person_von_verbal" : "1428",
          "person_bezeichnung" : "Kanoniker",
          "person_vorname" : "Matthias",
@@ -60393,7 +60528,7 @@
          "person_von" : 1428,
          "person_bis" : 1430,
          "person_gnd" : "",
-         "person_office_id" : "299022",
+         "person_office_id" : "299023",
          "person_von_verbal" : "1428",
          "person_bezeichnung" : "Kanoniker",
          "person_vorname" : "Matthias",
@@ -61931,21 +62066,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "055-01940-001",
-         "person_name" : "Johann Kathri",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Kanoniker",
-         "person_von" : 1504,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_office_id" : "288876",
-         "person_von_verbal" : "1504",
-         "person_bezeichnung" : "Kanoniker",
-         "person_vorname" : "Johann",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "055-00844-001",
          "person_name" : "Johann von dem Fels",
          "person_bis_verbal" : "",
@@ -61973,6 +62093,21 @@
          "person_bezeichnung" : "Kanoniker",
          "person_vorname" : "Johann",
          "person_namensalternativen" : "Matthaei",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "055-01940-001",
+         "person_name" : "Johann Kathri",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Kanoniker",
+         "person_von" : 1504,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_office_id" : "288876",
+         "person_von_verbal" : "1504",
+         "person_bezeichnung" : "Kanoniker",
+         "person_vorname" : "Johann",
+         "person_namensalternativen" : "",
          "person_anmerkung" : ""
       },
       {
@@ -66218,7 +66353,7 @@
          "person_bezeichnung" : "Vikar",
          "person_vorname" : "Jakob",
          "person_namensalternativen" : "",
-         "person_anmerkung" : ""
+         "person_anmerkung" : "Mehrere Vikare gleichen Namens."
       },
       {
          "person_gso" : "055-01629-001",
@@ -66233,7 +66368,7 @@
          "person_bezeichnung" : "Vikar",
          "person_vorname" : "Johann",
          "person_namensalternativen" : "",
-         "person_anmerkung" : ""
+         "person_anmerkung" : "Mehrere Vikare gleichen Namens."
       },
       {
          "person_gso" : "055-01666-001",
@@ -70093,6 +70228,23 @@
          "person_bezeichnung" : "Propst",
          "person_vorname" : "Philipp",
          "person_namensalternativen" : "Kratz von Scharfenstein, Cratz von Scharffenstein",
+         "person_anmerkung" : ""
+      }
+   ],
+   "472" : [
+      {
+         "person_gso" : "",
+         "person_name" : "Caspar Weise",
+         "person_bis_verbal" : "1758",
+         "person_bezeichnung_plural" : "Äbte",
+         "person_von" : 1754,
+         "person_bis" : 1758,
+         "person_gnd" : "",
+         "person_office_id" : "299437",
+         "person_von_verbal" : "1754",
+         "person_bezeichnung" : "Abt",
+         "person_vorname" : "Caspar",
+         "person_namensalternativen" : "",
          "person_anmerkung" : ""
       }
    ],
