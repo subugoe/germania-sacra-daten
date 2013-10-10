@@ -155,7 +155,7 @@ for values in cursor:
 		docKloster["band_facet"] = [bandSortName, "hat_band"]
 
 	docKloster["typ"] = "kloster"
-	docKloster["id"] = 'kloster-' + str(docKloster["kloster_id"])
+	docKloster["id"] = str(docKloster["kloster_id"])
 	docKloster["url"] = []
 	docKloster["url_bemerkung"] = []
 	docKloster["url_typ"] = []
