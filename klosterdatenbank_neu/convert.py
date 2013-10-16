@@ -301,10 +301,10 @@ for values in cursor:
 	}
 	band += [r]
 	
-	urls = row['url']
+	urlString = row['url']
 	buchtitel = 'Germania Sacra ' + r['nummer'] + ': ' + r['titel']
-	if urls:
-		urls = urls.split('#')
+	if urlString:
+		urls = urlString.strip('# ').split('#')
 		#for myURL in urls:
 		myURL = urls[0]
 		myURL = myURL.strip().strip('# ')
