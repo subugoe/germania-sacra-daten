@@ -243,8 +243,11 @@ for values in cursor:
 	WHERE
 		relation.uid_local = %s AND
 		relation.uid_foreign = literatur.uid
+	ORDER BY
+		literatur.citekey ASC
 	"""
 	literaturDict = {}
+	literaturCitekeys = []
 	cursor2.execute(queryLiteratur, [str(docKloster["sql_uid"])])
 	for values2 in cursor2:
 		docLiteratur = dict(zip(cursor2.column_names, values2))
@@ -252,8 +255,11 @@ for values in cursor:
 			literaturDict[docLiteratur["citekey"]] += ' / ' + docLiteratur["beschreibung"]
 		else:
 			literaturDict[docLiteratur["citekey"]] = docLiteratur["beschreibung"]
-	docKloster["literatur_citekey"] = literaturDict.keys()
-	docKloster["literatur_beschreibung"] = literaturDict.values()
+	
+	docKloster["literatur_citekey"] = sorted(literaturDict.keys())
+	docKloster["literatur_beschreibung"] = []
+	for citekey in docKloster["literatur_citekey"]:
+		docKloster["literatur_beschreibung"] += [literaturDict[citekey]]
 
 	docKlosterBasic = copy.deepcopy(docKloster)
 
