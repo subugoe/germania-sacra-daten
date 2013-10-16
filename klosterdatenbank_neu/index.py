@@ -37,9 +37,10 @@ personen = json.load(jsonFile)
 jsonFile.close()
 
 
-
+distantPast = -10000
 minYear = 700
 maxYear = 1810
+distantFuture = 10000
 yearStep = 10
 
 
@@ -64,12 +65,14 @@ def mergeDocIntoDoc (new, target):
 
 def improveZeitraumVerbalForDocument (doc, prefix):
 	if not doc[prefix + "_verbal"]:
-		if doc[prefix + "_von"] != minYear and doc[prefix + "_von"] != maxYear:
-			doc[prefix + "_verbal"] = str(doc[prefix + "_von"])
-		
-		if doc[prefix + "_bis"] != minYear and doc[prefix + "_bis"] != maxYear:
-			if doc[prefix + "_von"] != doc[prefix + "_bis"]:
-				doc[prefix + "_verbal"] += '/' +  str(doc[prefix + "_bis"])
+		if doc[prefix + "_von"]:
+			if doc[prefix + "_von"] != distantPast and doc[prefix + "_von"] != distantFuture:
+				doc[prefix + "_verbal"] = str(doc[prefix + "_von"])
+
+		if doc[prefix + "_bis"]:
+			if doc[prefix + "_bis"] != distantPast and doc[prefix + "_bis"] != distantFuture:
+				if doc[prefix + "_von"] != doc[prefix + "_bis"]:
+					doc[prefix + "_verbal"] += '/' +  str(doc[prefix + "_bis"])
 
 
 
@@ -78,9 +81,9 @@ def improveZeitraumForDocument (doc, prefix):
 		if not doc[prefix + "_von_bis"]:
 			doc[prefix + "_von_bis"] = doc[prefix + "_von_von"]
 	else:
-		doc[prefix + "_von_von"] = minYear
+		doc[prefix + "_von_von"] = distantPast
 		if not doc[prefix + "_von_bis"]:
-			doc[prefix + "_von_bis"] = minYear
+			doc[prefix + "_von_bis"] = distantPast
 		else:
 			print "Warnung: von_bis ohne von_von " + str(doc)
 	von = int(doc[prefix + "_von_von"])
@@ -93,8 +96,8 @@ def improveZeitraumForDocument (doc, prefix):
 		if doc[prefix + "_bis_bis"]:
 			doc[prefix + "_bis_von"] = von
 		else:
-			doc[prefix + "_bis_von"] = maxYear
-			doc[prefix + "_bis_bis"] = maxYear
+			doc[prefix + "_bis_von"] = distantPast
+			doc[prefix + "_bis_bis"] = distantFuture
 	bis = int(doc[prefix + "_bis_bis"])
 	improveZeitraumVerbalForDocument(doc, prefix + "_bis")
 	
