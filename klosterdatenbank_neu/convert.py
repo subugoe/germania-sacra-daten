@@ -32,6 +32,8 @@ bearbeiterDict = {
 	7: 20, # Bärbel Kröger
 	8: 36, # Anna Renziehausen
 	9: 32, # Fenna Campen
+	10: 42, # Timo Kirschberger
+	11: 43 # Eric Seibert
 }
 
 bearbeitungsstatusDict = {

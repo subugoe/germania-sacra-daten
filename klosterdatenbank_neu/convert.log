@@ -13,7 +13,10 @@ INFO: URL »http://d-nb.info/gnd/4506809-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4683949-5« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4355884-7« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4355889-6« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4822469-8« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4349754-8« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/7862595-6« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4374853-3« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4330520-9« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4226856-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html« existiert bereits: doppelt nutzen.
@@ -27,9 +30,13 @@ INFO: URL »http://d-nb.info/gnd/4203234-9« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4477426-6« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/1237290-0« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4347890-6« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/7763120-1« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/7779481-3« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/7763280-1« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/7781918-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4413410-1« existiert bereits: doppelt nutzen.
 INFO: URL »http://de.wikipedia.org/wiki/Kloster_Marienfeld_%28M%C3%BCnsterland%29« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4418842-0« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/10023882-8« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4749486-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4444323-7« existiert bereits: doppelt nutzen.
@@ -41,6 +48,7 @@ INFO: URL »http://d-nb.info/gnd/7762308-3« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4249088-1« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4021370-5« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4391709-4« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4028037-8« existiert bereits: doppelt nutzen.
 INFO: URL »http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html« existiert bereits: doppelt nutzen.
 INFO: URL »http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html« existiert bereits: doppelt nutzen.
 INFO: URL »http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html« existiert bereits: doppelt nutzen.
@@ -109,6 +117,7 @@ INFO: URL »http://d-nb.info/gnd/16325580-5« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/1008643-2« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/5299650-5« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4449082-3« existiert bereits: doppelt nutzen.
+FEHLER: 97 Kein citekey für Buch »Niedersächsisches Klosterbuch 2012 Bd. 2. S. 706-712.« gefunden: auslassen
 FEHLER: 100 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
 FEHLER: 101 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
 FEHLER: 102 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
@@ -217,10 +226,10 @@ INFO: 3106 Doppelter Literaturverweis »3106-Wendehorst.1997-S. 71«: auslassen
 Tabelle »url_typ«: 7 Datensätze
 
 
-Tabelle »url«: 502 Datensätze
+Tabelle »url«: 539 Datensätze
 
 
-Tabelle »zeitraum«: 3486 Datensätze
+Tabelle »zeitraum«: 3466 Datensätze
 
 
 Tabelle »bistum«: 60 Datensätze
@@ -244,7 +253,7 @@ Tabelle »personallistenstatus«: 3 Datensätze
 Tabelle »kloster«: 1428 Datensätze
 
 
-Tabelle »kloster_url_mm«: 259 Datensätze
+Tabelle »kloster_url_mm«: 296 Datensätze
 
 
 Tabelle »ordenstyp«: 4 Datensätze
@@ -256,7 +265,7 @@ Tabelle »klosterstatus«: 19 Datensätze
 Tabelle »orden«: 65 Datensätze
 
 
-Tabelle »kloster_orden«: 2004 Datensätze
+Tabelle »kloster_orden«: 1984 Datensätze
 
 
 Tabelle »orden_url_mm«: 69 Datensätze
@@ -271,10 +280,10 @@ Tabelle »ort«: 44206 Datensätze
 Tabelle »ort_url_mm«: 2 Datensätze
 
 
-Tabelle »literatur«: 1773 Datensätze
+Tabelle »literatur«: 1779 Datensätze
 
 
 Tabelle »kloster_standort«: 1482 Datensätze
 
 
-Tabelle »kloster_literatur_mm«: 1773 Datensätze
+Tabelle »kloster_literatur_mm«: 1779 Datensätze
