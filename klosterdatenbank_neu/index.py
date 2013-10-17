@@ -428,7 +428,7 @@ for values in cursor:
 	cursor2.execute(queryOrden, [str(docKloster["sql_uid"])])
 	for values2 in cursor2:
 		docOrden = dict(zip(cursor2.column_names, values2))
-		if docOrden['orden'] and docOrden['orden'] != 'evangelisches Kloster/Stift':
+		if docOrden['orden'] and docOrden['orden'] != 'evangelisches Kloster/Stift' and docOrden['orden'] != 'Reformiertes Stift (calvinistisch)':
 			# Facettenfeld mit allen außer den evangelischen füllen.
 			docOrden['orden_facet'] = docOrden['orden']
 		improveZeitraumForDocument(docOrden, "orden")
