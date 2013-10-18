@@ -19,11 +19,11 @@ Informationen zur Konversion und Indexierung der Daten liegen in [klosterdatenba
 
 
 ## Unterordner
-* [Bistumsgrenzen]: Geodaten mit den Bistumsgrenzen in verschiedenen Dateiformaten
-* [HelvetiaSacra]: alte FileMaker Datenbank zu Schweizer Klöstern (submodule, nicht öffentlich)
-* [Karten Wikipedia]: Skript zum Laden von Kloster Geodaten aus dem Wikimedia Toolserver
-* [Klosterdatenbank]: SQL Dump aus MS Access und Beschreibung des Datenmodells (submodule, nicht öffentlich)
-* [klosterdatenbank_neu]: Skripte für Konversion und Indexierung der Daten (mit eigenen Readme)
-* [Klostersymbole]: SVG Graphiken mit Symbolen für die verschiedenen Orden
-* [Personendatenbank]: Dateien für den Export der Personendatenbank (mit eigenem Readme)
-* [solr]: Konfiguration für den Solr Index der Klosterdatenbank
+* [Bistumsgrenzen](Bistumsgrenzen): Geodaten mit den Bistumsgrenzen in verschiedenen Dateiformaten
+* HelvetiaSacra: alte FileMaker Datenbank zu Schweizer Klöstern (submodule, nicht öffentlich)
+* [Karten Wikipedia](Karten Wikipedia): Skript zum Laden von Kloster Geodaten aus dem Wikimedia Toolserver
+* Klosterdatenbank: SQL Dump aus MS Access und Beschreibung des Datenmodells (submodule, nicht öffentlich)
+* [klosterdatenbank_neu](klosterdatenbank_neu): Skripte für Konversion und Indexierung der Daten (mit eigenen Readme)
+* [Klostersymbole](Klostersymbole): SVG Graphiken mit Symbolen für die verschiedenen Orden
+* [Personendatenbank](Personendatenbank): Dateien für den Export der Personendatenbank (mit eigenem Readme)
+* [solr](solr): Konfiguration für den Solr Index der Klosterdatenbank

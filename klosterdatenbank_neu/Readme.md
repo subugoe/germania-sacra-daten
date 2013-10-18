@@ -1,22 +1,22 @@
 # Konversion der Daten
-Das Konversionsskript ist [convert.py]. Es bereitet die Daten aus dem MS Access Dump für das verbesserte Datenschema auf.
+Das Konversionsskript [convert.py](convert.py) bereitet die Daten aus dem MS Access Dump für das verbesserte Datenschema auf.
 
 Es benötigt:
 
 * einige Python Module, z.B. mysql.connector (siehe die imports am Anfang des Skripts)
 * den importierten MS Access SQL Dump in der Datenbank »Klosterdatenbank« in MySQL (host:127.0.0.1, user:root, einstellbar am Anfang des Skripts)
 * die Möglichkeit, das Konversionsergebnis in die Tabelle »kloster« des MySQL Servers zu schreiben
-* das SQL Schema der Zieldatenbank in [klosterdatenbank/schema.sql]
+* das SQL Schema der Zieldatenbank in [schema.sql](schema.sql)
 
 
 ## Zielschema
 Das Zieldatenbankschema wurde mit MySQLWorkbench erstellt. Zugehörige Dateien sind:
 
-* [klosterdatenbank.mwb] – MySQLWorkbench Datei
-* [schema.sql] – SQL Schema, vom Importskript benötigt
-* [schema.pdf] – graphische Darstellung des SQL Schemas
+* [klosterdatenbank.mwb](klosterdatenbank.mwb) – MySQLWorkbench Datei
+* [schema.sql](schema.sql) – SQL Schema, vom Importskript benötigt
+* [schema.pdf](schema.pdf) – graphische Darstellung des SQL Schemas
 
-Die TYPO3 spezifischen Felder sind nicht in dem Datenbankschema enthalten. Wegen ihrer großen Zahl und Redundanz fügt das Konversionsskript sie zu den Tabellen hinzu und wandelt dabei die verschiedenen Namenskonventionen für Tabellen ineinander um (Präfix tx_gs_ und ggf model_domain, bzw. Suffix _mm).
+Die TYPO3 spezifischen Felder sind nicht in dem Datenbankschema enthalten. Wegen ihrer großen Zahl und Redundanz fügt das Konversionsskript sie zu den Tabellen hinzu und wandelt dabei die verschiedenen Namenskonventionen für Tabellen ineinander um (Präfix `tx_gs_` und ggf `model_domain`, bzw. Suffix `_mm`).
 
 ## Bearbeiter
 Das Konversionsskript enthält ein dictionary `bearbeiterDict` der Bearbeiter und bildet die Access IDs auf die IDs der entsprechenden TYPO3 Nutzerkonten ab.
@@ -25,39 +25,39 @@ Das Konversionsskript enthält ein dictionary `bearbeiterDict` der Bearbeiter un
 Das Konversionsskript enthält ein dictionary `bearbeitungsstatusDict` von Bearbeitungsstatus, die den vorkommenden Freitexen im Dump entspricht.
 
 ## Änderungsdaten
-Das Konversionsskript versucht, die Änderungsdaten, falls vorhanden, aus den Access Datensätzen zu übernehmen. Falls ein Datensatz kein Datum hat, aber zu einem anderen Datensatz gehört, wird dessen Datum genutzt, ansonsten der 1.1.2000.
+Das Konversionsskript versucht, die Änderungsdaten – falls vorhanden – aus den Access Datensätzen zu übernehmen. Falls ein Datensatz kein Datum hat, aber zu einem anderen Datensatz gehört, wird dessen Datum genutzt, ansonsten der 1.1.2000.
 
 ## Literaturimport
 In den Access Daten stehen die Literaturverweise als Freitext. Das Importskript versucht:
 
 * mehrere Einträge im Feld `tblKlosterStandort.Literaturnachweise` zu trennen
 * Seiten-/Artikelangaben am Ende des Literaturverweises abzutrennen
-* den reinen Literaturverweis in der Datei [GS-citekeys.csv] zu finden
-	* diese Datei entstand aus Bereinigungsarbeiten bei in der Tabelle [Germania Sacra Literatur](https://docs.google.com/spreadsheet/ccc?key=0Ah9t1ddBuxv8dEluYUg3OHBQUms1Z3ljV29EQmFpUWc&usp=drive_web/
-	* die Datei bildet den Freitext der Bibliographieeinträge auf die entsprechenden citekeys der BibTeX Datei [klosterdatenbankGS.bib] ab (die im TYPO3 System mit in die [https://github.com/subugoe/typo3-bib](bib Extension) importiert wird)
+* den reinen Literaturverweis in der Datei [GS-citekeys.csv](GS-citekeys.csv) zu finden
+	* diese Datei entstand aus Bereinigungsarbeiten bei in der Tabelle [Germania Sacra Literatur](https://docs.google.com/spreadsheet/ccc?key=0Ah9t1ddBuxv8dEluYUg3OHBQUms1Z3ljV29EQmFpUWc&usp=drive_web/)
+	* die Datei bildet den Freitext der Bibliographieeinträge auf die entsprechenden citekeys der BibTeX Datei [klosterdatenbankGS.bib] ab (die im TYPO3 System mit in die [bib Extension](https://github.com/subugoe/typo3-bib) importiert wird)
 	
 ## URLs
 Die einfachen URL Felder in den Originaldaten wurden durch ein flexibleres System ersetzt: Datensätze können so mit beliebig vielen URLs verbunden werden. Jede URL ist dabei mit einem `typ` getaggt und kann mit einer `bemerkung` (z.B. Anzeigestring) versehen sein.
 
 ## Logging
-Das Importskript loggt Problemfälle, die beim Import auftreten können, und allgemeine Informationen zum Datenimport in die Konsole. Das Log liegt als [convert.log] vor. Importprobleme sind je nach Schwere mit INFO, WARNUNG, FEHLER versehen.
+Das Importskript loggt Problemfälle, die beim Import auftreten können, und allgemeine Informationen zum Datenimport in die Konsole. Das Log liegt als [convert.log](convert.log) vor. Importprobleme sind je nach Schwere mit INFO, WARNUNG oder FEHLER versehen.
 
 
 
 
 
 # Indexierung der Daten
-Das Indexierungsskrip ist [index.py]. Es erzeugt einen [Solr](http://lucene.apache.org/solr/) Index aus den konvertierten MySQL Daten.
+Das Indexierungsskrip ist [index.py](index.py). Es erzeugt einen [Solr](http://lucene.apache.org/solr/) Index aus den konvertierten MySQL Daten.
 
 Es benötigt:
 * einige Python Module, z.B. mysql.connector, Geohash, json (siehe die Imports am Anfang des Skripts)
 * Zugriff auf MySQL mit den konvertierten Daten in der Datenbank »kloster« (host:127.0.0.1, user:root, einstellbar am Anfang des Skripts)
 * Zugriff auf den Ziel Solr Index (konfiguriert am Ende des Skriptes, ggf wird doppelt indexiert)
-* die zugehörigen Personendaten als JSON ([siehe unten](#Anreicherung-mit-Personendaten)))
+* die zugehörigen Personendaten als JSON
 
 
 ## Solr Konfiguration
-Die zugehörige Solr Konfiguration liegt unter [../solr/conf]. Sie beinhaltet das [Schema](../solr/conf/schema.xml) und die [solrconfig](../solr/conf/solrconfig.xml) mit Einstellungen für Autocomplete/Spellchecker. Sie ist getestet mit Solr 4.5.
+Die zugehörige Solr Konfiguration liegt unter [../solr/conf](../solr/conf). Sie beinhaltet das [Schema](../solr/conf/schema.xml) und die [solrconfig](../solr/conf/solrconfig.xml) mit Einstellungen für Autocomplete/Spellchecker. Sie ist getestet mit Solr 4.5.
 
 ## Anreicherung mit Personendaten
 Die zu einem Kloster gehörenden Personen werden auf der Seite des Klosters angezeigt. Da sie getrennt in der [Personendatenbank](http://personendatenbank.germania-sacra.de) erfaßt sind, werden sie zunächst von dort geladen. 
