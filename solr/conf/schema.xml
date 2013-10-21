@@ -190,6 +190,7 @@
 	<!--
 		Copy fields.
 	-->
+	<copyField source="kloster_id" dest="text"/>
 	<copyField source="url" dest="text"/>
 
 	<copyField source="patrozinium" dest="text"/>
