@@ -35,7 +35,18 @@ In den Access Daten stehen die Literaturverweise als Freitext. Das Importskript 
 * den reinen Literaturverweis in der Datei [GS-citekeys.csv](GS-citekeys.csv) zu finden
 	* diese Datei entstand aus Bereinigungsarbeiten bei in der Tabelle [Germania Sacra Literatur](https://docs.google.com/spreadsheet/ccc?key=0Ah9t1ddBuxv8dEluYUg3OHBQUms1Z3ljV29EQmFpUWc&usp=drive_web/)
 	* die Datei bildet den Freitext der Bibliographieeinträge auf die entsprechenden citekeys der BibTeX Datei [klosterdatenbankGS.bib] ab (die im TYPO3 System mit in die [bib Extension](https://github.com/subugoe/typo3-bib) importiert wird)
-	
+
+Es gibt also folgende Zusammenhänge:
+
+* Access: Freitext
+	* hieraus entsteht durch Magie und Geduld die Google Tabelle
+* Google Tabelle: Freitext → citekeys
+	* Der Export dieser Tabelle ist in der Datei [GS-citekeys.csv](GS-citekeys.csv)
+* BibTeX Datei: citekeys → Literaturangabe
+* Klosterdatensätze verweisen auf Datensätze der Tabelle »literatur«. Diese enthalten die citekeys und stellen so die Verbindung zur Bibliographie her
+* Die citekeys werden im Index gespeichert und genutzt um die Bibliographiedatensätze für die Anzeige von der bib Extension laden zu lassen
+
+
 ## URLs
 Die einfachen URL Felder in den Originaldaten wurden durch ein flexibleres System ersetzt: Datensätze können so mit beliebig vielen URLs verbunden werden. Jede URL ist dabei mit einem `typ` getaggt und kann mit einer `bemerkung` (z.B. Anzeigestring) versehen sein.
 
