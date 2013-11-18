@@ -162,6 +162,7 @@ FROM
 WHERE
 	offices.person_id = persons.id AND
 	offices.klosterid != "" AND
+	offices.deleted = 0 AND
 	persons.item_id = items.id AND
 	persons.deleted = 0 AND
 	items.deleted = 0 AND
