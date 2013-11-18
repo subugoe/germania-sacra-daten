@@ -36,6 +36,7 @@ INFO: URL »http://d-nb.info/gnd/7763280-1« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/7781918-4« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4413410-1« existiert bereits: doppelt nutzen.
 INFO: URL »http://de.wikipedia.org/wiki/Kloster_Marienfeld_%28M%C3%BCnsterland%29« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/4264816-6« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4418842-0« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/10023882-8« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4749486-4« existiert bereits: doppelt nutzen.
@@ -117,6 +118,7 @@ INFO: URL »http://d-nb.info/gnd/16325580-5« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/1008643-2« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/5299650-5« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4449082-3« existiert bereits: doppelt nutzen.
+INFO: 69 Doppelter Literaturverweis »69-Dolle.2012b-S. 394-404«: auslassen
 FEHLER: 97 Kein citekey für Buch »Niedersächsisches Klosterbuch 2012 Bd. 2. S. 706-712.« gefunden: auslassen
 FEHLER: 100 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
 FEHLER: 101 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
@@ -215,6 +217,7 @@ INFO: 858 Doppelter Literaturverweis »858-Streich.1986-S. 103«: auslassen
 INFO: 858 Doppelter Literaturverweis »858-Dolle.2012b-S. 1100-1108«: auslassen
 FEHLER: 880 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2012 Bd. 3« gefunden: auslassen
 INFO: 949 Doppelter Literaturverweis »949-Hengst.1994-S. 159-161«: auslassen
+FEHLER: Feld »ID_alleOrte« leer in KlosterStandort 1887: verwerfen
 INFO: 1067 Doppelter Literaturverweis »1067-Wendehorst.1997-S. 167«: auslassen
 INFO: 1090 Doppelter Literaturverweis »1090-Wiener.1998-S. 147«: auslassen
 INFO: 1090 Doppelter Literaturverweis »1090-Wiener.1998-S. 147«: auslassen
@@ -226,10 +229,10 @@ INFO: 3106 Doppelter Literaturverweis »3106-Wendehorst.1997-S. 71«: auslassen
 Tabelle »url_typ«: 7 Datensätze
 
 
-Tabelle »url«: 539 Datensätze
+Tabelle »url«: 590 Datensätze
 
 
-Tabelle »zeitraum«: 3466 Datensätze
+Tabelle »zeitraum«: 3461 Datensätze
 
 
 Tabelle »bistum«: 60 Datensätze
@@ -253,7 +256,7 @@ Tabelle »personallistenstatus«: 3 Datensätze
 Tabelle »kloster«: 1428 Datensätze
 
 
-Tabelle »kloster_url_mm«: 296 Datensätze
+Tabelle »kloster_url_mm«: 347 Datensätze
 
 
 Tabelle »ordenstyp«: 4 Datensätze
@@ -265,7 +268,7 @@ Tabelle »klosterstatus«: 19 Datensätze
 Tabelle »orden«: 65 Datensätze
 
 
-Tabelle »kloster_orden«: 1984 Datensätze
+Tabelle »kloster_orden«: 1978 Datensätze
 
 
 Tabelle »orden_url_mm«: 69 Datensätze
@@ -283,7 +286,7 @@ Tabelle »ort_url_mm«: 2 Datensätze
 Tabelle »literatur«: 1779 Datensätze
 
 
-Tabelle »kloster_standort«: 1482 Datensätze
+Tabelle »kloster_standort«: 1483 Datensätze
 
 
 Tabelle »kloster_literatur_mm«: 1779 Datensätze
