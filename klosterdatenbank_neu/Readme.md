@@ -63,19 +63,18 @@ Das Indexierungsskrip ist [index.py](index.py). Es erzeugt einen [Solr](http://l
 Es benötigt:
 * einige Python Module, z.B. mysql.connector, Geohash, json (siehe die Imports am Anfang des Skripts)
 * Zugriff auf MySQL mit den konvertierten Daten in der Datenbank »kloster« (host:127.0.0.1, user:root, einstellbar am Anfang des Skripts)
-* Zugriff auf den Ziel Solr Index (konfiguriert am Ende des Skriptes, ggf wird doppelt indexiert)
+* Schreibzugriff auf den Ziel Solr Index (konfiguriert am Ende des Skriptes, es wird in zwei Indexe indexiert)
 * die zugehörigen Personendaten als JSON
 
 
 ## Solr Konfiguration
 Die zugehörige Solr Konfiguration liegt unter [../solr/conf](../solr/conf). Sie beinhaltet das [Schema](../solr/conf/schema.xml) und die [solrconfig](../solr/conf/solrconfig.xml) mit Einstellungen für Autocomplete/Spellchecker. Sie ist getestet mit Solr 4.5.
 
+
 ## Anreicherung mit Personendaten
 Die zu einem Kloster gehörenden Personen werden auf der Seite des Klosters angezeigt. Da sie getrennt in der [Personendatenbank](http://personendatenbank.germania-sacra.de) erfaßt sind, werden sie zunächst von dort geladen. 
 
 Das Indexierungsskript lädt die [JSON Datei](../Personendatenbank/export.json) herunter, erstellt eine [lesbare Version](../Personendatenbank/export-pp.json) von ihr (nutzt das Skript json_pp im Pfad, dieser Schritt ist nicht nötig, aber wegen der besseren Diffbarkeit beim Testen hilfreich) und liest sie dann ein, um dem Indexdokument jedes Klosters seine Personen hinzuzufügen.
-
-
 
 
 ## Ausmultiplizieren der Daten
@@ -98,6 +97,7 @@ Zur Produktbildung werden alle Zeiträume der Standort- und Ordenszugehörigkeit
 Die Facettenbildung nutzt ebenfalls diesen Mechanismus für die Abfrage. Da Solr aber die Zählung der Facetten erst _nach_ dem `{!join}` durchführt, kann die angezeigte Anzahl etwas zu hoch sein, weil auch Ordenszugehörigkeiten aus dem falschen Zeitraum mit im Dokument stehen (ich sehe dafür keine Lösungsmöglichkeit).
 
 Hier würde ein hierarchisches Datenmodell sowohl die Indexerstellung als auch die Abfragen wesentlich vereinfachen. [elasticsearch](http://www.elasticsearch.org/) bietet solche Möglichkeiten. Die SUB will es momentan aber nicht einsetzen.
+
 
 ## Automatische Indexierung
 Dieses Skript erstellt den Index vollständig neu. Für den regulären Betrieb, in dem Daten in TYPO3 bearbeitet werden und sofort im Index abfragbar sein sollen ist es nötig, die Konversion granularer auszuführen und nur das neue/geänderte/gelöschte Dokument, sowie die davon abhängigen Dokumente im Index zu aktualisieren. Die Überprüfung der Abhängigkeiten und die Löschfunktion ist in diesem Skript noch nicht vorhanden.
