@@ -1,4 +1,11 @@
 <?php
+/**
+ * Skript zum Erzeugen der Beacon Datei für die Personendatenbank.
+ * 
+ * 2013 Sven-S. Porst
+ */
+
+
 setlocale(LC_ALL, 'de_DE.utf8');
 
 $sqlServer = '127.0.0.1';
@@ -21,7 +28,7 @@ if ($sql) {
 #FEED: http://personendatenbank.germania-sacra.de/beacon.txt
 #NAME: Germania Sacra Personendatenbank
 #DESCRIPTION: 
-#INSTITUTION: Germania Sacra, Akademie der Wissenschaften zu Göttingen
+#INSTITUTION: Germania Sacra, Akademie der Wissenschaften zu Goettingen
 #CONTACT: bkroege@gwdg.de\n";
 
 		date_default_timezone_set('CET');
@@ -44,13 +51,14 @@ if ($sql) {
 			$beacon .= $row['gndnummer'] . "\n";
 		}
 		
-		$beaconPath = dirname(__FILE__) . '/beacon.txt';
+		$beaconPath = dirname(__FILE__) . '/../beacon.txt';
 		if (file_put_contents($beaconPath, $beacon)) {
 			echo('Beacon Datei nach beacon.txt geschrieben.');
 		}
 		else {
 			echo('Beacon Datei konnte nicht nach beacon.txt geschrieben werden.');
 		}
+	}
 	else {
 		echo "Kein Zugriff auf Datenbank »" . $sqlDatabase . "«.\n";
 	}
