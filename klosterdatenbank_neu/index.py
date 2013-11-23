@@ -11,8 +11,8 @@ und spielt sie in Solr Index(e).
 
 import copy
 import pprint
-# benötigt das Modul Geohash (z.B. über easy_install)
-import Geohash
+# benötigt das Modul geohash (z.B. über easy_install)
+import geohash
 import urllib
 import json
 import xml.etree.ElementTree
@@ -308,7 +308,7 @@ for values in cursor:
 		if breite and laenge:
 			docStandort["koordinaten"] = str(breite) + "," + str(laenge)
 			docStandort["geohash"] = []
-			geohash = Geohash.encode(breite, laenge)
+			geohash = geohash.encode(breite, laenge)
 			i = 1
 			while (i <= len(geohash)):
 				docStandort["geohash"] += [('%02d' % i) + "-" + geohash[0:i]]
