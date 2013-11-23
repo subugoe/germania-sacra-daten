@@ -62126,6 +62126,21 @@
          "person_anmerkung" : ""
       },
       {
+         "person_gso" : "055-02496-001",
+         "person_name" : "Johann Mathaei",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Kanoniker",
+         "person_von" : 1504,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_office_id" : "288874",
+         "person_von_verbal" : "1504",
+         "person_bezeichnung" : "Kanoniker",
+         "person_vorname" : "Johann",
+         "person_namensalternativen" : "Matthaei",
+         "person_anmerkung" : ""
+      },
+      {
          "person_gso" : "055-00844-001",
          "person_name" : "Johann von dem Fels",
          "person_bis_verbal" : "",
@@ -62153,21 +62168,6 @@
          "person_bezeichnung" : "Kanoniker",
          "person_vorname" : "Johann",
          "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
-         "person_gso" : "055-02496-001",
-         "person_name" : "Johann Mathaei",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Kanoniker",
-         "person_von" : 1504,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_office_id" : "288874",
-         "person_von_verbal" : "1504",
-         "person_bezeichnung" : "Kanoniker",
-         "person_vorname" : "Johann",
-         "person_namensalternativen" : "Matthaei",
          "person_anmerkung" : ""
       },
       {
@@ -64001,21 +64001,6 @@
          "person_anmerkung" : ""
       },
       {
-         "person_gso" : "055-00512-001",
-         "person_name" : "Johann Diemen",
-         "person_bis_verbal" : "",
-         "person_bezeichnung_plural" : "Kanoniker",
-         "person_von" : 1632,
-         "person_bis" : 0,
-         "person_gnd" : "",
-         "person_office_id" : "289146",
-         "person_von_verbal" : "vor 1632",
-         "person_bezeichnung" : "Kanoniker",
-         "person_vorname" : "Johann",
-         "person_namensalternativen" : "",
-         "person_anmerkung" : ""
-      },
-      {
          "person_gso" : "055-02693-001",
          "person_name" : "Johann Murtzer",
          "person_bis_verbal" : "",
@@ -64024,6 +64009,21 @@
          "person_bis" : 0,
          "person_gnd" : "",
          "person_office_id" : "289147",
+         "person_von_verbal" : "vor 1632",
+         "person_bezeichnung" : "Kanoniker",
+         "person_vorname" : "Johann",
+         "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "055-00512-001",
+         "person_name" : "Johann Diemen",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Kanoniker",
+         "person_von" : 1632,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_office_id" : "289146",
          "person_von_verbal" : "vor 1632",
          "person_bezeichnung" : "Kanoniker",
          "person_vorname" : "Johann",
@@ -67118,6 +67118,21 @@
          "person_bezeichnung" : "Vikar",
          "person_vorname" : "Michael",
          "person_namensalternativen" : "",
+         "person_anmerkung" : ""
+      },
+      {
+         "person_gso" : "055-03842-001",
+         "person_name" : "Valerius von Wampach",
+         "person_bis_verbal" : "",
+         "person_bezeichnung_plural" : "Vikare",
+         "person_von" : 1534,
+         "person_bis" : 0,
+         "person_gnd" : "",
+         "person_office_id" : "301451",
+         "person_von_verbal" : "1534",
+         "person_bezeichnung" : "Vikar",
+         "person_vorname" : "Valerius",
+         "person_namensalternativen" : "Walter",
          "person_anmerkung" : ""
       },
       {
