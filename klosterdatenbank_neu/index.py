@@ -11,14 +11,18 @@ und spielt sie in Solr Index(e).
 
 import copy
 import pprint
-# benötigt das Modul python-geohash (z.B. über easy_install)
-import geohash
 import urllib
 import json
 import xml.etree.ElementTree
 import os
 
+# benötigt das Modul python-geohash
+import geohash
+# benötigt das Modul solrpy
+import solr
+# benötigt das Modul mysql.connector
 import mysql.connector
+
 db = mysql.connector.connect(user='root', host='127.0.0.1', database='kloster')
 db2 = mysql.connector.connect(user='root', host='127.0.0.1', database='kloster')
 db3 = mysql.connector.connect(user='root', host='127.0.0.1', database='kloster')
@@ -544,7 +548,6 @@ db.close()
 
 #pprint.pprint(docs)
 # Indexieren
-import solr
 index = solr.Solr('http://localhost:8080/solr/germania-sacra')
 index.delete_query('*:*')
 index.add_many(docs)

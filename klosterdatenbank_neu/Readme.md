@@ -61,7 +61,7 @@ Das Importskript loggt Problemfälle, die beim Import auftreten können, und all
 Das Indexierungsskrip ist [index.py](index.py). Es erzeugt einen [Solr](http://lucene.apache.org/solr/) Index aus den konvertierten MySQL Daten.
 
 Es benötigt:
-* einige Python Module, z.B. mysql.connector, python-geohash, json (siehe die Imports am Anfang des Skripts)
+* einige Python Module, z.B. mysql.connector, python-geohash, json, solrpy (siehe die Imports am Anfang des Skripts)
 * Zugriff auf MySQL mit den konvertierten Daten in der Datenbank »kloster« (host:127.0.0.1, user:root, einstellbar am Anfang des Skripts)
 * Schreibzugriff auf den Ziel Solr Index (konfiguriert am Ende des Skriptes, es wird in zwei Indexe indexiert)
 * die zugehörigen Personendaten als JSON
