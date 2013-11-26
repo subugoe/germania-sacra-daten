@@ -370,7 +370,8 @@ for values in cursor:
 		
 		queryOrtURL = """
 		SELECT
-			url.url, url.bemerkung,
+			url.url,
+			url.bemerkung AS url_bemerkung,
 			url_typ.name AS url_typ
 		FROM
 			tx_gs_domain_model_url AS url,
