@@ -34,6 +34,7 @@ INFO: URL »http://d-nb.info/gnd/7763120-1« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/7779481-3« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/7763280-1« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/7781918-4« existiert bereits: doppelt nutzen.
+INFO: URL »http://d-nb.info/gnd/7762741-6« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4413410-1« existiert bereits: doppelt nutzen.
 INFO: URL »http://de.wikipedia.org/wiki/Kloster_Marienfeld_%28M%C3%BCnsterland%29« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4264816-6« existiert bereits: doppelt nutzen.
@@ -118,6 +119,18 @@ INFO: URL »http://d-nb.info/gnd/16325580-5« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/1008643-2« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/5299650-5« existiert bereits: doppelt nutzen.
 INFO: URL »http://d-nb.info/gnd/4449082-3« existiert bereits: doppelt nutzen.
+FEHLER: orden_uid fehlt in klosterOrden ID 2301: Datensatz verwerfen
+{u'ID_KlosterOrden': 2301,
+ u'Klosternummer': 2035,
+ u'Klosterstatus': u'Kloster',
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': None,
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': None,
+ u'Ordenszugeh\xf6rigkeitvon__bis': None,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
 INFO: 69 Doppelter Literaturverweis »69-Dolle.2012b-S. 394-404«: auslassen
 FEHLER: 97 Kein citekey für Buch »Niedersächsisches Klosterbuch 2012 Bd. 2. S. 706-712.« gefunden: auslassen
 FEHLER: 100 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2« gefunden: auslassen
@@ -145,6 +158,7 @@ INFO: 196 Doppelter Literaturverweis »196-Wendehorst.1997-S. 82«: auslassen
 INFO: 196 Doppelter Literaturverweis »196-Lindner.1917(ND1967)-S. 65«: auslassen
 INFO: 196 Doppelter Literaturverweis »196-Hauck.1954c-S. 985«: auslassen
 INFO: 215 Doppelter Literaturverweis »215-Hauck.1954b-S. 1018«: auslassen
+FEHLER: 226 Kein citekey für Buch »Schleswig-Holsteinisches Klosterbuch Online, April 2011; Stefan Petersen, Bistum Ratzeburg, in: Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz, Freiburg i. Br. 2003« gefunden: auslassen
 INFO: 261 Doppelter Literaturverweis »261-Ehlers.2007-S. 433«: auslassen
 INFO: 265 Doppelter Literaturverweis »265-Hauck.1954b-S. 1018«: auslassen
 INFO: 265 Doppelter Literaturverweis »265-Lindner.1917(ND1967)-S. 38«: auslassen
@@ -168,10 +182,11 @@ INFO: 409 Doppelter Literaturverweis »409-Hoogeweg.1908(Nachdruck1986)-S. 84«:
 INFO: 409 Doppelter Literaturverweis »409-Streich.1986-S. 72 (Heiligenthal)«: auslassen
 INFO: 459 Zwei Beschreibungsfelder für: »Hengst.1992« zusammenfügen: Artikel „Augustiner-Chorherren“, S. 105-112
 INFO: 611 Zwei Beschreibungsfelder für: »Hengst.1992« zusammenfügen: Artikel „Benediktiner“, S. 574-577, hier S. 574f
+FEHLER: 676 Kein citekey für Buch »Schleswig-Holsteinisches Klosterbuch Online, April 2011; Wendehorst/Benz, Säkularkanonikerstifte« gefunden: auslassen
+FEHLER: 679 Kein citekey für Buch »Schleswig-Holsteinisches Klosterbuch Online, April 2011;  Christian Radtke, 		Bum Schleswig, in: Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz, Freiburg i. Br. 2003« gefunden: auslassen
 INFO: 726 Doppelter Literaturverweis »726-Hauck.1954b-S. 1017«: auslassen
 INFO: 726 Doppelter Literaturverweis »726-Lindner.1917(ND1967)-S. 29«: auslassen
 INFO: 726 Doppelter Literaturverweis »726-Ehlers.2007-S. 442«: auslassen
-INFO: 735 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel „Fürstenwalde. Domkapitel des Bistums Lebus“, S. 481-499, hier S. 481
 INFO: 736 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel  „Göritz (Górzyca). Domkapitel des Bistums Lebus“, S. 514-519, hier S. 514
 INFO: 736 Zwei Beschreibungsfelder für: »Heimann.2010b« zusammenfügen: Artikel „Lebus. Domkapitel“, S. 750-763, hier S. 750f
 INFO: 737 Zwei Beschreibungsfelder für: »Heimann.2010« zusammenfügen: Artikel „Gransee“, S. 536-542, hier S. 536
@@ -215,7 +230,6 @@ INFO: 802 Doppelter Literaturverweis »802-Ehlers.2007-S. 444«: auslassen
 INFO: 802 Doppelter Literaturverweis »802-Streich.1986-S. 105«: auslassen
 INFO: 858 Doppelter Literaturverweis »858-Streich.1986-S. 103«: auslassen
 INFO: 858 Doppelter Literaturverweis »858-Dolle.2012b-S. 1100-1108«: auslassen
-FEHLER: 880 Kein citekey für Buch »– Niedersächsisches Klosterbuch 2012 Bd. 3« gefunden: auslassen
 INFO: 949 Doppelter Literaturverweis »949-Hengst.1994-S. 159-161«: auslassen
 FEHLER: Feld »ID_alleOrte« leer in KlosterStandort 1887: verwerfen
 INFO: 1067 Doppelter Literaturverweis »1067-Wendehorst.1997-S. 167«: auslassen
@@ -223,52 +237,53 @@ INFO: 1090 Doppelter Literaturverweis »1090-Wiener.1998-S. 147«: auslassen
 INFO: 1090 Doppelter Literaturverweis »1090-Wiener.1998-S. 147«: auslassen
 INFO: 1096 Doppelter Literaturverweis »1096-Wiener.1998-S. 148«: auslassen
 INFO: 2012 Doppelter Literaturverweis »2012-Ehlers.2007-S. 419«: auslassen
+FEHLER: 2066 Kein citekey für Buch »Clemens Brodkorb, Bistum Schwerin, in: Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz, Freiburg i. Br. 2003« gefunden: auslassen
 INFO: 3106 Doppelter Literaturverweis »3106-Wendehorst.1997-S. 71«: auslassen
 
 
 Tabelle »url_typ«: 7 Datensätze
 
 
-Tabelle »url«: 591 Datensätze
+Tabelle »url«: 650 Datensätze
 
 
-Tabelle »zeitraum«: 3461 Datensätze
+Tabelle »zeitraum«: 3465 Datensätze
 
 
-Tabelle »bistum«: 60 Datensätze
+Tabelle »bistum«: 61 Datensätze
 
 
-Tabelle »bistum_url_mm«: 58 Datensätze
+Tabelle »bistum_url_mm«: 60 Datensätze
 
 
 Tabelle »band«: 73 Datensätze
 
 
-Tabelle »band_url_mm«: 153 Datensätze
+Tabelle »band_url_mm«: 168 Datensätze
 
 
 Tabelle »bearbeitungsstatus«: 7 Datensätze
 
 
-Tabelle »personallistenstatus«: 3 Datensätze
+Tabelle »personallistenstatus«: 4 Datensätze
 
 
-Tabelle »kloster«: 1428 Datensätze
+Tabelle »kloster«: 1442 Datensätze
 
 
-Tabelle »kloster_url_mm«: 347 Datensätze
+Tabelle »kloster_url_mm«: 389 Datensätze
 
 
 Tabelle »ordenstyp«: 4 Datensätze
 
 
-Tabelle »klosterstatus«: 19 Datensätze
+Tabelle »klosterstatus«: 9 Datensätze
 
 
 Tabelle »orden«: 65 Datensätze
 
 
-Tabelle »kloster_orden«: 1978 Datensätze
+Tabelle »kloster_orden«: 1981 Datensätze
 
 
 Tabelle »orden_url_mm«: 69 Datensätze
@@ -283,10 +298,10 @@ Tabelle »ort«: 44206 Datensätze
 Tabelle »ort_url_mm«: 3 Datensätze
 
 
-Tabelle »literatur«: 1779 Datensätze
+Tabelle »literatur«: 1775 Datensätze
 
 
-Tabelle »kloster_standort«: 1483 Datensätze
+Tabelle »kloster_standort«: 1484 Datensätze
 
 
-Tabelle »kloster_literatur_mm«: 1779 Datensätze
+Tabelle »kloster_literatur_mm«: 1775 Datensätze
