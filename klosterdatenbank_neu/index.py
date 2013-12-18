@@ -6,21 +6,20 @@ Liest die Daten aus MySQL,
 denormalisiert sie in Solr Dokumente
 und spielt sie in Solr Index(e).
 
+Funktioniert nicht mit Python 3
+
 2013 Sven-S. Porst, SUB Göttingen <porst@sub.uni-goettingen.de>
 """
 
 import copy
 import pprint
+# benötigt das Modul Geohash (z.B. über easy_install)
+import Geohash
 import urllib
 import json
 import xml.etree.ElementTree
 import os
 
-# benötigt das Modul python-geohash
-import geohash
-# benötigt das Modul solrpy
-import solr
-# benötigt das Modul mysql.connector
 import mysql.connector
 
 mysql_username = 'germaniasacra'
@@ -317,10 +316,10 @@ for values in cursor:
 		if breite and laenge:
 			docStandort["koordinaten"] = str(breite) + "," + str(laenge)
 			docStandort["geohash"] = []
-			gHash = geohash.encode(float(breite), float(laenge))
+			geohash = Geohash.encode(breite, laenge)
 			i = 1
-			while (i <= len(gHash)):
-				docStandort["geohash"] += [('%02d' % i) + "-" + gHash[0:i]]
+			while (i <= len(geohash)):
+				docStandort["geohash"] += [('%02d' % i) + "-" + geohash[0:i]]
 				i += 1
 			
 		del docStandort["standort_laenge"]
@@ -375,8 +374,7 @@ for values in cursor:
 		
 		queryOrtURL = """
 		SELECT
-			url.url,
-			url.bemerkung AS url_bemerkung,
+			url.url, url.bemerkung,
 			url_typ.name AS url_typ
 		FROM
 			tx_germaniasacra_domain_model_url AS url,
@@ -554,10 +552,8 @@ db.close()
 
 #pprint.pprint(docs)
 # Indexieren
-index = solr.Solr('http://localhost:8080/solr/germania-sacra')
-index.delete_query('*:*')
-index.add_many(docs)
-index.commit()
+# solrpy library wird benoetigt
+import solr
 
 index = solr.Solr('http://localhost:8983/solr/germaniasacra')
 index.delete_query('*:*')
