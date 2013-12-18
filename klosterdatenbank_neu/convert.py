@@ -30,14 +30,16 @@ import time
 readPrefix = 'Klosterdatenbank.tbl'
 writePrefix = 'mydb`.`tx_germaniasacra_'
 pid = 591
-accessDump = '../Klosterdatenbank/klosterdatenbankdump.sql'
+accessDumpSource = 'http://adw.io/fileadmin/dump/klosterdatenbankdump.sql'
+accessDumpTarget = '../Klosterdatenbank/klosterdatenbankdump.sql'
 
+urllib.urlretrieve (accessDumpSource, accessDumpTarget)
 
 # import Access Dump
 proc = subprocess.Popen(["mysql", "--user=%s" % mysql_username, "--password=%s" % mysql_password, "Klosterdatenbank"],
                         stdin=subprocess.PIPE,
                         stdout=subprocess.PIPE)
-out, err = proc.communicate(file(accessDump).read())
+out, err = proc.communicate(file(accessDumpTarget).read())
 
 print 'Dump in Datenbank eingespielt'
 
@@ -163,7 +165,7 @@ def addRecordsToTable (records, tableName):
 			prefix = writePrefix
 			if tableName[-3:] != '_mm':
 				prefix += 'domain_model_'
-			
+
 				# add default fields to record
 				for fieldName in defaultFields:
 					if not record.has_key(fieldName):
@@ -180,7 +182,7 @@ def addRecordsToTable (records, tableName):
 			if tableName == 'bistum':
 				cursor.execute('SET foreign_key_checks = 1')
 			# print cursor.statement
-			
+
 		db.commit()
 
 
@@ -216,14 +218,14 @@ def addWikipediaURLToDoc (row, fieldName, doc, relationDict):
 def makeURLData (URL, bemerkung, art, record_uid):
 	global urlDict, urlTypDict
 	URLRelation = None
-	if URL:		
+	if URL:
 		if not urlDict.has_key(URL):
 			if not urlTypDict.has_key(art):
 				urlTypDict[art] = {
 					'uid': len(urlTypDict) + 1,
 					'name': art
 				}
-			
+
 			urlDict[URL] = {
 				'uid': len(urlDict) + 1,
 				'url': URL,
@@ -233,7 +235,7 @@ def makeURLData (URL, bemerkung, art, record_uid):
 			# print u"INFO: neue URL »" + URL + u"«"
 		else:
 			print u"INFO: URL »" + URL + u"« existiert bereits: doppelt nutzen."
-			
+
 		URLRelation = {
 			'uid_local': record_uid,
 			'uid_foreign': urlDict[URL]['uid']
@@ -286,7 +288,7 @@ for values in cursor:
 		'shapefile': row['Shapefile'],
 		'ort_uid': row['Bistumssitz']
 	}
-	
+
 	GNDLabel = ''
 	if r['ist_erzbistum']:
 		GNDLabel = 'Erzbistum'
@@ -295,9 +297,9 @@ for values in cursor:
 	GNDLabel += ' ' + r['bistum']
 	addGNDURLToDoc(row, 'GND_Dioezese', r, r['bistum'], bistum_has_urlDict)
 	addWikipediaURLToDoc(row, 'Wikipedia_Dioezese', r, bistum_has_urlDict)
-	
+
 	bistumDict[row['ID']] = r
-	
+
 
 
 
@@ -320,7 +322,7 @@ for values in cursor:
 		'bistum_uid': row['Bistum']
 	}
 	band += [r]
-	
+
 	urlString = row['url']
 	buchtitel = 'Germania Sacra ' + r['nummer'] + ': ' + r['titel']
 	if urlString:
@@ -355,7 +357,7 @@ personallistenstatusDict = {}
 for values in cursor:
 	row = dict(zip(cursor.column_names, values))
 	uid = row['Klosternummer']
-	
+
 	if uid != None:
 		crdate = None
 		if row['Datensatz angelegt'] != None:
@@ -363,25 +365,25 @@ for values in cursor:
 		if not crdate:
 			crdate = defaultDate
 		cruser_id = 1
-		
+
 		if bearbeiterDict.has_key(row['Bearbeiter']):
 			cruser_id = bearbeiterDict[row['Bearbeiter']]
 		else:
 			print u"WARNUNG: ungültige Bearbeiter ID »" + str(row['Bearbeiter']) + u"« in klosterStammblatt " + str(uid) + u". Verwende: 1"
-				
+
 		bearbeitungsstatus = 0
 		if bearbeitungsstatusDict.has_key(row['Status']):
 			bearbeitungsstatus = bearbeitungsstatusDict[row['Status']]
 		else:
 			print u"WARNUNG: ungültiger Bearbeitungstatus »" + str(row['Status']) + u"« in klosterStammblatt " + str(uid) + u". Verwende: " + str(bearbeitungsstatus)
-		
+
 		if not personallistenstatusDict.has_key(row['Personallisten']):
 			personallistenstatusDict[row['Personallisten']] = {
 				'uid': len(personallistenstatusDict),
 				'name': row['Personallisten']
 			}
 		personallistenstatus = personallistenstatusDict[row['Personallisten']]['uid']
-	
+
 		r = {
 			'uid': uid,
 			'kloster_id': uid,
@@ -397,7 +399,7 @@ for values in cursor:
 			'personallistenstatus_uid': personallistenstatus
 		}
 		klosterDict[uid] = r
-	
+
 		if row['HauptRessource']:
 			parts = row['HauptRessource'].split('#')
 			if len(parts) > 1:
@@ -405,7 +407,7 @@ for values in cursor:
 				if URLRelation:
 					key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
 					kloster_has_urlDict[key] = URLRelation
-	
+
 		addGNDURLToDoc(row, 'GND', r, r['kloster'], kloster_has_urlDict)
 		addWikipediaURLToDoc(row, 'Wikipedia', r, kloster_has_urlDict)
 
@@ -447,10 +449,10 @@ for values in cursor:
 		}
 		ordenstypDict[r2['ordenstyp']] = r2
 	r['ordenstyp_uid'] = ordenstypDict[ordenstyp]['uid']
-	
+
 	addGNDURLToDoc(row, 'GND_Orden', r, r['orden'], orden_has_urlDict)
 	addWikipediaURLToDoc(row, 'Wikipedia_Orden', r, orden_has_urlDict)
-	
+
 	orden += [r]
 
 
@@ -465,18 +467,18 @@ for values in cursor:
 	row = dict(zip(cursor.column_names, values))
 	kloster_uid = row['Klosternummer']
 	orden_uid = row[u'Ordenszugehörigkeit']
-	
+
 	if kloster_uid and orden_uid:
 		if row['Klosterstatus'] == None or row['Klosterstatus'] == '':
 			row['Klosterstatus'] = u'keine Angabe'
-		
+
 		if not klosterstatusDict.has_key(row['Klosterstatus']):
 			klosterstatusDict[row['Klosterstatus']] = {
 				'uid': len(klosterstatusDict),
 				'status': row['Klosterstatus']
 			}
 		klosterstatus_uid = klosterstatusDict[row['Klosterstatus']]['uid']
-	
+
 		r = {
 			'uid': row['ID_KlosterOrden'],
 			'kloster_uid': kloster_uid,
@@ -486,7 +488,7 @@ for values in cursor:
 			'crdate': klosterDict[kloster_uid]['crdate'],
 			'cruser_id': klosterDict[kloster_uid]['cruser_id']
 		}
-	
+
 		r2 = {
 			'uid': len(zeitraum) + 1,
 			'von_von': row[u'Ordenszugehörigkeit_von_von'],
@@ -500,9 +502,9 @@ for values in cursor:
 		}
 		zeitraum += [r2]
 		r['zeitraum_uid'] = r2['uid']
-		
+
 		kloster_orden += [r]
-		
+
 	else:
 		if not kloster_uid:
 			print u"FEHLER: Klosternummer fehlt in klosterOrden ID " + str(row['ID_KlosterOrden']) + u": Datensatz verwerfen"
@@ -542,10 +544,10 @@ for values in cursor:
 	if not (bistum_uid == None or bistumDict.has_key(bistum_uid)):
 		print u"FEHLER: Feld »ID_Bistum« hat ungültigen Wert »" + str(bistum_uid) + u"« in alleOrte " + str(uid) + ". Verwende: 1"
 		bistum_uid = 1
-	
+
 	if row['Laenge']:
 		row['Laenge'] = row['Laenge'].strip().replace(unichr(8206), '')
-	
+
 	r = {
 		'uid': uid,
 		'ort': row['Ort'],
@@ -601,7 +603,7 @@ for values in cursor:
 			'crdate': klosterDict[kloster_uid]['crdate'],
 			'cruser_id': klosterDict[kloster_uid]['cruser_id']
 		}
-		
+
 		r2 = {
 			'uid': len(zeitraum) + 1,
 			'von_von': row['Standort_von_von'],
@@ -611,12 +613,12 @@ for values in cursor:
 			'bis_bis': row['Standort_Datum_bis_bis'],
 			'bis_verbal': row['Standort_bis_Verbal'],
 			'crdate': klosterDict[kloster_uid]['crdate'],
-			'cruser_id': klosterDict[kloster_uid]['cruser_id']		
+			'cruser_id': klosterDict[kloster_uid]['cruser_id']
 		}
 		zeitraum += [r2]
 		r['zeitraum_uid'] = r2['uid']
 		kloster_standort += [r]
-	
+
 		lit = row['Literaturnachweise']
 		if lit:
 			lit = lit.strip(u'- −').replace(u' − ', u' - ').replace(u' — ', u' - ').replace('\r\n', ' - ').replace(u'—', ' - ').replace(u' – ', ' - ').replace(r', S[^.]', ', S.').replace(r',S.', ', S.').split(' - ')
@@ -626,7 +628,7 @@ for values in cursor:
 				seite = None
 				if len(parts) > 1:
 					seite = 'S. ' + parts[1].strip(' .')
-			
+
 				if not bibitemDict.has_key(buch):
 					r3 = {
 						'uid': len(bibitemDict) + 1,
@@ -634,8 +636,8 @@ for values in cursor:
 					}
 					bibitemDict[buch] = r3
 					# print u"INFO: neues Buch »" + buch + u"«"
-				
-				
+
+
 				beschreibung = seite
 				if citekeyDict.has_key(buch):
 					citekey = citekeyDict[buch]['citekey']
@@ -645,7 +647,7 @@ for values in cursor:
 							print u"INFO: " + str(kloster_uid) + u" Zwei Beschreibungsfelder für: »" + citekey + u"« zusammenfügen: " + beschreibung
 						else:
 							beschreibung = citekeyDict[buch]['detail']
-				
+
 					literaturKey = str(kloster_uid) + u"-" + citekey + u"-" + unicode(beschreibung)
 					if literaturDict.has_key(literaturKey):
 						print u"INFO: " + str(kloster_uid) + u" Doppelter Literaturverweis »" + literaturKey + u"«: auslassen"
@@ -659,7 +661,7 @@ for values in cursor:
 							'cruser_id': klosterDict[kloster_uid]['cruser_id']
 						}
 						literaturDict[literaturKey] = r4
-				
+
 						kloster_has_literatur += [{
 							'uid_local': kloster_uid,
 							'uid_foreign': literatur_uid
