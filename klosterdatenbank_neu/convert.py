@@ -15,13 +15,19 @@ import copy
 import pprint
 import mysql.connector
 from mysql.connector.errors import Error
-db = mysql.connector.connect(user='root', host='127.0.0.1')
+
+mysql_username = 'germaniasacra'
+mysql_host = '127.0.0.1'
+mysql_password = 'germaniasacra'
+
+db = mysql.connector.connect(user=mysql_username, password=mysql_password, host=mysql_host)
 cursor = db.cursor()
 import urllib
 import time
 
 readPrefix = 'Klosterdatenbank.tbl'
-writePrefix = 'kloster`.`tx_gs_'
+writePrefix = 'mydb`.`tx_germaniasacra_'
+pid = 591
 
 bearbeiterDict = {
 	1: 31, # Christian Popp
@@ -68,7 +74,7 @@ defaultFields = {
 	'sys_language_uid': 0,
 	'l10n_parent': 0,
 	'l10n_diffsource': None,
-	'pid': 0
+	'pid': pid
 }
 
 
