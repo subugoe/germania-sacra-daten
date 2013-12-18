@@ -6,6 +6,8 @@ Liest die Daten aus MySQL,
 denormalisiert sie in Solr Dokumente
 und spielt sie in Solr Index(e).
 
+Funktioniert nicht mit Python 3
+
 2013 Sven-S. Porst, SUB Göttingen <porst@sub.uni-goettingen.de>
 """
 
@@ -19,9 +21,15 @@ import xml.etree.ElementTree
 import os
 
 import mysql.connector
-db = mysql.connector.connect(user='root', host='127.0.0.1', database='kloster')
-db2 = mysql.connector.connect(user='root', host='127.0.0.1', database='kloster')
-db3 = mysql.connector.connect(user='root', host='127.0.0.1', database='kloster')
+
+mysql_username = 'germaniasacra'
+mysql_host = '127.0.0.1'
+mysql_password = 'germaniasacra'
+mysql_db = 'mydb'
+
+db = mysql.connector.connect(user=mysql_username, host=mysql_host, password=mysql_password, database=mysql_db)
+db2 = mysql.connector.connect(user=mysql_username, host=mysql_host, password=mysql_password, database=mysql_db)
+db3 = mysql.connector.connect(user=mysql_username, host=mysql_host, password=mysql_password, database=mysql_db)
 cursor = db.cursor()
 cursor2 = db2.cursor()
 cursor3 = db3.cursor()
@@ -127,17 +135,17 @@ SELECT
 	kloster.text_gs_band, kloster.band_uid AS band_id, kloster.band_seite,
 	band.nummer AS band_nummer, band.titel AS band_titel,
 	band.kurztitel AS band_kurztitel, band.sortierung AS band_sortierung,
-	tx_gs_domain_model_bearbeitungsstatus.name as bearbeitungsstatus,
-	tx_gs_domain_model_personallistenstatus.name as personallistenstatus
+	tx_germaniasacra_domain_model_bearbeitungsstatus.name as bearbeitungsstatus,
+	tx_germaniasacra_domain_model_personallistenstatus.name as personallistenstatus
 FROM 
-	tx_gs_domain_model_kloster AS kloster,
-	tx_gs_domain_model_band AS band,
-	tx_gs_domain_model_bearbeitungsstatus,
-	tx_gs_domain_model_personallistenstatus
+	tx_germaniasacra_domain_model_kloster AS kloster,
+	tx_germaniasacra_domain_model_band AS band,
+	tx_germaniasacra_domain_model_bearbeitungsstatus,
+	tx_germaniasacra_domain_model_personallistenstatus
 WHERE
 	(band.uid = kloster.band_uid OR (kloster.band_uid IS NULL AND band.uid = 1)) AND
-	tx_gs_domain_model_bearbeitungsstatus.uid = kloster.bearbeitungsstatus_uid AND
-	tx_gs_domain_model_personallistenstatus.uid = kloster.personallistenstatus_uid
+	tx_germaniasacra_domain_model_bearbeitungsstatus.uid = kloster.bearbeitungsstatus_uid AND
+	tx_germaniasacra_domain_model_personallistenstatus.uid = kloster.personallistenstatus_uid
 ORDER BY
 	sql_uid
 """
@@ -173,9 +181,9 @@ for values in cursor:
 		url.url, url.bemerkung,
 		url_typ.name AS url_typ
 	FROM
-		tx_gs_domain_model_url AS url,
-		tx_gs_domain_model_url_typ AS url_typ,
-		tx_gs_band_url_mm AS relation		
+		tx_germaniasacra_domain_model_url AS url,
+		tx_germaniasacra_domain_model_url_typ AS url_typ,
+		tx_germaniasacra_band_url_mm AS relation		
 	WHERE
 		url.url_typ_uid = url_typ.uid AND
 		relation.uid_local = %s AND
@@ -204,9 +212,9 @@ for values in cursor:
 		url.url, url.bemerkung,
 		url_typ.name AS url_typ
 	FROM
-		tx_gs_domain_model_url AS url,
-		tx_gs_domain_model_url_typ AS url_typ,
-		tx_gs_kloster_url_mm AS relation
+		tx_germaniasacra_domain_model_url AS url,
+		tx_germaniasacra_domain_model_url_typ AS url_typ,
+		tx_germaniasacra_kloster_url_mm AS relation
 	WHERE
 		url.url_typ_uid = url_typ.uid AND
 		url.uid = relation.uid_foreign AND
@@ -238,8 +246,8 @@ for values in cursor:
 	SELECT 
 		literatur.uid, literatur.citekey, literatur.beschreibung
 	FROM
-		tx_gs_domain_model_literatur AS literatur,
-		tx_gs_kloster_literatur_mm AS relation
+		tx_germaniasacra_domain_model_literatur AS literatur,
+		tx_germaniasacra_kloster_literatur_mm AS relation
 	WHERE
 		relation.uid_local = %s AND
 		relation.uid_foreign = literatur.uid
@@ -275,11 +283,11 @@ for values in cursor:
 		zeitraum.bis_von AS standort_bis_von, zeitraum.bis_bis AS standort_bis_bis, zeitraum.bis_verbal AS standort_bis_verbal,
 		bistum.bistum, bistum.kirchenprovinz, bistum.ist_erzbistum
 	FROM 
-		tx_gs_domain_model_kloster_standort AS standort,
-		tx_gs_domain_model_ort AS ort,
-		tx_gs_domain_model_land AS land,
-		tx_gs_domain_model_zeitraum AS zeitraum,
-		tx_gs_domain_model_bistum AS bistum
+		tx_germaniasacra_domain_model_kloster_standort AS standort,
+		tx_germaniasacra_domain_model_ort AS ort,
+		tx_germaniasacra_domain_model_land AS land,
+		tx_germaniasacra_domain_model_zeitraum AS zeitraum,
+		tx_germaniasacra_domain_model_bistum AS bistum
 	WHERE
 		standort.kloster_uid = %s AND
 		standort.ort_uid = ort.uid AND
@@ -325,9 +333,9 @@ for values in cursor:
 				url.url, url.bemerkung,
 				url_typ.name AS url_typ
 			FROM
-				tx_gs_domain_model_url AS url,
-				tx_gs_domain_model_url_typ AS url_typ,
-				tx_gs_bistum_url_mm AS relation
+				tx_germaniasacra_domain_model_url AS url,
+				tx_germaniasacra_domain_model_url_typ AS url_typ,
+				tx_germaniasacra_bistum_url_mm AS relation
 			WHERE
 				url.url_typ_uid = url_typ.uid AND
 				url.uid = relation.uid_foreign AND
@@ -369,9 +377,9 @@ for values in cursor:
 			url.url, url.bemerkung,
 			url_typ.name AS url_typ
 		FROM
-			tx_gs_domain_model_url AS url,
-			tx_gs_domain_model_url_typ AS url_typ,
-			tx_gs_ort_url_mm AS relation
+			tx_germaniasacra_domain_model_url AS url,
+			tx_germaniasacra_domain_model_url_typ AS url_typ,
+			tx_germaniasacra_ort_url_mm AS relation
 		WHERE
 			url.url_typ_uid = url_typ.uid AND
 			url.uid = relation.uid_foreign AND
@@ -408,11 +416,11 @@ for values in cursor:
 		zeitraum.von_verbal AS orden_von_verbal, zeitraum.bis_von AS orden_bis_von,
 		zeitraum.bis_bis AS orden_bis_bis, zeitraum.bis_verbal AS orden_bis_verbal
 	FROM
-		tx_gs_domain_model_kloster_orden AS kloster_orden,
-		tx_gs_domain_model_orden AS orden,
-		tx_gs_domain_model_klosterstatus AS kloster_status,
-		tx_gs_domain_model_ordenstyp AS ordenstyp,
-		tx_gs_domain_model_zeitraum AS zeitraum
+		tx_germaniasacra_domain_model_kloster_orden AS kloster_orden,
+		tx_germaniasacra_domain_model_orden AS orden,
+		tx_germaniasacra_domain_model_klosterstatus AS kloster_status,
+		tx_germaniasacra_domain_model_ordenstyp AS ordenstyp,
+		tx_germaniasacra_domain_model_zeitraum AS zeitraum
 	WHERE
 		kloster_orden.kloster_uid = %s AND
 		kloster_orden.orden_uid = orden.uid AND
@@ -438,9 +446,9 @@ for values in cursor:
 			url.url, url.bemerkung,
 			url_typ.name AS url_typ
 		FROM
-			tx_gs_domain_model_url AS url,
-			tx_gs_domain_model_url_typ AS url_typ,
-			tx_gs_orden_url_mm AS relation
+			tx_germaniasacra_domain_model_url AS url,
+			tx_germaniasacra_domain_model_url_typ AS url_typ,
+			tx_germaniasacra_orden_url_mm AS relation
 		WHERE
 			url.url_typ_uid = url_typ.uid AND
 			url.uid = relation.uid_foreign AND
@@ -544,11 +552,8 @@ db.close()
 
 #pprint.pprint(docs)
 # Indexieren
+# solrpy library wird benoetigt
 import solr
-index = solr.Solr('http://localhost:8080/solr/germania-sacra')
-index.delete_query('*:*')
-index.add_many(docs)
-index.commit()
 
 index = solr.Solr('http://vlib.sub.uni-goettingen.de/solr/germania-sacra')
 index.delete_query('*:*')
