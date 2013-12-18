@@ -15,6 +15,8 @@ import copy
 import pprint
 import mysql.connector
 from mysql.connector.errors import Error
+import subprocess
+
 
 mysql_username = 'germaniasacra'
 mysql_host = '127.0.0.1'
@@ -28,6 +30,16 @@ import time
 readPrefix = 'Klosterdatenbank.tbl'
 writePrefix = 'mydb`.`tx_germaniasacra_'
 pid = 591
+accessDump = '../Klosterdatenbank/klosterdatenbankdump.sql'
+
+
+# import Access Dump
+proc = subprocess.Popen(["mysql", "--user=%s" % mysql_username, "--password=%s" % mysql_password, "Klosterdatenbank"],
+                        stdin=subprocess.PIPE,
+                        stdout=subprocess.PIPE)
+out, err = proc.communicate(file(accessDump).read())
+
+print 'Dump in Datenbank eingespielt'
 
 bearbeiterDict = {
 	1: 31, # Christian Popp
