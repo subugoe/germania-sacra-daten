@@ -560,10 +560,12 @@ import solr
 
 index = solr.Solr('http://localhost:8983/solr/germaniasacra')
 index.delete_query('*:*')
+index.commit()
 index.add_many(docs)
 index.commit()
 
 index = solr.Solr('http://vlib.sub.uni-goettingen.de/solr/germania-sacra')
 index.delete_query('*:*')
+index.commit()
 index.add_many(docs)
 index.commit()
