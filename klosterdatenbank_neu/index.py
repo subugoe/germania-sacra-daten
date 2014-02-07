@@ -20,6 +20,9 @@ import json
 import xml.etree.ElementTree
 import os
 
+import sys
+sys.stdout = open('index.log', 'w')
+
 import mysql.connector
 
 mysql_username = 'germaniasacra'
@@ -39,7 +42,7 @@ cursor3 = db3.cursor()
 personenURL = 'http://personendatenbank.germania-sacra.de/export/export.json'
 personenPath = '../Personendatenbank/export.json'
 urllib.urlretrieve(personenURL, personenPath)
-os.system("json_pp < " + personenPath + " > ../Personendatenbank/export-pp.json ")
+os.system("cat " + personenPath + " | python -mjson.tool > ../Personendatenbank/export-pp.json ")
 jsonFile = open(personenPath)
 personen = json.load(jsonFile)
 jsonFile.close()
@@ -183,7 +186,7 @@ for values in cursor:
 	FROM
 		tx_germaniasacra_domain_model_url AS url,
 		tx_germaniasacra_domain_model_url_typ AS url_typ,
-		tx_germaniasacra_band_url_mm AS relation		
+		tx_germaniasacra_band_url_mm AS relation
 	WHERE
 		url.url_typ_uid = url_typ.uid AND
 		relation.uid_local = %s AND

@@ -26,14 +26,16 @@ db = mysql.connector.connect(user=mysql_username, password=mysql_password, host=
 cursor = db.cursor()
 import urllib
 import time
+import sys
 
+sys.stdout = open('convert.log', 'w')
 readPrefix = 'Klosterdatenbank.tbl'
 writePrefix = 'mydb`.`tx_germaniasacra_'
 pid = 591
-accessDumpSource = 'http://adw.io/fileadmin/dump/klosterdatenbankdump.sql'
+#accessDumpSource = 'http://adw.io/fileadmin/dump/klosterdatenbankdump.sql'
 accessDumpTarget = '../Klosterdatenbank/klosterdatenbankdump.sql'
 
-urllib.urlretrieve (accessDumpSource, accessDumpTarget)
+#urllib.urlretrieve (accessDumpSource, accessDumpTarget)
 
 # import Access Dump
 proc = subprocess.Popen(["mysql", "--user=%s" % mysql_username, "--password=%s" % mysql_password, "Klosterdatenbank"],
@@ -41,7 +43,7 @@ proc = subprocess.Popen(["mysql", "--user=%s" % mysql_username, "--password=%s" 
                         stdout=subprocess.PIPE)
 out, err = proc.communicate(file(accessDumpTarget).read())
 
-print 'Dump in Datenbank eingespielt'
+print "Dump in Datenbank eingespielt"
 
 bearbeiterDict = {
 	1: 31, # Christian Popp
@@ -158,7 +160,7 @@ class UnicodeWriter:
 
 def addRecordsToTable (records, tableName):
 	global db, cursor
-	print u"\n\nTabelle »" + tableName + u"«: " + str(len(records)) + u" Datensätze"
+	print "\n\nTabelle " + tableName +": " + str(len(records)) + " Datensätze"
 
 	if len(records) > 0:
 		for record in records:
@@ -234,7 +236,7 @@ def makeURLData (URL, bemerkung, art, record_uid):
 			}
 			# print u"INFO: neue URL »" + URL + u"«"
 		else:
-			print u"INFO: URL »" + URL + u"« existiert bereits: doppelt nutzen."
+			print "INFO: URL " + URL + " existiert bereits: doppelt nutzen.".encode('utf-8')
 
 		URLRelation = {
 			'uid_local': record_uid,
@@ -635,7 +637,7 @@ for values in cursor:
 						'bibitem': buch
 					}
 					bibitemDict[buch] = r3
-					# print u"INFO: neues Buch »" + buch + u"«"
+					# print "INFO: neues Buch " + buch
 
 
 				beschreibung = seite
@@ -644,13 +646,13 @@ for values in cursor:
 					if citekey and citekeyDict[buch]['detail'] and citekeyDict[buch]['detail'] != u'#N/A':
 						if beschreibung and citekeyDict[buch]['detail'].find(beschreibung) == -1:
 							beschreibung = citekeyDict[buch]['detail'] + ', ' + beschreibung
-							print u"INFO: " + str(kloster_uid) + u" Zwei Beschreibungsfelder für: »" + citekey + u"« zusammenfügen: " + beschreibung
+							print "INFO: " + str(kloster_uid).encode('utf-8') + " Zwei Beschreibungsfelder für: " + citekey.encode('utf-8') + " zusammenfügen: " + beschreibung.encode('utf-8')
 						else:
 							beschreibung = citekeyDict[buch]['detail']
 
 					literaturKey = str(kloster_uid) + u"-" + citekey + u"-" + unicode(beschreibung)
 					if literaturDict.has_key(literaturKey):
-						print u"INFO: " + str(kloster_uid) + u" Doppelter Literaturverweis »" + literaturKey + u"«: auslassen"
+						print "INFO: " + str(kloster_uid).encode('utf-8') + " Doppelter Literaturverweis " + literaturKey.encode('utf-8') + ": auslassen"
 					else:
 						literatur_uid = len(literaturDict) + 1
 						r4 = {
@@ -667,13 +669,13 @@ for values in cursor:
 							'uid_foreign': literatur_uid
 						}]
 				else:
-					print u"FEHLER: " + str(kloster_uid) + u" Kein citekey für Buch »" + buch + u"« gefunden: auslassen"
+					print "FEHLER: " + str(kloster_uid) + " Kein citekey für Buch " + buch.encode('utf-8') + " gefunden: auslassen"
 
 	else:
 		if not ort_uid:
-			print u"FEHLER: Feld »ID_alleOrte« leer in KlosterStandort " + str(standort_uid) + ": verwerfen"
+			print "FEHLER: Feld ID_alleOrte leer in KlosterStandort " + str(standort_uid) + ": verwerfen"
 		if not kloster_uid:
-			print u"FEHLER: Feld »Klosternummer« leer in KlosterStandort " + str(standort_uid) + ": verwerfen"
+			print "FEHLER: Feld Klosternummer leer in KlosterStandort " + str(standort_uid) + ": verwerfen"
 
 
 
