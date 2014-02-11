@@ -129,152 +129,19 @@ INFO: URL http://d-nb.info/gnd/16325580-5 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/1008643-2 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/5299650-5 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4449082-3 existiert bereits: doppelt nutzen.
-FEHLER: orden_uid fehlt in klosterOrden ID 2322: Datensatz verwerfen
-{u'ID_KlosterOrden': 2322,
- u'Klosternummer': 3489,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': 1101,
- u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 2323: Datensatz verwerfen
-{u'ID_KlosterOrden': 2323,
- u'Klosternummer': 3490,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': 1101,
- u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 2324: Datensatz verwerfen
-{u'ID_KlosterOrden': 2324,
- u'Klosternummer': 3492,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': 1101,
- u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 2325: Datensatz verwerfen
-{u'ID_KlosterOrden': 2325,
- u'Klosternummer': 3493,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': 1101,
- u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 2326: Datensatz verwerfen
-{u'ID_KlosterOrden': 2326,
- u'Klosternummer': 3494,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': 1101,
- u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 2328: Datensatz verwerfen
-{u'ID_KlosterOrden': 2328,
- u'Klosternummer': 3497,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': 1101,
- u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 2329: Datensatz verwerfen
-{u'ID_KlosterOrden': 2329,
- u'Klosternummer': 3499,
- u'Klosterstatus': u'Domstift',
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': u'1802/1821',
- u'Ordenszugeh\xf6rigkeitVerbal_von': u'ausgehendes 8. Jh., w\xe4hrend des Episkopats Eginos (784\u2013812)',
- u'Ordenszugeh\xf6rigkeit_bis_von': 1802,
- u'Ordenszugeh\xf6rigkeit_von_von': 784,
- u'Ordenszugeh\xf6rigkeitvon__bis': 800,
- u'Ordenzugeh\xf6rigkeit_bis_bis': 1821,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 2330: Datensatz verwerfen
-{u'ID_KlosterOrden': 2330,
- u'Klosternummer': 3500,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': 1101,
- u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 2331: Datensatz verwerfen
-{u'ID_KlosterOrden': 2331,
- u'Klosternummer': 3501,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': 1101,
- u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 2332: Datensatz verwerfen
-{u'ID_KlosterOrden': 2332,
- u'Klosternummer': 3502,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': 1101,
- u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 2333: Datensatz verwerfen
-{u'ID_KlosterOrden': 2333,
- u'Klosternummer': 3503,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': 1101,
- u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
 INFO: 69 Doppelter Literaturverweis 69-Dolle.2012b-S. 394-404: auslassen
-FEHLER: 97 Kein citekey für Buch Niedersächsisches Klosterbuch 2012 Bd. 2. S. 706-712. gefunden: auslassen
-FEHLER: 100 Kein citekey für Buch – Niedersächsisches Klosterbuch 2 gefunden: auslassen
-FEHLER: 101 Kein citekey für Buch – Niedersächsisches Klosterbuch 2 gefunden: auslassen
-FEHLER: 102 Kein citekey für Buch – Niedersächsisches Klosterbuch 2 gefunden: auslassen
-FEHLER: 104 Kein citekey für Buch – Niedersächsisches Klosterbuch 2 gefunden: auslassen
-FEHLER: 106 Kein citekey für Buch – Niedersächsisches Klosterbuch 2 gefunden: auslassen
-FEHLER: 107 Kein citekey für Buch – Niedersächsisches Klosterbuch 2 gefunden: auslassen
-FEHLER: 108 Kein citekey für Buch – Niedersächsisches Klosterbuch 2 gefunden: auslassen
-FEHLER: 110 Kein citekey für Buch – Niedersächsisches Klosterbuch 2 gefunden: auslassen
-FEHLER: 111 Kein citekey für Buch – Niedersächsisches Klosterbuch 2 gefunden: auslassen
-FEHLER: 112 Kein citekey für Buch – Niedersächsisches Klosterbuch 2 gefunden: auslassen
-FEHLER: 116 Kein citekey für Buch – Niedersächsisches Klosterbuch 2 gefunden: auslassen
-FEHLER: 119 Kein citekey für Buch – Niedersächsisches Klosterbuch 2 gefunden: auslassen
+FEHLER: 100 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
+FEHLER: 101 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
+FEHLER: 102 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
+FEHLER: 104 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
+FEHLER: 106 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
+FEHLER: 107 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
+FEHLER: 108 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
+FEHLER: 110 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
+FEHLER: 111 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
+FEHLER: 112 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
+FEHLER: 116 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
+FEHLER: 119 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
 FEHLER: 123 Kein citekey für Buch – Niedersächsisches Klosterbuch 3 gefunden: auslassen
 FEHLER: 125 Kein citekey für Buch – Niedersächsisches Klosterbuch 3 gefunden: auslassen
 FEHLER: 126 Kein citekey für Buch – Streich, Klöster, Stifte Niedersachsen gefunden: auslassen
@@ -630,7 +497,7 @@ Tabelle url_typ: 7 Datensätze
 Tabelle url: 727 Datensätze
 
 
-Tabelle zeitraum: 3491 Datensätze
+Tabelle zeitraum: 3503 Datensätze
 
 
 Tabelle bistum: 62 Datensätze
@@ -666,7 +533,7 @@ Tabelle klosterstatus: 9 Datensätze
 Tabelle orden: 65 Datensätze
 
 
-Tabelle kloster_orden: 1987 Datensätze
+Tabelle kloster_orden: 1999 Datensätze
 
 
 Tabelle orden_url_mm: 69 Datensätze
@@ -681,10 +548,10 @@ Tabelle ort: 44210 Datensätze
 Tabelle ort_url_mm: 7 Datensätze
 
 
-Tabelle literatur: 1775 Datensätze
+Tabelle literatur: 1776 Datensätze
 
 
 Tabelle kloster_standort: 1504 Datensätze
 
 
-Tabelle kloster_literatur_mm: 1775 Datensätze
+Tabelle kloster_literatur_mm: 1776 Datensätze
