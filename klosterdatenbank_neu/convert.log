@@ -26,11 +26,14 @@ INFO: URL http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalter
 INFO: URL http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html existiert bereits: doppelt nutzen.
 INFO: URL http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html existiert bereits: doppelt nutzen.
 INFO: URL http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html existiert bereits: doppelt nutzen.
+INFO: URL http://d-nb.info/gnd/1247489-7 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/5283947-3 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4203234-9 existiert bereits: doppelt nutzen.
+INFO: URL http://d-nb.info/gnd/4697709-0 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4477426-6 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/1237290-0 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4347890-6 existiert bereits: doppelt nutzen.
+INFO: URL http://d-nb.info/gnd/813498-4 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/7763120-1 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/7779481-3 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/7763280-1 existiert bereits: doppelt nutzen.
@@ -40,10 +43,12 @@ INFO: URL http://d-nb.info/gnd/4413410-1 existiert bereits: doppelt nutzen.
 INFO: URL http://de.wikipedia.org/wiki/Kloster_Marienfeld_%28M%C3%BCnsterland%29 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4264816-6 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4418842-0 existiert bereits: doppelt nutzen.
+INFO: URL http://d-nb.info/gnd/4644031-8 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/10023882-8 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4749486-4 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4444323-7 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4295301-7 existiert bereits: doppelt nutzen.
+INFO: URL http://d-nb.info/gnd/4389474-4 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4389474-4 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4843653-7 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/7781897-0 existiert bereits: doppelt nutzen.
@@ -52,6 +57,7 @@ INFO: URL http://d-nb.info/gnd/4249088-1 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4021370-5 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4391709-4 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4028037-8 existiert bereits: doppelt nutzen.
+INFO: URL http://d-nb.info/gnd/2003595-0 existiert bereits: doppelt nutzen.
 INFO: URL http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html existiert bereits: doppelt nutzen.
 INFO: URL http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html existiert bereits: doppelt nutzen.
 INFO: URL http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html existiert bereits: doppelt nutzen.
@@ -85,6 +91,9 @@ INFO: URL http://d-nb.info/gnd/4385833-8 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4558940-9 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/2064415-2 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/7749511-1 existiert bereits: doppelt nutzen.
+INFO: URL http://d-nb.info/gnd/4301863-4 existiert bereits: doppelt nutzen.
+INFO: URL http://de.wikipedia.org/wiki/Kloster_Herrenchiemsee existiert bereits: doppelt nutzen.
+INFO: URL http://d-nb.info/gnd/16136474-3 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/2180420-5 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/1018585-9 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4029781-0 existiert bereits: doppelt nutzen.
@@ -120,16 +129,136 @@ INFO: URL http://d-nb.info/gnd/16325580-5 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/1008643-2 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/5299650-5 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4449082-3 existiert bereits: doppelt nutzen.
-FEHLER: orden_uid fehlt in klosterOrden ID 2301: Datensatz verwerfen
-{u'ID_KlosterOrden': 2301,
- u'Klosternummer': 2035,
- u'Klosterstatus': u'Kloster',
+FEHLER: orden_uid fehlt in klosterOrden ID 2322: Datensatz verwerfen
+{u'ID_KlosterOrden': 2322,
+ u'Klosternummer': 3489,
+ u'Klosterstatus': None,
  u'Ordenszugeh\xf6rigkeit': None,
  u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
  u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': None,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1101,
+ u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 2323: Datensatz verwerfen
+{u'ID_KlosterOrden': 2323,
+ u'Klosternummer': 3490,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1101,
+ u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 2324: Datensatz verwerfen
+{u'ID_KlosterOrden': 2324,
+ u'Klosternummer': 3492,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1101,
+ u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 2325: Datensatz verwerfen
+{u'ID_KlosterOrden': 2325,
+ u'Klosternummer': 3493,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1101,
+ u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 2326: Datensatz verwerfen
+{u'ID_KlosterOrden': 2326,
+ u'Klosternummer': 3494,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1101,
+ u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 2328: Datensatz verwerfen
+{u'ID_KlosterOrden': 2328,
+ u'Klosternummer': 3497,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1101,
+ u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 2329: Datensatz verwerfen
+{u'ID_KlosterOrden': 2329,
+ u'Klosternummer': 3499,
+ u'Klosterstatus': u'Domstift',
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': u'1802/1821',
+ u'Ordenszugeh\xf6rigkeitVerbal_von': u'ausgehendes 8. Jh., w\xe4hrend des Episkopats Eginos (784\u2013812)',
+ u'Ordenszugeh\xf6rigkeit_bis_von': 1802,
+ u'Ordenszugeh\xf6rigkeit_von_von': 784,
+ u'Ordenszugeh\xf6rigkeitvon__bis': 800,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': 1821,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 2330: Datensatz verwerfen
+{u'ID_KlosterOrden': 2330,
+ u'Klosternummer': 3500,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1101,
+ u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 2331: Datensatz verwerfen
+{u'ID_KlosterOrden': 2331,
+ u'Klosternummer': 3501,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1101,
+ u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 2332: Datensatz verwerfen
+{u'ID_KlosterOrden': 2332,
+ u'Klosternummer': 3502,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1101,
+ u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
+FEHLER: orden_uid fehlt in klosterOrden ID 2333: Datensatz verwerfen
+{u'ID_KlosterOrden': 2333,
+ u'Klosternummer': 3503,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': u'12. Jh.',
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': 1101,
+ u'Ordenszugeh\xf6rigkeitvon__bis': 1200,
  u'Ordenzugeh\xf6rigkeit_bis_bis': None,
  u'interne_Anmerkungen': None}
 INFO: 69 Doppelter Literaturverweis 69-Dolle.2012b-S. 394-404: auslassen
@@ -159,7 +288,7 @@ INFO: 196 Doppelter Literaturverweis 196-Wendehorst.1997-S. 82: auslassen
 INFO: 196 Doppelter Literaturverweis 196-Lindner.1917(ND1967)-S. 65: auslassen
 INFO: 196 Doppelter Literaturverweis 196-Hauck.1954c-S. 985: auslassen
 INFO: 215 Doppelter Literaturverweis 215-Hauck.1954b-S. 1018: auslassen
-FEHLER: 226 Kein citekey für Buch Schleswig-Holsteinisches Klosterbuch Online, April 2011; Stefan Petersen, Bistum Ratzeburg, in: Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz, Freiburg i. Br. 2003 gefunden: auslassen
+FEHLER: 226 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
 INFO: 261 Doppelter Literaturverweis 261-Ehlers.2007-S. 433: auslassen
 INFO: 265 Doppelter Literaturverweis 265-Hauck.1954b-S. 1018: auslassen
 INFO: 265 Doppelter Literaturverweis 265-Lindner.1917(ND1967)-S. 38: auslassen
@@ -183,16 +312,19 @@ INFO: 409 Doppelter Literaturverweis 409-Hoogeweg.1908(Nachdruck1986)-S. 84: aus
 INFO: 409 Doppelter Literaturverweis 409-Streich.1986-S. 72 (Heiligenthal): auslassen
 INFO: 459 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Artikel „Augustiner-Chorherren“, S. 105-112
 INFO: 611 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Artikel „Benediktiner“, S. 574-577, hier S. 574f
-FEHLER: 676 Kein citekey für Buch Schleswig-Holsteinisches Klosterbuch Online, April 2011; Wendehorst/Benz, Säkularkanonikerstifte gefunden: auslassen
-FEHLER: 679 Kein citekey für Buch Schleswig-Holsteinisches Klosterbuch Online, April 2011;  Christian Radtke, 		Bum Schleswig, in: Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz, Freiburg i. Br. 2003 gefunden: auslassen
+FEHLER: 628 Kein citekey für Buch Pesch, Der Dom zu Münster, Bd. 4: Das Domkloster gefunden: auslassen
+FEHLER: 676 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
+INFO: 676 Doppelter Literaturverweis 676-ChristianAlbrechtsUniversitatKiel.-None: auslassen
+FEHLER: 676 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
+FEHLER: 679 Kein citekey für Buch Schleswig-Holsteinisches Klosterbuch Online, April 2011;  Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
 INFO: 726 Doppelter Literaturverweis 726-Hauck.1954b-S. 1017: auslassen
 INFO: 726 Doppelter Literaturverweis 726-Lindner.1917(ND1967)-S. 29: auslassen
 INFO: 726 Doppelter Literaturverweis 726-Ehlers.2007-S. 442: auslassen
 INFO: 736 Zwei Beschreibungsfelder für: Heimann.2010 zusammenfügen: Artikel  „Göritz (Górzyca). Domkapitel des Bistums Lebus“, S. 514-519, hier S. 514
-INFO: 736 Zwei Beschreibungsfelder für: Heimann.2010b zusammenfügen: Artikel „Lebus. Domkapitel“, S. 750-763, hier S. 750f
+FEHLER: 736 Kein citekey für Buch Brandenburgisches Klosterbuch gefunden: auslassen
 INFO: 737 Zwei Beschreibungsfelder für: Heimann.2010 zusammenfügen: Artikel „Gransee“, S. 536-542, hier S. 536
 INFO: 738 Zwei Beschreibungsfelder für: Heimann.2010 zusammenfügen: Artikel „Guben“, S. 560-572, hier S. 560
-INFO: 739 Zwei Beschreibungsfelder für: Heimann.2010 zusammenfügen: Artikel „Havelberg“, S. 573-592, hier S. 573
+FEHLER: 739 Kein citekey für Buch Brandenburgisches Klosterbuch gefunden: auslassen
 INFO: 740 Zwei Beschreibungsfelder für: Heimann.2010 zusammenfügen: Artikel „Heiligengrabe“, S. 593-605, hier S. 593
 INFO: 741 Zwei Beschreibungsfelder für: Heimann.2010 zusammenfügen: Artikel  „Herzberg“, S. 606-611, hier S. 606
 INFO: 742 Zwei Beschreibungsfelder für: Heimann.2010 zusammenfügen: Artikel „Himmelpfort“, S. 612-624, hier S. 612
@@ -227,31 +359,47 @@ INFO: 769 Zwei Beschreibungsfelder für: Heimann.2010b zusammenfügen: Artikel �
 INFO: 770 Zwei Beschreibungsfelder für: Heimann.2010b zusammenfügen: Artikel „Ziesar. Franziskaner“, S. 1345-1346, hier S. 1345
 INFO: 771 Zwei Beschreibungsfelder für: Heimann.2010b zusammenfügen: Artikel „Ziesar. Zisterzienserinnen“, S. 1347-1358, hier S. 1347
 INFO: 772 Zwei Beschreibungsfelder für: Heimann.2010b zusammenfügen: Artikel „Zinna. Zisterzienser“, S. 1359-1384, hier S. 1347
+FEHLER: 783 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
+FEHLER: 792 Kein citekey für Buch von Brunn genannt von Kauffungen, Das Domkapitel von Meissen im Mittelalter, 2 gefunden: auslassen
 INFO: 802 Doppelter Literaturverweis 802-Ehlers.2007-S. 444: auslassen
 INFO: 802 Doppelter Literaturverweis 802-Streich.1986-S. 105: auslassen
 INFO: 858 Doppelter Literaturverweis 858-Streich.1986-S. 103: auslassen
 INFO: 858 Doppelter Literaturverweis 858-Dolle.2012b-S. 1100-1108: auslassen
 INFO: 949 Doppelter Literaturverweis 949-Hengst.1994-S. 159-161: auslassen
-FEHLER: Feld ID_alleOrte leer in KlosterStandort 1887: verwerfen
+FEHLER: 1041 Kein citekey für Buch Schmid, Reinhard: Oberwesel, Stift Liebfrauen. Bau- und Kunstgeschichte. In: Klöster und Stifte in Rheinland-Pfalz, URL: <http:⁄⁄www.klosterlexikon-rlp.de/mittelrhein-lahn-taunus/oberwesel-stift-liebfrauen/bau-und-kunstgeschichte.html> gefunden: auslassen
 INFO: 1067 Doppelter Literaturverweis 1067-Wendehorst.1997-S. 167: auslassen
 INFO: 1090 Doppelter Literaturverweis 1090-Wiener.1998-S. 147: auslassen
 INFO: 1090 Doppelter Literaturverweis 1090-Wiener.1998-S. 147: auslassen
 INFO: 1096 Doppelter Literaturverweis 1096-Wiener.1998-S. 148: auslassen
 INFO: 2012 Doppelter Literaturverweis 2012-Ehlers.2007-S. 419: auslassen
-FEHLER: 2066 Kein citekey für Buch Clemens Brodkorb, Bistum Schwerin, in: Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz, Freiburg i. Br. 2003 gefunden: auslassen
+FEHLER: 2066 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
 INFO: 3106 Doppelter Literaturverweis 3106-Wendehorst.1997-S. 71: auslassen
+FEHLER: 3488 Kein citekey für Buch Germania Benedictina X-1 gefunden: auslassen
+FEHLER: 3491 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
+FEHLER: 3491 Kein citekey für Buch GS NF 35 gefunden: auslassen
+FEHLER: 3491 Kein citekey für Buch Philipp, Geschichte des Stifts Naumburg und Zeitz gefunden: auslassen
+FEHLER: 3491 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
+FEHLER: 3491 Kein citekey für Buch GS NF 35 gefunden: auslassen
+FEHLER: 3491 Kein citekey für Buch Philipp, Geschichte des Stifts Naumburg und Zeitz gefunden: auslassen
+FEHLER: 3495 Kein citekey für Buch DB_HistBay, URL: <http://www.historisches-lexikon-bayerns.de/artikel/artikel_45861> gefunden: auslassen
+FEHLER: 3495 Kein citekey für Buch Wurster.2010 gefunden: auslassen
+FEHLER: 3495 Kein citekey für Buch Heuwieser.1988, 38f., Nr. 44 gefunden: auslassen
+FEHLER: 3495 Kein citekey für Buch Boshof.1992, 13, Nr. 42 gefunden: auslassen
+FEHLER: 3496 Kein citekey für Buch Klöster in Bayern. Haus der Bayerischen Geschichte (Online-Datenbank, http://www.hdbg.eu/kloster/web/index.php/detail?id=KS0106 gefunden: auslassen
+FEHLER: 3499 Kein citekey für Buch Braumann (Hg.), Die Jahrzeitbücher des Konstanzer Domkapitels, Einleitung gefunden: auslassen
+FEHLER: 3499 Kein citekey für Buch Helvetia Sacra I/2 gefunden: auslassen
 
 
 Tabelle url_typ: 7 Datensätze
 
 
-Tabelle url: 650 Datensätze
+Tabelle url: 727 Datensätze
 
 
-Tabelle zeitraum: 3465 Datensätze
+Tabelle zeitraum: 3491 Datensätze
 
 
-Tabelle bistum: 61 Datensätze
+Tabelle bistum: 62 Datensätze
 
 
 Tabelle bistum_url_mm: 60 Datensätze
@@ -260,19 +408,19 @@ Tabelle bistum_url_mm: 60 Datensätze
 Tabelle band: 73 Datensätze
 
 
-Tabelle band_url_mm: 168 Datensätze
+Tabelle band_url_mm: 174 Datensätze
 
 
 Tabelle bearbeitungsstatus: 7 Datensätze
 
 
-Tabelle personallistenstatus: 4 Datensätze
+Tabelle personallistenstatus: 2 Datensätze
 
 
-Tabelle kloster: 1442 Datensätze
+Tabelle kloster: 1443 Datensätze
 
 
-Tabelle kloster_url_mm: 389 Datensätze
+Tabelle kloster_url_mm: 460 Datensätze
 
 
 Tabelle ordenstyp: 4 Datensätze
@@ -284,7 +432,7 @@ Tabelle klosterstatus: 9 Datensätze
 Tabelle orden: 65 Datensätze
 
 
-Tabelle kloster_orden: 1981 Datensätze
+Tabelle kloster_orden: 1987 Datensätze
 
 
 Tabelle orden_url_mm: 69 Datensätze
@@ -293,16 +441,16 @@ Tabelle orden_url_mm: 69 Datensätze
 Tabelle land: 27 Datensätze
 
 
-Tabelle ort: 44206 Datensätze
+Tabelle ort: 44210 Datensätze
 
 
-Tabelle ort_url_mm: 3 Datensätze
+Tabelle ort_url_mm: 7 Datensätze
 
 
 Tabelle literatur: 1775 Datensätze
 
 
-Tabelle kloster_standort: 1484 Datensätze
+Tabelle kloster_standort: 1504 Datensätze
 
 
 Tabelle kloster_literatur_mm: 1775 Datensätze
