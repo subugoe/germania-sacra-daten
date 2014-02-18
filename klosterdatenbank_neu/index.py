@@ -558,14 +558,13 @@ db.close()
 # solrpy library wird benoetigt
 import solr
 
-index = solr.Solr('http://localhost:8983/solr/germaniasacra')
-index.delete_query('*:*')
-index.commit()
-index.add_many(docs)
-index.commit()
+def insert_into_solr(solr_url):
+    index = solr.Solr(solr_url)
+    index.delete_query('*:*')
+    index.commit()
+    index.add_many(docs)
+    index.commit()
 
-index = solr.Solr('http://vlib.sub.uni-goettingen.de/solr/germania-sacra')
-index.delete_query('*:*')
-index.commit()
-index.add_many(docs)
-index.commit()
+
+insert_into_solr('http://localhost:8983/solr/germaniasacra')
+insert_into_solr('http://vlib.sub.uni-goettingen.de/solr/germania-sacra')
