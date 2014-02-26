@@ -129,6 +129,18 @@ INFO: URL http://d-nb.info/gnd/16325580-5 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/1008643-2 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/5299650-5 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4449082-3 existiert bereits: doppelt nutzen.
+FEHLER: orden_uid fehlt in klosterOrden ID 2340: Datensatz verwerfen
+{u'ID_KlosterOrden': 2340,
+ u'Klosternummer': 306,
+ u'Klosterstatus': None,
+ u'Ordenszugeh\xf6rigkeit': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
+ u'Ordenszugeh\xf6rigkeitVerbal_von': None,
+ u'Ordenszugeh\xf6rigkeit_bis_von': None,
+ u'Ordenszugeh\xf6rigkeit_von_von': None,
+ u'Ordenszugeh\xf6rigkeitvon__bis': None,
+ u'Ordenzugeh\xf6rigkeit_bis_bis': None,
+ u'interne_Anmerkungen': None}
 INFO: 69 Doppelter Literaturverweis 69-Dolle.2012b-S. 394-404: auslassen
 FEHLER: 100 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
 FEHLER: 101 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
@@ -161,6 +173,7 @@ INFO: 265 Doppelter Literaturverweis 265-Hauck.1954b-S. 1018: auslassen
 INFO: 265 Doppelter Literaturverweis 265-Lindner.1917(ND1967)-S. 38: auslassen
 INFO: 265 Doppelter Literaturverweis 265-Schwinekoper.1987-S. 475f: auslassen
 INFO: 265 Doppelter Literaturverweis 265-Ehlers.2007-S. 450: auslassen
+FEHLER: 295 Kein citekey für Buch www.templerlexikon.uni-hamburg.de gefunden: auslassen
 FEHLER: 298 Kein citekey für Buch Besitzungen des Templerordens auf deutschem Gebiet (inklusive Österreich und Tschechien), 2010 gefunden: auslassen
 INFO: 314 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 546 f
 INFO: 314 Doppelter Literaturverweis 314-Streich.1986-S. 101: auslassen
@@ -467,7 +480,6 @@ INFO: 1033 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.199
 FEHLER: 1041 Kein citekey für Buch Schmid, Reinhard: Oberwesel, Stift Liebfrauen. Bau- und Kunstgeschichte. In: Klöster und Stifte in Rheinland-Pfalz, URL: <http:⁄⁄www.klosterlexikon-rlp.de/mittelrhein-lahn-taunus/oberwesel-stift-liebfrauen/bau-und-kunstgeschichte.html> gefunden: auslassen
 INFO: 1045 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 487-488
 INFO: 1067 Doppelter Literaturverweis 1067-Wendehorst.1997-S. 167: auslassen
-INFO: 1072 Zwei Beschreibungsfelder für: Wiener.1998 zusammenfügen: Wiener.1997, S. 145
 INFO: 1090 Doppelter Literaturverweis 1090-Wiener.1998-S. 147: auslassen
 INFO: 1090 Doppelter Literaturverweis 1090-Wiener.1998-S. 147: auslassen
 INFO: 1096 Doppelter Literaturverweis 1096-Wiener.1998-S. 148: auslassen
@@ -490,15 +502,16 @@ FEHLER: 3495 Kein citekey für Buch Boshof.1992, 13, Nr. 42 gefunden: auslassen
 FEHLER: 3496 Kein citekey für Buch Klöster in Bayern. Haus der Bayerischen Geschichte (Online-Datenbank, http://www.hdbg.eu/kloster/web/index.php/detail?id=KS0106 gefunden: auslassen
 FEHLER: 3499 Kein citekey für Buch Braumann (Hg.), Die Jahrzeitbücher des Konstanzer Domkapitels, Einleitung gefunden: auslassen
 FEHLER: 3499 Kein citekey für Buch Helvetia Sacra I/2 gefunden: auslassen
+FEHLER: 3511 Kein citekey für Buch Schrader, Klöster von der Reformation bis zum Westfälischen Frieden gefunden: auslassen
 
 
 Tabelle url_typ: 7 Datensätze
 
 
-Tabelle url: 727 Datensätze
+Tabelle url: 744 Datensätze
 
 
-Tabelle zeitraum: 3503 Datensätze
+Tabelle zeitraum: 3514 Datensätze
 
 
 Tabelle bistum: 62 Datensätze
@@ -516,13 +529,13 @@ Tabelle band_url_mm: 174 Datensätze
 Tabelle bearbeitungsstatus: 7 Datensätze
 
 
-Tabelle personallistenstatus: 2 Datensätze
+Tabelle personallistenstatus: 3 Datensätze
 
 
-Tabelle kloster: 1443 Datensätze
+Tabelle kloster: 1446 Datensätze
 
 
-Tabelle kloster_url_mm: 460 Datensätze
+Tabelle kloster_url_mm: 477 Datensätze
 
 
 Tabelle ordenstyp: 4 Datensätze
@@ -534,7 +547,7 @@ Tabelle klosterstatus: 9 Datensätze
 Tabelle orden: 65 Datensätze
 
 
-Tabelle kloster_orden: 1999 Datensätze
+Tabelle kloster_orden: 2002 Datensätze
 
 
 Tabelle orden_url_mm: 69 Datensätze
@@ -552,7 +565,7 @@ Tabelle ort_url_mm: 7 Datensätze
 Tabelle literatur: 1776 Datensätze
 
 
-Tabelle kloster_standort: 1504 Datensätze
+Tabelle kloster_standort: 1512 Datensätze
 
 
 Tabelle kloster_literatur_mm: 1776 Datensätze
