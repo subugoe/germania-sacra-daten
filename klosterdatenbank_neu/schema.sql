@@ -422,6 +422,7 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`literatur` (
   `uid` INT NOT NULL AUTO_INCREMENT ,
   `citekey` VARCHAR(255) NULL ,
   `beschreibung` TEXT NULL ,
+  `titel` TEXT NULL,
   PRIMARY KEY (`uid`) ,
   UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) )
 ENGINE = InnoDB;

@@ -669,6 +669,7 @@ for values in cursor:
                         'uid': literatur_uid,
                         'citekey': citekey,
                         'beschreibung': beschreibung,
+                        'titel': buch,
                         'crdate': klosterDict[kloster_uid]['crdate'],
                         'cruser_id': klosterDict[kloster_uid]['cruser_id']
                         }

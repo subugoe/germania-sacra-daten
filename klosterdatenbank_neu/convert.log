@@ -141,7 +141,7 @@ FEHLER: orden_uid fehlt in klosterOrden ID 2340: Datensatz verwerfen
  u'Ordenszugeh\xf6rigkeitvon__bis': None,
  u'Ordenzugeh\xf6rigkeit_bis_bis': None,
  u'interne_Anmerkungen': None}
-INFO: 69 Doppelter Literaturverweis 69-Dolle.2012b-S. 394-404: auslassen
+INFO: 69 Doppelter Literaturverweis 69-Dolle.2012-S. 394-404: auslassen
 FEHLER: 100 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
 FEHLER: 101 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
 FEHLER: 102 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
@@ -157,8 +157,8 @@ FEHLER: 119 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2
 FEHLER: 123 Kein citekey für Buch – Niedersächsisches Klosterbuch 3 gefunden: auslassen
 FEHLER: 125 Kein citekey für Buch – Niedersächsisches Klosterbuch 3 gefunden: auslassen
 FEHLER: 126 Kein citekey für Buch – Streich, Klöster, Stifte Niedersachsen gefunden: auslassen
-INFO: 126 Doppelter Literaturverweis 126-Dolle.2012b-S. 1307-1314: auslassen
-INFO: 162 Doppelter Literaturverweis 162-Dolle.2012b-S. 1353-1357: auslassen
+INFO: 126 Doppelter Literaturverweis 126-Dolle.2012c-S. 1307-1314: auslassen
+INFO: 162 Doppelter Literaturverweis 162-Dolle.2012c-S. 1353-1357: auslassen
 INFO: 164 Doppelter Literaturverweis 164-Wendehorst.1997-S. 177: auslassen
 INFO: 169 Zwei Beschreibungsfelder für: Heimann.2010 zusammenfügen: Artikel „Arneburg. Benediktiner“, hier S. 127, S. 127-130, hier S. 127
 INFO: 176 Zwei Beschreibungsfelder für: Heimann.2010 zusammenfügen: Artikel „Kalbe/Milde. Benediktinerinnen/Kanonissen (?)“, S. 671-675, hier S. 671
@@ -177,8 +177,8 @@ FEHLER: 295 Kein citekey für Buch www.templerlexikon.uni-hamburg.de gefunden: a
 FEHLER: 298 Kein citekey für Buch Besitzungen des Templerordens auf deutschem Gebiet (inklusive Österreich und Tschechien), 2010 gefunden: auslassen
 INFO: 314 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 546 f
 INFO: 314 Doppelter Literaturverweis 314-Streich.1986-S. 101: auslassen
-INFO: 317 Doppelter Literaturverweis 317-Dolle.2012b-S. 1044-1050: auslassen
-INFO: 317 Doppelter Literaturverweis 317-Dolle.2012b-S. 1044-1050: auslassen
+INFO: 317 Doppelter Literaturverweis 317-Dolle.2012c-S. 1044-1050: auslassen
+INFO: 317 Doppelter Literaturverweis 317-Dolle.2012c-S. 1044-1050: auslassen
 INFO: 321 Doppelter Literaturverweis 321-Streich.1986-S. 38 f: auslassen
 INFO: 345 Doppelter Literaturverweis 345-Streich.1986-S. 49: auslassen
 INFO: 349 Doppelter Literaturverweis 349-Hoogeweg.1908(Nachdruck1986)-S. 19: auslassen
@@ -398,7 +398,7 @@ INFO: 802 Doppelter Literaturverweis 802-Ehlers.2007-S. 444: auslassen
 INFO: 802 Doppelter Literaturverweis 802-Streich.1986-S. 105: auslassen
 INFO: 812 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994, S. 329-335
 INFO: 858 Doppelter Literaturverweis 858-Streich.1986-S. 103: auslassen
-INFO: 858 Doppelter Literaturverweis 858-Dolle.2012b-S. 1100-1108: auslassen
+INFO: 858 Doppelter Literaturverweis 858-Dolle.2012c-S. 1100-1108: auslassen
 INFO: 933 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994, S. 149
 INFO: 934 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994, S. 68-71
 INFO: 935 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994, S. 71-74

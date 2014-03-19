@@ -566,5 +566,5 @@ def insert_into_solr(solr_url):
     index.commit()
 
 
-insert_into_solr('http://adw.dev:8983/solr/germaniasacra')
 insert_into_solr('http://vlib.sub.uni-goettingen.de/solr/germania-sacra')
+insert_into_solr('http://adw-dev.tc.sub.uni-goettingen.de/solr/germania-sacra')
