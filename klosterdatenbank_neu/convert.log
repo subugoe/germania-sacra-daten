@@ -488,7 +488,6 @@ INFO: 2012 Doppelter Literaturverweis 2012-Ehlers.2007-S. 419: auslassen
 FEHLER: 2066 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
 INFO: 3106 Doppelter Literaturverweis 3106-Wendehorst.1997-S. 71: auslassen
 FEHLER: 3488 Kein citekey für Buch Germania Benedictina X-1 gefunden: auslassen
-FEHLER: 3489 Kein citekey für Buch Remling, Urkundenbuch, Nr. 7 gefunden: auslassen
 FEHLER: 3491 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
 FEHLER: 3491 Kein citekey für Buch GS NF 35 gefunden: auslassen
 FEHLER: 3491 Kein citekey für Buch Philipp, Geschichte des Stifts Naumburg und Zeitz gefunden: auslassen
@@ -562,10 +561,10 @@ Tabelle ort: 44210 Datensätze
 Tabelle ort_url_mm: 7 Datensätze
 
 
-Tabelle literatur: 1776 Datensätze
+Tabelle literatur: 1777 Datensätze
 
 
 Tabelle kloster_standort: 1512 Datensätze
 
 
-Tabelle kloster_literatur_mm: 1776 Datensätze
+Tabelle kloster_literatur_mm: 1777 Datensätze
