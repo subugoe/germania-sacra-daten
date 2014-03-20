@@ -11,6 +11,7 @@ INFO: URL http://d-nb.info/gnd/5150774-2 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/5107923-9 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/10106304-0 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4506809-4 existiert bereits: doppelt nutzen.
+INFO: URL http://personendatenbank.germania-sacra.de/books/findpage/AFI,1972 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4683949-5 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4355884-7 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4355889-6 existiert bereits: doppelt nutzen.
@@ -84,8 +85,6 @@ INFO: URL http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalter
 INFO: URL http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html existiert bereits: doppelt nutzen.
 INFO: URL http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html existiert bereits: doppelt nutzen.
 INFO: URL http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html existiert bereits: doppelt nutzen.
-INFO: URL http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html existiert bereits: doppelt nutzen.
-INFO: URL http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/16277070-4 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4385833-8 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4558940-9 existiert bereits: doppelt nutzen.
@@ -94,6 +93,7 @@ INFO: URL http://d-nb.info/gnd/7749511-1 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4301863-4 existiert bereits: doppelt nutzen.
 INFO: URL http://de.wikipedia.org/wiki/Kloster_Herrenchiemsee existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/16136474-3 existiert bereits: doppelt nutzen.
+INFO: URL http://de.wikipedia.org/wiki/Komturei_Nemerow existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/2180420-5 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/1018585-9 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4029781-0 existiert bereits: doppelt nutzen.
@@ -129,31 +129,16 @@ INFO: URL http://d-nb.info/gnd/16325580-5 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/1008643-2 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/5299650-5 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4449082-3 existiert bereits: doppelt nutzen.
-FEHLER: orden_uid fehlt in klosterOrden ID 2340: Datensatz verwerfen
-{u'ID_KlosterOrden': 2340,
- u'Klosternummer': 306,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': None,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
 INFO: 69 Doppelter Literaturverweis 69-Dolle.2012-S. 394-404: auslassen
-FEHLER: 100 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
-FEHLER: 101 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
-FEHLER: 102 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
-FEHLER: 104 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
-FEHLER: 106 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
-FEHLER: 107 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
-FEHLER: 108 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
-FEHLER: 110 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
-FEHLER: 111 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
-FEHLER: 112 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
-FEHLER: 116 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
-FEHLER: 119 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012 Bd. 2 gefunden: auslassen
+FEHLER: 100 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012, 2 gefunden: auslassen
+FEHLER: 101 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012, 2 gefunden: auslassen
+FEHLER: 102 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012, 2 gefunden: auslassen
+FEHLER: 104 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012, 2 gefunden: auslassen
+FEHLER: 106 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012, 2 gefunden: auslassen
+FEHLER: 111 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012, 2 gefunden: auslassen
+FEHLER: 112 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012, 2 gefunden: auslassen
+FEHLER: 116 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012, 2 gefunden: auslassen
+FEHLER: 119 Kein citekey für Buch – Niedersächsisches Klosterbuch 2012, 2 gefunden: auslassen
 FEHLER: 123 Kein citekey für Buch – Niedersächsisches Klosterbuch 3 gefunden: auslassen
 FEHLER: 125 Kein citekey für Buch – Niedersächsisches Klosterbuch 3 gefunden: auslassen
 FEHLER: 126 Kein citekey für Buch – Streich, Klöster, Stifte Niedersachsen gefunden: auslassen
@@ -167,13 +152,12 @@ INFO: 196 Doppelter Literaturverweis 196-Wendehorst.1997-S. 82: auslassen
 INFO: 196 Doppelter Literaturverweis 196-Lindner.1917(ND1967)-S. 65: auslassen
 INFO: 196 Doppelter Literaturverweis 196-Hauck.1954c-S. 985: auslassen
 INFO: 215 Doppelter Literaturverweis 215-Hauck.1954b-S. 1018: auslassen
-FEHLER: 226 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
 INFO: 261 Doppelter Literaturverweis 261-Ehlers.2007-S. 433: auslassen
 INFO: 265 Doppelter Literaturverweis 265-Hauck.1954b-S. 1018: auslassen
 INFO: 265 Doppelter Literaturverweis 265-Lindner.1917(ND1967)-S. 38: auslassen
 INFO: 265 Doppelter Literaturverweis 265-Schwinekoper.1987-S. 475f: auslassen
 INFO: 265 Doppelter Literaturverweis 265-Ehlers.2007-S. 450: auslassen
-FEHLER: 295 Kein citekey für Buch www.templerlexikon.uni-hamburg.de gefunden: auslassen
+INFO: 268 Zwei Beschreibungsfelder für: Bosl.1961 zusammenfügen: NA, S. 220 f
 FEHLER: 298 Kein citekey für Buch Besitzungen des Templerordens auf deutschem Gebiet (inklusive Österreich und Tschechien), 2010 gefunden: auslassen
 INFO: 314 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 546 f
 INFO: 314 Doppelter Literaturverweis 314-Streich.1986-S. 101: auslassen
@@ -191,6 +175,7 @@ INFO: 402 Doppelter Literaturverweis 402-Hoogeweg.1908(Nachdruck1986)-S. 55: aus
 INFO: 403 Doppelter Literaturverweis 403-Hoogeweg.1908(Nachdruck1986)-S. 55: auslassen
 INFO: 409 Doppelter Literaturverweis 409-Hoogeweg.1908(Nachdruck1986)-S. 84: auslassen
 INFO: 409 Doppelter Literaturverweis 409-Streich.1986-S. 72 (Heiligenthal): auslassen
+FEHLER: 415 Kein citekey für Buch Westfälisches Klosterbuch 1, 215–226 gefunden: auslassen
 INFO: 432 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 33-35
 INFO: 434 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 36
 INFO: 435 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 39
@@ -235,7 +220,6 @@ INFO: 485 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992
 INFO: 486 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 196-199
 INFO: 488 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 206f
 INFO: 489 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 210f
-INFO: 490 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 224f
 INFO: 492 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 226f
 INFO: 493 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 228f
 INFO: 495 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 233f
@@ -344,13 +328,13 @@ INFO: 630 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994
 INFO: 631 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994, S. 49ff
 INFO: 632 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994, S. 58ff
 INFO: 637 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994, S. 64ff
-FEHLER: 676 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
 INFO: 676 Doppelter Literaturverweis 676-ChristianAlbrechtsUniversitatKiel.-None: auslassen
-FEHLER: 676 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
+INFO: 676 Doppelter Literaturverweis 676-Gatz.2003-S. 363-369: auslassen
 FEHLER: 679 Kein citekey für Buch Schleswig-Holsteinisches Klosterbuch Online, April 2011;  Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
 INFO: 726 Doppelter Literaturverweis 726-Hauck.1954b-S. 1017: auslassen
 INFO: 726 Doppelter Literaturverweis 726-Lindner.1917(ND1967)-S. 29: auslassen
 INFO: 726 Doppelter Literaturverweis 726-Ehlers.2007-S. 442: auslassen
+FEHLER: 736 Kein citekey für Buch Brandenburgisches Klosterbuch 1, 481–499 gefunden: auslassen
 INFO: 736 Zwei Beschreibungsfelder für: Heimann.2010 zusammenfügen: Artikel  „Göritz (Górzyca). Domkapitel des Bistums Lebus“, S. 514-519, hier S. 514
 FEHLER: 736 Kein citekey für Buch Brandenburgisches Klosterbuch gefunden: auslassen
 INFO: 737 Zwei Beschreibungsfelder für: Heimann.2010 zusammenfügen: Artikel „Gransee“, S. 536-542, hier S. 536
@@ -390,7 +374,6 @@ INFO: 769 Zwei Beschreibungsfelder für: Heimann.2010b zusammenfügen: Artikel �
 INFO: 770 Zwei Beschreibungsfelder für: Heimann.2010b zusammenfügen: Artikel „Ziesar. Franziskaner“, S. 1345-1346, hier S. 1345
 INFO: 771 Zwei Beschreibungsfelder für: Heimann.2010b zusammenfügen: Artikel „Ziesar. Zisterzienserinnen“, S. 1347-1358, hier S. 1347
 INFO: 772 Zwei Beschreibungsfelder für: Heimann.2010b zusammenfügen: Artikel „Zinna. Zisterzienser“, S. 1359-1384, hier S. 1347
-FEHLER: 783 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
 FEHLER: 792 Kein citekey für Buch von Brunn genannt von Kauffungen, Das Domkapitel von Meissen im Mittelalter, 2 gefunden: auslassen
 INFO: 795 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 587-593
 INFO: 798 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994, S. 150-158
@@ -485,32 +468,27 @@ INFO: 1090 Doppelter Literaturverweis 1090-Wiener.1998-S. 147: auslassen
 INFO: 1096 Doppelter Literaturverweis 1096-Wiener.1998-S. 148: auslassen
 INFO: 2011 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994, S. 53-58
 INFO: 2012 Doppelter Literaturverweis 2012-Ehlers.2007-S. 419: auslassen
-FEHLER: 2066 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
+FEHLER: 2076 Kein citekey für Buch Nordrheinisches Klosterbuch 1 gefunden: auslassen
+FEHLER: 2077 Kein citekey für Buch Nordrheinisches Klosterbuch 1 gefunden: auslassen
 INFO: 3106 Doppelter Literaturverweis 3106-Wendehorst.1997-S. 71: auslassen
-FEHLER: 3488 Kein citekey für Buch Germania Benedictina X-1 gefunden: auslassen
-FEHLER: 3491 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
-FEHLER: 3491 Kein citekey für Buch GS NF 35 gefunden: auslassen
-FEHLER: 3491 Kein citekey für Buch Philipp, Geschichte des Stifts Naumburg und Zeitz gefunden: auslassen
-FEHLER: 3491 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
-FEHLER: 3491 Kein citekey für Buch GS NF 35 gefunden: auslassen
-FEHLER: 3491 Kein citekey für Buch Philipp, Geschichte des Stifts Naumburg und Zeitz gefunden: auslassen
-FEHLER: 3495 Kein citekey für Buch DB_HistBay, URL: <http://www.historisches-lexikon-bayerns.de/artikel/artikel_45861> gefunden: auslassen
-FEHLER: 3495 Kein citekey für Buch Wurster.2010 gefunden: auslassen
-FEHLER: 3495 Kein citekey für Buch Heuwieser.1988, 38f., Nr. 44 gefunden: auslassen
-FEHLER: 3495 Kein citekey für Buch Boshof.1992, 13, Nr. 42 gefunden: auslassen
-FEHLER: 3496 Kein citekey für Buch Klöster in Bayern. Haus der Bayerischen Geschichte (Online-Datenbank, http://www.hdbg.eu/kloster/web/index.php/detail?id=KS0106 gefunden: auslassen
-FEHLER: 3499 Kein citekey für Buch Braumann (Hg.), Die Jahrzeitbücher des Konstanzer Domkapitels, Einleitung gefunden: auslassen
-FEHLER: 3499 Kein citekey für Buch Helvetia Sacra I/2 gefunden: auslassen
-FEHLER: 3511 Kein citekey für Buch Schrader, Klöster von der Reformation bis zum Westfälischen Frieden gefunden: auslassen
+FEHLER: 3292 Kein citekey für Buch Nordrheinisches Klosterbuch 1 gefunden: auslassen
+FEHLER: 3371 Kein citekey für Buch endehorst/Benz, Säkularkanonikerstifte gefunden: auslassen
+INFO: 3491 Doppelter Literaturverweis 3491-Gatz.2003-S. 488-497: auslassen
+INFO: 3491 Doppelter Literaturverweis 3491-Wiener.1997-None: auslassen
+INFO: 3491 Doppelter Literaturverweis 3491-PhilippJohannPaulChristian.1800-None: auslassen
+FEHLER: Feld ID_alleOrte leer in KlosterStandort 1942: verwerfen
+FEHLER: Feld ID_alleOrte leer in KlosterStandort 1946: verwerfen
+FEHLER: 3526 Kein citekey für Buch Brandenburgisches Klosterbuch 1 gefunden: auslassen
+FEHLER: 3527 Kein citekey für Buch Brandenburgisches Klosterbuch 1 gefunden: auslassen
 
 
 Tabelle url_typ: 7 Datensätze
 
 
-Tabelle url: 744 Datensätze
+Tabelle url: 822 Datensätze
 
 
-Tabelle zeitraum: 3514 Datensätze
+Tabelle zeitraum: 3528 Datensätze
 
 
 Tabelle bistum: 62 Datensätze
@@ -522,7 +500,7 @@ Tabelle bistum_url_mm: 60 Datensätze
 Tabelle band: 73 Datensätze
 
 
-Tabelle band_url_mm: 174 Datensätze
+Tabelle band_url_mm: 186 Datensätze
 
 
 Tabelle bearbeitungsstatus: 7 Datensätze
@@ -531,10 +509,10 @@ Tabelle bearbeitungsstatus: 7 Datensätze
 Tabelle personallistenstatus: 3 Datensätze
 
 
-Tabelle kloster: 1446 Datensätze
+Tabelle kloster: 1456 Datensätze
 
 
-Tabelle kloster_url_mm: 477 Datensätze
+Tabelle kloster_url_mm: 542 Datensätze
 
 
 Tabelle ordenstyp: 4 Datensätze
@@ -546,7 +524,7 @@ Tabelle klosterstatus: 9 Datensätze
 Tabelle orden: 65 Datensätze
 
 
-Tabelle kloster_orden: 2002 Datensätze
+Tabelle kloster_orden: 2007 Datensätze
 
 
 Tabelle orden_url_mm: 69 Datensätze
@@ -558,13 +536,13 @@ Tabelle land: 27 Datensätze
 Tabelle ort: 44210 Datensätze
 
 
-Tabelle ort_url_mm: 7 Datensätze
+Tabelle ort_url_mm: 8 Datensätze
 
 
-Tabelle literatur: 1777 Datensätze
+Tabelle literatur: 1792 Datensätze
 
 
-Tabelle kloster_standort: 1512 Datensätze
+Tabelle kloster_standort: 1521 Datensätze
 
 
-Tabelle kloster_literatur_mm: 1777 Datensätze
+Tabelle kloster_literatur_mm: 1792 Datensätze

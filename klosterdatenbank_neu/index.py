@@ -274,7 +274,6 @@ for values in cursor:
 
 	docKlosterBasic = copy.deepcopy(docKloster)
 
-	
 	queryStandort = """
 	SELECT
 		standort.uid AS standort_uid, standort.gruender,
