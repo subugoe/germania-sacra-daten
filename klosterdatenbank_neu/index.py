@@ -263,9 +263,8 @@ for values in cursor:
     for values2 in cursor2:
         docLiteratur = dict(zip(cursor2.column_names, values2))
         if (literaturDict.has_key(docLiteratur["citekey"])):
-            print type(literaturDict[docLiteratur["citekey"]])
             if literaturDict[docLiteratur["citekey"]] is None:
-                print "None"
+                print literaturDict[docLiteratur["citekey"]]
             else:
                 literaturDict[docLiteratur["citekey"]] += ' / ' + docLiteratur["beschreibung"]
         else:
