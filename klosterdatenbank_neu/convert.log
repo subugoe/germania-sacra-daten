@@ -28,6 +28,8 @@ INFO: URL http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalter
 INFO: URL http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html existiert bereits: doppelt nutzen.
 INFO: URL http://www.gko.uni-leipzig.de/historisches-seminar/seminar/mittelalterliche-geschichte/forschungsprojekte/mecklenburgisches-klosterbuch/liste-der-kloester.html existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/1247489-7 existiert bereits: doppelt nutzen.
+INFO: URL http://d-nb.info/gnd/7721372-5 existiert bereits: doppelt nutzen.
+INFO: URL http://de.wikipedia.org/wiki/Kloster_Wendhusen existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/5283947-3 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4203234-9 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4697709-0 existiert bereits: doppelt nutzen.
@@ -47,7 +49,6 @@ INFO: URL http://d-nb.info/gnd/4264816-6 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4418842-0 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4644031-8 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/10023882-8 existiert bereits: doppelt nutzen.
-INFO: URL http://d-nb.info/gnd/4749486-4 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4444323-7 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4295301-7 existiert bereits: doppelt nutzen.
 INFO: URL http://d-nb.info/gnd/4389474-4 existiert bereits: doppelt nutzen.
@@ -318,7 +319,6 @@ INFO: 625 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992
 INFO: 626 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 635-637
 INFO: 627 Zwei Beschreibungsfelder für: Hengst.1992 zusammenfügen: Hengst.1992, S. 638-641
 INFO: 628 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994, S. 28f
-FEHLER: 628 Kein citekey für Buch Pesch, Der Dom zu Münster, Bd. 4: Das Domkloster gefunden: auslassen
 INFO: 629 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994, S. 39ff
 INFO: 630 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994, S. 45-49
 INFO: 631 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994, S. 49ff
@@ -379,6 +379,7 @@ INFO: 812 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994
 INFO: 858 Doppelter Literaturverweis 858-Streich.1986-S. 103: auslassen
 INFO: 858 Doppelter Literaturverweis 858-Dolle.2012c-S. 1100-1108: auslassen
 FEHLER: 860 Kein citekey für Buch Streich 2011 gefunden: auslassen
+FEHLER: 918 Kein citekey für Buch Niedersächsisches Klosterbnuch, Teil 1 gefunden: auslassen
 INFO: 933 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994, S. 149
 INFO: 934 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994, S. 68-71
 INFO: 935 Zwei Beschreibungsfelder für: Hengst.1994 zusammenfügen: Hengst.1994, S. 71-74
@@ -472,8 +473,12 @@ FEHLER: 3292 Kein citekey für Buch Nordrheinisches Klosterbuch 1 gefunden: ausl
 INFO: 3491 Doppelter Literaturverweis 3491-Gatz.2003-S. 488-497: auslassen
 INFO: 3491 Doppelter Literaturverweis 3491-Wiener.1997-None: auslassen
 INFO: 3491 Doppelter Literaturverweis 3491-PhilippJohannPaulChristian.1800-None: auslassen
+FEHLER: 3518 Kein citekey für Buch Niedersächsisches Klosterbuch, Teil 1 gefunden: auslassen
 FEHLER: 3526 Kein citekey für Buch Brandenburgisches Klosterbuch 1 gefunden: auslassen
 FEHLER: 3527 Kein citekey für Buch Brandenburgisches Klosterbuch 1 gefunden: auslassen
+FEHLER: 3528 Kein citekey für Buch Brandenburgisches Klosterbuch 1 gefunden: auslassen
+FEHLER: 3529 Kein citekey für Buch Brandenburgisches Klosterbuch 1 gefunden: auslassen
+FEHLER: 3530 Kein citekey für Buch Brandenburgisches Klosterbuch 1 gefunden: auslassen
 FEHLER: 3535 Kein citekey für Buch Georg Kohlstedt, Helmut Flachenecker, Gerode, in: Germania Benedictina 10,1 gefunden: auslassen
 FEHLER: 3536 Kein citekey für Buch Helmut Flachenecker, Homburg bei Langensalza, in: Germania Benedictina 10,1 gefunden: auslassen
 FEHLER: 3537 Kein citekey für Buch Thomas Vogtherr, Pegau, in: Germania Benedictina 10,2 gefunden: auslassen
@@ -482,15 +487,20 @@ FEHLER: 3540 Kein citekey für Buch Christof Römer, Paulinzella, in: Germania B
 FEHLER: 3545 Kein citekey für Buch Gudrun Gleba, Malgarten, in: Nieders. Klosterbuch II gefunden: auslassen
 FEHLER: 3546 Kein citekey für Buch Horst-Rüdiger Jarck, Rinteln, in: Nieders. Klosterbuch III gefunden: auslassen
 FEHLER: 3550 Kein citekey für Buch Niedersächsisches Klosterbuch Bd. 1 gefunden: auslassen
+FEHLER: 3552 Kein citekey für Buch Brandenburgisches Klosterbuch 2 gefunden: auslassen
+FEHLER: 3553 Kein citekey für Buch Brandenburgisches Klosterbuch 2 gefunden: auslassen
+FEHLER: 3554 Kein citekey für Buch Brandenburgisches Klosterbuch 2 gefunden: auslassen
+FEHLER: 3555 Kein citekey für Buch Brandenburgisches Klosterbuch 2 gefunden: auslassen
+FEHLER: 3556 Kein citekey für Buch Brandenburgisches Klosterbuch 2 gefunden: auslassen
 
 
 Tabelle url_typ: 7 Datensätze
 
 
-Tabelle url: 842 Datensätze
+Tabelle url: 852 Datensätze
 
 
-Tabelle zeitraum: 3573 Datensätze
+Tabelle zeitraum: 3580 Datensätze
 
 
 Tabelle bistum: 62 Datensätze
@@ -511,10 +521,10 @@ Tabelle bearbeitungsstatus: 7 Datensätze
 Tabelle personallistenstatus: 3 Datensätze
 
 
-Tabelle kloster: 1476 Datensätze
+Tabelle kloster: 1480 Datensätze
 
 
-Tabelle kloster_url_mm: 562 Datensätze
+Tabelle kloster_url_mm: 571 Datensätze
 
 
 Tabelle ordenstyp: 4 Datensätze
@@ -526,7 +536,7 @@ Tabelle klosterstatus: 9 Datensätze
 Tabelle orden: 65 Datensätze
 
 
-Tabelle kloster_orden: 2029 Datensätze
+Tabelle kloster_orden: 2033 Datensätze
 
 
 Tabelle orden_url_mm: 69 Datensätze
@@ -541,10 +551,10 @@ Tabelle ort: 44211 Datensätze
 Tabelle ort_url_mm: 8 Datensätze
 
 
-Tabelle literatur: 1794 Datensätze
+Tabelle literatur: 1793 Datensätze
 
 
-Tabelle kloster_standort: 1544 Datensätze
+Tabelle kloster_standort: 1547 Datensätze
 
 
-Tabelle kloster_literatur_mm: 1794 Datensätze
+Tabelle kloster_literatur_mm: 1793 Datensätze
