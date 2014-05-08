@@ -226,7 +226,6 @@ for values in cursor:
     cursor2.execute(queryKlosterURL, [str(docKloster["sql_uid"])])
     for values2 in cursor2:
         docURL = dict(zip(cursor2.column_names, values2))
-
         if docURL["url_typ"] == "Wikipedia":
             docKloster["url_wikipedia"] += [docURL["url"]]
         elif docURL["url_typ"] == "Quelle":
@@ -395,6 +394,7 @@ for values in cursor:
             docURL = dict(zip(cursor3.column_names, values3))
             if docURL["url_typ"] == "Geonames":
                 geoname = docURL["url"].split("geonames.org/")[1]
+                docURL["url_bemerkung"] = geoname
             mergeDocIntoDoc(docURL, docStandort)
         docStandort["geonames"] += [geoname]
 
