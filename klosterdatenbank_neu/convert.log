@@ -474,11 +474,6 @@ INFO: 3491 Doppelter Literaturverweis 3491-Gatz.2003-S. 488-497: auslassen
 INFO: 3491 Doppelter Literaturverweis 3491-Wiener.1997-None: auslassen
 INFO: 3491 Doppelter Literaturverweis 3491-PhilippJohannPaulChristian.1800-None: auslassen
 FEHLER: 3518 Kein citekey für Buch Niedersächsisches Klosterbuch, Teil 1 gefunden: auslassen
-FEHLER: 3526 Kein citekey für Buch Brandenburgisches Klosterbuch 1 gefunden: auslassen
-FEHLER: 3527 Kein citekey für Buch Brandenburgisches Klosterbuch 1 gefunden: auslassen
-FEHLER: 3528 Kein citekey für Buch Brandenburgisches Klosterbuch 1 gefunden: auslassen
-FEHLER: 3529 Kein citekey für Buch Brandenburgisches Klosterbuch 1 gefunden: auslassen
-FEHLER: 3530 Kein citekey für Buch Brandenburgisches Klosterbuch 1 gefunden: auslassen
 FEHLER: 3535 Kein citekey für Buch Georg Kohlstedt, Helmut Flachenecker, Gerode, in: Germania Benedictina 10,1 gefunden: auslassen
 FEHLER: 3536 Kein citekey für Buch Helmut Flachenecker, Homburg bei Langensalza, in: Germania Benedictina 10,1 gefunden: auslassen
 FEHLER: 3537 Kein citekey für Buch Thomas Vogtherr, Pegau, in: Germania Benedictina 10,2 gefunden: auslassen
@@ -551,10 +546,10 @@ Tabelle ort: 44211 Datensätze
 Tabelle ort_url_mm: 8 Datensätze
 
 
-Tabelle literatur: 1793 Datensätze
+Tabelle literatur: 1798 Datensätze
 
 
 Tabelle kloster_standort: 1547 Datensätze
 
 
-Tabelle kloster_literatur_mm: 1793 Datensätze
+Tabelle kloster_literatur_mm: 1798 Datensätze
