@@ -482,11 +482,6 @@ FEHLER: 3540 Kein citekey für Buch Christof Römer, Paulinzella, in: Germania B
 FEHLER: 3545 Kein citekey für Buch Gudrun Gleba, Malgarten, in: Nieders. Klosterbuch II gefunden: auslassen
 FEHLER: 3546 Kein citekey für Buch Horst-Rüdiger Jarck, Rinteln, in: Nieders. Klosterbuch III gefunden: auslassen
 FEHLER: 3550 Kein citekey für Buch Niedersächsisches Klosterbuch Bd. 1 gefunden: auslassen
-FEHLER: 3552 Kein citekey für Buch Brandenburgisches Klosterbuch 2 gefunden: auslassen
-FEHLER: 3553 Kein citekey für Buch Brandenburgisches Klosterbuch 2 gefunden: auslassen
-FEHLER: 3554 Kein citekey für Buch Brandenburgisches Klosterbuch 2 gefunden: auslassen
-FEHLER: 3555 Kein citekey für Buch Brandenburgisches Klosterbuch 2 gefunden: auslassen
-FEHLER: 3556 Kein citekey für Buch Brandenburgisches Klosterbuch 2 gefunden: auslassen
 
 
 Tabelle url_typ: 7 Datensätze
@@ -546,10 +541,10 @@ Tabelle ort: 44211 Datensätze
 Tabelle ort_url_mm: 8 Datensätze
 
 
-Tabelle literatur: 1798 Datensätze
+Tabelle literatur: 1803 Datensätze
 
 
 Tabelle kloster_standort: 1547 Datensätze
 
 
-Tabelle kloster_literatur_mm: 1798 Datensätze
+Tabelle kloster_literatur_mm: 1803 Datensätze
