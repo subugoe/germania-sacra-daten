@@ -1,21 +1,12 @@
 Dump in Datenbank eingespielt
-FEHLER: 298 Kein citekey für Buch Besitzungen des Templerordens auf deutschem Gebiet (inklusive Österreich und Tschechien), 2010 gefunden: auslassen
-FEHLER: 415 Kein citekey für Buch Westfälisches Klosterbuch 1, 215–226 gefunden: auslassen
 FEHLER: 679 Kein citekey für Buch Schleswig-Holsteinisches Klosterbuch Online, April 2011;  Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
-FEHLER: 736 Kein citekey für Buch Brandenburgisches Klosterbuch 1, 481–499 gefunden: auslassen
 FEHLER: 736 Kein citekey für Buch Brandenburgisches Klosterbuch gefunden: auslassen
 FEHLER: 739 Kein citekey für Buch Brandenburgisches Klosterbuch gefunden: auslassen
 FEHLER: 792 Kein citekey für Buch von Brunn genannt von Kauffungen, Das Domkapitel von Meissen im Mittelalter, 2 gefunden: auslassen
 FEHLER: 835 Kein citekey für Buch Niedersächsisches Klosterbuch, Bd. 3 S. 1050–1052 gefunden: auslassen
 FEHLER: 860 Kein citekey für Buch Streich 2011 gefunden: auslassen
 FEHLER: 918 Kein citekey für Buch Niedersächsisches Klosterbuch, Teil 1 gefunden: auslassen
-FEHLER: 1041 Kein citekey für Buch Schmid, Reinhard: Oberwesel, Stift Liebfrauen. Bau- und Kunstgeschichte. In: Klöster und Stifte in Rheinland-Pfalz, URL: <http:⁄⁄www.klosterlexikon-rlp.de/mittelrhein-lahn-taunus/oberwesel-stift-liebfrauen/bau-und-kunstgeschichte.html> gefunden: auslassen
-FEHLER: 2076 Kein citekey für Buch Nordrheinisches Klosterbuch 1 gefunden: auslassen
-FEHLER: 2077 Kein citekey für Buch Nordrheinisches Klosterbuch 1 gefunden: auslassen
-FEHLER: 3292 Kein citekey für Buch Nordrheinisches Klosterbuch 1 gefunden: auslassen
 FEHLER: 3518 Kein citekey für Buch Niedersächsisches Klosterbuch, Teil 1 gefunden: auslassen
-FEHLER: 3535 Kein citekey für Buch Georg Kohlstedt, Helmut Flachenecker, Gerode, in: Germania Benedictina 10,1 gefunden: auslassen
-FEHLER: 3536 Kein citekey für Buch Helmut Flachenecker, Homburg bei Langensalza, in: Germania Benedictina 10,1 gefunden: auslassen
 FEHLER: 3537 Kein citekey für Buch Thomas Vogtherr, Pegau, in: Germania Benedictina 10,2 gefunden: auslassen
 FEHLER: 3539 Kein citekey für Buch Volker Graupner, Oldisleben, in: Germania Benedictina 10,2 gefunden: auslassen
 FEHLER: 3540 Kein citekey für Buch Christof Römer, Paulinzella, in: Germania Benedictina 10,2 gefunden: auslassen
@@ -81,10 +72,10 @@ Tabelle ort: 44211 Datensätze
 Tabelle ort_url_mm: 8 Datensätze
 
 
-Tabelle literatur: 1814 Datensätze
+Tabelle literatur: 1823 Datensätze
 
 
 Tabelle kloster_standort: 1547 Datensätze
 
 
-Tabelle kloster_literatur_mm: 1814 Datensätze
+Tabelle kloster_literatur_mm: 1823 Datensätze
