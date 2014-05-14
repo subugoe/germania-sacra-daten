@@ -236,8 +236,6 @@ def makeURLData(URL, bemerkung, art, record_uid):
             'url_typ_uid': urlTypDict[art]['uid']
             }
         # print u"INFO: neue URL »" + URL + u"«"
-        else:
-            print "INFO: URL " + URL + " existiert bereits: doppelt nutzen.".encode('utf-8')
 
         URLRelation = {
         'uid_local': record_uid,
@@ -653,17 +651,14 @@ for values in cursor:
                     if citekey and citekeyDict[buch]['detail'] and citekeyDict[buch]['detail'] != u'#N/A':
                         if beschreibung and citekeyDict[buch]['detail'].find(beschreibung) == -1:
                             beschreibung = citekeyDict[buch]['detail'] + ', ' + beschreibung
-                            print "INFO: " + str(kloster_uid).encode(
-                                'utf-8') + " Zwei Beschreibungsfelder für: " + citekey.encode(
-                                'utf-8') + " zusammenfügen: " + beschreibung.encode('utf-8')
+                            #print "INFO: " + str(kloster_uid).encode(
+                            #    'utf-8') + " Zwei Beschreibungsfelder für: " + citekey.encode(
+                            #    'utf-8') + " zusammenfügen: " + beschreibung.encode('utf-8')
                         else:
                             beschreibung = citekeyDict[buch]['detail']
 
                     literaturKey = str(kloster_uid) + u"-" + citekey + u"-" + unicode(beschreibung)
-                    if literaturDict.has_key(literaturKey):
-                        print "INFO: " + str(kloster_uid).encode(
-                            'utf-8') + " Doppelter Literaturverweis " + literaturKey.encode('utf-8') + ": auslassen"
-                    else:
+                    if literaturDict.has_key(literaturKey) == False:
                         literatur_uid = len(literaturDict) + 1
                         r4 = {
                         'uid': literatur_uid,
