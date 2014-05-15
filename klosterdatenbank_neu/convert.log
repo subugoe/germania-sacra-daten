@@ -1,21 +1,15 @@
 Dump in Datenbank eingespielt
-FEHLER: Feld ID_alleOrte leer in KlosterStandort 2000: verwerfen
-FEHLER: 679 Kein citekey für Buch Schleswig-Holsteinisches Klosterbuch Online, April 2011;  Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. v. Erwin Gatz gefunden: auslassen
-FEHLER: 736 Kein citekey für Buch Brandenburgisches Klosterbuch gefunden: auslassen
-FEHLER: 739 Kein citekey für Buch Brandenburgisches Klosterbuch gefunden: auslassen
+FEHLER: 317 Kein citekey für Buch Niedersächsisches Klosterbuch 2012 3 gefunden: auslassen
+FEHLER: 679 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. V. Erwin Gatz gefunden: auslassen
 FEHLER: 792 Kein citekey für Buch von Brunn genannt von Kauffungen, Das Domkapitel von Meissen im Mittelalter, 2 gefunden: auslassen
-FEHLER: 835 Kein citekey für Buch Niedersächsisches Klosterbuch, Bd. 3 S. 1050–1052 gefunden: auslassen
-FEHLER: 918 Kein citekey für Buch Niedersächsisches Klosterbuch 2012, 1,  S. 163–164 gefunden: auslassen
 FEHLER: 3495 Kein citekey für Buch Wurster 2010 gefunden: auslassen
 FEHLER: 3495 Kein citekey für Buch Heuwieser 1988, 38f., Nr. 44 gefunden: auslassen
-FEHLER: 3518 Kein citekey für Buch Niedersächsisches Klosterbuch 2012, 1,  S. 138–141 gefunden: auslassen
-FEHLER: 3537 Kein citekey für Buch Thomas Vogtherr, Pegau, in: Germania Benedictina 10,2 gefunden: auslassen
-FEHLER: 3539 Kein citekey für Buch Volker Graupner, Oldisleben, in: Germania Benedictina 10,2 gefunden: auslassen
-FEHLER: 3540 Kein citekey für Buch Christof Römer, Paulinzella, in: Germania Benedictina 10,2 gefunden: auslassen
-FEHLER: 3545 Kein citekey für Buch Gudrun Gleba, Malgarten, in: Nieders. Klosterbuch II gefunden: auslassen
+FEHLER: 3537 Kein citekey für Buch Germania Benedictina 10,2 gefunden: auslassen
+FEHLER: 3539 Kein citekey für Buch Germania Benedictina 10,2 gefunden: auslassen
+FEHLER: 3540 Kein citekey für Buch Germania Benedictina 10,2 gefunden: auslassen
+FEHLER: 3545 Kein citekey für Buch Niedersächsischers Klosterbuch 2012 2 gefunden: auslassen
 FEHLER: 3546 Kein citekey für Buch Horst-Rüdiger Jarck, Rinteln, in: Nieders. Klosterbuch III gefunden: auslassen
-FEHLER: 3550 Kein citekey für Buch Niedersächsisches Klosterbuch Bd. 1 gefunden: auslassen
-FEHLER: Feld ID_alleOrte leer in KlosterStandort 1996: verwerfen
+FEHLER: 3573 Kein citekey für Buch Gilomen.1986c gefunden: auslassen
 
 
 Tabelle url_typ: 7 Datensätze
@@ -24,7 +18,7 @@ Tabelle url_typ: 7 Datensätze
 Tabelle url: 868 Datensätze
 
 
-Tabelle zeitraum: 3617 Datensätze
+Tabelle zeitraum: 3621 Datensätze
 
 
 Tabelle bistum: 62 Datensätze
@@ -45,7 +39,7 @@ Tabelle bearbeitungsstatus: 7 Datensätze
 Tabelle personallistenstatus: 3 Datensätze
 
 
-Tabelle kloster: 1494 Datensätze
+Tabelle kloster: 1495 Datensätze
 
 
 Tabelle kloster_url_mm: 584 Datensätze
@@ -60,7 +54,7 @@ Tabelle klosterstatus: 12 Datensätze
 Tabelle orden: 65 Datensätze
 
 
-Tabelle kloster_orden: 2057 Datensätze
+Tabelle kloster_orden: 2058 Datensätze
 
 
 Tabelle orden_url_mm: 69 Datensätze
@@ -69,16 +63,16 @@ Tabelle orden_url_mm: 69 Datensätze
 Tabelle land: 27 Datensätze
 
 
-Tabelle ort: 44212 Datensätze
+Tabelle ort: 44213 Datensätze
 
 
 Tabelle ort_url_mm: 8 Datensätze
 
 
-Tabelle literatur: 1833 Datensätze
+Tabelle literatur: 1839 Datensätze
 
 
-Tabelle kloster_standort: 1560 Datensätze
+Tabelle kloster_standort: 1563 Datensätze
 
 
-Tabelle kloster_literatur_mm: 1833 Datensätze
+Tabelle kloster_literatur_mm: 1839 Datensätze
