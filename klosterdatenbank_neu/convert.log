@@ -1,15 +1,6 @@
 Dump in Datenbank eingespielt
-FEHLER: 317 Kein citekey für Buch Niedersächsisches Klosterbuch 2012 3 gefunden: auslassen
 FEHLER: 679 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. V. Erwin Gatz gefunden: auslassen
 FEHLER: 792 Kein citekey für Buch von Brunn genannt von Kauffungen, Das Domkapitel von Meissen im Mittelalter, 2 gefunden: auslassen
-FEHLER: 3495 Kein citekey für Buch Wurster 2010 gefunden: auslassen
-FEHLER: 3495 Kein citekey für Buch Heuwieser 1988, 38f., Nr. 44 gefunden: auslassen
-FEHLER: 3537 Kein citekey für Buch Germania Benedictina 10,2 gefunden: auslassen
-FEHLER: 3539 Kein citekey für Buch Germania Benedictina 10,2 gefunden: auslassen
-FEHLER: 3540 Kein citekey für Buch Germania Benedictina 10,2 gefunden: auslassen
-FEHLER: 3545 Kein citekey für Buch Niedersächsischers Klosterbuch 2012 2 gefunden: auslassen
-FEHLER: 3546 Kein citekey für Buch Horst-Rüdiger Jarck, Rinteln, in: Nieders. Klosterbuch III gefunden: auslassen
-FEHLER: 3573 Kein citekey für Buch Gilomen.1986c gefunden: auslassen
 
 
 Tabelle url_typ: 7 Datensätze
@@ -69,10 +60,10 @@ Tabelle ort: 44213 Datensätze
 Tabelle ort_url_mm: 8 Datensätze
 
 
-Tabelle literatur: 1839 Datensätze
+Tabelle literatur: 1847 Datensätze
 
 
 Tabelle kloster_standort: 1563 Datensätze
 
 
-Tabelle kloster_literatur_mm: 1839 Datensätze
+Tabelle kloster_literatur_mm: 1847 Datensätze
