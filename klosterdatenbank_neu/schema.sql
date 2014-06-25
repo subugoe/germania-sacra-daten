@@ -1,518 +1,550 @@
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
-
-DROP SCHEMA IF EXISTS `mydb` ;
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `mydb` ;
-
--- -----------------------------------------------------
--- Table `mydb`.`ordenstyp`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`ordenstyp` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`ordenstyp` (
-  `uid` INT NOT NULL ,
-  `ordenstyp` VARCHAR(255) NULL ,
-  PRIMARY KEY (`uid`) )
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`orden`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`orden` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`orden` (
-  `uid` INT NOT NULL AUTO_INCREMENT ,
-  `orden` VARCHAR(255) NULL ,
-  `ordo` VARCHAR(45) NULL ,
-  `symbol` VARCHAR(45) NULL ,
-  `graphik` VARCHAR(45) NULL ,
-  `ordenstyp_uid` INT NULL ,
-  PRIMARY KEY (`uid`) ,
-  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
-  INDEX `fk_orden_ordenstyp_idx` (`ordenstyp_uid` ASC) ,
-  CONSTRAINT `fk_orden_ordenstyp`
-    FOREIGN KEY (`ordenstyp_uid` )
-    REFERENCES `mydb`.`ordenstyp` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`land`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`land` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`land` (
-  `uid` INT NOT NULL AUTO_INCREMENT ,
-  `land` VARCHAR(255) NULL ,
-  `ist_in_deutschland` TINYINT NULL ,
-  PRIMARY KEY (`uid`) ,
-  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) )
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`ort`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`ort` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`ort` (
-  `uid` INT NOT NULL AUTO_INCREMENT ,
-  `ort` VARCHAR(255) NULL ,
-  `gemeinde` VARCHAR(255) NULL ,
-  `kreis` VARCHAR(255) NULL ,
-  `land_uid` INT NULL ,
-  `wuestung` TINYINT NULL ,
-  `breite` FLOAT NULL ,
-  `laenge` FLOAT NULL ,
-  `bistum_uid` INT NULL ,
-  PRIMARY KEY (`uid`) ,
-  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
-  INDEX `fk_ort_bundesland1_idx` (`land_uid` ASC) ,
-  INDEX `fk_ort_bistum1_idx` (`bistum_uid` ASC) ,
-  CONSTRAINT `fk_ort_bundesland1`
-    FOREIGN KEY (`land_uid` )
-    REFERENCES `mydb`.`land` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_ort_bistum1`
-    FOREIGN KEY (`bistum_uid` )
-    REFERENCES `mydb`.`bistum` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`bistum`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`bistum` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`bistum` (
-  `uid` INT NOT NULL AUTO_INCREMENT ,
-  `bistum` VARCHAR(255) NULL ,
-  `kirchenprovinz` VARCHAR(255) NULL ,
-  `bemerkung` TEXT NULL ,
-  `ist_erzbistum` TINYINT NULL ,
-  `shapefile` VARCHAR(255) NULL ,
-  `ort_uid` INT NULL ,
-  PRIMARY KEY (`uid`) ,
-  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
-  INDEX `fk_bistum_ort1_idx` (`ort_uid` ASC) ,
-  CONSTRAINT `fk_bistum_ort1`
-    FOREIGN KEY (`ort_uid` )
-    REFERENCES `mydb`.`ort` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`band`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`band` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`band` (
-  `uid` INT NOT NULL AUTO_INCREMENT ,
-  `nummer` VARCHAR(255) NULL ,
-  `sortierung` INT NOT NULL ,
-  `titel` TEXT NULL ,
-  `kurztitel` TEXT NULL ,
-  `bistum_uid` INT NOT NULL ,
-  PRIMARY KEY (`uid`) ,
-  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
-  INDEX `fk_band_bistum1_idx` (`bistum_uid` ASC) ,
-  CONSTRAINT `fk_band_bistum1`
-    FOREIGN KEY (`bistum_uid` )
-    REFERENCES `mydb`.`bistum` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`personallistenstatus`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`personallistenstatus` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`personallistenstatus` (
-  `uid` INT NOT NULL ,
-  `name` VARCHAR(255) NULL ,
-  PRIMARY KEY (`uid`) )
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`bearbeitungsstatus`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`bearbeitungsstatus` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`bearbeitungsstatus` (
-  `uid` INT NOT NULL ,
-  `name` VARCHAR(45) NULL ,
-  PRIMARY KEY (`uid`) )
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`kloster`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`kloster` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`kloster` (
-  `uid` INT NOT NULL AUTO_INCREMENT ,
-  `kloster_id` INT NOT NULL ,
-  `kloster` VARCHAR(255) NULL ,
-  `patrozinium` VARCHAR(255) NULL ,
-  `bemerkung` TEXT NULL ,
-  `band_uid` INT NULL ,
-  `band_seite` VARCHAR(45) NULL ,
-  `text_gs_band` TEXT NULL ,
-  `bearbeitungsstatus_uid` INT NOT NULL ,
-  `personallistenstatus_uid` INT NOT NULL ,
-  PRIMARY KEY (`uid`) ,
-  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
-  INDEX `fk_kloster_band1_idx` (`band_uid` ASC) ,
-  UNIQUE INDEX `kloster_id_UNIQUE` (`kloster_id` ASC) ,
-  INDEX `fk_kloster_personallistenstatus1_idx` (`personallistenstatus_uid` ASC) ,
-  INDEX `fk_kloster_bearbeitungsstatus1_idx` (`bearbeitungsstatus_uid` ASC) ,
-  CONSTRAINT `fk_kloster_band1`
-    FOREIGN KEY (`band_uid` )
-    REFERENCES `mydb`.`band` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_kloster_personallistenstatus1`
-    FOREIGN KEY (`personallistenstatus_uid` )
-    REFERENCES `mydb`.`personallistenstatus` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_kloster_bearbeitungsstatus1`
-    FOREIGN KEY (`bearbeitungsstatus_uid` )
-    REFERENCES `mydb`.`bearbeitungsstatus` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`zeitraum`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`zeitraum` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`zeitraum` (
-  `uid` INT NOT NULL AUTO_INCREMENT ,
-  `von_von` INT NULL ,
-  `von_bis` INT NULL ,
-  `von_verbal` VARCHAR(255) NULL ,
-  `bis_von` INT NULL ,
-  `bis_bis` INT NULL ,
-  `bis_verbal` VARCHAR(255) NULL ,
-  PRIMARY KEY (`uid`) ,
-  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) )
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`klosterstatus`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`klosterstatus` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`klosterstatus` (
-  `uid` INT NOT NULL ,
-  `status` VARCHAR(255) NULL ,
-  PRIMARY KEY (`uid`) )
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`kloster_orden`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`kloster_orden` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`kloster_orden` (
-  `uid` INT NOT NULL AUTO_INCREMENT ,
-  `kloster_uid` INT NOT NULL ,
-  `orden_uid` INT NOT NULL ,
-  `klosterstatus_uid` INT NOT NULL ,
-  `zeitraum_uid` INT NOT NULL ,
-  `bemerkung` TEXT NULL ,
-  PRIMARY KEY (`uid`) ,
-  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
-  INDEX `fk_kloster_orden_orden1_idx` (`orden_uid` ASC) ,
-  INDEX `fk_kloster_orden_kloster2_idx` (`kloster_uid` ASC) ,
-  INDEX `fk_kloster_orden_zeitraum1_idx` (`zeitraum_uid` ASC) ,
-  INDEX `fk_kloster_orden_klosterstatus1_idx` (`klosterstatus_uid` ASC) ,
-  CONSTRAINT `fk_kloster_orden_orden1`
-    FOREIGN KEY (`orden_uid` )
-    REFERENCES `mydb`.`orden` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_kloster_orden_kloster2`
-    FOREIGN KEY (`kloster_uid` )
-    REFERENCES `mydb`.`kloster` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_kloster_orden_zeitraum1`
-    FOREIGN KEY (`zeitraum_uid` )
-    REFERENCES `mydb`.`zeitraum` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_kloster_orden_klosterstatus1`
-    FOREIGN KEY (`klosterstatus_uid` )
-    REFERENCES `mydb`.`klosterstatus` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`url_typ`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`url_typ` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`url_typ` (
-  `uid` INT NOT NULL ,
-  `name` VARCHAR(255) NULL ,
-  PRIMARY KEY (`uid`) )
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`url`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`url` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`url` (
-  `uid` INT NOT NULL AUTO_INCREMENT ,
-  `url` TEXT NULL ,
-  `bemerkung` TEXT NULL ,
-  `url_typ_uid` INT NOT NULL ,
-  PRIMARY KEY (`uid`) ,
-  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
-  INDEX `fk_url_url_typ1_idx` (`url_typ_uid` ASC) ,
-  CONSTRAINT `fk_url_url_typ1`
-    FOREIGN KEY (`url_typ_uid` )
-    REFERENCES `mydb`.`url_typ` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`band_has_url`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`band_has_url` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`band_has_url` (
-  `uid_local` INT NOT NULL ,
-  `uid_foreign` INT NOT NULL ,
-  PRIMARY KEY (`uid_local`, `uid_foreign`) ,
-  INDEX `fk_band_has_url_url1_idx` (`uid_foreign` ASC) ,
-  INDEX `fk_band_has_url_band1_idx` (`uid_local` ASC) ,
-  CONSTRAINT `fk_band_has_url_band1`
-    FOREIGN KEY (`uid_local` )
-    REFERENCES `mydb`.`band` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_band_has_url_url1`
-    FOREIGN KEY (`uid_foreign` )
-    REFERENCES `mydb`.`url` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`kloster_has_url`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`kloster_has_url` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`kloster_has_url` (
-  `uid_local` INT NOT NULL ,
-  `uid_foreign` INT NOT NULL ,
-  PRIMARY KEY (`uid_local`, `uid_foreign`) ,
-  INDEX `fk_kloster_has_url_url1_idx` (`uid_foreign` ASC) ,
-  INDEX `fk_kloster_has_url_kloster1_idx` (`uid_local` ASC) ,
-  CONSTRAINT `fk_kloster_has_url_kloster1`
-    FOREIGN KEY (`uid_local` )
-    REFERENCES `mydb`.`kloster` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_kloster_has_url_url1`
-    FOREIGN KEY (`uid_foreign` )
-    REFERENCES `mydb`.`url` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`kloster_standort`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`kloster_standort` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`kloster_standort` (
-  `uid` INT NOT NULL AUTO_INCREMENT ,
-  `kloster_uid` INT NOT NULL ,
-  `ort_uid` INT NOT NULL ,
-  `zeitraum_uid` INT NOT NULL ,
-  `gruender` TEXT NULL ,
-  `bemerkung` TEXT NULL ,
-  `breite` FLOAT NULL ,
-  `laenge` FLOAT NULL ,
-  `bemerkung_standort` TEXT NULL ,
-  `temp_literatur_alt` TEXT NULL ,
-  PRIMARY KEY (`uid`) ,
-  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) ,
-  INDEX `fk_kloster_standort_kloster1_idx` (`kloster_uid` ASC) ,
-  INDEX `fk_kloster_standort_ort1_idx` (`ort_uid` ASC) ,
-  INDEX `fk_kloster_standort_zeitraum1_idx` (`zeitraum_uid` ASC) ,
-  CONSTRAINT `fk_kloster_standort_kloster1`
-    FOREIGN KEY (`kloster_uid` )
-    REFERENCES `mydb`.`kloster` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_kloster_standort_ort1`
-    FOREIGN KEY (`ort_uid` )
-    REFERENCES `mydb`.`ort` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_kloster_standort_zeitraum1`
-    FOREIGN KEY (`zeitraum_uid` )
-    REFERENCES `mydb`.`zeitraum` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`ort_has_url`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`ort_has_url` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`ort_has_url` (
-  `uid_local` INT NOT NULL ,
-  `uid_foreign` INT NOT NULL ,
-  PRIMARY KEY (`uid_local`, `uid_foreign`) ,
-  INDEX `fk_ort_has_url_url1_idx` (`uid_foreign` ASC) ,
-  INDEX `fk_ort_has_url_ort1_idx` (`uid_local` ASC) ,
-  CONSTRAINT `fk_ort_has_url_ort1`
-    FOREIGN KEY (`uid_local` )
-    REFERENCES `mydb`.`ort` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_ort_has_url_url1`
-    FOREIGN KEY (`uid_foreign` )
-    REFERENCES `mydb`.`url` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`literatur`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`literatur` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`literatur` (
-  `uid` INT NOT NULL AUTO_INCREMENT ,
-  `citekey` VARCHAR(255) NULL ,
-  `beschreibung` TEXT NULL ,
-  `titel` TEXT NULL,
-  PRIMARY KEY (`uid`) ,
-  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC) )
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`bibitem`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`bibitem` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`bibitem` (
-  `uid` INT NOT NULL ,
-  `bibitem` TEXT NULL ,
-  PRIMARY KEY (`uid`) )
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`orden_has_url`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`orden_has_url` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`orden_has_url` (
-  `uid_local` INT NOT NULL ,
-  `uid_foreign` INT NOT NULL ,
-  PRIMARY KEY (`uid_local`, `uid_foreign`) ,
-  INDEX `fk_orden_has_url_url1_idx` (`uid_foreign` ASC) ,
-  INDEX `fk_orden_has_url_orden1_idx` (`uid_local` ASC) ,
-  CONSTRAINT `fk_orden_has_url_orden1`
-    FOREIGN KEY (`uid_local` )
-    REFERENCES `mydb`.`orden` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_orden_has_url_url1`
-    FOREIGN KEY (`uid_foreign` )
-    REFERENCES `mydb`.`url` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`bistum_has_url`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`bistum_has_url` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`bistum_has_url` (
-  `uid_local` INT NOT NULL ,
-  `uid_foreign` INT NOT NULL ,
-  PRIMARY KEY (`uid_local`, `uid_foreign`) ,
-  INDEX `fk_bistum_has_url_url1_idx` (`uid_foreign` ASC) ,
-  INDEX `fk_bistum_has_url_bistum1_idx` (`uid_local` ASC) ,
-  CONSTRAINT `fk_bistum_has_url_bistum1`
-    FOREIGN KEY (`uid_local` )
-    REFERENCES `mydb`.`bistum` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_bistum_has_url_url1`
-    FOREIGN KEY (`uid_foreign` )
-    REFERENCES `mydb`.`url` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`kloster_has_literatur`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`kloster_has_literatur` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`kloster_has_literatur` (
-  `uid_local` INT NOT NULL ,
-  `uid_foreign` INT NOT NULL ,
-  PRIMARY KEY (`uid_local`, `uid_foreign`) ,
-  INDEX `fk_kloster_has_literatur_literatur1_idx` (`uid_foreign` ASC) ,
-  INDEX `fk_kloster_has_literatur_kloster1_idx` (`uid_local` ASC) ,
-  CONSTRAINT `fk_kloster_has_literatur_kloster1`
-    FOREIGN KEY (`uid_local` )
-    REFERENCES `mydb`.`kloster` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_kloster_has_literatur_literatur1`
-    FOREIGN KEY (`uid_foreign` )
-    REFERENCES `mydb`.`literatur` (`uid` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
-
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+-- phpMyAdmin SQL Dump
+-- version 4.1.9
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Erstellungszeit: 18. Jun 2014 um 16:25
+-- Server Version: 5.5.37-0ubuntu0.12.04.1
+-- PHP-Version: 5.5.12-2+deb.sury.org~precise+1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Datenbank: `germania`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_band`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_band`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_band` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `bistum` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `nummer` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `sortierung` int(11) NOT NULL,
+  `titel` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `kurztitel` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`),
+  KEY `IDX_BC13F9E62BE54566` (`bistum`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=75 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_bandhasurl`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_bandhasurl`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_bandhasurl` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `band` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `url` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  KEY `IDX_885BD41148DFA2EB` (`band`),
+  KEY `IDX_885BD411F47645AE` (`url`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_bearbeiter`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_bearbeiter`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_bearbeiter` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `bearbeiter` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=12 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_bearbeitungsstatus`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_bearbeitungsstatus`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_bearbeitungsstatus` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_bibitem`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_bibitem`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_bibitem` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `bibitem` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=250 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_bistum`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_bistum`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_bistum` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `ort` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `bistum` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `kirchenprovinz` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bemerkung` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ist_erzbistum` int(11) DEFAULT NULL,
+  `shapefile` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`),
+  UNIQUE KEY `UNIQ_62F2479BF6ABFB5E` (`ort`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=76 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_bistumhasurl`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_bistumhasurl`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_bistumhasurl` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `bistum` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `url` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  KEY `IDX_79C4421C2BE54566` (`bistum`),
+  KEY `IDX_79C4421CF47645AE` (`url`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_kloster`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_kloster`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_kloster` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `bearbeitungsstatus` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `bearbeiter` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `personallistenstatus` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `band` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `kloster_id` int(11) DEFAULT NULL,
+  `kloster` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `patrozinium` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bemerkung` longtext COLLATE utf8_unicode_ci,
+  `band_seite` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `text_gs_band` longtext COLLATE utf8_unicode_ci,
+  `bearbeitungsstand` longtext COLLATE utf8_unicode_ci,
+  `creationdate` datetime NOT NULL,
+  `changeddate` datetime DEFAULT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`),
+  KEY `IDX_3F3F3173F77E4657` (`bearbeitungsstatus`),
+  KEY `IDX_3F3F3173E063B86C` (`bearbeiter`),
+  KEY `IDX_3F3F3173CC4E7F70` (`personallistenstatus`),
+  KEY `IDX_3F3F317348DFA2EB` (`band`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3575 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_klosterhasliteratur`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_klosterhasliteratur`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_klosterhasliteratur` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `kloster` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `literatur` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  KEY `IDX_81316783FC7AA8D0` (`kloster`),
+  KEY `IDX_813167836CD7C9B9` (`literatur`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_klosterhasurl`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_klosterhasurl`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_klosterhasurl` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `kloster` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `url` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  KEY `IDX_150245A4FC7AA8D0` (`kloster`),
+  KEY `IDX_150245A4F47645AE` (`url`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_klosterorden`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_klosterorden`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_klosterorden` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `kloster` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `orden` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `klosterstatus` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `von_von` int(11) DEFAULT NULL,
+  `von_bis` int(11) DEFAULT NULL,
+  `von_verbal` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bis_von` int(11) DEFAULT NULL,
+  `bis_bis` int(11) DEFAULT NULL,
+  `bis_verbal` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bemerkung` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`),
+  KEY `IDX_6024429DFC7AA8D0` (`kloster`),
+  KEY `IDX_6024429DE128CFD7` (`orden`),
+  KEY `IDX_6024429D91356728` (`klosterstatus`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2435 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_klosterstandort`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_klosterstandort`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_klosterstandort` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `kloster` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ort` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `von_von` int(11) DEFAULT NULL,
+  `von_bis` int(11) DEFAULT NULL,
+  `von_verbal` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bis_von` int(11) DEFAULT NULL,
+  `bis_bis` int(11) DEFAULT NULL,
+  `bis_verbal` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `gruender` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bemerkung` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `breite` double DEFAULT NULL,
+  `laenge` double DEFAULT NULL,
+  `bemerkung_standort` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `temp_literatur_alt` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`),
+  KEY `IDX_FD484853FC7AA8D0` (`kloster`),
+  KEY `IDX_FD484853F6ABFB5E` (`ort`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2020 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_klosterstatus`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_klosterstatus`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_klosterstatus` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `status` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=13 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_land`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_land`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_land` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `land` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `ist_in_deutschland` int(11) DEFAULT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=79 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_literatur`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_literatur`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_literatur` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `citekey` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `beschreibung` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1891 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_orden`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_orden`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_orden` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `ordenstyp` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `orden` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `ordo` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `symbol` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `graphik` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`),
+  KEY `IDX_9F6D7F31EEE8F78` (`ordenstyp`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=77 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_ordenhasurl`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_ordenhasurl`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_ordenhasurl` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `orden` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `url` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  KEY `IDX_82D92A2E128CFD7` (`orden`),
+  KEY `IDX_82D92A2F47645AE` (`url`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_ordenstyp`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_ordenstyp`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_ordenstyp` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `ordenstyp` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_ort`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_ort`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_ort` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `land` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bistum` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `ort` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `gemeinde` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `kreis` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `wuestung` int(11) DEFAULT NULL,
+  `breite` double DEFAULT NULL,
+  `laenge` double DEFAULT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`),
+  KEY `IDX_EE45A748A800D5D8` (`land`),
+  KEY `IDX_EE45A7482BE54566` (`bistum`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=46479326 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_orthasurl`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_orthasurl`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_orthasurl` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `ort` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `url` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  KEY `IDX_AD307F85F6ABFB5E` (`ort`),
+  KEY `IDX_AD307F85F47645AE` (`url`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_personallistenstatus`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_personallistenstatus`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_personallistenstatus` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_url`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_url`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_url` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `urltyp` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `bemerkung` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`),
+  KEY `IDX_EC9819B8E5CFB5CA` (`urltyp`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=911 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `subugoe_germaniasacra_domain_model_urltyp`
+--
+
+DROP TABLE IF EXISTS `subugoe_germaniasacra_domain_model_urltyp`;
+CREATE TABLE IF NOT EXISTS `subugoe_germaniasacra_domain_model_urltyp` (
+  `persistence_object_identifier` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`persistence_object_identifier`),
+  UNIQUE KEY `uid` (`uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
+
+--
+-- Constraints der exportierten Tabellen
+--
+
+--
+-- Constraints der Tabelle `subugoe_germaniasacra_domain_model_band`
+--
+ALTER TABLE `subugoe_germaniasacra_domain_model_band`
+  ADD CONSTRAINT `FK_BC13F9E62BE54566` FOREIGN KEY (`bistum`) REFERENCES `subugoe_germaniasacra_domain_model_bistum` (`persistence_object_identifier`) ON DELETE NO ACTION;
+
+--
+-- Constraints der Tabelle `subugoe_germaniasacra_domain_model_bandhasurl`
+--
+ALTER TABLE `subugoe_germaniasacra_domain_model_bandhasurl`
+  ADD CONSTRAINT `FK_885BD41148DFA2EB` FOREIGN KEY (`band`) REFERENCES `subugoe_germaniasacra_domain_model_band` (`persistence_object_identifier`) ON DELETE NO ACTION,
+  ADD CONSTRAINT `FK_885BD411F47645AE` FOREIGN KEY (`url`) REFERENCES `subugoe_germaniasacra_domain_model_url` (`persistence_object_identifier`) ON DELETE NO ACTION;
+
+--
+-- Constraints der Tabelle `subugoe_germaniasacra_domain_model_bistum`
+--
+ALTER TABLE `subugoe_germaniasacra_domain_model_bistum`
+  ADD CONSTRAINT `FK_62F2479BF6ABFB5E` FOREIGN KEY (`ort`) REFERENCES `subugoe_germaniasacra_domain_model_ort` (`persistence_object_identifier`) ON DELETE NO ACTION;
+
+--
+-- Constraints der Tabelle `subugoe_germaniasacra_domain_model_bistumhasurl`
+--
+ALTER TABLE `subugoe_germaniasacra_domain_model_bistumhasurl`
+  ADD CONSTRAINT `FK_79C4421C2BE54566` FOREIGN KEY (`bistum`) REFERENCES `subugoe_germaniasacra_domain_model_bistum` (`persistence_object_identifier`) ON DELETE NO ACTION,
+  ADD CONSTRAINT `FK_79C4421CF47645AE` FOREIGN KEY (`url`) REFERENCES `subugoe_germaniasacra_domain_model_url` (`persistence_object_identifier`) ON DELETE NO ACTION;
+
+--
+-- Constraints der Tabelle `subugoe_germaniasacra_domain_model_kloster`
+--
+ALTER TABLE `subugoe_germaniasacra_domain_model_kloster`
+  ADD CONSTRAINT `FK_3F3F317348DFA2EB` FOREIGN KEY (`band`) REFERENCES `subugoe_germaniasacra_domain_model_band` (`persistence_object_identifier`) ON DELETE NO ACTION,
+  ADD CONSTRAINT `FK_3F3F3173CC4E7F70` FOREIGN KEY (`personallistenstatus`) REFERENCES `subugoe_germaniasacra_domain_model_personallistenstatus` (`persistence_object_identifier`) ON DELETE NO ACTION,
+  ADD CONSTRAINT `FK_3F3F3173E063B86C` FOREIGN KEY (`bearbeiter`) REFERENCES `subugoe_germaniasacra_domain_model_bearbeiter` (`persistence_object_identifier`) ON DELETE NO ACTION,
+  ADD CONSTRAINT `FK_3F3F3173F77E4657` FOREIGN KEY (`bearbeitungsstatus`) REFERENCES `subugoe_germaniasacra_domain_model_bearbeitungsstatus` (`persistence_object_identifier`) ON DELETE NO ACTION;
+
+--
+-- Constraints der Tabelle `subugoe_germaniasacra_domain_model_klosterhasliteratur`
+--
+ALTER TABLE `subugoe_germaniasacra_domain_model_klosterhasliteratur`
+  ADD CONSTRAINT `FK_813167836CD7C9B9` FOREIGN KEY (`literatur`) REFERENCES `subugoe_germaniasacra_domain_model_literatur` (`persistence_object_identifier`) ON DELETE NO ACTION,
+  ADD CONSTRAINT `FK_81316783FC7AA8D0` FOREIGN KEY (`kloster`) REFERENCES `subugoe_germaniasacra_domain_model_kloster` (`persistence_object_identifier`) ON DELETE NO ACTION;
+
+--
+-- Constraints der Tabelle `subugoe_germaniasacra_domain_model_klosterhasurl`
+--
+ALTER TABLE `subugoe_germaniasacra_domain_model_klosterhasurl`
+  ADD CONSTRAINT `FK_150245A4F47645AE` FOREIGN KEY (`url`) REFERENCES `subugoe_germaniasacra_domain_model_url` (`persistence_object_identifier`) ON DELETE NO ACTION,
+  ADD CONSTRAINT `FK_150245A4FC7AA8D0` FOREIGN KEY (`kloster`) REFERENCES `subugoe_germaniasacra_domain_model_kloster` (`persistence_object_identifier`) ON DELETE NO ACTION;
+
+--
+-- Constraints der Tabelle `subugoe_germaniasacra_domain_model_klosterorden`
+--
+ALTER TABLE `subugoe_germaniasacra_domain_model_klosterorden`
+  ADD CONSTRAINT `FK_6024429D91356728` FOREIGN KEY (`klosterstatus`) REFERENCES `subugoe_germaniasacra_domain_model_klosterstatus` (`persistence_object_identifier`) ON DELETE NO ACTION,
+  ADD CONSTRAINT `FK_6024429DE128CFD7` FOREIGN KEY (`orden`) REFERENCES `subugoe_germaniasacra_domain_model_orden` (`persistence_object_identifier`) ON DELETE NO ACTION,
+  ADD CONSTRAINT `FK_6024429DFC7AA8D0` FOREIGN KEY (`kloster`) REFERENCES `subugoe_germaniasacra_domain_model_kloster` (`persistence_object_identifier`) ON DELETE NO ACTION;
+
+--
+-- Constraints der Tabelle `subugoe_germaniasacra_domain_model_klosterstandort`
+--
+ALTER TABLE `subugoe_germaniasacra_domain_model_klosterstandort`
+  ADD CONSTRAINT `FK_FD484853F6ABFB5E` FOREIGN KEY (`ort`) REFERENCES `subugoe_germaniasacra_domain_model_ort` (`persistence_object_identifier`) ON DELETE NO ACTION,
+  ADD CONSTRAINT `FK_FD484853FC7AA8D0` FOREIGN KEY (`kloster`) REFERENCES `subugoe_germaniasacra_domain_model_kloster` (`persistence_object_identifier`) ON DELETE NO ACTION;
+
+--
+-- Constraints der Tabelle `subugoe_germaniasacra_domain_model_orden`
+--
+ALTER TABLE `subugoe_germaniasacra_domain_model_orden`
+  ADD CONSTRAINT `FK_9F6D7F31EEE8F78` FOREIGN KEY (`ordenstyp`) REFERENCES `subugoe_germaniasacra_domain_model_ordenstyp` (`persistence_object_identifier`) ON DELETE NO ACTION;
+
+--
+-- Constraints der Tabelle `subugoe_germaniasacra_domain_model_ordenhasurl`
+--
+ALTER TABLE `subugoe_germaniasacra_domain_model_ordenhasurl`
+  ADD CONSTRAINT `FK_82D92A2E128CFD7` FOREIGN KEY (`orden`) REFERENCES `subugoe_germaniasacra_domain_model_orden` (`persistence_object_identifier`) ON DELETE NO ACTION,
+  ADD CONSTRAINT `FK_82D92A2F47645AE` FOREIGN KEY (`url`) REFERENCES `subugoe_germaniasacra_domain_model_url` (`persistence_object_identifier`) ON DELETE NO ACTION;
+
+--
+-- Constraints der Tabelle `subugoe_germaniasacra_domain_model_ort`
+--
+ALTER TABLE `subugoe_germaniasacra_domain_model_ort`
+  ADD CONSTRAINT `FK_EE45A7482BE54566` FOREIGN KEY (`bistum`) REFERENCES `subugoe_germaniasacra_domain_model_bistum` (`persistence_object_identifier`) ON DELETE NO ACTION,
+  ADD CONSTRAINT `FK_EE45A748A800D5D8` FOREIGN KEY (`land`) REFERENCES `subugoe_germaniasacra_domain_model_land` (`persistence_object_identifier`) ON DELETE NO ACTION;
+
+--
+-- Constraints der Tabelle `subugoe_germaniasacra_domain_model_orthasurl`
+--
+ALTER TABLE `subugoe_germaniasacra_domain_model_orthasurl`
+  ADD CONSTRAINT `FK_AD307F85F47645AE` FOREIGN KEY (`url`) REFERENCES `subugoe_germaniasacra_domain_model_url` (`persistence_object_identifier`) ON DELETE NO ACTION,
+  ADD CONSTRAINT `FK_AD307F85F6ABFB5E` FOREIGN KEY (`ort`) REFERENCES `subugoe_germaniasacra_domain_model_ort` (`persistence_object_identifier`) ON DELETE NO ACTION;
+
+--
+-- Constraints der Tabelle `subugoe_germaniasacra_domain_model_url`
+--
+ALTER TABLE `subugoe_germaniasacra_domain_model_url`
+  ADD CONSTRAINT `FK_EC9819B8E5CFB5CA` FOREIGN KEY (`urltyp`) REFERENCES `subugoe_germaniasacra_domain_model_urltyp` (`persistence_object_identifier`) ON DELETE NO ACTION;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
