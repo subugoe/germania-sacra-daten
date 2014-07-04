@@ -1,4 +1,5 @@
 Dump in Datenbank eingespielt
+WARNUNG: ungueltiger Bearbeitungstatus None in klosterStammblatt 3590. Verwende: 0
 FEHLER: orden_uid fehlt in klosterOrden ID 2433: Datensatz verwerfen
 {u'ID_KlosterOrden': 2433,
  u'Klosternummer': 3572,
@@ -11,9 +12,9 @@ FEHLER: orden_uid fehlt in klosterOrden ID 2433: Datensatz verwerfen
  u'Ordenszugeh\xf6rigkeitvon__bis': 1809,
  u'Ordenzugeh\xf6rigkeit_bis_bis': None,
  u'interne_Anmerkungen': None}
-FEHLER: orden_uid fehlt in klosterOrden ID 101: Datensatz verwerfen
-{u'ID_KlosterOrden': 101,
- u'Klosternummer': 157,
+FEHLER: orden_uid fehlt in klosterOrden ID 350: Datensatz verwerfen
+{u'ID_KlosterOrden': 350,
+ u'Klosternummer': 409,
  u'Klosterstatus': None,
  u'Ordenszugeh\xf6rigkeit': None,
  u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
@@ -23,68 +24,25 @@ FEHLER: orden_uid fehlt in klosterOrden ID 101: Datensatz verwerfen
  u'Ordenszugeh\xf6rigkeitvon__bis': None,
  u'Ordenzugeh\xf6rigkeit_bis_bis': None,
  u'interne_Anmerkungen': u''}
-FEHLER: orden_uid fehlt in klosterOrden ID 282: Datensatz verwerfen
-{u'ID_KlosterOrden': 282,
- u'Klosternummer': 349,
- u'Klosterstatus': u'Kloster',
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': None,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': u''}
-FEHLER: orden_uid fehlt in klosterOrden ID 283: Datensatz verwerfen
-{u'ID_KlosterOrden': 283,
- u'Klosternummer': 349,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': None,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': u''}
-FEHLER: orden_uid fehlt in klosterOrden ID 779: Datensatz verwerfen
-{u'ID_KlosterOrden': 779,
- u'Klosternummer': 836,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': None,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': u''}
-FEHLER: orden_uid fehlt in klosterOrden ID 1271: Datensatz verwerfen
-{u'ID_KlosterOrden': 1271,
- u'Klosternummer': 263,
- u'Klosterstatus': None,
- u'Ordenszugeh\xf6rigkeit': None,
- u'Ordenszugeh\xf6rigkeitVerbal_bis': None,
- u'Ordenszugeh\xf6rigkeitVerbal_von': None,
- u'Ordenszugeh\xf6rigkeit_bis_von': None,
- u'Ordenszugeh\xf6rigkeit_von_von': None,
- u'Ordenszugeh\xf6rigkeitvon__bis': None,
- u'Ordenzugeh\xf6rigkeit_bis_bis': None,
- u'interne_Anmerkungen': None}
-FEHLER: 123 Kein citekey für Buch Niedersächsisches Klosterbuch 2012 3, 1115–1118 gefunden: auslassen
-FEHLER: Feld ID_alleOrte leer in KlosterStandort 2016: verwerfen
+FEHLER: 150 Kein citekey für Buch Niedersächsisches Klosterbuch 2012 1, 1 gefunden: auslassen
+FEHLER: 161 Kein citekey für Buch Hauck, Kirchengeschichte 4 gefunden: auslassen
+FEHLER: 161 Kein citekey für Buch Lindner, Germania Monastica gefunden: auslassen
 FEHLER: 679 Kein citekey für Buch Die Bistümer des Heiligen Römischen Reiches von ihren Anfängen bis zur Säkularisation, hg. V. Erwin Gatz gefunden: auslassen
-FEHLER: 707 Kein citekey für Buch Streich,Klöster, Stifte Niedersachsen gefunden: auslassen
 FEHLER: 792 Kein citekey für Buch von Brunn genannt von Kauffungen, Das Domkapitel von Meissen im Mittelalter, 2 gefunden: auslassen
+FEHLER: 883 Kein citekey für Buch Niedersächsisches Klosterbuch 2012 2, 1290-1298 gefunden: auslassen
+FEHLER: 907 Kein citekey für Buch Niedersächsisches Klosterbuch 2012 3, 1465-1467 gefunden: auslassen
+FEHLER: 908 Kein citekey für Buch Niedersächsisches Klosterbuch 2012 3, 1471-1487 gefunden: auslassen
+FEHLER: 2091 Kein citekey für Buch Klöster Bayern gefunden: auslassen
+FEHLER: 3587 Kein citekey für Buch http://www.kloester-bw.de/?nr=629 gefunden: auslassen
 
 
 Tabelle url_typ: 7 Datensätze
 
 
-Tabelle url: 915 Datensätze
+Tabelle url: 1007 Datensätze
 
 
-Tabelle zeitraum: 3619 Datensätze
+Tabelle zeitraum: 3617 Datensätze
 
 
 Tabelle bistum: 62 Datensätze
@@ -105,22 +63,22 @@ Tabelle bearbeitungsstatus: 7 Datensätze
 Tabelle personallistenstatus: 3 Datensätze
 
 
-Tabelle kloster: 1496 Datensätze
+Tabelle kloster: 1493 Datensätze
 
 
-Tabelle kloster_url_mm: 632 Datensätze
+Tabelle kloster_url_mm: 718 Datensätze
 
 
 Tabelle ordenstyp: 4 Datensätze
 
 
-Tabelle klosterstatus: 12 Datensätze
+Tabelle klosterstatus: 11 Datensätze
 
 
 Tabelle orden: 65 Datensätze
 
 
-Tabelle kloster_orden: 2055 Datensätze
+Tabelle kloster_orden: 2057 Datensätze
 
 
 Tabelle orden_url_mm: 69 Datensätze
@@ -129,16 +87,16 @@ Tabelle orden_url_mm: 69 Datensätze
 Tabelle land: 27 Datensätze
 
 
-Tabelle ort: 44216 Datensätze
+Tabelle ort: 44215 Datensätze
 
 
 Tabelle ort_url_mm: 9 Datensätze
 
 
-Tabelle literatur: 1871 Datensätze
+Tabelle literatur: 1867 Datensätze
 
 
-Tabelle kloster_standort: 1564 Datensätze
+Tabelle kloster_standort: 1560 Datensätze
 
 
-Tabelle kloster_literatur_mm: 1871 Datensätze
+Tabelle kloster_literatur_mm: 1867 Datensätze

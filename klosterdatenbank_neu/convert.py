@@ -210,8 +210,13 @@ def addWikipediaURLToDoc(row, fieldName, doc, relationDict):
         urls = urls.replace('http:// ', '').replace(';', '#').split('#')
         for myURL in urls:
             lemma = re.sub(r'.*/wiki/', '', myURL).replace('_', ' ')
-            lemma = urllib.unquote(str(lemma))
-            lemma = lemma.decode('utf-8')
+            try:
+                lemma = lemma
+            except UnicodeError:
+                print u"FEHLER: Datensatz " + str(doc['uid']) + ": Unguelige Kodierung der Wikipedia URL"
+            lemma = urllib.unquote(lemma)
+
+            lemma = lemma
             URLRelation = makeURLData(myURL, lemma, 'Wikipedia', doc['uid'])
             if URLRelation:
                 key = str(URLRelation['uid_local']) + '-' + str(URLRelation['uid_foreign'])
@@ -377,8 +382,8 @@ for values in cursor:
         if bearbeitungsstatusDict.has_key(row['Status']):
             bearbeitungsstatus = bearbeitungsstatusDict[row['Status']]
         else:
-            print u"WARNUNG: ungültiger Bearbeitungstatus »" + str(row['Status']) + u"« in klosterStammblatt " + str(
-                uid) + u". Verwende: " + str(bearbeitungsstatus)
+            print u"WARNUNG: ungueltiger Bearbeitungstatus " + str(row['Status']) + u" in klosterStammblatt " + str(
+                uid) + u". Verwende: " + unicode(str(bearbeitungsstatus), "utf-8")
 
         if not personallistenstatusDict.has_key(row['Personallisten']):
             personallistenstatusDict[row['Personallisten']] = {
