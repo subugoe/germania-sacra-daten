@@ -1,0 +1,5 @@
+*.mwb.bak
+.DS_Store
+solr/data
+Personendatenbank/gsdatenbank_2013_05_27_08_25.sql
+.idea/

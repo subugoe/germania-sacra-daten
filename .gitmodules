@@ -1,0 +1,6 @@
+[submodule "HelvetiaSacra"]
+	path = HelvetiaSacra
+	url = ./HelvetiaSacra
+[submodule "Klosterdatenbank"]
+	path = Klosterdatenbank
+	url = ./Klosterdatenbank
