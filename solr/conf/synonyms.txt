@@ -3,3 +3,4 @@
 # mapping: aaafoo => aaabar
 # group: Television, Televisions, TV, TVs
 # group: Kollegiatstift, Kanonissenstift, Kanonikerstift
+# group: Augustinerchorherrenstift, Augustiner-Chorherrenstift
