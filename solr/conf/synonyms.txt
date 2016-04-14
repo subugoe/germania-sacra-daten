@@ -2,4 +2,4 @@
 # e.g.
 # mapping: aaafoo => aaabar
 # group: Television, Televisions, TV, TVs
-# group: Kollegiatstift, Kanonissenstift
+# group: Kollegiatstift, Kanonissenstift, Kanonikerstift
