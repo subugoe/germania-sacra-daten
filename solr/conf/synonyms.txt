@@ -3,12 +3,12 @@
 # mapping: aaafoo => aaabar
 # group: Television, Televisions, TV, TVs
 Kollegiatstift, Kanonissenstift, Kanonikerstift
-group: Augustinerchorherrenstift, Augustiner-Chorherrenstift
-group: Franziskaner, Minoriten, Observanten, Rekollekten
-group: Augustinereremitinnen, Augustinerinnen
-group: Augustinereremiten, Augustiner
-group: Franziskaner der Dritten Regel, Terziaren, Franziskanerterziaren
-group: Hieronymiten, Trollbrüder
-group: Lazaristen, Vinzentiner
-group: Alexianer, Celliten
-group: Englische Fräulein, Maria-Ward, Institut der seligen Jungfrau Maria
+Augustinerchorherrenstift, Augustiner-Chorherrenstift
+Franziskaner, Minoriten, Observanten, Rekollekten
+Augustinereremitinnen, Augustinerinnen
+Augustinereremiten, Augustiner
+Terziaren, Franziskanerterziaren
+Hieronymiten, Trollbrüder
+Lazaristen, Vinzentiner
+Alexianer, Celliten
+Englische Fräulein, Maria-Ward, Institut der seligen Jungfrau Maria
