@@ -514,6 +514,7 @@
 		<fieldType name="text_de" class="solr.TextField" positionIncrementGap="100">
 			<analyzer>
 				<tokenizer class="solr.StandardTokenizerFactory"/>
+				<filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
 				<filter class="solr.LowerCaseFilterFactory"/>
 				<filter class="solr.StopFilterFactory" ignoreCase="true" words="lang/stopwords_de.txt" format="snowball" enablePositionIncrements="true"/>
 				<filter class="solr.GermanNormalizationFilterFactory"/>
